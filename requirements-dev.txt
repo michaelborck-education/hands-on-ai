@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chatcraft"
+version = "0.1.0"
+description = "Educational LLM bot personalities for classrooms"
+authors = [
+  { name="Your Name", email="you@example.com" }
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "requests"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "build",
+  "twine",
+  "cython"
+]
+
+[tool.setuptools.packages.find]
+include = ["chatcraft"]
+
+[tool.setuptools.package-data]
+"chatcraft" = ["data/*.json"]
+
+[project.urls]
+Homepage = "https://github.com/your-org/chatcraft"
+Documentation = "https://your-org.github.io/chatcraft/"
+Source = "https://github.com/your-org/chatcraft"
+Issues = "https://github.com/your-org/chatcraft/issues"

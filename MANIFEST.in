@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include version.json
+recursive-include chatcraft/data *.json
+recursive-include chatcraft *.pyx
+recursive-include chatcraft *.pxd

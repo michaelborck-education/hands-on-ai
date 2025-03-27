@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chatcraft"
+version = "0.1.0"
+description = "Educational LLM bot personalities for classrooms"
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["requests"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "build",
+  "twine",
+  "cython",
+  "ruff",
+  "mkdocs",
+  "mkdocs",
+  "mkdocs-material",
+  "uv"
+]
+
+[tool.setuptools.packages.find]
+include = ["chatcraft"]
+
+[tool.setuptools.package-data]
+"chatcraft" = ["data/*.json"]
+
+[project.urls]
+Homepage = "https://github.com/teaching-repositories/chatcraft"
+Documentation = "https://github.com/teaching-repositories/chatcraft"
+Source = "https://github.com/teaching-repositories/chatcraft"
+Issues = "https://github.com/teaching-repositories/chatcraft"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-v"
+
+[tool.ruff]
+line-length = 100
+exclude = ["build", "dist", ".venv"]

@@ -1,0 +1,39 @@
+name: 📦 Build and Release Bundle
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout
+        uses: actions/checkout@v3
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: 🔢 Bump version.json (based on tag)
+        run: |
+          VERSION=$(echo $GITHUB_REF | sed 's|refs/tags/v||')
+          echo "{\"version\": \"$$VERSION\", \"url\": \"https://github.com/teaching-repositories/chatcraft/tools/project_browser.html\"}" > version.json
+
+      - name: 🧳 Build ZIP
+        run: python tools/build_zip.py
+
+      - name: 🚀 Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ChatCraft_Offline_Bundle.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
