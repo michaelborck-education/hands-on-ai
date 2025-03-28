@@ -7,6 +7,10 @@
       "Well, *that* didn’t work. Shocker. Retrying.",
       "AI's having a moment. Let’s see if it pulls itself together."
     ],
+    "pirate": [
+        "☠️ Me circuits be tangled! Ask again, ye landlubber!",
+        "⚓️ The winds be foul. Try again, matey!",
+    ],
     "parrot": [
       "Squawk! Retry! Retry!",
       "Pieces of eight! Something went wrong, matey. Trying again!"
@@ -41,6 +45,10 @@
     ],
     "coder": [
       "Timeout? Probably a bug. Let’s try that request again."
+    ],
+    "default": [
+        "The ghost in the machine just acted up. Try again in a sec?",
+        "⚠️ Error in the digital depths... please retype that question.",
     ]
   }
   

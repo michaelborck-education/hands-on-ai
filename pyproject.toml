@@ -28,7 +28,7 @@ dev = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["chatcraft"]
+where = ["src"]
 
 [tool.setuptools.package-data]
 "chatcraft" = ["data/*.json"]

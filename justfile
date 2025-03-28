@@ -1,51 +1,56 @@
 # Justfile for common development tasks
 
-# ✅ Setup development environment
-install-dev:
-  pip install -r requirements-dev.txt
-
-# 🧪 Run tests
+# 🧪 Run and check
 test:
   pytest
 
-# 🧹 Lint with Ruff
 lint:
   ruff chatcraft tests tools
 
-# 🎨 Format with Ruff
 format:
   ruff format chatcraft tests tools
 
-# 🏗️ Build and optionally upload
+ci: [lint test]  # 💼 Run linter and tests together
+
+# 🔧 Project setup
+install-dev:
+  pip install -r requirements-dev.txt
+
+sync-version:
+  python tools/inject_version.py --all
+  echo "✅ Synced version across pyproject.toml and version.json"
+
+requirements:
+  uv pip compile pyproject.toml --extra=none --output=requirements.txt
+  uv pip compile pyproject.toml --extra=dev --output=requirements-dev.txt
+  echo "✅ Regenerated requirements.txt and requirements-dev.txt"
+
+# 🏗️ Build and distribute
 build args="":
   python build.py {{args}}
 
-# 💼 Create offline bundle
 bundle:
   python tools/build_zip.py
 
-# 🔄 Sync version across project
-sync-version:
-  python tools/inject_version.py
-
-# 📚 Build documentation
+# 📚 Documentation
 docs:
   mkdocs build --clean
 
-# 🌍 Deploy documentation to GitHub Pages
 deploy-docs:
   mkdocs gh-deploy --force
 
 # 📋 Help menu
 help:
   @echo "Available commands:"
-  @echo "  install-dev     Install dev dependencies"
   @echo "  test            Run tests with pytest"
   @echo "  lint            Run Ruff linter"
   @echo "  format          Auto-format code with Ruff"
-  @echo "  build           Build and optionally upload (use: just build -- --minor)"
-  @echo "  bundle          Create offline .zip distribution"
+  @echo "  ci              Run lint and tests together"
+  @echo "  install-dev     Install dev dependencies"
   @echo "  sync-version    Sync version across files"
+  @echo "  requirements    Generate requirements.txt and requirements-dev.txt"
+  @echo "  build           Build and optionally upload (e.g. just build -- --minor)"
+  @echo "  bundle          Create offline .zip distribution"
   @echo "  docs            Build documentation"
   @echo "  deploy-docs     Deploy docs to GitHub Pages"
   @echo "  help            Show this help message"

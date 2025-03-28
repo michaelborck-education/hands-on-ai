@@ -1,0 +1,29 @@
+site_name: ChatCraft Documentation
+site_url: https://github.com/teaching-repositories/chatcraft
+repo_url: https://github.com/teaching-repositories/chatcraft
+repo_name: teaching-repositories/chatcraft
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.instant
+  palette:
+    scheme: default
+    primary: indigo
+    accent: light blue
+nav:
+  - Home: index.md
+  - Bots: bots.md
+  - Guide: ollama-guide.md
+  - Education: education-guide.md
+  - Projects: mini-projects.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["chatcraft"]
+          options:
+            docstring_style: google
+            show_signature: false
