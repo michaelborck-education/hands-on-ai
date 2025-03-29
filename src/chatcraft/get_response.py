@@ -1,16 +1,21 @@
-# cython: language_level=3
 import requests
 import random
 import time
 from chatcraft.config import get_server_url, load_fallbacks, log
 
-_last_model = None  # global cache
+_last_model: str | None = None  # global cache
 _fallbacks = load_fallbacks()
 
 
-def get_response(str prompt, str model="llama3", str system="You are a helpful assistant.",
-                 str personality="friendly", bint stream=False, int retries=2):
-    '''
+def get_response(
+    prompt: str,
+    model: str = "llama3",
+    system: str = "You are a helpful assistant.",
+    personality: str = "friendly",
+    stream: bool = False,
+    retries: int = 2
+) -> str:
+    """
     Send a prompt to the Ollama API and retrieve the model's response.
 
     This function manages the connection to a local Ollama server, sends the user's
@@ -21,12 +26,12 @@ def get_response(str prompt, str model="llama3", str system="You are a helpful a
         model (str): LLM model to use (e.g., "llama3", "codellama")
         system (str): System message defining bot behavior
         personality (str): Used for fallback character during retries
-        stream (bint): Whether to request streaming output (default False)
+        stream (bool): Whether to request streaming output (default False)
         retries (int): Number of times to retry on error
 
     Returns:
         str: AI response or error message
-    '''
+    """
     global _last_model
 
     if model != _last_model:

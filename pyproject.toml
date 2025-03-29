@@ -7,12 +7,15 @@ name = "chatcraft"
 version = "0.1.0"
 description = "Educational LLM bot personalities for classrooms"
 authors = [
-  { name = "Your Name", email = "you@example.com" }
+  { name = "Michael Borck", email = "michael@borck.me" }
 ]
 license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.8"
-dependencies = ["requests"]
+dependencies = ["requests", "typer"]
+
+[project.scripts]
+chatcraft = "chatcraft.cli:app"
 
 [project.optional-dependencies]
 dev = [
@@ -22,8 +25,9 @@ dev = [
   "cython",
   "ruff",
   "mkdocs",
-  "mkdocs",
+  "mkdocstrings",
   "mkdocs-material",
+  "pymdown-extensions",
   "uv"
 ]
 

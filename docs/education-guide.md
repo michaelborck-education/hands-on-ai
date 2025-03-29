@@ -117,9 +117,9 @@ When introducing AI in the classroom, consider discussing:
 
 ## Additional Resources
 
-- [mini_project_examples.md](mini_project_examples.md) - Ready-to-use classroom activities
-- [bot_gallery.md](bot_gallery.md) - Library of pre-built personality bots
-- [classroom_setup.md](classroom_setup.md) - Detailed technical setup instructions
+- [mini_project_examples.md](mini-project-examples.md) - Ready-to-use classroom activities
+- [bot_gallery.md](bot-gallery.md) - Library of pre-built personality bots
+- [classroom_setup.md](classroom-setup.md) - Detailed technical setup instructions
 
 ---
 

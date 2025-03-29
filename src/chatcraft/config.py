@@ -5,6 +5,8 @@ import logging
 import os
 from pathlib import Path
 from importlib.resources import files
+import importlib.resources
+
 
 DEFAULT_SERVER = "http://localhost:11434"
 DEFAULT_FALLBACKS = {"friendly": ["Retrying..."]}
@@ -21,13 +23,28 @@ if os.environ.get("CHATCRAFT_LOG") == "debug":
 
 
 def load_fallbacks():
-    try:
-        fallback_path = files("chatcraft") / "data" / "fallbacks.json"
-        with open(fallback_path, encoding="utf-8") as f:
+    """
+    Load fallback personality messages from user, local, or default locations.
+
+    Priority:
+    1. ~/.chatcraft/fallbacks.json
+    2. ./chatcraft/data/fallbacks.local.json
+    3. packaged fallback (chatcraft/data/fallbacks.json)
+    """
+    user_file = Path.home() / ".chatcraft" / "fallbacks.json"
+    local_file = Path("chatcraft/data/fallbacks.local.json")
+
+    if user_file.exists():
+        with user_file.open("r", encoding="utf-8") as f:
             return json.load(f)
-    except Exception as e:
-        log.warning(f"Failed to load fallback messages: {e}")
-        return DEFAULT_FALLBACKS
+
+    elif local_file.exists():
+        with local_file.open("r", encoding="utf-8") as f:
+            return json.load(f)
+
+    else:
+        with importlib.resources.open_text("chatcraft.data", "fallbacks.json") as f:
+            return json.load(f)
 
 
 def get_server_url():

@@ -98,6 +98,66 @@ ChatCraft comes with several ready-to-use personalities:
 Each personality bot has its own tone, purpose, and example use case.
 See [`docs/bots.md`](docs/bots.md) or run `tools/generate_bot_gallery.py` to view them.
 
+
+---
+
+
+Great! Based on everything you've built, here's how we can enhance the `README.md` to introduce the **CLI** and **Interactive REPL**, while staying consistent with your tone and structure. I also recommend **adding a new user guide** (e.g., `docs/cli-guide.md`) for full CLI documentation, especially if you plan to support advanced features later.
+
+---
+
+
+## 💬 ChatCraft CLI
+
+You can also use ChatCraft directly from the command line, without writing Python code.
+
+After installation, run:
+
+```bash
+chatcraft --help
+```
+
+### Basic CLI Usage
+
+Ask a single question using a bot personality:
+
+```bash
+chatcraft ask "What is the capital of France?" --personality friendly
+```
+
+List all available bots:
+
+```bash
+chatcraft bots
+```
+
+Run environment checks to verify Ollama setup:
+
+```bash
+chatcraft doctor
+```
+
+### 🖥️ Interactive Mode
+
+Launch a stateless REPL to chat with a bot:
+
+```bash
+chatcraft interactive
+```
+
+Once inside, use commands like:
+
+- `/help` — Show available commands
+- `/bots` — List available bot personalities
+- `/personality pirate` — Switch to a different bot
+- `/exit` — Exit the chat
+
+💡 By design, this REPL has no memory between prompts, making it ideal for short, educational interactions.
+
+See [docs/cli-guide.md](docs/cli-guide.md) for full CLI documentation.
+
+---
+
 ### Classroom Examples
 
 See the [mini_project_examples.md](docs/mini_project_examples.md) file for creative ways to use ChatCraft in education, including:

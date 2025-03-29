@@ -5,6 +5,7 @@ repo_name: teaching-repositories/chatcraft
 edit_uri: edit/main/docs/
 theme:
   name: material
+  favicon: assets/icon-192.png
   features:
     - navigation.tabs
     - navigation.instant
@@ -14,10 +15,12 @@ theme:
     accent: light blue
 nav:
   - Home: index.md
-  - Bots: bots.md
-  - Guide: ollama-guide.md
+  - Bots: bot-gallery.md
+  - "Ollama Setup": ollama-guide.md
   - Education: education-guide.md
   - Projects: mini-projects.md
+  - Template: mini-project-template.md
+  - "ChatCraft CLI": cli-guide.md
 plugins:
   - search
   - mkdocstrings:
@@ -27,3 +30,25 @@ plugins:
           options:
             docstring_style: google
             show_signature: false
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.emoji
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/teaching-repositories/chatcraft
+
+extra_css:
+  - stylesheets/custom.css
+
+extra_javascript:
+  - javascripts/custom.js
+

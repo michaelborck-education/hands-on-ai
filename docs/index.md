@@ -1,4 +1,4 @@
-# Welcome to ChatCraft
+# ![ChatCraft Logo](assets/icon-512.png) Welcome to ChatCraft!
 
 ChatCraft makes AI accessible for classrooms by providing fun and friendly chatbot personalities that educators and students can interact with in pure Python.
 
