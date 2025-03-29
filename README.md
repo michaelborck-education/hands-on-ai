@@ -102,11 +102,6 @@ See [`docs/bots.md`](docs/bots.md) or run `tools/generate_bot_gallery.py` to vie
 ---
 
 
-Great! Based on everything you've built, here's how we can enhance the `README.md` to introduce the **CLI** and **Interactive REPL**, while staying consistent with your tone and structure. I also recommend **adding a new user guide** (e.g., `docs/cli-guide.md`) for full CLI documentation, especially if you plan to support advanced features later.
-
----
-
-
 ## 💬 ChatCraft CLI
 
 You can also use ChatCraft directly from the command line, without writing Python code.
@@ -157,6 +152,26 @@ Once inside, use commands like:
 See [docs/cli-guide.md](docs/cli-guide.md) for full CLI documentation.
 
 ---
+
+## 🧠 RagCraft: Ask Questions About Your Notes
+
+RagCraft is a built-in RAG (Retrieval-Augmented Generation) tool in ChatCraft that lets you:
+
+- Load your own `.md`, `.txt`, `.pdf`, or `.docx` files
+- Ask questions based only on your notes
+- Use a CLI or FastHTML visual interface
+
+### 🧪 Example CLI Usage
+
+```bash
+ragcraft index docs/
+ragcraft ask "What is a firewall?"
+ragcraft interactive
+ragcraft web
+```
+
+👉 See [chatcraft/ragcraft-guide.md](chatcraft/ragcraft-guide.md) for the full guide.
+
 
 ### Classroom Examples
 
@@ -242,6 +257,9 @@ cp chatcraft/data/fallbacks.json ~/.chatcraft/fallbacks.json
 ```
 
 ---
+
+
+
 
 ## Contributing
 

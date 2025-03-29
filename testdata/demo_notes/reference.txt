@@ -1,0 +1,11 @@
+The OSI model has 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, Application.
+TCP operates at the Transport layer of the OSI model.
+IP (Internet Protocol) is responsible for routing packets across networks.
+DNS (Domain Name System) translates domain names into IP addresses.
+Common TCP ports include:
+- 80 for HTTP
+- 443 for HTTPS
+- 25 for SMTP
+- 110 for POP3
+- 21 for FTP
+TCP ensures reliable communication with error correction and flow control.

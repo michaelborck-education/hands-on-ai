@@ -1,141 +1,98 @@
-# 🧠 ChatCraft RAG Guide: Ask Questions About Your Notes
+# 🧠 RagCraft Guide: Ask Questions About Your Notes
 
-## Overview
-ChatCraft now includes a **Simple RAG (Retrieval-Augmented Generation)** system. This lets you ask an LLM questions about your **own notes** (e.g., `.md`, `.txt`, `.pdf`, `.docx`) using a local model like Ollama.
+[![](https://img.shields.io/badge/CLI-RagCraft-blue)](#💬-cli-usage)
 
-You load your files → build an index → ask questions. That’s it!
+RagCraft is a lightweight tool to turn your documents into an AI-powered knowledge base using Retrieval-Augmented Generation (RAG). It’s part of the ChatCraft ecosystem.
 
 ---
 
-## 📦 Optional: Install Word and PDF Support
+![RagCraft Web Interface](assets/ragcraft-web-preview.png)
 
-To use `.pdf` and `.docx` files, install the extra RAG dependencies:
+---
 
-```bash
-uv pip install .[rag]
-```
+## 🚀 How to Use
 
-Or with pip:
+### ✅ Install ChatCraft with RAG support
 
 ```bash
 pip install chatcraft[rag]
 ```
 
----
-
-## 🔧 Step 1: Build the RAG Index
-
-You need to turn your `.md`, `.txt`, `.docx`, or `.pdf` file into an **indexed format** that the system can search.
-
-### 🔨 Command:
-```bash
-python -m chatcraft.rag.build_index path/to/notes.pdf
-```
-
-- `notes.pdf` = your file (e.g., lecture notes, textbook, etc.)
-- `default.npz` will be saved to `~/.chatcraft/.rag_index/` unless you specify a path
-
-This will:
-- Read your file
-- Chunk the text (~500 words by default)
-- Get embeddings via Ollama (`nomic-embed-text` by default)
-- Save everything into `.npz` for later
-
-> 💡 You only need to do this **once per file**, unless your notes change!
-
----
-
-## 🔍 Step 2: Ask a Question (Query the Index)
-
-Now that you’ve built an index, you can ask questions about it.
-
-### 🧪 Command:
-```bash
-python -m chatcraft.rag.query_rag ask "What are the four layers of a firewall?"
-```
-
-This will:
-- Embed your query
-- Compare it to your notes
-- Find the top 3 most relevant chunks
-- Send those + your prompt to the LLM
-
-You can also show the retrieved context:
+Or with `uv`:
 
 ```bash
-python -m chatcraft.rag.query_rag ask "Explain DNS" --show-context --show-scores
+uv pip install chatcraft[rag]
 ```
 
 ---
 
-## 🗨️ Step 2b: Use Interactive Mode
-
-Use a simple REPL-style chat with your notes:
+## 💬 CLI Usage
 
 ```bash
-python -m chatcraft.rag.query_rag interactive
-```
-
-If no index exists, it will guide you through building one interactively!
-
----
-
-## 🤖 Step 3: Use RAG in Code (like a bot)
-
-You can use `rag_bot()` in your Python scripts, just like other ChatCraft bots:
-
-```python
-from chatcraft.rag import rag_bot
-
-response = rag_bot("Summarize quantum entanglement")
-print(response)
+ragcraft index notes/            # Build index from folder or file
+ragcraft ask "What is TCP?"     # Ask a question
+ragcraft interactive             # Start interactive Q&A mode
+ragcraft web                     # Launch the FastHTML visual explorer
 ```
 
 ---
 
-## ⚙️ Optional Settings
+## 📁 Where Indexes Are Stored
 
-### 🔁 Change Model or Host (via config or env)
+- CLI default: `~/.chatcraft/.rag_index/default.npz`
+- Web UI default: `~/.chatcraft/.rag_index/web_index.npz`
 
-ChatCraft supports config priority:
+You can override using `--output-file` or `--index-path`.
 
-1. Environment variables
-2. `~/.chatcraft/config.json`
-3. Defaults
+---
 
-### 🧪 Example: Environment Variables
+## 🧪 Try It Without Indexing
+
+Use this prebuilt example:
 
 ```bash
-export EMBEDDING_MODEL=nomic-embed-text
-export OLLAMA_URL=http://localhost:11434
-```
-
-### ⚙️ Or: Config File (`~/.chatcraft/config.json`)
-```json
-{
-  "embedding_model": "nomic-embed-text",
-  "ollama_host": "http://localhost:11434"
-}
+ragcraft ask "What is TCP?" --index-path chatcraft/testdata/sample_index.npz
 ```
 
 ---
 
-## 🛠️ Developer Tips
+## 📂 Test Data (for Students or Demos)
 
-- Adjust chunk size (`--chunk-size` flag or modify `chunk_text()` in `rag_utils.py`)
-- Change number of context chunks (e.g., `top_k=5` in `rag_bot()`)
-- Use `get_top_k()` + `get_response()` directly for advanced workflows
+Use the built-in files in `chatcraft/testdata/demo_notes/`:
+
+```bash
+ragcraft index chatcraft/testdata/demo_notes/
+```
+
+Includes:
+
+- `sample.md` – Markdown format
+- `reference.txt` – Plain text
+- `demo.docx` – [Download](../demo.docx)
+- `demo.pdf` – [Download](../demo.pdf)
 
 ---
 
-## 🏁 Coming Soon (Ideas)
-- ✅ Multi-file indexing
-- ✅ Source tags
-- ✅ Web interface for visual exploration
-- 🧠 Syntax-aware RAG for code
-- 🗃️ CSV/table flattening for structured data
+## 🛠️ Justfile (Optional Shortcuts)
+
+```make
+just rag-index file=notes.md:
+    ragcraft index $file
+
+just rag-web:
+    ragcraft web
+```
 
 ---
 
-Made for students. Built for educators. Powered by open LLMs.  
-Happy RAG-ing! 🚀
+## 🧠 Example Workflow
+
+```bash
+ragcraft index lectures/
+ragcraft ask "What are the core steps in DNS resolution?" --show-context
+ragcraft web
+```
+
+---
+
+Designed for educators. Built for learners. Powered by open models.
