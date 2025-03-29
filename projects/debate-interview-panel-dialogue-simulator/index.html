@@ -1,0 +1,1117 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/teaching-repositories/chatcraft/projects/debate-interview-panel-dialogue-simulator/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/icon-192.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>AI Persona Dialogue Simulator - ChatCraft Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-persona-dialogue-simulator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ChatCraft Documentation" class="md-header__button md-logo" aria-label="ChatCraft Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ChatCraft Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AI Persona Dialogue Simulator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/teaching-repositories/chatcraft" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    teaching-repositories/chatcraft
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../bot-gallery/" class="md-tabs__link">
+        
+  
+    
+  
+  Bots
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ollama-guide/" class="md-tabs__link">
+        
+  
+    
+  
+  Ollama Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../education-guide/" class="md-tabs__link">
+        
+  
+    
+  
+  Education
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mini-projects/" class="md-tabs__link">
+        
+  
+    
+  
+  Projects
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mini-project-template/" class="md-tabs__link">
+        
+  
+    
+  
+  Template
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cli-guide/" class="md-tabs__link">
+        
+  
+    
+  
+  ChatCraft CLI
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ChatCraft Documentation" class="md-nav__button md-logo" aria-label="ChatCraft Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ChatCraft Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/teaching-repositories/chatcraft" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    teaching-repositories/chatcraft
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bot-gallery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bots
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ollama-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ollama Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../education-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Education
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-project-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ChatCraft CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-simulator-for-interviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Simulator for Interviews
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extension Ideas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="ai-persona-dialogue-simulator">AI Persona Dialogue Simulator<a class="headerlink" href="#ai-persona-dialogue-simulator" title="Permanent link">&para;</a></h1>
+<p><strong>Difficulty</strong>: Intermediate<br />
+<strong>Time</strong>: 45-60 minutes<br />
+<strong>Learning Focus</strong>: Function calls, lists, creativity, dialogue simulation</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Simulate interactive dialogues between multiple AI personas with different personalities or perspectives. This flexible tool enables both multi-participant panel discussions and focused one-on-one debates, allowing students to explore how different characters approach the same topics. The simulator can also be configured to run simulated interviews by selecting appropriate personas and question formats.</p>
+<p>Simulate an interview or debate between multiple bots with different personalities or perspectives, exploring how different characters might approach the same questions or topics.</p>
+<p>This project offers flexibility to run either panel discussions with multiple participants or focused one-on-one debates, allowing students to explore how different personas respond to the same topics.</p>
+<h2 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">chatcraft</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_response</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ai_persona_dialogue_simulator</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Simulate a dialogue between multiple AI personas with different personalities,</span>
+<span class="sd">    exploring how different characters approach the same questions or topics.</span>
+
+<span class="sd">    This tool supports multiple dialogue formats:</span>
+<span class="sd">    1. Panel discussion - Multiple personas exchange views with less structure</span>
+<span class="sd">    2. Formal debate - Two personas engage in structured argument with multiple rounds</span>
+<span class="sd">    3. Interview - One persona can be set as an &quot;interviewer&quot; asking questions </span>
+<span class="sd">       of other personas serving as &quot;interviewees&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== AI Persona Dialogue Simulator ===&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Define different bot personalities</span>
+    <span class="c1"># Each personality has a unique perspective that influences how they respond</span>
+    <span class="n">bot_personalities</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;Professor&quot;</span><span class="p">:</span> <span class="s2">&quot;You are a logical, analytical professor who values facts, research, and intellectual rigor. You speak formally and cite evidence for your claims. You believe in rational inquiry and skepticism.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Coach&quot;</span><span class="p">:</span> <span class="s2">&quot;You are an inspirational coach who focuses on motivation, emotional intelligence, and personal growth. You believe in the power of passion, intuition, and human potential. You speak with enthusiasm and use motivational language.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Artist&quot;</span><span class="p">:</span> <span class="s2">&quot;You are a creative artist who values beauty, expression, and innovation. You think metaphorically and appreciate the abstract and subjective. You believe in breaking rules to create something new. Your language is colorful and expressive.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Entrepreneur&quot;</span><span class="p">:</span> <span class="s2">&quot;You are a practical entrepreneur focused on results, efficiency, and real-world applications. You value solutions that work and ideas that can be implemented. You speak directly and focus on action.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Dr. Logic&quot;</span><span class="p">:</span> <span class="s2">&quot;You value logical reasoning and empirical evidence above all. You cite studies and statistics to support your points. You believe decisions should be made based on data, not emotions.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Empathetic Emma&quot;</span><span class="p">:</span> <span class="s2">&quot;You believe emotional impact and human stories are most important. You consider how policies and ideas affect real people. You speak with compassion and emphasize the human element in every issue.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Traditional Tom&quot;</span><span class="p">:</span> <span class="s2">&quot;You value tradition, stability, and time-tested approaches. You&#39;re skeptical of rapid change and new untested ideas. You believe in preserving what works and making careful, incremental improvements.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Interviewer&quot;</span><span class="p">:</span> <span class="s2">&quot;You are a professional interviewer who asks insightful, probing questions. You&#39;re curious and neutral, aiming to bring out the most interesting perspectives from others. You follow up with clarifying questions when needed.&quot;</span>
+    <span class="p">}</span>
+
+    <span class="c1"># List of debate/discussion topics</span>
+    <span class="c1"># These can be used for debates, panel discussions, or interview topics</span>
+    <span class="n">dialogue_topics</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;What&#39;s more important: creativity or logic?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Is technology improving or harming society?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Should education focus more on facts or skills?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Is it better to be a specialist or a generalist?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Are humans naturally cooperative or competitive?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;What&#39;s the best way to measure success in life?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Should we prioritize individual freedom or collective welfare?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Is artificial intelligence more likely to help or harm humanity?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Should governments regulate social media platforms?&quot;</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Let user select a dialogue topic</span>
+    <span class="c1"># TODO: Add input validation to handle non-integer inputs</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Choose a topic:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">question</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dialogue_topics</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">question</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">dialogue_topics</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">. Custom topic (enter your own)&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Input validation could be added here to handle non-integer inputs</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Enter topic number: &quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">choice</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">choice</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">dialogue_topics</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid choice. Using default topic #1.&quot;</span><span class="p">)</span>
+            <span class="n">choice</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Using default topic #1.&quot;</span><span class="p">)</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">choice</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dialogue_topics</span><span class="p">):</span>
+        <span class="n">dialogue_topic</span> <span class="o">=</span> <span class="n">dialogue_topics</span><span class="p">[</span><span class="n">choice</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dialogue_topic</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Enter your custom topic: &quot;</span><span class="p">)</span>
+
+    <span class="c1"># Choose dialogue format</span>
+    <span class="c1"># The format affects how the personas interact with each other</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Choose dialogue format:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Panel discussion (multiple personas participate in an open exchange)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. One-on-one debate (two personas engage in structured argument)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Interview (one persona interviews the others)&quot;</span><span class="p">)</span>
+
+    <span class="c1"># TODO: Add input validation for format choice</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">format_choice</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Enter format number (1-3): &quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">format_choice</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">format_choice</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid format. Using panel discussion (1).&quot;</span><span class="p">)</span>
+            <span class="n">format_choice</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Using panel discussion (1).&quot;</span><span class="p">)</span>
+        <span class="n">format_choice</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># Select personas based on format</span>
+    <span class="k">if</span> <span class="n">format_choice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c1"># Panel discussion - let user select multiple participants</span>
+        <span class="c1"># This mode simulates a roundtable where each persona responds to the previous one</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Available personalities:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">perspective</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bot_personalities</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">perspective</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># TODO: Add more robust input validation for selections</span>
+        <span class="n">selections</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Select personalities (comma-separated numbers, e.g., 1,3,4): &quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">selected_indices</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="o">-</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">selections</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)]</span>
+            <span class="c1"># Check if indices are valid</span>
+            <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">idx</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">idx</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bot_personalities</span><span class="p">)</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">selected_indices</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Some selections were invalid. Using first 3 personalities.&quot;</span><span class="p">)</span>
+                <span class="n">selected_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Using first 3 personalities.&quot;</span><span class="p">)</span>
+            <span class="n">selected_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+        <span class="c1"># Get the selected personalities</span>
+        <span class="n">personalities</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">bot_personalities</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+        <span class="n">participants</span> <span class="o">=</span> <span class="p">{</span><span class="n">personalities</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span> <span class="n">personalities</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">selected_indices</span> <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">personalities</span><span class="p">)}</span>
+
+        <span class="c1"># Panel discussions typically have fewer rounds with more participants</span>
+        <span class="n">rounds</span> <span class="o">=</span> <span class="mi">1</span>  
+
+    <span class="k">elif</span> <span class="n">format_choice</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="c1"># One-on-one debate - let user select exactly two participants</span>
+        <span class="c1"># This mode creates a structured back-and-forth exchange with multiple rounds</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Choose two debaters:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">perspective</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bot_personalities</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">perspective</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># TODO: Add input validation for debater selections</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">choice1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Select first debater (1-8): &quot;</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="n">choice2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Select second debater (1-8): &quot;</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
+
+            <span class="k">if</span> <span class="n">choice1</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">choice1</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bot_personalities</span><span class="p">)</span> <span class="ow">or</span> <span class="n">choice2</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">choice2</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bot_personalities</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid selection. Using Professor and Coach.&quot;</span><span class="p">)</span>
+                <span class="n">choice1</span><span class="p">,</span> <span class="n">choice2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Using Professor and Coach.&quot;</span><span class="p">)</span>
+            <span class="n">choice1</span><span class="p">,</span> <span class="n">choice2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+
+        <span class="c1"># Get the selected personalities</span>
+        <span class="n">personalities</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">bot_personalities</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+        <span class="n">participants</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">personalities</span><span class="p">[</span><span class="n">choice1</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span> <span class="n">personalities</span><span class="p">[</span><span class="n">choice1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">personalities</span><span class="p">[</span><span class="n">choice2</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span> <span class="n">personalities</span><span class="p">[</span><span class="n">choice2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="p">}</span>
+
+        <span class="c1"># Set number of rounds for one-on-one debate</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">rounds</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">How many response rounds? (1-5): &quot;</span><span class="p">))</span>
+            <span class="n">rounds</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">rounds</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># Ensure rounds is between 1 and 5</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Using 2 rounds.&quot;</span><span class="p">)</span>
+            <span class="n">rounds</span> <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># format_choice == 3</span>
+        <span class="c1"># Interview format - one interviewer, multiple interviewees</span>
+        <span class="c1"># This mode has one persona asking questions and others responding</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Select the interviewer:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">perspective</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bot_personalities</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># TODO: Add input validation for interviewer selection</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">interviewer_idx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Select interviewer (1-8, recommend #8 &#39;Interviewer&#39;): &quot;</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">interviewer_idx</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">interviewer_idx</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bot_personalities</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid selection. Using &#39;Interviewer&#39; persona.&quot;</span><span class="p">)</span>
+                <span class="c1"># Find the Interviewer in the list</span>
+                <span class="n">interviewer_idx</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">bot_personalities</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Interviewer&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="s2">&quot;Interviewer&quot;</span> <span class="ow">in</span> <span class="n">bot_personalities</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Using &#39;Interviewer&#39; persona.&quot;</span><span class="p">)</span>
+            <span class="n">interviewer_idx</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">bot_personalities</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Interviewer&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="s2">&quot;Interviewer&quot;</span> <span class="ow">in</span> <span class="n">bot_personalities</span> <span class="k">else</span> <span class="mi">0</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Select interviewees:&quot;</span><span class="p">)</span>
+        <span class="n">personalities</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">bot_personalities</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+        <span class="n">interviewees</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">personalities</span><span class="p">)))</span>
+        <span class="n">interviewees</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">interviewer_idx</span><span class="p">)</span>  <span class="c1"># Remove interviewer from potential interviewees</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">interviewees</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">name</span><span class="p">,</span> <span class="n">perspective</span> <span class="o">=</span> <span class="n">personalities</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">perspective</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># TODO: Add input validation for interviewee selections</span>
+        <span class="n">selections</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Select interviewees (comma-separated numbers): &quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">selected</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="o">-</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">selections</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)]</span>
+            <span class="c1"># Convert selected indices to actual personality indices</span>
+            <span class="n">selected_indices</span> <span class="o">=</span> <span class="p">[</span><span class="n">interviewees</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">selected</span> <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">interviewees</span><span class="p">)]</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">selected_indices</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No valid selections. Using first two personalities.&quot;</span><span class="p">)</span>
+                <span class="n">selected_indices</span> <span class="o">=</span> <span class="n">interviewees</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Using first two personalities.&quot;</span><span class="p">)</span>
+            <span class="n">selected_indices</span> <span class="o">=</span> <span class="n">interviewees</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="c1"># Add interviewer and interviewees to participants</span>
+        <span class="n">participants</span> <span class="o">=</span> <span class="p">{</span><span class="n">personalities</span><span class="p">[</span><span class="n">interviewer_idx</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span> <span class="n">personalities</span><span class="p">[</span><span class="n">interviewer_idx</span><span class="p">][</span><span class="mi">1</span><span class="p">]}</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">selected_indices</span><span class="p">:</span>
+            <span class="n">participants</span><span class="p">[</span><span class="n">personalities</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">personalities</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># Set number of interview questions</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">rounds</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">How many interview questions? (1-5): &quot;</span><span class="p">))</span>
+            <span class="n">rounds</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">rounds</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1"># Ensure rounds is between 1 and 5</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Using 3 questions.&quot;</span><span class="p">)</span>
+            <span class="n">rounds</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="c1"># Function to get response from a bot</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_bot_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">perspective</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate a response from a persona based on their perspective.&quot;&quot;&quot;</span>
+        <span class="n">system_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;You are </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">perspective</span><span class="si">}</span><span class="s2"> Keep responses under 100 words to keep the dialogue flowing.&quot;</span>
+        <span class="k">return</span> <span class="n">get_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">system</span><span class="o">=</span><span class="n">system_prompt</span><span class="p">)</span>
+
+    <span class="c1"># Start the dialogue</span>
+    <span class="n">participant_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">participants</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Dialogue on: </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2"> ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Opening statements (except for interview format)</span>
+    <span class="k">if</span> <span class="n">format_choice</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>  <span class="c1"># Not interview format</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Opening Statements ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">statements</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">perspective</span> <span class="ow">in</span> <span class="n">participants</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s opening statement:&quot;</span><span class="p">)</span>
+            <span class="n">statement</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Give an opening statement on the topic of </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">perspective</span><span class="p">,</span>
+                <span class="n">name</span>
+            <span class="p">)</span>
+            <span class="n">statements</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">statement</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Discussion rounds based on format</span>
+    <span class="k">if</span> <span class="n">format_choice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c1"># Panel discussion - each persona responds to the previous speaker</span>
+        <span class="c1"># This creates a chain of responses where each builds on the last</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Panel Discussion ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">previous_statement</span> <span class="o">=</span> <span class="n">statements</span><span class="p">[</span><span class="n">participant_names</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">previous_name</span> <span class="o">=</span> <span class="n">participant_names</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">round_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rounds</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Round </span><span class="si">{</span><span class="n">round_num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> ---</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">participant_names</span><span class="p">:</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> responds to </span><span class="si">{</span><span class="n">previous_name</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+                <span class="n">response</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;The topic is: </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">previous_name</span><span class="si">}</span><span class="s2"> said: &#39;</span><span class="si">{</span><span class="n">previous_statement</span><span class="si">}</span><span class="s2">&#39;</span><span class="se">\n\n</span><span class="s2">Respond to </span><span class="si">{</span><span class="n">previous_name</span><span class="si">}</span><span class="s2">&#39;s perspective with your own viewpoint.&quot;</span><span class="p">,</span>
+                    <span class="n">participants</span><span class="p">[</span><span class="n">name</span><span class="p">],</span>
+                    <span class="n">name</span>
+                <span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">()</span>
+
+                <span class="n">previous_statement</span> <span class="o">=</span> <span class="n">response</span>
+                <span class="n">previous_name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">elif</span> <span class="n">format_choice</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="c1"># One-on-one debate - alternating responses with structured format</span>
+        <span class="c1"># This simulates a formal debate with clear turns and direct responses</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Debate Rounds ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">debater1</span> <span class="o">=</span> <span class="n">participant_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">debater2</span> <span class="o">=</span> <span class="n">participant_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">current_statement</span> <span class="o">=</span> <span class="n">statements</span><span class="p">[</span><span class="n">debater2</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">round_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rounds</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Round </span><span class="si">{</span><span class="n">round_num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> ---</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="c1"># First debater responds</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">debater1</span><span class="si">}</span><span class="s2"> responds:&quot;</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Respond to this statement on </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">: &#39;</span><span class="si">{</span><span class="n">current_statement</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                <span class="n">participants</span><span class="p">[</span><span class="n">debater1</span><span class="p">],</span>
+                <span class="n">debater1</span>
+            <span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+            <span class="n">current_statement</span> <span class="o">=</span> <span class="n">response</span>
+
+            <span class="c1"># Second debater responds</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">debater2</span><span class="si">}</span><span class="s2"> responds:&quot;</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Respond to this statement on </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">: &#39;</span><span class="si">{</span><span class="n">current_statement</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
+                <span class="n">participants</span><span class="p">[</span><span class="n">debater2</span><span class="p">],</span>
+                <span class="n">debater2</span>
+            <span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+            <span class="n">current_statement</span> <span class="o">=</span> <span class="n">response</span>
+
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># format_choice == 3</span>
+        <span class="c1"># Interview format - interviewer asks questions, interviewees respond</span>
+        <span class="c1"># This simulates a talk show or interview panel with one host</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Interview Session ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">interviewer</span> <span class="o">=</span> <span class="n">participant_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">interviewees</span> <span class="o">=</span> <span class="n">participant_names</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+        <span class="c1"># Opening question about the topic</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">interviewer</span><span class="si">}</span><span class="s2"> asks about </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+        <span class="n">question</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;As an interviewer, ask an insightful opening question about </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">participants</span><span class="p">[</span><span class="n">interviewer</span><span class="p">],</span>
+            <span class="n">interviewer</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+        <span class="c1"># Each interviewee responds to the opening question</span>
+        <span class="k">for</span> <span class="n">interviewee</span> <span class="ow">in</span> <span class="n">interviewees</span><span class="p">:</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">interviewee</span><span class="si">}</span><span class="s2"> responds:&quot;</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;You&#39;re being interviewed. The interviewer asked: &#39;</span><span class="si">{</span><span class="n">question</span><span class="si">}</span><span class="s2">&#39; regarding </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">. Respond with your perspective.&quot;</span><span class="p">,</span>
+                <span class="n">participants</span><span class="p">[</span><span class="n">interviewee</span><span class="p">],</span>
+                <span class="n">interviewee</span>
+            <span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+
+        <span class="c1"># Additional rounds of questions</span>
+        <span class="k">for</span> <span class="n">round_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">rounds</span><span class="p">):</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- Question </span><span class="si">{</span><span class="n">round_num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> ---</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Interviewer asks a follow-up question</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">interviewer</span><span class="si">}</span><span class="s2"> asks:&quot;</span><span class="p">)</span>
+            <span class="n">question</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Based on the previous responses about </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">, ask a follow-up question that explores a different angle or aspect of the topic.&quot;</span><span class="p">,</span>
+                <span class="n">participants</span><span class="p">[</span><span class="n">interviewer</span><span class="p">],</span>
+                <span class="n">interviewer</span>
+            <span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+
+            <span class="c1"># Each interviewee responds to the new question</span>
+            <span class="k">for</span> <span class="n">interviewee</span> <span class="ow">in</span> <span class="n">interviewees</span><span class="p">:</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">interviewee</span><span class="si">}</span><span class="s2"> responds:&quot;</span><span class="p">)</span>
+                <span class="n">response</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;You&#39;re being interviewed. The interviewer asked: &#39;</span><span class="si">{</span><span class="n">question</span><span class="si">}</span><span class="s2">&#39; regarding </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">. Respond with your perspective.&quot;</span><span class="p">,</span>
+                    <span class="n">participants</span><span class="p">[</span><span class="n">interviewee</span><span class="p">],</span>
+                    <span class="n">interviewee</span>
+                <span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">()</span>
+
+    <span class="c1"># Closing statements (except for interview format which has a special closing)</span>
+    <span class="k">if</span> <span class="n">format_choice</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Closing Statements ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">closing_statements</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">perspective</span> <span class="ow">in</span> <span class="n">participants</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s closing remarks:&quot;</span><span class="p">)</span>
+            <span class="n">closing</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Give a brief closing statement summarizing your position on </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">perspective</span><span class="p">,</span>
+                <span class="n">name</span>
+            <span class="p">)</span>
+            <span class="n">closing_statements</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">closing</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">closing</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Special closing for interview format</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Interview Wrap-up ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">closing_statements</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Interviewer provides a wrap-up</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">interviewer</span><span class="si">}</span><span class="s2">&#39;s wrap-up:&quot;</span><span class="p">)</span>
+        <span class="n">interviewer_closing</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Provide a thoughtful wrap-up to the interview about </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">, thanking your guests and highlighting key insights.&quot;</span><span class="p">,</span>
+            <span class="n">participants</span><span class="p">[</span><span class="n">interviewer</span><span class="p">],</span>
+            <span class="n">interviewer</span>
+        <span class="p">)</span>
+        <span class="n">closing_statements</span><span class="p">[</span><span class="n">interviewer</span><span class="p">]</span> <span class="o">=</span> <span class="n">interviewer_closing</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">interviewer_closing</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+        <span class="c1"># Each interviewee gives a brief final thought</span>
+        <span class="k">for</span> <span class="n">interviewee</span> <span class="ow">in</span> <span class="n">interviewees</span><span class="p">:</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">interviewee</span><span class="si">}</span><span class="s2">&#39;s final thought:&quot;</span><span class="p">)</span>
+            <span class="n">closing</span> <span class="o">=</span> <span class="n">get_bot_response</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;The interview about </span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2"> is ending. Share a brief, impactful final thought in 1-2 sentences.&quot;</span><span class="p">,</span>
+                <span class="n">participants</span><span class="p">[</span><span class="n">interviewee</span><span class="p">],</span>
+                <span class="n">interviewee</span>
+            <span class="p">)</span>
+            <span class="n">closing_statements</span><span class="p">[</span><span class="n">interviewee</span><span class="p">]</span> <span class="o">=</span> <span class="n">closing</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">closing</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+
+    <span class="c1"># Moderator summary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Summary ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">summary_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Summarize the dialogue on &#39;</span><span class="si">{</span><span class="n">dialogue_topic</span><span class="si">}</span><span class="s2">&#39; between the following participants:</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">perspective</span> <span class="ow">in</span> <span class="n">participants</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">summary_prompt</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s perspective: </span><span class="si">{</span><span class="n">perspective</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">closing_statements</span><span class="p">:</span>
+            <span class="n">summary_prompt</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;s closing: </span><span class="si">{</span><span class="n">closing_statements</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+
+    <span class="k">if</span> <span class="n">format_choice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">summary_type</span> <span class="o">=</span> <span class="s2">&quot;panel discussion&quot;</span>
+    <span class="k">elif</span> <span class="n">format_choice</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">summary_type</span> <span class="o">=</span> <span class="s2">&quot;debate&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">summary_type</span> <span class="o">=</span> <span class="s2">&quot;interview&quot;</span>
+
+    <span class="n">summary_prompt</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;Provide a neutral, balanced summary of this </span><span class="si">{</span><span class="n">summary_type</span><span class="si">}</span><span class="s2">, highlighting the key differences in their approaches and the strengths of each perspective.&quot;</span>
+
+    <span class="n">moderator</span> <span class="o">=</span> <span class="n">get_response</span><span class="p">(</span>
+        <span class="n">summary_prompt</span><span class="p">,</span>
+        <span class="n">system</span><span class="o">=</span><span class="s2">&quot;You are a neutral, insightful moderator who can identify the merits of different viewpoints. Provide a balanced summary.&quot;</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">moderator</span><span class="p">)</span>
+
+<span class="c1"># Run the dialogue simulator</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">ai_persona_dialogue_simulator</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="using-the-simulator-for-interviews">Using the Simulator for Interviews<a class="headerlink" href="#using-the-simulator-for-interviews" title="Permanent link">&para;</a></h2>
+<p>To use this simulator specifically for interview scenarios:</p>
+<ol>
+<li>
+<p><strong>Select Format #3 (Interview)</strong> - This configures one persona to act as the interviewer and others as interviewees</p>
+</li>
+<li>
+<p><strong>Choose the Interviewer</strong> - Select the "Interviewer" persona (option #8) for best results, though any persona can serve as an interviewer</p>
+</li>
+<li>
+<p><strong>Select Interviewees</strong> - Choose which personas will be interviewed on the selected topic</p>
+</li>
+<li>
+<p><strong>Set Number of Questions</strong> - Determine how many rounds of questions the interviewer will ask</p>
+</li>
+<li>
+<p><strong>Interview Structure:</strong></p>
+</li>
+<li>The interviewer begins with an opening question about the topic</li>
+<li>Each interviewee responds from their unique perspective</li>
+<li>The interviewer asks follow-up questions in subsequent rounds</li>
+<li>The session concludes with a wrap-up from the interviewer and final thoughts from interviewees</li>
+</ol>
+<p>This interview format is particularly useful for:
+- Exploring multiple perspectives on controversial topics
+- Demonstrating how different personality types respond to the same questions
+- Simulating talk show or panel interview dynamics
+- Teaching questioning techniques and response patterns</p>
+<h2 id="extension-ideas">Extension Ideas<a class="headerlink" href="#extension-ideas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add a feature for the user to join as an additional participant</li>
+<li>Create specialized formats for specific topics (ethics, technology, etc.)</li>
+<li>Implement a scoring system where users rate which perspective they found most compelling</li>
+<li>Add follow-up questions that challenge each persona's perspective</li>
+<li>Create a "change my mind" feature where personas try to persuade on a controversial topic</li>
+<li>Allow students to create their own custom persona profiles</li>
+<li>Add a feature to visualize the dialogue flow and connections between arguments</li>
+<li>Implement a fact-checker persona that evaluates claims made during discussions</li>
+<li>Create a mode where personas can switch perspectives mid-dialogue to show flexibility in thinking</li>
+<li>Add the ability to save transcripts for later analysis or comparison</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/teaching-repositories/chatcraft" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>
