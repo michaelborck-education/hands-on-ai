@@ -1,0 +1,9 @@
+{
+    "embedding_model": "nomic-embed-text",
+    "ollama_host": "http://192.168.1.42:11434",
+    "default_model": "llama3",
+    "default_personality": "coder",
+     "timeout": 12
+
+}
+  

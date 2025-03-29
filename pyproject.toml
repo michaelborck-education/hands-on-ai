@@ -16,8 +16,11 @@ dependencies = ["requests", "typer"]
 
 [project.scripts]
 chatcraft = "chatcraft.cli:app"
+rag = "chatcraft.rag.query_rag:app"
+rag-index = "chatcraft.rag.build_index:app"
 
 [project.optional-dependencies]
+rag = ["python-docx", "pymupdf"]
 dev = [
   "pytest",
   "build",
