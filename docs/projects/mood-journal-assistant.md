@@ -1,14 +1,14 @@
-## Mood Journal Assistant
+# Mood Journal Assistant
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: File I/O, date handling, text analysis
 
-### Overview
+## Overview
 
 Create a journaling assistant that helps users track moods and reflect on patterns.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -137,7 +137,7 @@ if __name__ == "__main__":
     mood_journal()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add mood tracking visualizations or goal-setting features.
 

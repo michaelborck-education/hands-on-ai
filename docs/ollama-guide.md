@@ -112,7 +112,7 @@ No additional configuration is required unless you've changed Ollama's default s
 >
 > If you're running Ollama on a different host or port (e.g. remote or Docker), you can create a config file to tell ChatCraft where to send requests.  
 >
-> See: [docs/configuration.md](docs/configuration.md) for advanced setup.
+> See: [docs/configuration.md](configuration.md) for advanced setup.
 
 ## Troubleshooting
 

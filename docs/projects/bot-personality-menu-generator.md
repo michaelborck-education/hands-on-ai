@@ -1,14 +1,14 @@
-## Bot Personality Menu Generator
+# Bot Personality Menu Generator
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Dictionaries, functions, menu systems
 
-### Overview
+## Overview
 
 Create a flexible menu system that allows users to interact with multiple bot personalities on demand, practicing dictionary management, function mappings, and user interface design.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     personality_menu()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Allow users to create and save their own custom bot personalities
 - Add a "random" option that selects a personality at random

@@ -1,14 +1,14 @@
-## Text Adventure Game Engine
+# Text Adventure Game Engine
 
 **Difficulty**: Advanced  
 **Time**: 90-120 minutes  
 **Learning Focus**: Object-oriented programming, game design, file I/O, AI interaction
 
-### Overview
+## Overview
 
 Create a text adventure game engine that allows students to build interactive stories with rooms, items, and characters. The engine supports saving/loading games and provides AI-powered hints to guide players.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -463,7 +463,7 @@ if __name__ == "__main__":
     play_adventure_game()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add more room types with special properties (e.g., dark rooms that require a light source)
 - Implement NPCs (non-player characters) that the player can talk to

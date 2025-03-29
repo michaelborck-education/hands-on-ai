@@ -5,8 +5,6 @@ import markdown
 import re
 import json
 
-# GitHub version URL for live check
-GITHUB_VERSION_URL = "https://raw.githubusercontent.com/teaching-repositories/chatcraft/refs/heads/main/version.json?token=GHSAT0AAAAAAC7QM3UEYLAAT2VMFNGAM2GYZ7HSTPQ"
 PROJECTS_DIR = Path("docs/projects")
 VERSION_FILE = Path("version.json")
 OUTPUT_HTML = Path("tools/project_browser.html")
@@ -17,7 +15,8 @@ def read_markdown_files(projects_dir):
     for md_file in projects_dir.glob('*.md'):
         content = md_file.read_text(encoding='utf-8')
         
-        title_match = re.search(r'^##\s+(.*)', content, re.MULTILINE)
+        # Updated regex to match h1 titles instead of h2
+        title_match = re.search(r'^#\s+(.*)', content, re.MULTILINE)
         difficulty_match = re.search(r'\*\*Difficulty\*\*:\s*(.*)', content)
         focus_match = re.search(r'\*\*Learning Focus\*\*:\s*(.*)', content)
 
@@ -64,7 +63,8 @@ def generate_html(projects):
 </head>
 <body class='bg-gray-50 p-6'>
     <h1 class='text-2xl font-bold mb-4'>Project Browser</h1>
-    <p class='mb-4'>Generated: {date_str} v{local_version} <span id="latest-version">Checking latest...</span></p>
+    <p class='mb-4'>Generated: {date_str} v{local_version} <span id="latest-version">  <span id="latest-version">📁 Offline version. Visit <a href="https://github.com/teaching-repositories/chatcraft" target="_blank">ChatCraft GitHub</a> to check for updates.</span>
+</span></p>
 
     <div class='mb-4 flex flex-col md:flex-row gap-4'>
         <input type='text' id='search' placeholder='Search projects...' class='border p-2 rounded w-full md:w-1/3'>
@@ -112,17 +112,6 @@ function applyFilters() {{
     }});
 }}
 </script>
-<script>
-    // Version check
-    fetch("{GITHUB_VERSION_URL}")
-      .then(res => res.json())
-      .then(data => {{
-        document.getElementById("latest-version").innerText = `Latest: v${{data.version}}`;
-      }})
-      .catch(() => {{
-        document.getElementById("latest-version").innerText = "(Couldn't fetch latest)";
-      }});
-  </script>
 </body>
 </html>
 """

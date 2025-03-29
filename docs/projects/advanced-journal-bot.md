@@ -4,11 +4,11 @@
 **Time**: 60-90 minutes  
 **Learning Focus**: Data structures, file I/O, data visualization, natural language processing, user experience design
 
-### Overview
+## Overview
 
 Create a comprehensive journaling application that combines structured mood tracking with flexible reflection prompts, offering users deep insights through data visualization and AI-powered analysis.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -1503,7 +1503,7 @@ if __name__ == "__main__":
     main()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - **Data Visualization Enhancements**: Add interactive visualizations using libraries like Plotly or Bokeh
 - **Natural Language Processing**: Implement sentiment analysis to automatically detect the emotional tone of entries

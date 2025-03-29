@@ -1,14 +1,14 @@
-## Choose Your Own Adventure
+# Choose Your Own Adventure
 
 **Difficulty**: Intermediate  
 **Time**: 60-90 minutes  
 **Learning Focus**: State management, narrative design, user input handling
 
-### Overview
+## Overview
 
 Create an interactive story where the bot generates narrative segments based on user choices.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -160,7 +160,7 @@ if __name__ == "__main__":
     adventure_game()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add inventory management, character stats, or multiple endings based on decisions.
 

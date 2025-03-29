@@ -1,14 +1,14 @@
-## Code Explainer Tool
+# Code Explainer Tool
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Code analysis, documentation
 
-### Overview
+## Overview
 
 Create a tool that explains code snippets and helps users understand programming concepts.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -181,7 +181,7 @@ if __name__ == "__main__":
     code_explainer()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add functionality to generate test cases or convert code between languages.
 

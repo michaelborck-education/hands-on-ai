@@ -1,14 +1,14 @@
-## Trivia or Quiz Bot
+# Trivia or Quiz Bot
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Loops, conditionals, lists
 
-### Overview
+## Overview
 
 Build an interactive quiz bot that asks questions, tracks the user's score, provides feedback, and offers hints when needed.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -92,7 +92,7 @@ if __name__ == "__main__":
     create_quiz_bot()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add difficulty levels where harder questions are worth more points
 - Include a hint system where users can ask for clues but lose points

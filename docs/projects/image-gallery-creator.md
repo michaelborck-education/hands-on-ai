@@ -1,14 +1,14 @@
-## Image Gallery Creator
+# Image Gallery Creator
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: File handling, HTML generation, metadata management, API integration
 
-### Overview
+## Overview
 
 Create a tool that generates an HTML gallery from a collection of images. The tool manages image metadata, generates descriptions (optionally with AI assistance), and creates a responsive web gallery to showcase the images.
 
-### Instructions
+## Instructions
 
 ```python
 import os
@@ -234,7 +234,7 @@ if __name__ == "__main__":
     create_image_gallery()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add image filtering by tags or categories
 - Implement image resizing and thumbnail generation

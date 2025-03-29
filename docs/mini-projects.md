@@ -5,28 +5,28 @@ This document contains ready-to-use mini-projects and activities for using ChatC
 ## Table of Contents
 
 1. [Advanced Journal Assistant](#advanced-journal-assistant)
-2. [Run the personality menu](#run-the-personality-menu)
-3. [Example bot personality](#example-bot-personality)
-4. [Run the adventure game](#run-the-adventure-game)
-5. [Run the classroom simulation](#run-the-classroom-simulation)
-6. [Run the code explainer](#run-the-code-explainer)
-7. [Run the writing partner](#run-the-writing-partner)
-8. [Run the dashboard](#run-the-dashboard)
-9. [Run the dialogue simulator](#run-the-dialogue-simulator)
-10. [Run the emotional support bot](#run-the-emotional-support-bot)
-11. [Run the historical figure chat](#run-the-historical-figure-chat)
-12. [Run the gallery creator](#run-the-gallery-creator)
-13. [Run the reflection journal](#run-the-reflection-journal)
-14. [Run the quiz](#run-the-quiz)
-15. [Run the translation helper](#run-the-translation-helper)
-16. [Run the journal](#run-the-journal)
-17. [Run the chatbot](#run-the-chatbot)
-18. [Example personalities students can create:](#example-personalities-students-can-create:)
-19. [Run the to-do list](#run-the-to-do-list)
-20. [Run the tutor bot](#run-the-tutor-bot)
-21. [Run the game](#run-the-game)
-22. [Run the quiz](#run-the-quiz)
-23. [Run the dashboard](#run-the-dashboard)
+2. [Bot Personality Menu Generator](#bot-personality-menu-generator)
+3. [Build Your Own Personality Bot](#build-your-own-personality-bot)
+4. [Choose Your Own Adventure](#choose-your-own-adventure)
+5. [Classroom Simulation Bot](#classroom-simulation-bot)
+6. [Code Explainer Tool](#code-explainer-tool)
+7. [Creative Writing Partner](#creative-writing-partner)
+8. [Data Visualization Dashboard](#data-visualization-dashboard)
+9. [AI Persona Dialogue Simulator](#ai-persona-dialogue-simulator)
+10. [Emotional Support Bot](#emotional-support-bot)
+11. [Historical Figure Chat](#historical-figure-chat)
+12. [Image Gallery Creator](#image-gallery-creator)
+13. [Journal or Reflection Bot](#journal-or-reflection-bot)
+14. [Knowledge Quiz Bot](#knowledge-quiz-bot)
+15. [Language Translation Helper](#language-translation-helper)
+16. [Mood Journal Assistant](#mood-journal-assistant)
+17. [PDF Question Answering Chatbot](#pdf-question-answering-chatbot)
+18. [Personality Bot Creator](#personality-bot-creator)
+19. [Smart To-Do List](#smart-to-do-list)
+20. [Subject Expert Tutor](#subject-expert-tutor)
+21. [Text Adventure Game Engine](#text-adventure-game-engine)
+22. [Trivia or Quiz Bot](#trivia-or-quiz-bot)
+23. [Weather Dashboard](#weather-dashboard)
 24. [YouTube to Blog Converter](#youtube-to-blog-converter)
 
 ---
@@ -37,11 +37,11 @@ This document contains ready-to-use mini-projects and activities for using ChatC
 **Time**: 60-90 minutes  
 **Learning Focus**: Data structures, file I/O, data visualization, natural language processing, user experience design
 
-### Overview
+## Overview
 
 Create a comprehensive journaling application that combines structured mood tracking with flexible reflection prompts, offering users deep insights through data visualization and AI-powered analysis.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -1536,7 +1536,7 @@ if __name__ == "__main__":
     main()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - **Data Visualization Enhancements**: Add interactive visualizations using libraries like Plotly or Bokeh
 - **Natural Language Processing**: Implement sentiment analysis to automatically detect the emotional tone of entries
@@ -1554,17 +1554,17 @@ if __name__ == "__main__":
 
 ---
 
-## Bot Personality Menu Generator
+# Bot Personality Menu Generator
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Dictionaries, functions, menu systems
 
-### Overview
+## Overview
 
 Create a flexible menu system that allows users to interact with multiple bot personalities on demand, practicing dictionary management, function mappings, and user interface design.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -1677,7 +1677,7 @@ if __name__ == "__main__":
     personality_menu()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Allow users to create and save their own custom bot personalities
 - Add a "random" option that selects a personality at random
@@ -1687,17 +1687,17 @@ if __name__ == "__main__":
 
 ---
 
-## Build Your Own Personality Bot
+# Build Your Own Personality Bot
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
 **Learning Focus**: Functions, system prompts, creative writing
 
-### Overview
+## Overview
 
 Create a new bot personality that responds in a unique way — like a movie character, animal, celebrity, or completely invented creature. Students will learn how to craft system prompts that reflect specific voices or styles.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -1748,7 +1748,7 @@ for prompt in conversation:
     print()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Create multiple personalities and compare how they respond to the same questions
 - Hold a "bot showcase" where students introduce their bots to the class
@@ -1759,17 +1759,17 @@ for prompt in conversation:
 
 ---
 
-## Choose Your Own Adventure
+# Choose Your Own Adventure
 
 **Difficulty**: Intermediate  
 **Time**: 60-90 minutes  
 **Learning Focus**: State management, narrative design, user input handling
 
-### Overview
+## Overview
 
 Create an interactive story where the bot generates narrative segments based on user choices.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -1921,7 +1921,7 @@ if __name__ == "__main__":
     adventure_game()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add inventory management, character stats, or multiple endings based on decisions.
 
@@ -1929,17 +1929,17 @@ Add inventory management, character stats, or multiple endings based on decision
 
 ---
 
-## Classroom Simulation Bot
+# Classroom Simulation Bot
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Functions, menu systems, multiple bot use
 
-### Overview
+## Overview
 
 Create a classroom simulation where students can interact with different characters or experts on various topics, practicing both coding skills and exploring different perspectives.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -2048,7 +2048,7 @@ if __name__ == "__main__":
     classroom_simulation()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add more character types like historian, artist, or fictional character
 - Create a debate mode where two characters discuss the same topic
@@ -2060,17 +2060,17 @@ if __name__ == "__main__":
 
 ---
 
-## Code Explainer Tool
+# Code Explainer Tool
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Code analysis, documentation
 
-### Overview
+## Overview
 
 Create a tool that explains code snippets and helps users understand programming concepts.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -2243,7 +2243,7 @@ if __name__ == "__main__":
     code_explainer()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add functionality to generate test cases or convert code between languages.
 
@@ -2251,17 +2251,17 @@ Add functionality to generate test cases or convert code between languages.
 
 ---
 
-## Creative Writing Partner
+# Creative Writing Partner
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Narrative development, creative collaboration, editing
 
-### Overview
+## Overview
 
 A collaborative writing tool that helps students develop stories, poems, or essays.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -2609,13 +2609,13 @@ if __name__ == "__main__":
     writing_partner()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add a collaborative storytelling mode where student and bot take turns adding to a story.
 
 ---
 
-## Implementation Tips
+# Implementation Tips
 
 When using these mini-projects in a classroom setting:
 
@@ -2626,7 +2626,7 @@ When using these mini-projects in a classroom setting:
 5. **Focus on concepts**: Emphasize the programming concepts being used rather than just creating a functioning bot.
 6. **Ethical discussions**: Use these projects as opportunities to discuss AI ethics, bias, and limitations.
 
-## Assessment Ideas
+# Assessment Ideas
 
 - Have students document their process in a digital portfolio
 - Create a "bot showcase" where students present their creations
@@ -2640,17 +2640,17 @@ When using these mini-projects in a classroom setting:
 
 ---
 
-## Data Visualization Dashboard
+# Data Visualization Dashboard
 
 **Difficulty**: Intermediate  
 **Time**: 60-90 minutes  
 **Learning Focus**: Data analysis, visualization, pandas, matplotlib
 
-### Overview
+## Overview
 
 Create an interactive dashboard that allows users to visualize and explore data relationships through various chart types. Students will learn data manipulation with pandas and visualization with matplotlib.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -2847,7 +2847,7 @@ if __name__ == "__main__":
     data_dashboard()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add more visualization types like pie charts, histograms, or heatmaps
 - Implement data filtering options to explore subsets of the data
@@ -2860,13 +2860,13 @@ if __name__ == "__main__":
 
 ---
 
-## AI Persona Dialogue Simulator
+# AI Persona Dialogue Simulator
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Function calls, lists, creativity, dialogue simulation
 
-### Overview
+## Overview
 
 Simulate interactive dialogues between multiple AI personas with different personalities or perspectives. This flexible tool enables both multi-participant panel discussions and focused one-on-one debates, allowing students to explore how different characters approach the same topics. The simulator can also be configured to run simulated interviews by selecting appropriate personas and question formats.
 
@@ -2874,7 +2874,7 @@ Simulate an interview or debate between multiple bots with different personaliti
 
 This project offers flexibility to run either panel discussions with multiple participants or focused one-on-one debates, allowing students to explore how different personas respond to the same topics.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -3297,7 +3297,7 @@ if __name__ == "__main__":
     ai_persona_dialogue_simulator()
 ```
 
-### Using the Simulator for Interviews
+## Using the Simulator for Interviews
 
 To use this simulator specifically for interview scenarios:
 
@@ -3321,7 +3321,7 @@ This interview format is particularly useful for:
 - Simulating talk show or panel interview dynamics
 - Teaching questioning techniques and response patterns
 
-### Extension Ideas
+## Extension Ideas
 
 - Add a feature for the user to join as an additional participant
 - Create specialized formats for specific topics (ethics, technology, etc.)
@@ -3338,17 +3338,17 @@ This interview format is particularly useful for:
 
 ---
 
-## Emotional Support Bot
+# Emotional Support Bot
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
 **Learning Focus**: Selection, text analysis, branching logic
 
-### Overview
+## Overview
 
 Create a bot that responds differently based on the user's emotional state, providing tailored support, advice, or encouragement depending on the mood expressed.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -3445,7 +3445,7 @@ if __name__ == "__main__":
     emotional_support_bot()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add more emotional states and corresponding bot personalities
 - Create a mood tracking feature that remembers past interactions
@@ -3457,17 +3457,17 @@ if __name__ == "__main__":
 
 ---
 
-## Historical Figure Chat
+# Historical Figure Chat
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
 **Learning Focus**: Historical research, character perspective, dialogue
 
-### Overview
+## Overview
 
 Chat with simulated historical figures to learn about their lives, achievements, and time periods.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -3537,7 +3537,7 @@ if __name__ == "__main__":
     historical_figure_chat()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add a "time travel interview" mode where students can interview multiple figures about the same topic or event.
 
@@ -3545,17 +3545,17 @@ Add a "time travel interview" mode where students can interview multiple figures
 
 ---
 
-## Image Gallery Creator
+# Image Gallery Creator
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: File handling, HTML generation, metadata management, API integration
 
-### Overview
+## Overview
 
 Create a tool that generates an HTML gallery from a collection of images. The tool manages image metadata, generates descriptions (optionally with AI assistance), and creates a responsive web gallery to showcase the images.
 
-### Instructions
+## Instructions
 
 ```python
 import os
@@ -3781,7 +3781,7 @@ if __name__ == "__main__":
     create_image_gallery()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add image filtering by tags or categories
 - Implement image resizing and thumbnail generation
@@ -3794,17 +3794,17 @@ if __name__ == "__main__":
 
 ---
 
-## Journal or Reflection Bot
+# Journal or Reflection Bot
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
 **Learning Focus**: Lists, memory, summarization
 
-### Overview
+## Overview
 
 Create a digital journaling assistant that helps users reflect on their experiences, identify patterns in their thoughts, and provide meaningful insights or feedback on their entries.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -3935,7 +3935,7 @@ if __name__ == "__main__":
     reflection_journal()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add mood tracking to each entry
 - Create visualizations of common themes or topics over time
@@ -3947,17 +3947,17 @@ if __name__ == "__main__":
 
 ---
 
-## Knowledge Quiz Bot
+# Knowledge Quiz Bot
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Lists, loops, conditionals, scoring systems
 
-### Overview
+## Overview
 
 Build a bot that quizzes the user on a topic and tracks their score.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -4039,7 +4039,7 @@ if __name__ == "__main__":
     run_quiz()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add difficulty levels, timing, or topic categories.
 
@@ -4047,17 +4047,17 @@ Add difficulty levels, timing, or topic categories.
 
 ---
 
-## Language Translation Helper
+# Language Translation Helper
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
 **Learning Focus**: Multilingual communication, cultural context
 
-### Overview
+## Overview
 
 Create a tool that helps translate text between languages and explains cultural context.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -4188,7 +4188,7 @@ if __name__ == "__main__":
     translation_helper()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add a conversation practice mode where students can simulate dialogues in another language.
 
@@ -4196,17 +4196,17 @@ Add a conversation practice mode where students can simulate dialogues in anothe
 
 ---
 
-## Mood Journal Assistant
+# Mood Journal Assistant
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: File I/O, date handling, text analysis
 
-### Overview
+## Overview
 
 Create a journaling assistant that helps users track moods and reflect on patterns.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -4335,7 +4335,7 @@ if __name__ == "__main__":
     mood_journal()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add mood tracking visualizations or goal-setting features.
 
@@ -4343,17 +4343,17 @@ Add mood tracking visualizations or goal-setting features.
 
 ---
 
-## PDF Question Answering Chatbot
+# PDF Question Answering Chatbot
 
 **Difficulty**: Intermediate-Advanced  
 **Time**: 60-90 minutes  
 **Learning Focus**: Document processing, natural language understanding, information retrieval
 
-### Overview
+## Overview
 
 Create a chatbot that can answer questions from a PDF document. This project teaches students how to extract and process text from PDFs and use AI to retrieve relevant information based on user queries.
 
-### Instructions
+## Instructions
 
 ```python
 import os
@@ -4587,7 +4587,7 @@ if __name__ == "__main__":
     chatbot.run()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add support for multiple document formats (DOCX, TXT, etc.)
 - Implement semantic search to find specific information more efficiently
@@ -4598,7 +4598,7 @@ if __name__ == "__main__":
 
 ---
 
-## Implementation Tips
+# Implementation Tips
 
 When using these advanced mini-projects in a classroom setting:
 
@@ -4609,7 +4609,7 @@ When using these advanced mini-projects in a classroom setting:
 5. **Focus on concepts**: Emphasize the programming concepts being used rather than just creating a functioning application.
 6. **Ethical discussions**: Use these projects as opportunities to discuss AI ethics, bias, and limitations.
 
-## Assessment Ideas
+# Assessment Ideas
 
 - Have students document their process in a digital portfolio
 - Create a "project showcase" where students present their creations
@@ -4623,17 +4623,17 @@ When using these advanced mini-projects in a classroom setting:
 
 ---
 
-## Personality Bot Creator
+# Personality Bot Creator
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
 **Learning Focus**: Functions, creativity, system prompts
 
-### Overview
+## Overview
 
 Students create and interact with a bot that has a unique personality of their design. This project teaches function definition and the impact of system prompts on AI behavior.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -4678,7 +4678,7 @@ for prompt in test_prompts:
     print("-" * 50)
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Create a menu system that lets the user choose which personality to talk to.
 
@@ -4686,17 +4686,17 @@ Create a menu system that lets the user choose which personality to talk to.
 
 ---
 
-## Smart To-Do List
+# Smart To-Do List
 
 **Difficulty**: Intermediate  
 **Time**: 60-75 minutes  
 **Learning Focus**: Data structures, file I/O, date handling, AI assistance
 
-### Overview
+## Overview
 
 Build a smart to-do list application that helps users organize tasks with categories, priorities, and due dates. The application provides AI-assisted recommendations for task management and organization.
 
-### Instructions
+## Instructions
 
 ```python
 import os
@@ -5226,7 +5226,7 @@ if __name__ == "__main__":
     todo_list.run()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add recurring tasks (daily, weekly, monthly)
 - Implement task dependencies (tasks that require other tasks to be completed first)
@@ -5239,17 +5239,17 @@ if __name__ == "__main__":
 
 ---
 
-## Subject Expert Tutor
+# Subject Expert Tutor
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Domain-specific prompting, educational dialogue
 
-### Overview
+## Overview
 
 Create a specialized tutor bot for a specific subject area that can explain concepts and quiz the user.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -5417,7 +5417,7 @@ if __name__ == "__main__":
     tutor_bot()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add a spaced repetition system that tracks concepts users struggle with and revisits them.
 
@@ -5425,17 +5425,17 @@ Add a spaced repetition system that tracks concepts users struggle with and revi
 
 ---
 
-## Text Adventure Game Engine
+# Text Adventure Game Engine
 
 **Difficulty**: Advanced  
 **Time**: 90-120 minutes  
 **Learning Focus**: Object-oriented programming, game design, file I/O, AI interaction
 
-### Overview
+## Overview
 
 Create a text adventure game engine that allows students to build interactive stories with rooms, items, and characters. The engine supports saving/loading games and provides AI-powered hints to guide players.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -5890,7 +5890,7 @@ if __name__ == "__main__":
     play_adventure_game()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add more room types with special properties (e.g., dark rooms that require a light source)
 - Implement NPCs (non-player characters) that the player can talk to
@@ -5903,17 +5903,17 @@ if __name__ == "__main__":
 
 ---
 
-## Trivia or Quiz Bot
+# Trivia or Quiz Bot
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Loops, conditionals, lists
 
-### Overview
+## Overview
 
 Build an interactive quiz bot that asks questions, tracks the user's score, provides feedback, and offers hints when needed.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -5997,7 +5997,7 @@ if __name__ == "__main__":
     create_quiz_bot()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add difficulty levels where harder questions are worth more points
 - Include a hint system where users can ask for clues but lose points
@@ -6009,17 +6009,17 @@ if __name__ == "__main__":
 
 ---
 
-## Weather Dashboard
+# Weather Dashboard
 
 **Difficulty**: Intermediate-Advanced  
 **Time**: 60-90 minutes  
 **Learning Focus**: API integration, data visualization, environmental data analysis
 
-### Overview
+## Overview
 
 Create a weather dashboard that fetches real-time weather data and forecasts from an API, then visualizes it with charts and provides AI-powered weather advice based on conditions.
 
-### Instructions
+## Instructions
 
 ```python
 import requests
@@ -6389,7 +6389,7 @@ if __name__ == "__main__":
     dashboard.run()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add support for multiple locations and comparison views
 - Implement unit conversion between metric and imperial
@@ -6408,11 +6408,11 @@ if __name__ == "__main__":
 **Time**: 30-45 minutes  
 **Learning Focus**: API integration, text processing, content repurposing
 
-### Overview
+## Overview
 
 Create a tool that converts YouTube video transcripts into well-formatted blog posts using AI. This project helps students understand how to extract data from one format and transform it into another valuable piece of content.
 
-### Instructions
+## Instructions
 
 ```python
 import re
@@ -6574,7 +6574,7 @@ if __name__ == "__main__":
     youtube_to_blog()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add support for multiple languages and translation
 - Implement a social media post generator from the same content

@@ -1,14 +1,14 @@
-## Data Visualization Dashboard
+# Data Visualization Dashboard
 
 **Difficulty**: Intermediate  
 **Time**: 60-90 minutes  
 **Learning Focus**: Data analysis, visualization, pandas, matplotlib
 
-### Overview
+## Overview
 
 Create an interactive dashboard that allows users to visualize and explore data relationships through various chart types. Students will learn data manipulation with pandas and visualization with matplotlib.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -205,7 +205,7 @@ if __name__ == "__main__":
     data_dashboard()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add more visualization types like pie charts, histograms, or heatmaps
 - Implement data filtering options to explore subsets of the data

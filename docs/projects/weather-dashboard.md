@@ -1,14 +1,14 @@
-## Weather Dashboard
+# Weather Dashboard
 
 **Difficulty**: Intermediate-Advanced  
 **Time**: 60-90 minutes  
 **Learning Focus**: API integration, data visualization, environmental data analysis
 
-### Overview
+## Overview
 
 Create a weather dashboard that fetches real-time weather data and forecasts from an API, then visualizes it with charts and provides AI-powered weather advice based on conditions.
 
-### Instructions
+## Instructions
 
 ```python
 import requests
@@ -378,7 +378,7 @@ if __name__ == "__main__":
     dashboard.run()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add support for multiple locations and comparison views
 - Implement unit conversion between metric and imperial

@@ -1,14 +1,14 @@
-## PDF Question Answering Chatbot
+# PDF Question Answering Chatbot
 
 **Difficulty**: Intermediate-Advanced  
 **Time**: 60-90 minutes  
 **Learning Focus**: Document processing, natural language understanding, information retrieval
 
-### Overview
+## Overview
 
 Create a chatbot that can answer questions from a PDF document. This project teaches students how to extract and process text from PDFs and use AI to retrieve relevant information based on user queries.
 
-### Instructions
+## Instructions
 
 ```python
 import os
@@ -242,7 +242,7 @@ if __name__ == "__main__":
     chatbot.run()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add support for multiple document formats (DOCX, TXT, etc.)
 - Implement semantic search to find specific information more efficiently
@@ -253,7 +253,7 @@ if __name__ == "__main__":
 
 ---
 
-## Implementation Tips
+# Implementation Tips
 
 When using these advanced mini-projects in a classroom setting:
 
@@ -264,7 +264,7 @@ When using these advanced mini-projects in a classroom setting:
 5. **Focus on concepts**: Emphasize the programming concepts being used rather than just creating a functioning application.
 6. **Ethical discussions**: Use these projects as opportunities to discuss AI ethics, bias, and limitations.
 
-## Assessment Ideas
+# Assessment Ideas
 
 - Have students document their process in a digital portfolio
 - Create a "project showcase" where students present their creations

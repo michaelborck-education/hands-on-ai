@@ -1,14 +1,14 @@
-## Historical Figure Chat
+# Historical Figure Chat
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
 **Learning Focus**: Historical research, character perspective, dialogue
 
-### Overview
+## Overview
 
 Chat with simulated historical figures to learn about their lives, achievements, and time periods.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     historical_figure_chat()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add a "time travel interview" mode where students can interview multiple figures about the same topic or event.
 

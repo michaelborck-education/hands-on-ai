@@ -1,14 +1,14 @@
-## Personality Bot Creator
+# Personality Bot Creator
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
 **Learning Focus**: Functions, creativity, system prompts
 
-### Overview
+## Overview
 
 Students create and interact with a bot that has a unique personality of their design. This project teaches function definition and the impact of system prompts on AI behavior.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -53,7 +53,7 @@ for prompt in test_prompts:
     print("-" * 50)
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Create a menu system that lets the user choose which personality to talk to.
 

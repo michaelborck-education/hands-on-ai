@@ -1,14 +1,14 @@
-## Journal or Reflection Bot
+# Journal or Reflection Bot
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
 **Learning Focus**: Lists, memory, summarization
 
-### Overview
+## Overview
 
 Create a digital journaling assistant that helps users reflect on their experiences, identify patterns in their thoughts, and provide meaningful insights or feedback on their entries.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -139,7 +139,7 @@ if __name__ == "__main__":
     reflection_journal()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add mood tracking to each entry
 - Create visualizations of common themes or topics over time

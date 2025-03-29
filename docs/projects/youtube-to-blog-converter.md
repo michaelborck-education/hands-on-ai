@@ -4,11 +4,11 @@
 **Time**: 30-45 minutes  
 **Learning Focus**: API integration, text processing, content repurposing
 
-### Overview
+## Overview
 
 Create a tool that converts YouTube video transcripts into well-formatted blog posts using AI. This project helps students understand how to extract data from one format and transform it into another valuable piece of content.
 
-### Instructions
+## Instructions
 
 ```python
 import re
@@ -170,7 +170,7 @@ if __name__ == "__main__":
     youtube_to_blog()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add support for multiple languages and translation
 - Implement a social media post generator from the same content

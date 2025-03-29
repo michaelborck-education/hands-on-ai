@@ -1,14 +1,14 @@
-## Classroom Simulation Bot
+# Classroom Simulation Bot
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Functions, menu systems, multiple bot use
 
-### Overview
+## Overview
 
 Create a classroom simulation where students can interact with different characters or experts on various topics, practicing both coding skills and exploring different perspectives.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -117,7 +117,7 @@ if __name__ == "__main__":
     classroom_simulation()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add more character types like historian, artist, or fictional character
 - Create a debate mode where two characters discuss the same topic

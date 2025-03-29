@@ -1,14 +1,14 @@
-## Subject Expert Tutor
+# Subject Expert Tutor
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Domain-specific prompting, educational dialogue
 
-### Overview
+## Overview
 
 Create a specialized tutor bot for a specific subject area that can explain concepts and quiz the user.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -176,7 +176,7 @@ if __name__ == "__main__":
     tutor_bot()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add a spaced repetition system that tracks concepts users struggle with and revisits them.
 

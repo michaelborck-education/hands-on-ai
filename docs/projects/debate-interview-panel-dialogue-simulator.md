@@ -1,10 +1,10 @@
-## AI Persona Dialogue Simulator
+# AI Persona Dialogue Simulator
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Function calls, lists, creativity, dialogue simulation
 
-### Overview
+## Overview
 
 Simulate interactive dialogues between multiple AI personas with different personalities or perspectives. This flexible tool enables both multi-participant panel discussions and focused one-on-one debates, allowing students to explore how different characters approach the same topics. The simulator can also be configured to run simulated interviews by selecting appropriate personas and question formats.
 
@@ -12,7 +12,7 @@ Simulate an interview or debate between multiple bots with different personaliti
 
 This project offers flexibility to run either panel discussions with multiple participants or focused one-on-one debates, allowing students to explore how different personas respond to the same topics.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -435,7 +435,7 @@ if __name__ == "__main__":
     ai_persona_dialogue_simulator()
 ```
 
-### Using the Simulator for Interviews
+## Using the Simulator for Interviews
 
 To use this simulator specifically for interview scenarios:
 
@@ -459,7 +459,7 @@ This interview format is particularly useful for:
 - Simulating talk show or panel interview dynamics
 - Teaching questioning techniques and response patterns
 
-### Extension Ideas
+## Extension Ideas
 
 - Add a feature for the user to join as an additional participant
 - Create specialized formats for specific topics (ethics, technology, etc.)

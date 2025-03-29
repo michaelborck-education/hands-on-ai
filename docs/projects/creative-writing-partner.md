@@ -1,14 +1,14 @@
-## Creative Writing Partner
+# Creative Writing Partner
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Narrative development, creative collaboration, editing
 
-### Overview
+## Overview
 
 A collaborative writing tool that helps students develop stories, poems, or essays.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -356,13 +356,13 @@ if __name__ == "__main__":
     writing_partner()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add a collaborative storytelling mode where student and bot take turns adding to a story.
 
 ---
 
-## Implementation Tips
+# Implementation Tips
 
 When using these mini-projects in a classroom setting:
 
@@ -373,7 +373,7 @@ When using these mini-projects in a classroom setting:
 5. **Focus on concepts**: Emphasize the programming concepts being used rather than just creating a functioning bot.
 6. **Ethical discussions**: Use these projects as opportunities to discuss AI ethics, bias, and limitations.
 
-## Assessment Ideas
+# Assessment Ideas
 
 - Have students document their process in a digital portfolio
 - Create a "bot showcase" where students present their creations

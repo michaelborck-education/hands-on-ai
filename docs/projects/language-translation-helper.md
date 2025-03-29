@@ -1,14 +1,14 @@
-## Language Translation Helper
+# Language Translation Helper
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
 **Learning Focus**: Multilingual communication, cultural context
 
-### Overview
+## Overview
 
 Create a tool that helps translate text between languages and explains cultural context.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -139,7 +139,7 @@ if __name__ == "__main__":
     translation_helper()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add a conversation practice mode where students can simulate dialogues in another language.
 

@@ -1,14 +1,14 @@
-## Knowledge Quiz Bot
+# Knowledge Quiz Bot
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
 **Learning Focus**: Lists, loops, conditionals, scoring systems
 
-### Overview
+## Overview
 
 Build a bot that quizzes the user on a topic and tracks their score.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     run_quiz()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 Add difficulty levels, timing, or topic categories.
 

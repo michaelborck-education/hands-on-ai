@@ -1,14 +1,14 @@
-## Build Your Own Personality Bot
+# Build Your Own Personality Bot
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
 **Learning Focus**: Functions, system prompts, creative writing
 
-### Overview
+## Overview
 
 Create a new bot personality that responds in a unique way — like a movie character, animal, celebrity, or completely invented creature. Students will learn how to craft system prompts that reflect specific voices or styles.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -59,7 +59,7 @@ for prompt in conversation:
     print()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Create multiple personalities and compare how they respond to the same questions
 - Hold a "bot showcase" where students introduce their bots to the class

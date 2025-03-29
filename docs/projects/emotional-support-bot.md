@@ -1,14 +1,14 @@
-## Emotional Support Bot
+# Emotional Support Bot
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
 **Learning Focus**: Selection, text analysis, branching logic
 
-### Overview
+## Overview
 
 Create a bot that responds differently based on the user's emotional state, providing tailored support, advice, or encouragement depending on the mood expressed.
 
-### Instructions
+## Instructions
 
 ```python
 from chatcraft import get_response
@@ -105,7 +105,7 @@ if __name__ == "__main__":
     emotional_support_bot()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add more emotional states and corresponding bot personalities
 - Create a mood tracking feature that remembers past interactions

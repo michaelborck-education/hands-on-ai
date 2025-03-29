@@ -1,14 +1,14 @@
-## Smart To-Do List
+# Smart To-Do List
 
 **Difficulty**: Intermediate  
 **Time**: 60-75 minutes  
 **Learning Focus**: Data structures, file I/O, date handling, AI assistance
 
-### Overview
+## Overview
 
 Build a smart to-do list application that helps users organize tasks with categories, priorities, and due dates. The application provides AI-assisted recommendations for task management and organization.
 
-### Instructions
+## Instructions
 
 ```python
 import os
@@ -538,7 +538,7 @@ if __name__ == "__main__":
     todo_list.run()
 ```
 
-### Extension Ideas
+## Extension Ideas
 
 - Add recurring tasks (daily, weekly, monthly)
 - Implement task dependencies (tasks that require other tasks to be completed first)
