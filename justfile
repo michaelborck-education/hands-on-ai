@@ -70,9 +70,21 @@ rag-web:
 build-mini-projects:
   python tools/build_mini_projects.py
 
+# 🔧 Split mini-projects.md into individual project files
+split-mini-projects:
+  python tools/scripts/split.py
+
 # 🔄 Update mini-projects code examples to use ailabkit.chat
 update-mini-projects:
   python tools/scripts/update_mini_projects.py
+
+# 🏷️ Add or update module type (chat, rag, agent) in mini-projects
+update-module-types:
+  python tools/scripts/add_module_type.py
+
+# 🔄 Convert all ChatCraft references to AiLabKit in documentation
+convert-references:
+  python tools/scripts/convert_references.py
 
 # 🇦🇺 Convert American spelling to Australian/British spelling in docs
 spelling-au:
@@ -80,7 +92,7 @@ spelling-au:
 
 # 🌐 Regenerate HTML-based project browser
 build-project-browser:
-  python tools/project_browser.py
+  python tools/project_browser.py --output project_browser.html
 
 # 🛠️ Rebuild everything: sync version, docs, browser, mini-projects
 build-all:
@@ -139,7 +151,10 @@ help:
   @echo "  rag-web               Start AiLabKit RAG web interface"
   @echo "  doctor                Run system diagnostic for AiLabKit"
   @echo "  build-mini-projects   Rebuild mini-projects.md from /docs/projects"
+  @echo "  split-mini-projects   Split mini-projects.md into individual project files"
   @echo "  update-mini-projects  Update code in mini-projects to use ailabkit.chat"
+  @echo "  update-module-types   Add or update module type in mini-projects"
+  @echo "  convert-references    Convert all ChatCraft references to AiLabKit in docs"
   @echo "  spelling-au           Convert American spelling to Australian/British spelling"
   @echo "  lint-mini-projects    Lint mini-projects.md files"
   @echo "  build-project-browser Generate the project_browser.html"
