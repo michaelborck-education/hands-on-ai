@@ -26,7 +26,7 @@ jobs:
       - name: 🔢 Bump version.json (based on tag)
         run: |
           VERSION=$(echo $GITHUB_REF | sed 's|refs/tags/v||')
-          echo "{\"version\": \"$$VERSION\", \"url\": \"https://github.com/teaching-repositories/chatcraft/tools/project_browser.html\"}" > version.json
+          echo "{\"version\": \"$VERSION\", \"url\": \"https://github.com/teaching-repositories/ailabkit/project_browser.html\"}" > version.json
 
       - name: 🧳 Build ZIP
         run: python tools/build_zip.py
@@ -34,6 +34,6 @@ jobs:
       - name: 🚀 Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: ChatCraft_Offline_Bundle.zip
+          files: AiLabKit_Offline_Bundle.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
