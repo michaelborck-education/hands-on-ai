@@ -57,6 +57,28 @@ chat interactive
 
 This opens a text-based, stateless REPL (Read-Eval-Print Loop).
 
+## 🌐 Web Interface
+
+Launch a web interface to chat with personality bots:
+
+```bash
+chat web
+```
+
+By default, the interface is only accessible from your local machine. To make it accessible from other devices on your network:
+
+```bash
+chat web --public
+```
+
+> ⚠️ When using the `--public` flag, the interface will be accessible to anyone on your network. Use with caution.
+
+You can also specify a custom port (default is 8000):
+
+```bash
+chat web --port 8888
+```
+
 ### REPL Commands
 
 Use commands prefixed with `/` inside the REPL:

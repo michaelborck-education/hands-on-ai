@@ -25,9 +25,13 @@ def web(
     try:
         from fasthtml.common import *
     except ImportError:
-        print("❌ FastHTML is required for the web interface.")
-        print("Please install it with: pip install python-fasthtml")
-        raise typer.Exit(1)
+        try:
+            # Alternative import path if the package is installed as python-fasthtml
+            from python_fasthtml.common import *
+        except ImportError:
+            print("❌ FastHTML is required for the web interface.")
+            print("Please install it with: pip install python-fasthtml")
+            raise typer.Exit(1)
 
     # Override host if public flag is set
     if public:

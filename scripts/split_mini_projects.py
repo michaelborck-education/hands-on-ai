@@ -57,7 +57,7 @@ app = typer.Typer(help="Split markdown files with level-1 headers into individua
 @app.command()
 def split(
     input_file: Path = typer.Option(
-        Path("docs/projects/agent/mini-projects.md"),
+        Path("docs/projects/mini-projects.md"),
         "--input",
         "-i",
         help="Input markdown file"

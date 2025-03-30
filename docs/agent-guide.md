@@ -42,6 +42,20 @@ ailabkit agent web
 
 This launches a web interface for the agent, accessible in your browser.
 
+By default, the interface is only accessible from your local machine. To make it accessible from other devices on your network:
+
+```bash
+ailabkit agent web --public
+```
+
+> ⚠️ When using the `--public` flag, the interface will be accessible to anyone on your network. Use with caution.
+
+You can also specify a custom port (default is 8002):
+
+```bash
+ailabkit agent web --port 8888
+```
+
 ### List available tools
 
 ```bash

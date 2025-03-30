@@ -105,6 +105,28 @@ just rag-index file=notes.md
 just rag-web
 ```
 
+## 🌐 Web Interface
+
+Launch a web interface to ask questions about your documents:
+
+```bash
+ailabkit rag web
+```
+
+By default, the interface is only accessible from your local machine. To make it accessible from other devices on your network:
+
+```bash
+ailabkit rag web --public
+```
+
+> ⚠️ When using the `--public` flag, the interface will be accessible to anyone on your network. Use with caution.
+
+You can also specify a custom port (default is 8001):
+
+```bash
+ailabkit rag web --port 8888
+```
+
 ---
 
 ## 🧠 Example Workflow

@@ -6,8 +6,21 @@ import time
 import asyncio
 from typing import List, Dict, Any
 import json
-from fasthtml import FastHTML, Request
-from fasthtml.utils import Sockets
+
+# Handle correct import for python-fasthtml package
+try:
+    from fasthtml import FastHTML, Request
+    from fasthtml.utils import Sockets
+except ImportError:
+    try:
+        # Alternative import path if the package is installed as python-fasthtml
+        from python_fasthtml import FastHTML, Request
+        from python_fasthtml.utils import Sockets
+    except ImportError:
+        raise ImportError(
+            "FastHTML is required for the web interface. "
+            "Please install it with: pip install python-fasthtml"
+        )
 from ..config import get_model, log
 from .core import run_agent, list_tools
 from .tools import register_simple_tools
