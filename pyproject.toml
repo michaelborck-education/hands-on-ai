@@ -12,7 +12,15 @@ authors = [
 license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.8"
-dependencies = ["requests", "typer"]
+dependencies = [
+    "requests", 
+    "typer",
+    "python-fasthtml",
+    "python-docx", 
+    "pymupdf", 
+    "scikit-learn", 
+    "numpy"
+]
 
 [project.scripts]
 ailabkit = "ailabkit.cli:app"
@@ -20,9 +28,10 @@ chat = "ailabkit.chat.cli:app"
 rag = "ailabkit.rag.cli:app"
 agent = "ailabkit.agent.cli:app"
 
+# Keep optional dependencies for backward compatibility and development
 [project.optional-dependencies]
-rag = ["python-docx", "pymupdf", "scikit-learn", "numpy", "python-fasthtml"]
-chat = ["python-fasthtml"]
+rag = []
+chat = []
 agent = []
 dev = [
   "pytest",
