@@ -1,133 +1,55 @@
 """
-Web command for the rag CLI - provides a web interface.
+Web command for the rag CLI - provides a web interface using FastHTML.
 """
 
 import typer
 import os
+import json
 import tempfile
 from pathlib import Path
-from ...config import CONFIG_DIR
+from ...config import CONFIG_DIR, log
 from ..utils import load_text_file, chunk_text, get_embeddings, save_index_with_sources, get_top_k
 from ...chat import get_response
 
 app = typer.Typer(help="Launch web interface for RAG")
 
 
-def create_web_app(index_path=None):
-    """
-    Create a FastAPI web app for RAG.
-    
-    Args:
-        index_path: Path to index file
-        
-    Returns:
-        FastAPI app
-    """
-    from fastapi import FastAPI, File, UploadFile, Form, HTTPException
-    from fastapi.responses import HTMLResponse
-    from fastapi.middleware.cors import CORSMiddleware
-    
-    # If no index path is provided, use default
+@app.callback(invoke_without_command=True)
+def web(
+    port: int = typer.Option(8000, help="Port to run the web server on"),
+    index_path: str = typer.Option(None, help="Path to index file (default: ~/.ailabkit/index.npz)"),
+):
+    """Launch web interface for RAG using FastHTML."""
+    try:
+        from fasthtml.common import *
+    except ImportError:
+        print("❌ FastHTML is required for the web interface.")
+        print("Please install it with: pip install python-fasthtml")
+        raise typer.Exit(1)
+
+    # Determine the index path
     if index_path is None:
         index_path = str(CONFIG_DIR / "index.npz")
     
-    app = FastAPI(title="RAG Web Interface")
+    index_dir = Path(index_path).parent
+    index_dir.mkdir(exist_ok=True)
     
-    # Add CORS middleware
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=["*"],
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
+    # Create FastHTML app
+    app, rt = fast_app()
     
-    # Simple HTML frontend
-    @app.get("/", response_class=HTMLResponse)
-    async def get_home():
-        return """
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>RAG Web Interface</title>
-            <style>
-                body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-                h1 { color: #333; }
-                textarea, input[type="text"] { width: 100%; padding: 8px; margin: 8px 0; }
-                button { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
-                #result { margin-top: 20px; white-space: pre-wrap; }
-                .context { background-color: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
-                .source { font-size: 0.8em; color: #666; }
-                .answer { background-color: #e6f7e6; padding: 15px; border-radius: 5px; }
-            </style>
-        </head>
-        <body>
-            <h1>RAG Web Interface</h1>
-            
-            <div id="uploadForm">
-                <h2>Upload Documents</h2>
-                <form action="/upload" method="post" enctype="multipart/form-data">
-                    <input type="file" name="file" multiple>
-                    <button type="submit">Upload & Index</button>
-                </form>
-            </div>
-            
-            <hr>
-            
-            <div id="queryForm">
-                <h2>Ask a Question</h2>
-                <input type="text" id="question" placeholder="Enter your question here">
-                <button onclick="askQuestion()">Ask</button>
-            </div>
-            
-            <div id="result"></div>
-            
-            <script>
-            async function askQuestion() {
-                const question = document.getElementById('question').value;
-                if (!question) return;
-                
-                document.getElementById('result').innerHTML = "Searching...";
-                
-                try {
-                    const response = await fetch('/ask', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: new URLSearchParams({ 'question': question })
-                    });
-                    
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    
-                    const data = await response.json();
-                    let resultHtml = '<h3>Results</h3>';
-                    
-                    // Show context
-                    resultHtml += '<h4>Context Used:</h4>';
-                    data.context.forEach((item, i) => {
-                        resultHtml += `<div class="context">
-                            <div class="source">Source: ${item.source} (Score: ${item.score.toFixed(4)})</div>
-                            <div>${item.text.substring(0, 300)}${item.text.length > 300 ? '...' : ''}</div>
-                        </div>`;
-                    });
-                    
-                    // Show answer
-                    resultHtml += '<h4>Answer:</h4>';
-                    resultHtml += `<div class="answer">${data.answer}</div>`;
-                    
-                    document.getElementById('result').innerHTML = resultHtml;
-                } catch (error) {
-                    document.getElementById('result').innerHTML = `Error: ${error.message}`;
-                }
-            }
-            </script>
-        </body>
-        </html>
-        """
-    
-    # Upload and index documents
-    @app.post("/upload")
-    async def upload_file(file: UploadFile = File(...)):
+    # File upload handling - this uses a temporary file to store the uploaded file
+    @rt("/upload")
+    async def post(file, request):
         try:
+            # Check if the index file can be loaded (or initialize it if it doesn't exist)
+            if os.path.exists(index_path):
+                try:
+                    # Test if the file is valid
+                    get_top_k("test", index_path, k=1)
+                except Exception:
+                    # If invalid, create a new one later
+                    pass
+            
             # Create a temporary file
             suffix = Path(file.filename).suffix
             with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp:
@@ -147,30 +69,36 @@ def create_web_app(index_path=None):
             # Clean up
             os.unlink(temp_path)
             
-            return {"message": f"File {file.filename} indexed successfully", "chunks": len(chunks)}
+            # Return info about the indexing process
+            return Div(
+                P(f"File {file.filename} indexed successfully."),
+                P(f"Created {len(chunks)} text chunks."),
+                P("Your document is now ready for questions!")
+            )
         except Exception as e:
-            raise HTTPException(status_code=500, detail=str(e))
+            log.exception(f"Error during file upload: {e}")
+            return Div(f"Error: {str(e)}", style="color: red;")
     
-    # Ask a question
-    @app.post("/ask")
-    async def ask_question(question: str = Form(...)):
+    # Question answering
+    @rt("/ask")
+    async def post(question: str):
         try:
             # Get context
             context_items, scores = get_top_k(question, index_path, k=3, return_scores=True)
             
             # Format context for response
-            context = []
+            context_sections = []
             for i, (text, source) in enumerate(context_items):
-                context.append({
-                    "text": text,
-                    "source": source,
-                    "score": scores[i]
-                })
+                context_sections.append(Div(
+                    Div(f"Source: {source} (Score: {scores[i]:.4f})", cls="source"),
+                    Div(text[:300] + ('...' if len(text) > 300 else '')),
+                    cls="context"
+                ))
             
             # Build prompt with context
             prompt = f"Question: {question}\n\nContext:\n"
-            for item in context:
-                prompt += f"- {item['text']}\n"
+            for i, (text, source) in enumerate(context_items):
+                prompt += f"- {text}\n"
             prompt += "\nAnswer the question based on the provided context. If the context doesn't contain the answer, say so."
             
             # Get answer
@@ -179,42 +107,79 @@ def create_web_app(index_path=None):
                 system="You are a helpful assistant that answers questions based only on the provided context."
             )
             
-            return {
-                "question": question,
-                "context": context,
-                "answer": answer
-            }
+            # Return the results
+            return Div(
+                H3("Results"),
+                H4("Context Used:"),
+                *context_sections,
+                H4("Answer:"),
+                Div(answer, cls="answer")
+            )
         except Exception as e:
-            raise HTTPException(status_code=500, detail=str(e))
+            log.exception(f"Error during question answering: {e}")
+            return Div(f"Error: {str(e)}", style="color: red;")
     
-    return app
-
-
-@app.callback(invoke_without_command=True)
-def web(
-    port: int = typer.Option(8000, help="Port to run the web server on"),
-    index_path: str = typer.Option(None, help="Path to index file (default: ~/.ailabkit/index.npz)"),
-):
-    """Launch web interface for RAG."""
-    try:
-        import uvicorn
-        from fastapi import FastAPI
-    except ImportError:
-        print("[red]❌ FastAPI and uvicorn are required for the web interface.[/red]")
-        print("Please install them with: pip install fastapi uvicorn")
-        raise typer.Exit(1)
+    # Main page
+    @rt("/")
+    def get():
+        return Titled("RAG Web Interface",
+            Article(
+                H1("RAG Web Interface"),
+                
+                # Upload section
+                Div(
+                    H2("Upload Documents"),
+                    Form(
+                        Input(type="file", name="file"),
+                        Button("Upload & Index", type="submit"),
+                        enctype="multipart/form-data",
+                        action="/upload",
+                        method="post",
+                        hx_post="/upload",
+                        hx_target="#upload-result",
+                        hx_swap="outerHTML"
+                    ),
+                    Div(id="upload-result"),
+                    id="uploadForm"
+                ),
+                
+                Hr(),
+                
+                # Query section
+                Div(
+                    H2("Ask a Question"),
+                    Form(
+                        Input(type="text", id="question", name="question", placeholder="Enter your question here"),
+                        Button("Ask", type="submit"),
+                        hx_post="/ask",
+                        hx_target="#result",
+                        hx_swap="innerHTML",
+                        hx_trigger="submit"
+                    ),
+                    id="queryForm"
+                ),
+                
+                # Result area
+                Div(id="result"),
+                
+                # CSS styling
+                Style("""
+                    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+                    h1 { color: #333; }
+                    textarea, input[type="text"] { width: 100%; padding: 8px; margin: 8px 0; }
+                    button { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+                    #result { margin-top: 20px; white-space: pre-wrap; }
+                    .context { background-color: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
+                    .source { font-size: 0.8em; color: #666; }
+                    .answer { background-color: #e6f7e6; padding: 15px; border-radius: 5px; }
+                """)
+            )
+        )
     
-    # Determine the index path
-    if index_path is None:
-        index_path = str(CONFIG_DIR / "index.npz")
-    
-    index_dir = Path(index_path).parent
-    index_dir.mkdir(exist_ok=True)
-    
+    # Run the server
     print(f"🌐 Starting RAG web interface on http://localhost:{port}")
     print(f"Using index: {index_path}")
     print("Press Ctrl+C to stop the server")
     
-    # Create and run the web app
-    app = create_web_app(index_path)
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    # Serve the application
+    serve(app=app, port=port)
