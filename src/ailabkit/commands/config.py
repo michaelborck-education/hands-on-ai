@@ -6,7 +6,6 @@ import typer
 from rich import print
 import json
 from .. import config
-import shutil
 
 app = typer.Typer(help="View or edit configuration")
 

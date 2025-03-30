@@ -3,14 +3,12 @@ Core RAG utilities for document loading, chunking, embedding, and retrieval.
 """
 
 from pathlib import Path
-import os
-import json
 import shutil
 import importlib.resources
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import requests
-from ..config import get_server_url, get_embedding_model, get_chunk_size, log
+from ..config import get_server_url, get_embedding_model, get_chunk_size
 
 
 def load_text_file(path: Path) -> str:
