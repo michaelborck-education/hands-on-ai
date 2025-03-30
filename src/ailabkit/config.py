@@ -32,6 +32,29 @@ def ensure_config_dir():
     CONFIG_DIR.mkdir(exist_ok=True)
 
 
+def load_default_config():
+    """
+    Load the default configuration packaged with AiLabKit.
+    
+    Returns:
+        dict: Default configuration settings
+    """
+    try:
+        from importlib.resources import files
+        path = files("ailabkit.data") / "default_config.json"
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        log.warning(f"Failed to read default config: {e}")
+        # Fallback to hardcoded defaults if file can't be loaded
+        return {
+            "server": DEFAULT_SERVER,
+            "model": DEFAULT_MODEL,
+            "embedding_model": DEFAULT_EMBEDDING_MODEL,
+            "chunk_size": DEFAULT_CHUNK_SIZE,
+        }
+
+
 def load_config():
     """
     Load configuration from config file or environment variables.
@@ -39,14 +62,10 @@ def load_config():
     Returns:
         dict: Configuration settings
     """
-    config = {
-        "server": DEFAULT_SERVER,
-        "model": DEFAULT_MODEL,
-        "embedding_model": DEFAULT_EMBEDDING_MODEL,
-        "chunk_size": DEFAULT_CHUNK_SIZE,
-    }
+    # Start with default configuration
+    config = load_default_config()
     
-    # Check environment variables first
+    # Check environment variables
     if "AILABKIT_SERVER" in os.environ:
         config["server"] = os.environ["AILABKIT_SERVER"]
     
@@ -56,7 +75,7 @@ def load_config():
     if "AILABKIT_EMBEDDING_MODEL" in os.environ:
         config["embedding_model"] = os.environ["AILABKIT_EMBEDDING_MODEL"]
     
-    # Then check config file
+    # Then check user config file (this overrides defaults and environment variables)
     if CONFIG_PATH.exists():
         try:
             with open(CONFIG_PATH, encoding="utf-8") as f:

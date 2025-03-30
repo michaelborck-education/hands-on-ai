@@ -1,34 +1,16 @@
-## Project Title
-
-**Difficulty**: Beginner  
-**Time**: 30 minutes  
-**Learning Focus**: Lists, loops, user input
-
-### Overview
-A short description of what the student will build or learn.
-
-### Instructions
-Step-by-step or scaffolded guidance.
-
-### Extension Ideas
-Optional: Ways to expand or personalize the project.
-```
-
-The new format is as follows:
-
-```markdown
 # Project Title
 
 **Difficulty**: Beginner  
 **Time**: 30 minutes  
-**Learning Focus**: Lists, loops, user input
+**Learning Focus**: Lists, loops, user input  
+**Module**: chat
 
 ## Overview
 A short description of what the student will build or learn.
 
 ## Instructions
-Step-by-step or scaffolded guidance.
+Step-by-step or scaffold guidance.
 
 ## Extension Ideas
-Optional: Ways to expand or personalize the project.
+Optional: Ways to expand or personalise the project.
 

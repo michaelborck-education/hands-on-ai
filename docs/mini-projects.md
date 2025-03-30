@@ -1,6 +1,6 @@
 # Mini Project Examples
 
-This document contains ready-to-use mini-projects and activities for using ChatCraft in educational settings. Each project includes learning objectives, difficulty level, estimated time, and complete code examples.
+This document contains ready-to-use mini-projects and activities for using AiLabKit in educational settings. Each project includes learning objectives, difficulty level, estimated time, and complete code examples.
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@ This document contains ready-to-use mini-projects and activities for using ChatC
 5. [Classroom Simulation Bot](#classroom-simulation-bot)
 6. [Code Explainer Tool](#code-explainer-tool)
 7. [Creative Writing Partner](#creative-writing-partner)
-8. [Data Visualization Dashboard](#data-visualization-dashboard)
+8. [Data Visualisation Dashboard](#data-visualisation-dashboard)
 9. [AI Persona Dialogue Simulator](#ai-persona-dialogue-simulator)
 10. [Emotional Support Bot](#emotional-support-bot)
 11. [Historical Figure Chat](#historical-figure-chat)
@@ -22,12 +22,13 @@ This document contains ready-to-use mini-projects and activities for using ChatC
 16. [Mood Journal Assistant](#mood-journal-assistant)
 17. [PDF Question Answering Chatbot](#pdf-question-answering-chatbot)
 18. [Personality Bot Creator](#personality-bot-creator)
-19. [Smart To-Do List](#smart-to-do-list)
-20. [Subject Expert Tutor](#subject-expert-tutor)
-21. [Text Adventure Game Engine](#text-adventure-game-engine)
-22. [Trivia or Quiz Bot](#trivia-or-quiz-bot)
-23. [Weather Dashboard](#weather-dashboard)
-24. [YouTube to Blog Converter](#youtube-to-blog-converter)
+19. [Simple Calculator Agent](#simple-calculator-agent)
+20. [Smart To-Do List](#smart-to-do-list)
+21. [Subject Expert Tutor](#subject-expert-tutor)
+22. [Text Adventure Game Engine](#text-adventure-game-engine)
+23. [Trivia or Quiz Bot](#trivia-or-quiz-bot)
+24. [Weather Dashboard](#weather-dashboard)
+25. [YouTube to Blog Converter](#youtube-to-blog-converter)
 
 ---
 
@@ -35,16 +36,17 @@ This document contains ready-to-use mini-projects and activities for using ChatC
 
 **Difficulty**: Intermediate-Advanced  
 **Time**: 60-90 minutes  
-**Learning Focus**: Data structures, file I/O, data visualization, natural language processing, user experience design
+**Learning Focus**: Data structures, file I/O, data visualisation, natural language processing, user experience design  
+**Module**: chat
 
 ## Overview
 
-Create a comprehensive journaling application that combines structured mood tracking with flexible reflection prompts, offering users deep insights through data visualization and AI-powered analysis.
+Create a comprehensive journaling application that combines structured mood tracking with flexible reflection prompts, offering users deep insights through data visualisation and AI-powered analysis.
 
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import datetime
 import os
 import json
@@ -1538,16 +1540,16 @@ if __name__ == "__main__":
 
 ## Extension Ideas
 
-- **Data Visualization Enhancements**: Add interactive visualizations using libraries like Plotly or Bokeh
+- **Data Visualisation Enhancements**: Add interactive visualisations using libraries like Plotly or Bokeh
 - **Natural Language Processing**: Implement sentiment analysis to automatically detect the emotional tone of entries
 - **Machine Learning Integration**: Build a recommendation system that suggests activities based on past mood correlations
-- **Multiple Journaling Modes**: Add specialized templates for gratitude journaling, goal tracking, habit formation, etc.
-- **Social Features**: Add optional sharing of insights (anonymized) with trusted friends or mentors
+- **Multiple Journaling Modes**: Add specialised templates for gratitude journaling, goal tracking, habit formation, etc.
+- **Social Features**: Add optional sharing of insights (anonymised) with trusted friends or mentors
 - **Integrations**: Connect with other applications like calendar, fitness trackers, or meditation apps
 - **Mobile Compatibility**: Create a companion mobile app for on-the-go journaling
 - **Voice Journaling**: Add speech-to-text functionality for verbal journaling
-- **Export Options**: Enhanced export formats including PDF with embedded visualizations, interactive web formats
-- **Cloud Sync**: Add secure cloud synchronization for access across multiple devices
+- **Export Options**: Enhanced export formats including PDF with embedded visualisations, interactive web formats
+- **Cloud Sync**: Add secure cloud synchronisation for access across multiple devices
 - **Guided Journaling Sessions**: AI-guided journaling sessions focused on specific topics or goals
 
 ---
@@ -1558,7 +1560,8 @@ if __name__ == "__main__":
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Dictionaries, functions, menu systems
+**Learning Focus**: Dictionaries, functions, menu systems  
+**Module**: chat
 
 ## Overview
 
@@ -1567,7 +1570,7 @@ Create a flexible menu system that allows users to interact with multiple bot pe
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def personality_menu():
     print("=== Bot Personality Menu Generator ===")
@@ -1691,7 +1694,8 @@ if __name__ == "__main__":
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
-**Learning Focus**: Functions, system prompts, creative writing
+**Learning Focus**: Functions, system prompts, creative writing  
+**Module**: chat
 
 ## Overview
 
@@ -1700,7 +1704,7 @@ Create a new bot personality that responds in a unique way — like a movie char
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 # Example bot personality
 def cat_bot(prompt):
@@ -1763,7 +1767,8 @@ for prompt in conversation:
 
 **Difficulty**: Intermediate  
 **Time**: 60-90 minutes  
-**Learning Focus**: State management, narrative design, user input handling
+**Learning Focus**: State management, narrative design, user input handling  
+**Module**: chat
 
 ## Overview
 
@@ -1772,7 +1777,7 @@ Create an interactive story where the bot generates narrative segments based on 
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def adventure_game():
     """Interactive Choose Your Own Adventure game powered by an LLM"""
@@ -1933,7 +1938,8 @@ Add inventory management, character stats, or multiple endings based on decision
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Functions, menu systems, multiple bot use
+**Learning Focus**: Functions, menu systems, multiple bot use  
+**Module**: chat
 
 ## Overview
 
@@ -1942,7 +1948,7 @@ Create a classroom simulation where students can interact with different charact
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def classroom_simulation():
     print("=== Virtual Classroom Simulation ===")
@@ -2064,7 +2070,8 @@ if __name__ == "__main__":
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Code analysis, documentation
+**Learning Focus**: Code analysis, documentation  
+**Module**: chat
 
 ## Overview
 
@@ -2073,7 +2080,7 @@ Create a tool that explains code snippets and helps users understand programming
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import sys
 
 def code_explainer():
@@ -2255,7 +2262,8 @@ Add functionality to generate test cases or convert code between languages.
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Narrative development, creative collaboration, editing
+**Learning Focus**: Narrative development, creative collaboration, editing  
+**Module**: chat
 
 ## Overview
 
@@ -2264,7 +2272,7 @@ A collaborative writing tool that helps students develop stories, poems, or essa
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def writing_partner():
     """Interactive creative writing assistant"""
@@ -2640,20 +2648,21 @@ When using these mini-projects in a classroom setting:
 
 ---
 
-# Data Visualization Dashboard
+# Data Visualisation Dashboard
 
 **Difficulty**: Intermediate  
 **Time**: 60-90 minutes  
-**Learning Focus**: Data analysis, visualization, pandas, matplotlib
+**Learning Focus**: Data analysis, visualisation, pandas, matplotlib  
+**Module**: chat
 
 ## Overview
 
-Create an interactive dashboard that allows users to visualize and explore data relationships through various chart types. Students will learn data manipulation with pandas and visualization with matplotlib.
+Create an interactive dashboard that allows users to visualise and explore data relationships through various chart types. Students will learn data manipulation with pandas and visualisation with matplotlib.
 
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import pandas as pd
 import matplotlib.pyplot as plt
 from io import BytesIO
@@ -2849,10 +2858,10 @@ if __name__ == "__main__":
 
 ## Extension Ideas
 
-- Add more visualization types like pie charts, histograms, or heatmaps
+- Add more visualisation types like pie charts, histograms, or heatmaps
 - Implement data filtering options to explore subsets of the data
 - Add the ability to load CSV files from disk
-- Create a feature to export all visualizations as a report
+- Create a feature to export all visualisations as a report
 - Implement interactive plots using libraries like Plotly
 - Add clustering or other basic data analysis techniques
 
@@ -2864,7 +2873,8 @@ if __name__ == "__main__":
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Function calls, lists, creativity, dialogue simulation
+**Learning Focus**: Function calls, lists, creativity, dialogue simulation  
+**Module**: chat
 
 ## Overview
 
@@ -2877,7 +2887,7 @@ This project offers flexibility to run either panel discussions with multiple pa
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import time
 
 def ai_persona_dialogue_simulator():
@@ -3324,12 +3334,12 @@ This interview format is particularly useful for:
 ## Extension Ideas
 
 - Add a feature for the user to join as an additional participant
-- Create specialized formats for specific topics (ethics, technology, etc.)
+- Create specialised formats for specific topics (ethics, technology, etc.)
 - Implement a scoring system where users rate which perspective they found most compelling
 - Add follow-up questions that challenge each persona's perspective
 - Create a "change my mind" feature where personas try to persuade on a controversial topic
 - Allow students to create their own custom persona profiles
-- Add a feature to visualize the dialogue flow and connections between arguments
+- Add a feature to visualise the dialogue flow and connections between arguments
 - Implement a fact-checker persona that evaluates claims made during discussions
 - Create a mode where personas can switch perspectives mid-dialogue to show flexibility in thinking
 - Add the ability to save transcripts for later analysis or comparison
@@ -3342,7 +3352,8 @@ This interview format is particularly useful for:
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
-**Learning Focus**: Selection, text analysis, branching logic
+**Learning Focus**: Selection, text analysis, branching logic  
+**Module**: chat
 
 ## Overview
 
@@ -3351,7 +3362,7 @@ Create a bot that responds differently based on the user's emotional state, prov
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def emotional_support_bot():
     print("=== Emotional Support Bot ===")
@@ -3461,7 +3472,8 @@ if __name__ == "__main__":
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
-**Learning Focus**: Historical research, character perspective, dialogue
+**Learning Focus**: Historical research, character perspective, dialogue  
+**Module**: chat
 
 ## Overview
 
@@ -3470,7 +3482,7 @@ Chat with simulated historical figures to learn about their lives, achievements,
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import random
 
 def historical_figure_chat():
@@ -3549,7 +3561,8 @@ Add a "time travel interview" mode where students can interview multiple figures
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: File handling, HTML generation, metadata management, API integration
+**Learning Focus**: File handling, HTML generation, metadata management, API integration  
+**Module**: chat
 
 ## Overview
 
@@ -3560,7 +3573,7 @@ Create a tool that generates an HTML gallery from a collection of images. The to
 ```python
 import os
 import json
-from chatcraft import get_response
+from ailabkit.chat import get_response
 from datetime import datetime
 
 def create_image_gallery():
@@ -3784,8 +3797,8 @@ if __name__ == "__main__":
 ## Extension Ideas
 
 - Add image filtering by tags or categories
-- Implement image resizing and thumbnail generation
-- Create a lightbox effect for viewing full-size images
+- Implement image resising and thumbnail generation
+- Create a lightbox effect for viewing full-sise images
 - Add EXIF data extraction to display camera information
 - Implement a theme selector with different gallery styles
 - Create a server-side component to host the gallery online
@@ -3798,7 +3811,8 @@ if __name__ == "__main__":
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
-**Learning Focus**: Lists, memory, summarization
+**Learning Focus**: Lists, memory, summarisation  
+**Module**: chat
 
 ## Overview
 
@@ -3807,7 +3821,7 @@ Create a digital journaling assistant that helps users reflect on their experien
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import datetime
 import os
 
@@ -3938,10 +3952,10 @@ if __name__ == "__main__":
 ## Extension Ideas
 
 - Add mood tracking to each entry
-- Create visualizations of common themes or topics over time
+- Create visualisations of common themes or topics over time
 - Add a guided meditation option based on journal content
 - Implement a goal-setting feature that references past entries
-- Create specialized journaling templates for different purposes (gratitude, productivity, etc.)
+- Create specialised journaling templates for different purposes (gratitude, productivity, etc.)
 
 ---
 
@@ -3951,7 +3965,8 @@ if __name__ == "__main__":
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Lists, loops, conditionals, scoring systems
+**Learning Focus**: Lists, loops, conditionals, scoring systems  
+**Module**: chat
 
 ## Overview
 
@@ -3960,7 +3975,7 @@ Build a bot that quizzes the user on a topic and tracks their score.
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import random
 
 def generate_questions(topic, number_of_questions=5):
@@ -4051,7 +4066,8 @@ Add difficulty levels, timing, or topic categories.
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
-**Learning Focus**: Multilingual communication, cultural context
+**Learning Focus**: Multilingual communication, cultural context  
+**Module**: chat
 
 ## Overview
 
@@ -4060,7 +4076,7 @@ Create a tool that helps translate text between languages and explains cultural 
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def translation_helper():
     """Tool to translate text and explain cultural context"""
@@ -4200,7 +4216,8 @@ Add a conversation practice mode where students can simulate dialogues in anothe
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: File I/O, date handling, text analysis
+**Learning Focus**: File I/O, date handling, text analysis  
+**Module**: chat
 
 ## Overview
 
@@ -4209,7 +4226,7 @@ Create a journaling assistant that helps users track moods and reflect on patter
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import datetime
 import os
 import json
@@ -4337,7 +4354,7 @@ if __name__ == "__main__":
 
 ## Extension Ideas
 
-Add mood tracking visualizations or goal-setting features.
+Add mood tracking visualisations or goal-setting features.
 
 ---
 
@@ -4347,7 +4364,8 @@ Add mood tracking visualizations or goal-setting features.
 
 **Difficulty**: Intermediate-Advanced  
 **Time**: 60-90 minutes  
-**Learning Focus**: Document processing, natural language understanding, information retrieval
+**Learning Focus**: Document processing, natural language understanding, information retrieval  
+**Module**: chat
 
 ## Overview
 
@@ -4359,7 +4377,7 @@ Create a chatbot that can answer questions from a PDF document. This project tea
 import os
 import sys
 import fitz  # PyMuPDF
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 class PDFChatbot:
     """A chatbot that can answer questions about PDF documents."""
@@ -4627,7 +4645,8 @@ When using these advanced mini-projects in a classroom setting:
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
-**Learning Focus**: Functions, creativity, system prompts
+**Learning Focus**: Functions, creativity, system prompts  
+**Module**: chat
 
 ## Overview
 
@@ -4636,7 +4655,7 @@ Students create and interact with a bot that has a unique personality of their d
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 # Example personalities students can create:
 def superhero_bot(prompt):
@@ -4686,15 +4705,150 @@ Create a menu system that lets the user choose which personality to talk to.
 
 ---
 
+# Simple Calculator Agent
+
+**Difficulty**: Beginner - A simple introduction to agent functionality
+
+**Learning Focus**: Agents, Tool Use, ReAct Framework
+
+**Module**: agent
+
+This mini-project creates a simple calculator agent that can solve math problems using the ReAct framework. It demonstrates how to create and use tools with an agent.
+
+## Project Overview
+
+In this project, you'll create an agent that can:
+
+1. Parse mathematical expressions
+2. Break down complex calculations into steps
+3. Use a calculator tool to solve sub-problems
+4. Show its reasoning process
+
+This is a great introduction to how agents work and how they can use tools to solve problems.
+
+## Implementation
+
+Start by importing the necessary modules:
+
+```python
+from ailabkit.agent import run_agent, register_tool
+
+# Define a calculator function
+def calculator(expression):
+    """Evaluate a mathematical expression."""
+    try:
+        # Using a safe eval environment
+        result = eval(expression, {"__builtins__": {}}, {
+            "abs": abs, "min": min, "max": max, "round": round, 
+            "sum": sum, "pow": pow, "int": int, "float": float
+        })
+        return f"Result: {result}"
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+# Register the calculator tool
+register_tool(
+    "calculator", 
+    "Evaluate a mathematical expression. Example: 2 + 2 * 10", 
+    calculator
+)
+
+# Create a function to run the agent
+def solve_math_problem(question):
+    """Solve a math problem using the agent."""
+    print(f"Question: {question}")
+    
+    # Run the agent with the question
+    response = run_agent(question, verbose=True)
+    
+    print("\nFinal Answer:")
+    print(response)
+    
+    return response
+
+# Example usage
+if __name__ == "__main__":
+    questions = [
+        "What is 25 * 3?",
+        "If I have 125 apples and give away 1/5 of them, how many do I have left?",
+        "What is the square root of 144?",
+        "What is 15% of 240?",
+        "If a triangle has sides of length 3, 4, and 5, what is its area?"
+    ]
+    
+    for q in questions:
+        print("\n" + "="*50)
+        solve_math_problem(q)
+        print("="*50)
+```
+
+## How It Works
+
+1. We define a `calculator` function that can safely evaluate mathematical expressions.
+2. We register this tool with the agent system using `register_tool`.
+3. We create a `solve_math_problem` function that runs the agent with a question.
+4. The agent uses ReAct prompting to break down the problem and use the calculator tool.
+5. The agent returns a final answer based on its reasoning and the tool results.
+
+## Sample Output
+
+When you run this code, you'll see output like:
+
+```
+==================================================
+Question: What is 25 * 3?
+
+Thought: I need to multiply 25 by 3. I can use the calculator tool for this.
+Action: calculator
+Action Input: 25 * 3
+Observation: Result: 75
+
+Final Answer: The result of 25 * 3 is 75.
+==================================================
+```
+
+## Extensions and Variations
+
+Here are some ways to extend this project:
+
+1. **Add more mathematical functions**: Extend the calculator to handle more complex operations like logarithms, trigonometry, etc.
+
+2. **Create a multi-step calculator**: Modify the agent to show intermediate steps for complex calculations.
+
+3. **Add unit conversion**: Create a unit conversion tool and let the agent solve problems involving different units.
+
+4. **Create a word problem solver**: Enhance the agent to parse word problems and solve them step-by-step.
+
+5. **Add visualization**: Create a web interface that displays the agent's reasoning steps alongside the calculations.
+
+## Educational Applications
+
+This project can be used to:
+
+- Teach how agents break down problems into steps
+- Demonstrate the ReAct framework in practice
+- Show how tools can extend an AI system's capabilities
+- Help students understand mathematical problem-solving strategies
+
+## Assessment Ideas
+
+- Have students modify the calculator tool to handle additional operations
+- Ask students to analyze the agent's reasoning for different types of problems
+- Challenge students to create a word problem generator that the agent can solve
+- Have students compare the agent's approach to their own problem-solving methods
+
+---
+
 # Smart To-Do List
 
 **Difficulty**: Intermediate  
 **Time**: 60-75 minutes  
-**Learning Focus**: Data structures, file I/O, date handling, AI assistance
+**Learning Focus**: Data structures, file I/O, date handling, AI assistance  
+**Module**: chat
 
 ## Overview
 
-Build a smart to-do list application that helps users organize tasks with categories, priorities, and due dates. The application provides AI-assisted recommendations for task management and organization.
+Build a smart to-do list application that helps users organise tasks with categories, priorities, and due dates. The application provides AI-assisted recommendations for task management and organisation.
 
 ## Instructions
 
@@ -4702,7 +4856,7 @@ Build a smart to-do list application that helps users organize tasks with catego
 import os
 import json
 from datetime import datetime, timedelta
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 class SmartTodoList:
     """
@@ -5230,7 +5384,7 @@ if __name__ == "__main__":
 
 - Add recurring tasks (daily, weekly, monthly)
 - Implement task dependencies (tasks that require other tasks to be completed first)
-- Create a calendar view to visualize task distribution
+- Create a calendar view to visualise task distribution
 - Add a Pomodoro timer feature for focused work sessions
 - Implement task sharing or collaboration features
 - Create a mobile-friendly web interface using a framework like Flask
@@ -5243,16 +5397,17 @@ if __name__ == "__main__":
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Domain-specific prompting, educational dialogue
+**Learning Focus**: Domain-specific prompting, educational dialogue  
+**Module**: chat
 
 ## Overview
 
-Create a specialized tutor bot for a specific subject area that can explain concepts and quiz the user.
+Create a specialised tutor bot for a specific subject area that can explain concepts and quiz the user.
 
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import time
 
 def tutor_bot():
@@ -5429,7 +5584,8 @@ Add a spaced repetition system that tracks concepts users struggle with and revi
 
 **Difficulty**: Advanced  
 **Time**: 90-120 minutes  
-**Learning Focus**: Object-oriented programming, game design, file I/O, AI interaction
+**Learning Focus**: Object-oriented programming, game design, file I/O, AI interaction  
+**Module**: chat
 
 ## Overview
 
@@ -5438,7 +5594,7 @@ Create a text adventure game engine that allows students to build interactive st
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import json
 import os
 
@@ -5907,7 +6063,8 @@ if __name__ == "__main__":
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Loops, conditionals, lists
+**Learning Focus**: Loops, conditionals, lists  
+**Module**: chat
 
 ## Overview
 
@@ -5916,7 +6073,7 @@ Build an interactive quiz bot that asks questions, tracks the user's score, prov
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import random
 
 def create_quiz_bot():
@@ -6001,7 +6158,7 @@ if __name__ == "__main__":
 
 - Add difficulty levels where harder questions are worth more points
 - Include a hint system where users can ask for clues but lose points
-- Make a specialized quiz for a specific subject the students are studying
+- Make a specialised quiz for a specific subject the students are studying
 - Add a timer element where users have to answer within a time limit
 - Let students create their own question banks to quiz each other
 
@@ -6013,7 +6170,8 @@ if __name__ == "__main__":
 
 **Difficulty**: Intermediate-Advanced  
 **Time**: 60-90 minutes  
-**Learning Focus**: API integration, data visualization, environmental data analysis
+**Learning Focus**: API integration, data visualisation, environmental data analysis  
+**Module**: chat
 
 ## Overview
 
@@ -6026,7 +6184,7 @@ import requests
 import matplotlib.pyplot as plt
 import os
 from datetime import datetime, timedelta
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 class WeatherDashboard:
     """
@@ -6394,9 +6552,9 @@ if __name__ == "__main__":
 - Add support for multiple locations and comparison views
 - Implement unit conversion between metric and imperial
 - Create a historical weather data retrieval and analysis feature
-- Add precipitation and wind forecasts with appropriate visualizations
+- Add precipitation and wind forecasts with appropriate visualisations
 - Implement a daily weather notification system
-- Create a map-based visualization of weather data
+- Create a map-based visualisation of weather data
 
 ---
 
@@ -6406,7 +6564,8 @@ if __name__ == "__main__":
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
-**Learning Focus**: API integration, text processing, content repurposing
+**Learning Focus**: API integration, text processing, content repurposing  
+**Module**: chat
 
 ## Overview
 
@@ -6418,7 +6577,7 @@ Create a tool that converts YouTube video transcripts into well-formatted blog p
 import re
 import argparse
 from youtube_transcript_api import YouTubeTranscriptApi
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def youtube_to_blog():
     """Convert YouTube video transcripts into blog post content using AI."""
@@ -6581,7 +6740,7 @@ if __name__ == "__main__":
 - Create a scheduler to process videos in batch
 - Add image extraction from video thumbnails or frames
 - Build a web interface with Flask or Streamlit
-- Implement SEO optimization suggestions for the generated content
+- Implement SEO optimisation suggestions for the generated content
 
 ---
 
@@ -6590,4 +6749,4 @@ if __name__ == "__main__":
 <!-- All mini-projects are now included and conform to the standard format.
 For additions or edits, update the corresponding files in docs/projects/ and regenerate this document. -->
 
-_For implementation strategies and assessment ideas, see the [ChatCraft Education Guide](education-guide.md)._
+_For implementation strategies and assessment ideas, see the [AiLabKit Education Guide](education-guide.md)._

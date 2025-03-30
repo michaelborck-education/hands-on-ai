@@ -6,7 +6,7 @@ Thanks for your interest in contributing to AiLabKit! Whether you're fixing a ty
 
 There are many ways to contribute to AiLabKit:
 
-1. **Add new bot personalities**: Create creative, educational, or specialized bot personalities for the chat module.
+1. **Add new bot personalities**: Create creative, educational, or specialised bot personalities for the chat module.
 2. **Enhance RAG capabilities**: Improve document processing, indexing, or retrieval in the RAG module.
 3. **Extend agent functionality**: Add new tools or capabilities to the agent module.
 4. **Bug fixes**: Help identify and fix bugs in the existing codebase.
@@ -72,7 +72,7 @@ To add a new bot personality to the chat module:
 1. Decide whether your bot fits into an existing personality category (educational, creative, technical, etc.)
 2. Create a new bot file in the appropriate directory:
    - For a standard category bot: `src/ailabkit/chat/personalities/your_bot.py`
-   - For a specialized bot: `src/ailabkit/chat/personalities/bots/your_bot.py`
+   - For a specialised bot: `src/ailabkit/chat/personalities/bots/your_bot.py`
 3. Follow the pattern:
    ```python
    def your_bot_name(prompt):

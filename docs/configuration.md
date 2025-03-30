@@ -93,7 +93,7 @@ This will:
 
 - Create a shared classroom config file and distribute it to students (e.g., via `curl` script)
 - Use environment variables to avoid hardcoding URLs into student projects
-- Customize fallback personality messages for your learning context
+- Customise fallback personality messages for your learning context
 
 ---
 

@@ -26,7 +26,7 @@ This project was made possible thanks to the following contributors:
   Helped with modular architecture, web interfaces, and documentation.  
   Contributions include:  
   - Web interface implementation  
-  - Code restructuring and modularization  
+  - Code restructuring and modularisation  
   - Build system updates  
   - Module integration  
   - Development tools

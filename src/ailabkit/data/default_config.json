@@ -1,0 +1,8 @@
+{
+    "server": "http://localhost:11434",
+    "model": "llama3",
+    "embedding_model": "nomic-embed-text",
+    "chunk_size": 500,
+    "default_personality": "coder",
+    "timeout": 60
+}

@@ -55,14 +55,14 @@ ailabkit/
 
 ## Key Changes
 
-1. **Modular Organization:**
+1. **Modular Organisation:**
    - Each functionality (chat, rag, agent) is now a separate submodule
    - Each submodule has its own CLI, commands, and functionality
    - Shared configuration in central config.py
 
 2. **Personality Structure:**
    - Individual bot files for easy contribution
-   - Category grouping for logical organization
+   - Category grouping for logical organisation
    - Three ways to import bots:
      - From individual files: `from ailabkit.chat.personalities.bots import friendly_bot`
      - From categories: `from ailabkit.chat.personalities.creative import *`
@@ -74,7 +74,7 @@ ailabkit/
    - Consistent pattern across all submodules
 
 4. **Configuration:**
-   - Centralized configuration in ailabkit/config.py
+   - Centralised configuration in ailabkit/config.py
    - Environment variables renamed from CHATCRAFT_* to AILABKIT_*
    - Configuration directory ~/.chatcraft -> ~/.ailabkit
 

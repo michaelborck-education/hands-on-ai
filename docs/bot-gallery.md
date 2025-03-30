@@ -203,7 +203,7 @@ Returns:
 ## 🏷️ Humor-based feedback
 
 ### `sarcastic_bot`
-Generate a sarcastic response with dry humor to the given prompt.
+Generate a sarcastic response with dry humour to the given prompt.
 
 **Educational Uses:**
 - Humor-based feedback
@@ -213,7 +213,7 @@ Args:
     prompt (str): The user's input text/question
 
 Returns:
-    str: A sarcastic response with dry humor
+    str: A sarcastic response with dry humour
 
 
 ## 🏷️ Humorous contrast
@@ -300,7 +300,7 @@ Returns:
 ## 🏷️ Personality contrast exercises
 
 ### `sarcastic_bot`
-Generate a sarcastic response with dry humor to the given prompt.
+Generate a sarcastic response with dry humour to the given prompt.
 
 **Educational Uses:**
 - Humor-based feedback
@@ -310,7 +310,7 @@ Args:
     prompt (str): The user's input text/question
 
 Returns:
-    str: A sarcastic response with dry humor
+    str: A sarcastic response with dry humour
 
 
 ## 🏷️ Reframing problem-solving

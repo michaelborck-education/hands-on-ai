@@ -1,8 +1,8 @@
-# ChatCraft: Education Guide
+# AiLabKit: Education Guide
 
 > "LLMs made simple for students and educators"
 
-This guide provides educational rationale, classroom implementation strategies, and learning objectives for using ChatCraft in various educational settings.
+This guide provides educational rationale, classroom implementation strategies, and learning objectives for using AiLabKit in various educational settings.
 
 ## Educational Value
 
@@ -70,7 +70,7 @@ Deeper exploration of AI concepts and applications:
 - Gain exposure to API concepts
 
 ### AI Literacy
-- Recognize capabilities and limitations of LLMs
+- Recognise capabilities and limitations of LLMs
 - Understand the role of system prompts in shaping responses
 - Identify patterns in AI-generated content
 - Develop critical thinking about AI outputs
@@ -118,8 +118,9 @@ When introducing AI in the classroom, consider discussing:
 ## Additional Resources
 
 - [mini-projects.md](mini-projects.md) - Ready-to-use classroom activities
+- [project_browser.html](../project_browser.html) - Interactive offline browser for mini-projects
 - [bot-gallery.md](bot-gallery.md) - Library of pre-built personality bots
-- [classroom0setup.md](classroom-setup.md) - Detailed technical setup instructions
+- [classroom-setup.md](classroom-setup.md) - Detailed technical setup instructions
 
 ---
 

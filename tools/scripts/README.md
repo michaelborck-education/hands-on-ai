@@ -25,6 +25,43 @@ This script searches for common patterns in the mini-project files such as:
 
 The script is automatically included in the `build-all` workflow.
 
+### `convert_references.py`
+
+Traverses the entire docs/ directory to replace all references to "ChatCraft" with "AiLabKit" throughout documentation.
+
+**Usage:**
+```bash
+# Run on all documentation files
+python tools/scripts/convert_references.py
+
+# Or use the make/just targets (once added)
+make convert-references
+just convert-references
+```
+
+This script handles various types of replacements:
+- Case-sensitive "ChatCraft" → "AiLabKit"
+- Import statements: `from chatcraft import` → `from ailabkit.chat import`
+- Function calls: `chatcraft.function()` → `ailabkit.chat.function()`
+- General lowercase references: `chatcraft` → `ailabkit.chat`
+
+The script processes .md, .py, .txt, and .html files, generating a report of all changes made.
+
+### `split.py`
+
+Splits the combined mini-projects.md file into individual project files in the docs/projects/ directory.
+
+**Usage:**
+```bash
+# Run with default paths
+python tools/scripts/split.py
+
+# Specify custom input file and output directory
+python tools/scripts/split.py --input path/to/combined.md --output-dir path/to/output
+```
+
+This utility extracts each project (marked by level 2 headers) from a combined markdown file and creates separate files for each one. It's essentially the reverse operation of `build_mini_projects.py`.
+
 ### `convert_spelling.py`
 
 Converts American English spelling to Australian/British English spelling in documentation files.
