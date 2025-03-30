@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://github.com/teaching-repositories/ailabkit/cli-guide/">
       
       
+        <link rel="prev" href="../project-tools/">
+      
+      
+        <link rel="next" href="../bot-template/">
       
       
       <link rel="icon" href="../assets/icon-192.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>AiLabKit Command Line Interface (CLI) - AiLabKit Documentation</title>
+        <title>CLI Reference - AiLabKit Documentation</title>
       
     
     
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AiLabKit Command Line Interface (CLI)
+              CLI Reference
             
           </span>
         </div>
@@ -275,35 +279,17 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../project-tools/" class="md-tabs__link">
           
   
   
   For Developers
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../projects/" class="md-tabs__link">
-          
-  
-  
-  Mini-Projects
 
         </a>
       </li>
@@ -694,6 +680,200 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    CLI Reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-cli-ailabkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main CLI (ailabkit)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main CLI (ailabkit)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-module-cli-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Module CLI (chat)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat Module CLI (chat)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rag-module-cli-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG Module CLI (rag)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RAG Module CLI (rag)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-command-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Command Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detailed Command Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rag-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      rag index
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-module-cli-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Module CLI (agent)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Module CLI (agent)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-using-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips for Using the CLI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -814,6 +994,200 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    CLI Reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-cli-ailabkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main CLI (ailabkit)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main CLI (ailabkit)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-module-cli-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Module CLI (chat)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat Module CLI (chat)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rag-module-cli-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG Module CLI (rag)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RAG Module CLI (rag)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-command-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Command Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detailed Command Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rag-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      rag index
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-module-cli-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Module CLI (agent)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Module CLI (agent)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-using-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips for Using the CLI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -906,6 +1280,246 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-agent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tool Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    CLI Reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-cli-ailabkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main CLI (ailabkit)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main CLI (ailabkit)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-module-cli-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Module CLI (chat)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat Module CLI (chat)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rag-module-cli-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG Module CLI (rag)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RAG Module CLI (rag)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-command-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Command Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detailed Command Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rag-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      rag index
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-module-cli-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Module CLI (agent)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Module CLI (agent)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-using-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips for Using the CLI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1022,6 +1636,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../mini-projects.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projects Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../projects/" class="md-nav__link">
         
   
@@ -1095,26 +1732,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1127,7 +1769,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             For Developers
@@ -1152,6 +1794,200 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    CLI Reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-cli-ailabkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main CLI (ailabkit)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main CLI (ailabkit)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-module-cli-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Module CLI (chat)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat Module CLI (chat)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rag-module-cli-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG Module CLI (rag)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RAG Module CLI (rag)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-command-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Command Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detailed Command Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rag-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      rag index
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-module-cli-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Module CLI (agent)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Module CLI (agent)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-using-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips for Using the CLI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1261,7 +2097,7 @@
   
   
   <span class="md-ellipsis">
-    Mini-Projects
+    Templates
     
   </span>
   
@@ -1271,102 +2107,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Mini-Projects
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../projects/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Project Gallery
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mini-project-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Project Template
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Templates
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Templates
           </label>
@@ -1445,10 +2185,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -1461,8 +2201,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             About
           </label>
