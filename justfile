@@ -65,13 +65,14 @@ chat-web:
 
 rag-web:
   ailabkit rag web
+  
+agent-web:
+  ailabkit agent web
 
 # 🔧 Rebuild mini-projects markdown from individual project files
 build-mini-projects:
   python scripts/build_mini_projects.py
 
-# Legacy commands (kept for reference but non-functional)
-# These commands require scripts that have been archived and are no longer maintained
 
 # 🇦🇺 Convert American spelling to Australian/British spelling in docs
 spelling-au:
@@ -150,6 +151,7 @@ help:
   @echo "  agent-repl            Start AiLabKit agent interactive mode"
   @echo "  chat-web              Start AiLabKit chat web interface"
   @echo "  rag-web               Start AiLabKit RAG web interface"
+  @echo "  agent-web             Start AiLabKit agent web interface"
   @echo "  doctor                Run system diagnostic for AiLabKit"
   @echo "  build-mini-projects   Rebuild mini-projects.md from /docs/projects"
   @echo "  spelling-au           Convert American spelling to Australian/British spelling"
