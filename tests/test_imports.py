@@ -8,19 +8,19 @@ def test_imports():
     
     # Test main package
     import ailabkit
-    print("✅ Successfully imported ailabkit")
+    print(f"✅ Successfully imported ailabkit {ailabkit.__name__}")
     
     # Test chat module
     from ailabkit import chat
-    print("✅ Successfully imported ailabkit.chat")
+    print(f"✅ Successfully imported ailabkit.chat {chat.__name__}")
     
     # Test RAG module
     from ailabkit import rag
-    print("✅ Successfully imported ailabkit.rag")
+    print(f"✅ Successfully imported ailabkit.rag {rag.__name__}")
     
     # Test agent module
     from ailabkit import agent
-    print("✅ Successfully imported ailabkit.agent")
+    print(f"✅ Successfully imported ailabkit.agent {agent.__name__}")
     
     print("All imports successful!")
 
@@ -31,15 +31,15 @@ def test_chat():
     
     # Import bot functions
     from ailabkit.chat import friendly_bot
-    print("✅ Successfully imported friendly_bot")
+    print(f"✅ Successfully imported friendly_bot {friendly_bot.__name__}")
     
     # Test importing from categories
     from ailabkit.chat.personalities.creative import pirate_bot
-    print("✅ Successfully imported pirate_bot from creative module")
+    print(f"✅ Successfully imported pirate_bot {pirate_bot.__name__}")
     
     # Test importing directly from bot file
     from ailabkit.chat.personalities.bots.teacher_bot import teacher_bot
-    print("✅ Successfully imported teacher_bot directly from bot file")
+    print(f"✅ Successfully imported teacher_bot {teacher_bot.__name__}")
     
     print("Chat module tests passed!")
 
