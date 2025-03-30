@@ -5,6 +5,8 @@ Core RAG utilities for document loading, chunking, embedding, and retrieval.
 from pathlib import Path
 import os
 import json
+import shutil
+import importlib.resources
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import requests
@@ -153,3 +155,57 @@ def get_top_k(query, index_path, k=3, return_scores=False):
     if return_scores:
         return list(zip(top_chunks, top_sources)), top_scores
     return list(zip(top_chunks, top_sources))
+
+
+def get_sample_docs_path():
+    """
+    Get the path to the sample document directory.
+    
+    Returns:
+        Path: Path object to the sample documents directory
+    """
+    try:
+        # For Python 3.9+
+        with importlib.resources.path('ailabkit.rag.data', 'samples') as path:
+            return path
+    except Exception:
+        # Fallback for older Python or direct file access
+        module_path = Path(__file__).parent
+        return module_path / 'data' / 'samples'
+
+
+def list_sample_docs():
+    """
+    List all available sample documents.
+    
+    Returns:
+        list: List of sample document filenames
+    """
+    sample_path = get_sample_docs_path()
+    return [f.name for f in sample_path.iterdir() if f.is_file()]
+
+
+def copy_sample_docs(destination=None):
+    """
+    Copy sample documents to a destination directory.
+    
+    Args:
+        destination: Path to copy documents to (default: current directory)
+        
+    Returns:
+        Path: Path to the destination directory
+    """
+    if destination is None:
+        destination = Path.cwd() / 'sample_docs'
+    else:
+        destination = Path(destination)
+        
+    destination.mkdir(exist_ok=True, parents=True)
+    sample_path = get_sample_docs_path()
+    
+    # Copy all files
+    for file_path in sample_path.iterdir():
+        if file_path.is_file():
+            shutil.copy2(file_path, destination / file_path.name)
+            
+    return destination

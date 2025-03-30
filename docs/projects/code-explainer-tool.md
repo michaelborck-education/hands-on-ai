@@ -11,7 +11,7 @@ Create a tool that explains code snippets and helps users understand programming
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import sys
 
 def code_explainer():

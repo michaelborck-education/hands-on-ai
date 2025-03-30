@@ -14,7 +14,7 @@ Create a chatbot that can answer questions from a PDF document. This project tea
 import os
 import sys
 import fitz  # PyMuPDF
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 class PDFChatbot:
     """A chatbot that can answer questions about PDF documents."""

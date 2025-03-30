@@ -11,7 +11,7 @@ Create a journaling assistant that helps users track moods and reflect on patter
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import datetime
 import os
 import json

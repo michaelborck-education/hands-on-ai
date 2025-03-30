@@ -11,7 +11,7 @@ Create a flexible menu system that allows users to interact with multiple bot pe
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def personality_menu():
     print("=== Bot Personality Menu Generator ===")

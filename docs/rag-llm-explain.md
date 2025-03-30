@@ -1,10 +1,3 @@
-Certainly! Here's the full content of **`chatcraft/ragcraft-llm-explainer.md`**:
-
----
-
-### 📄 `ragcraft-llm-explainer.md`
-
-```markdown
 # 🤖 What Does the LLM Do in RAG?
 
 You might wonder:
@@ -75,6 +68,3 @@ You need **both** to make RAG powerful.
 ---
 
 Designed for clarity. Powered by context.
-```
-
-Would you like a PDF version of this explainer or to link it directly in `ragcraft-guide.md`?

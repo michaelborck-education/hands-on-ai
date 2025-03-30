@@ -13,7 +13,7 @@ Create a tool that generates an HTML gallery from a collection of images. The to
 ```python
 import os
 import json
-from chatcraft import get_response
+from ailabkit.chat import get_response
 from datetime import datetime
 
 def create_image_gallery():

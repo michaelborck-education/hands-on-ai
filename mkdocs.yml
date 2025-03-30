@@ -38,9 +38,13 @@ nav:
     - "Education Guide": education-guide.md
     - "Projects Overview": mini-projects.md
     - "Project Template": mini-project-template.md
+    - "Project Tools": project-tools.md
   - Mini-Projects:
     - "Overview": mini-projects.md
     - "Project Gallery": projects/
+  - About:
+    - "Authors": authors.md
+    - "Contributing": contributing.md
 plugins:
   - search
   - mkdocstrings:

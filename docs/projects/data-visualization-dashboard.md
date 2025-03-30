@@ -11,7 +11,7 @@ Create an interactive dashboard that allows users to visualize and explore data 
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import pandas as pd
 import matplotlib.pyplot as plt
 from io import BytesIO

@@ -4,11 +4,14 @@
 test:
   pytest
 
+test-basic:
+  python test_ailabkit.py
+
 lint:
-  ruff chatcraft tests tools
+  ruff src/ailabkit tests tools
 
 format:
-  ruff format chatcraft tests tools
+  ruff format src/ailabkit tests tools
 
 # 💼 Run linter and tests together
 ci: 
@@ -29,8 +32,8 @@ requirements:
   echo "✅ Regenerated requirements.txt and requirements-dev.txt"
 
 # 🏗️ Build and distribute
-build args="":
-  python build.py {{args}}
+build:
+  python -m build
 
 bundle:
   python tools/build_zip.py
@@ -42,17 +45,38 @@ docs:
 deploy-docs:
   mkdocs gh-deploy --force
 
-# 🧪 Run CLI in interactive REPL mode
-repl:
-  chatcraft interactive
+# 🧪 Run CLI modules in interactive mode
+chat-repl:
+  ailabkit chat interactive
+
+rag-repl:
+  ailabkit rag interactive
+
+agent-repl:
+  ailabkit agent interactive
 
 # 🩺 Run diagnostic check
 doctor:
-  chatcraft doctor
+  ailabkit doctor
+
+# 🌐 Run web interfaces
+chat-web:
+  ailabkit chat web
+
+rag-web:
+  ailabkit rag web
 
 # 🔧 Rebuild mini-projects markdown from individual project files
 build-mini-projects:
   python tools/build_mini_projects.py
+
+# 🔄 Update mini-projects code examples to use ailabkit.chat
+update-mini-projects:
+  python tools/scripts/update_mini_projects.py
+
+# 🇦🇺 Convert American spelling to Australian/British spelling in docs
+spelling-au:
+  python tools/scripts/convert_spelling.py --verbose
 
 # 🌐 Regenerate HTML-based project browser
 build-project-browser:
@@ -61,6 +85,7 @@ build-project-browser:
 # 🛠️ Rebuild everything: sync version, docs, browser, mini-projects
 build-all:
   just sync-version
+  just update-mini-projects
   just build-mini-projects
   just build-project-browser
   just docs
@@ -98,7 +123,8 @@ clean:
 help:
   @echo "Available commands:"
   @echo "  install-dev           Install dev dependencies"
-  @echo "  test                  Run tests with pytest"
+  @echo "  test                  Run all tests with pytest"
+  @echo "  test-basic            Run basic imports test directly"
   @echo "  lint                  Run Ruff linter"
   @echo "  format                Auto-format code with Ruff"
   @echo "  build                 Build and optionally upload"
@@ -106,9 +132,15 @@ help:
   @echo "  sync-version          Sync version across files"
   @echo "  docs                  Build MkDocs site"
   @echo "  deploy-docs           Deploy site to GitHub Pages"
-  @echo "  repl                  Start ChatCraft REPL"
-  @echo "  doctor                Run system diagnostic for ChatCraft"
+  @echo "  chat-repl             Start AiLabKit chat interactive mode"
+  @echo "  rag-repl              Start AiLabKit RAG interactive mode"
+  @echo "  agent-repl            Start AiLabKit agent interactive mode"
+  @echo "  chat-web              Start AiLabKit chat web interface"
+  @echo "  rag-web               Start AiLabKit RAG web interface"
+  @echo "  doctor                Run system diagnostic for AiLabKit"
   @echo "  build-mini-projects   Rebuild mini-projects.md from /docs/projects"
+  @echo "  update-mini-projects  Update code in mini-projects to use ailabkit.chat"
+  @echo "  spelling-au           Convert American spelling to Australian/British spelling"
   @echo "  lint-mini-projects    Lint mini-projects.md files"
   @echo "  build-project-browser Generate the project_browser.html"
   @echo "  build-all             Sync version, rebuild docs and project browser"

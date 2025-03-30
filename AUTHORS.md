@@ -7,12 +7,12 @@ This project was made possible thanks to the following contributors:
 - **Michael Borck**  
   Lead developer and educational designer.  
   GitHub: [michael-borck](https://github.com/teaching-repositories)  
-  Email: michae@borck.me
+  Email: michael@borck.me
 
-## AI Co-Author
+## AI Co-Authors
 
 - **ChatGPT (OpenAI)**  
-  Provided design and code-generation assistance for ChatCraft.  
+  Provided design and code-generation assistance for the original ChatCraft module.  
   Helped with architecture, packaging, documentation, and workflow automation.  
   Contributions include:  
   - Bot personality system  
@@ -21,9 +21,20 @@ This project was made possible thanks to the following contributors:
   - Testing and tooling  
   - Educational project design
 
+- **Claude (Anthropic)**  
+  Provided assistance with transitioning the project to AiLabKit.  
+  Helped with modular architecture, web interfaces, and documentation.  
+  Contributions include:  
+  - Web interface implementation  
+  - Code restructuring and modularization  
+  - Build system updates  
+  - Module integration  
+  - Development tools
+
 ## Acknowledgments
 
 - Inspired by the open-source Python packaging ecosystem and educators exploring AI in the classroom.
+- Built with a focus on educational applications of AI in teaching and learning environments.
 
 ---
 

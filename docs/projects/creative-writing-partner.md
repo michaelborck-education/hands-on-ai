@@ -11,7 +11,7 @@ A collaborative writing tool that helps students develop stories, poems, or essa
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def writing_partner():
     """Interactive creative writing assistant"""

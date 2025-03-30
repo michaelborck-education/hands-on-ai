@@ -11,7 +11,7 @@ Create a digital journaling assistant that helps users reflect on their experien
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import datetime
 import os
 

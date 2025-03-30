@@ -11,7 +11,7 @@ Create a specialized tutor bot for a specific subject area that can explain conc
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import time
 
 def tutor_bot():

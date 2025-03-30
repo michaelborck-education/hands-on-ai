@@ -13,7 +13,7 @@ uv pip install -e '.[dev]'
 You’ll have access to a CLI tool:
 
 ```bash
-chatcraft --help
+chat --help
 ```
 
 ---
@@ -24,7 +24,7 @@ chatcraft --help
 Send a question to a selected personality:
 
 ```bash
-chatcraft ask "What is Python used for?" --personality coder
+chat ask "What is Python used for?" --personality coder
 ```
 
 By default, the `friendly` bot is used unless another personality is specified.
@@ -32,7 +32,7 @@ By default, the `friendly` bot is used unless another personality is specified.
 ### List Available Bots
 
 ```bash
-chatcraft bots
+chat bots
 ```
 
 Displays all personality bots with a brief description.
@@ -40,7 +40,7 @@ Displays all personality bots with a brief description.
 ### Check System (Doctor)
 
 ```bash
-chatcraft doctor
+chat doctor
 ```
 
 Performs a diagnostic to check if the Ollama server is reachable and responding.
@@ -52,7 +52,7 @@ Performs a diagnostic to check if the Ollama server is reachable and responding.
 Run:
 
 ```bash
-chatcraft interactive
+chat interactive
 ```
 
 This opens a text-based, stateless REPL (Read-Eval-Print Loop).
@@ -80,7 +80,7 @@ ChatCraft bots are defined as simple Python functions using `get_response()`. Yo
 All built-in bots are available via:
 
 ```python
-from chatcraft import friendly_bot, pirate_bot, coder_bot, ...
+from chat import friendly_bot, pirate_bot, coder_bot, ...
 ```
 
 ---
@@ -88,7 +88,7 @@ from chatcraft import friendly_bot, pirate_bot, coder_bot, ...
 ## 🧪 Troubleshooting
 
 - If you see `❌ Ollama server not reachable`, ensure Ollama is running on your machine.
-- Use `chatcraft doctor` for diagnostics.
+- Use `chat doctor` for diagnostics.
 - To change the server URL, set the `OLLAMA_HOST` environment variable.
 
 ```bash
@@ -107,4 +107,4 @@ export OLLAMA_HOST=http://remote-server:11434
 
 *ChatCraft CLI is designed for educational use, rapid prototyping, and personality-driven chatbot interaction.*
 
-For more advanced usage, consider integrating ChatCraft into your Python projects using the `chatcraft` library.
+For more advanced usage, consider integrating ChatCraft into your Python projects using the `chat` library.

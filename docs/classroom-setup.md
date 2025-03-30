@@ -1,6 +1,6 @@
 # Classroom Setup for ChatCraft
 
-This guide walks educators and students through the technical setup needed to use [ChatCraft](https://github.com/teaching-repositories/chatcraft) in a classroom environment. It assumes basic familiarity with Python and the command line.
+This guide walks educators and students through the technical setup needed to use [ChatCraft](https://github.com/teaching-repositories/chat) in a classroom environment. It assumes basic familiarity with Python and the command line.
 
 ---
 
@@ -17,8 +17,8 @@ This guide walks educators and students through the technical setup needed to us
 
 ### 1. Clone the ChatCraft Repository
 ```bash
-git clone https://github.com/teaching-repositories/chatcraft.git
-cd chatcraft
+git clone https://github.com/teaching-repositories/chat.git
+cd chat
 ```
 
 ### 2. Create a Virtual Environment
@@ -54,13 +54,13 @@ Or use a model of your choice (e.g., `codellama`, `mistral`, etc.)
 
 ### CLI Check:
 ```bash
-chatcraft doctor
+chat doctor
 ```
 Should report that Ollama is reachable.
 
 ### Interactive Mode:
 ```bash
-chatcraft interactive
+chat interactive
 ```
 Chat with any of the built-in personalities.
 
@@ -70,7 +70,7 @@ Chat with any of the built-in personalities.
 
 - ✅ Ensure all students have Python and Ollama installed
 - ✅ Pre-install the models if bandwidth is limited
-- ✅ Use `just doctor` or `chatcraft doctor` to verify working setup
+- ✅ Use `just doctor` or `chat doctor` to verify working setup
 - ✅ Optionally, preload `.venv` and models on lab machines
 - ✅ Use offline bundle (`just bundle`) if internet is restricted
 
@@ -96,7 +96,7 @@ Useful for running a central server in class.
 
 ## 🧰 Related Tools
 - `just doctor` - Check environment
-- `just repl` or `chatcraft interactive` - Start REPL
+- `just repl` or `chat interactive` - Start REPL
 - `just build-all` - Build docs and mini-projects
 - `mkdocs serve` - Live preview of documentation site
 

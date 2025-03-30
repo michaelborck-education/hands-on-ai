@@ -11,7 +11,7 @@ Create a classroom simulation where students can interact with different charact
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def classroom_simulation():
     print("=== Virtual Classroom Simulation ===")

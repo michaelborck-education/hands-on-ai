@@ -11,7 +11,7 @@ Create a tool that helps translate text between languages and explains cultural 
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def translation_helper():
     """Tool to translate text and explain cultural context"""

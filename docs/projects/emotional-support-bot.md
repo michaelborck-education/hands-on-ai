@@ -11,7 +11,7 @@ Create a bot that responds differently based on the user's emotional state, prov
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def emotional_support_bot():
     print("=== Emotional Support Bot ===")

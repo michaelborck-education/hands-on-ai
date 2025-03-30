@@ -11,7 +11,7 @@ Students create and interact with a bot that has a unique personality of their d
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 # Example personalities students can create:
 def superhero_bot(prompt):

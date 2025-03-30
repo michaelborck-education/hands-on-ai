@@ -50,7 +50,10 @@ dev = [
 where = ["src"]
 
 [tool.setuptools.package-data]
-"ailabkit" = ["chat/data/*.json"]
+"ailabkit" = [
+    "chat/data/*.json",
+    "rag/data/samples/*"
+]
 
 [project.urls]
 Homepage = "https://github.com/teaching-repositories/ailabkit"

@@ -11,7 +11,7 @@ Create a new bot personality that responds in a unique way — like a movie char
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 # Example bot personality
 def cat_bot(prompt):

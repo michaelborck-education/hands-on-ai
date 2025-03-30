@@ -1,6 +1,13 @@
 include README.md
 include LICENSE
 include version.json
-recursive-include chatcraft/data *.json
-recursive-include chatcraft *.pyx
-recursive-include chatcraft *.pxd
+include CONTRIBUTING.md
+include AUTHORS.md
+include pytest.ini
+include justfile
+include Makefile
+recursive-include src/ailabkit */data/*.json
+recursive-include src/ailabkit/rag/data/samples *
+recursive-include docs *.md *.png *.jpg *.svg *.gif
+# Keep testdata for development purposes
+recursive-include testdata *

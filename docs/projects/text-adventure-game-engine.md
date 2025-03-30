@@ -11,7 +11,7 @@ Create a text adventure game engine that allows students to build interactive st
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import json
 import os
 

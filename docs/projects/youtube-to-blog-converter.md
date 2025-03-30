@@ -14,7 +14,7 @@ Create a tool that converts YouTube video transcripts into well-formatted blog p
 import re
 import argparse
 from youtube_transcript_api import YouTubeTranscriptApi
-from chatcraft import get_response
+from ailabkit.chat import get_response
 
 def youtube_to_blog():
     """Convert YouTube video transcripts into blog post content using AI."""

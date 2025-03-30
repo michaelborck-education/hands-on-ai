@@ -11,7 +11,7 @@ Chat with simulated historical figures to learn about their lives, achievements,
 ## Instructions
 
 ```python
-from chatcraft import get_response
+from ailabkit.chat import get_response
 import random
 
 def historical_figure_chat():
