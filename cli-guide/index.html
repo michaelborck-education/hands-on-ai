@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://github.com/teaching-repositories/ailabkit/classroom-setup/">
+        <link rel="canonical" href="https://github.com/teaching-repositories/ailabkit/cli-guide/">
       
       
-        <link rel="prev" href="../education-guide/">
-      
-      
-        <link rel="next" href="../projects/">
       
       
       <link rel="icon" href="../assets/icon-192.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Classroom Setup - AiLabKit Documentation</title>
+        <title>AiLabKit Command Line Interface (CLI) - AiLabKit Documentation</title>
       
     
     
@@ -76,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#classroom-setup-for-chatcraft" class="md-skip">
+        <a href="#ailabkit-command-line-interface-cli" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Classroom Setup
+              AiLabKit Command Line Interface (CLI)
             
           </span>
         </div>
@@ -259,12 +255,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../education-guide/" class="md-tabs__link">
           
   
@@ -519,32 +513,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Classroom Setup
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../classroom-setup/" class="md-nav__link">
         
   
   
@@ -555,188 +527,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 System Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔧 Installation Steps
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔧 Installation Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-clone-the-chatcraft-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Clone the ChatCraft Repository
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-create-a-virtual-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Create a Virtual Environment
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-install-chatcraft-editable-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Install ChatCraft (Editable Mode)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-ollama" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Run Ollama
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🤖 Run Ollama">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-install-ollama" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Install Ollama
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-start-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Start the Server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-the-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Test the Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Test the Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cli-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      CLI Check:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interactive-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Interactive Mode:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#classroom-preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 Classroom Preparation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optional-offline-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Optional: Offline Setup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remote-ollama-advanced" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Remote Ollama (Advanced)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧰 Related Tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      📘 See Also
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1140,31 +930,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -1177,7 +962,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             For Educators
@@ -1211,32 +996,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Classroom Setup
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../classroom-setup/" class="md-nav__link">
         
   
   
@@ -1247,188 +1010,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 System Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔧 Installation Steps
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔧 Installation Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-clone-the-chatcraft-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Clone the ChatCraft Repository
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-create-a-virtual-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Create a Virtual Environment
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-install-chatcraft-editable-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Install ChatCraft (Editable Mode)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-ollama" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Run Ollama
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🤖 Run Ollama">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-install-ollama" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Install Ollama
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-start-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Start the Server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-the-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Test the Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Test the Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cli-check" class="md-nav__link">
-    <span class="md-ellipsis">
-      CLI Check:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interactive-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Interactive Mode:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#classroom-preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 Classroom Preparation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optional-offline-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Optional: Offline Setup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remote-ollama-advanced" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Remote Ollama (Advanced)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧰 Related Tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      📘 See Also
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1959,86 +1540,156 @@
   
 
 
-<h1 id="classroom-setup-for-chatcraft">Classroom Setup for ChatCraft<a class="headerlink" href="#classroom-setup-for-chatcraft" title="Permanent link">&para;</a></h1>
-<p>This guide walks educators and students through the technical setup needed to use <a href="https://github.com/teaching-repositories/chat">ChatCraft</a> in a classroom environment. It assumes basic familiarity with Python and the command line.</p>
-<hr />
-<h2 id="system-requirements">💻 System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Operating System: Linux, macOS, or WSL on Windows</li>
-<li>Python: 3.8+</li>
-<li><a href="https://ollama.com">Ollama</a> installed and running (for local LLM inference)</li>
-<li>Internet access (for first-time setup or optional remote models)</li>
-</ul>
-<hr />
-<h2 id="installation-steps">🔧 Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h2>
-<h3 id="1-clone-the-chatcraft-repository">1. Clone the ChatCraft Repository<a class="headerlink" href="#1-clone-the-chatcraft-repository" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/teaching-repositories/chat.git
-<span class="nb">cd</span><span class="w"> </span>chat
+<h1 id="ailabkit-command-line-interface-cli">AiLabKit Command Line Interface (CLI)<a class="headerlink" href="#ailabkit-command-line-interface-cli" title="Permanent link">&para;</a></h1>
+<p>This document provides a reference for the command-line interfaces in AiLabKit. The toolkit provides several CLI commands for different modules.</p>
+<h2 id="main-cli-ailabkit">Main CLI (ailabkit)<a class="headerlink" href="#main-cli-ailabkit" title="Permanent link">&para;</a></h2>
+<p>The main <code>ailabkit</code> command provides access to global functions and serves as an entry point to the module-specific commands.</p>
+<div class="highlight"><pre><span></span><code>Usage:<span class="w"> </span>ailabkit<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+
+<span class="w">  </span>AI<span class="w"> </span>Learning<span class="w"> </span>Lab<span class="w"> </span>Toolkit
+
+Options:
+<span class="w">  </span>--install-completion<span class="w">  </span>Install<span class="w"> </span>completion<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>shell.
+<span class="w">  </span>--show-completion<span class="w">     </span>Show<span class="w"> </span>completion<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>shell,<span class="w"> </span>to<span class="w"> </span>copy
+<span class="w">                        </span>it<span class="w"> </span>or<span class="w"> </span>customize<span class="w"> </span>the<span class="w"> </span>installation.
+<span class="w">  </span>--help<span class="w">                </span>Show<span class="w"> </span>this<span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span>exit.
+
+Commands:
+<span class="w">  </span>version<span class="w">   </span>Display<span class="w"> </span>version<span class="w"> </span>information
+<span class="w">  </span>list<span class="w">      </span>List<span class="w"> </span>available<span class="w"> </span>modules
+<span class="w">  </span>doctor<span class="w">    </span>Check<span class="w"> </span>environment<span class="w"> </span>and<span class="w"> </span>configuration
+<span class="w">  </span>config<span class="w">    </span>View<span class="w"> </span>or<span class="w"> </span>edit<span class="w"> </span>configuration
 </code></pre></div>
-<h3 id="2-create-a-virtual-environment">2. Create a Virtual Environment<a class="headerlink" href="#2-create-a-virtual-environment" title="Permanent link">&para;</a></h3>
-<p>We recommend <code>uv</code> for fast installs, but <code>venv</code> or <code>virtualenv</code> also works.
-<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>venv<span class="w"> </span>.venv
-<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
-</code></pre></div></p>
-<h3 id="3-install-chatcraft-editable-mode">3. Install ChatCraft (Editable Mode)<a class="headerlink" href="#3-install-chatcraft-editable-mode" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;.[dev]&#39;</span>
+<h3 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check system configuration</span>
+ailabkit<span class="w"> </span>doctor
+
+<span class="c1"># View and edit configuration</span>
+ailabkit<span class="w"> </span>config
+
+<span class="c1"># List all available modules</span>
+ailabkit<span class="w"> </span>list
+
+<span class="c1"># Check version</span>
+ailabkit<span class="w"> </span>version
 </code></pre></div>
-This installs the core package, CLI entry point, and development tools.</p>
-<hr />
-<h2 id="run-ollama">🤖 Run Ollama<a class="headerlink" href="#run-ollama" title="Permanent link">&para;</a></h2>
-<p>ChatCraft expects a local Ollama server by default.</p>
-<h3 id="1-install-ollama">1. Install Ollama<a class="headerlink" href="#1-install-ollama" title="Permanent link">&para;</a></h3>
-<p>Follow instructions at: <a href="https://ollama.com/download">https://ollama.com/download</a></p>
-<h3 id="2-start-the-server">2. Start the Server<a class="headerlink" href="#2-start-the-server" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>ollama<span class="w"> </span>run<span class="w"> </span>llama3
+<h2 id="chat-module-cli-chat">Chat Module CLI (chat)<a class="headerlink" href="#chat-module-cli-chat" title="Permanent link">&para;</a></h2>
+<p>The <code>chat</code> module provides an interface for interacting with various bot personalities.</p>
+<div class="highlight"><pre><span></span><code>Usage:<span class="w"> </span>chat<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+
+<span class="w">  </span>Simple<span class="w"> </span>chatbot<span class="w"> </span>with<span class="w"> </span>personality
+
+Options:
+<span class="w">  </span>--install-completion<span class="w">  </span>Install<span class="w"> </span>completion<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>shell.
+<span class="w">  </span>--show-completion<span class="w">     </span>Show<span class="w"> </span>completion<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>shell,<span class="w"> </span>to<span class="w"> </span>copy
+<span class="w">                        </span>it<span class="w"> </span>or<span class="w"> </span>customize<span class="w"> </span>the<span class="w"> </span>installation.
+<span class="w">  </span>--help<span class="w">                </span>Show<span class="w"> </span>this<span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span>exit.
+
+Commands:
+<span class="w">  </span>ask<span class="w">           </span>Send<span class="w"> </span>a<span class="w"> </span>single<span class="w"> </span>prompt<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>bot
+<span class="w">  </span>bots<span class="w">          </span>List<span class="w"> </span>available<span class="w"> </span>bots
+<span class="w">  </span>doctor<span class="w">        </span>Run<span class="w"> </span>diagnostics
+<span class="w">  </span>interactive<span class="w">   </span>Start<span class="w"> </span>interactive<span class="w"> </span>REPL
+<span class="w">  </span>web<span class="w">           </span>Launch<span class="w"> </span>web<span class="w"> </span>interface
 </code></pre></div>
-Or use a model of your choice (e.g., <code>codellama</code>, <code>mistral</code>, etc.)</p>
-<hr />
-<h2 id="test-the-setup">🚀 Test the Setup<a class="headerlink" href="#test-the-setup" title="Permanent link">&para;</a></h2>
-<h3 id="cli-check">CLI Check:<a class="headerlink" href="#cli-check" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>chat<span class="w"> </span>doctor
+<h3 id="example-usage_1">Example Usage<a class="headerlink" href="#example-usage_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># List all available bot personalities</span>
+chat<span class="w"> </span>bots
+
+<span class="c1"># Ask a question with a specific bot personality</span>
+chat<span class="w"> </span>ask<span class="w"> </span>--personality<span class="w"> </span>pirate_bot<span class="w"> </span><span class="s2">&quot;Tell me about the weather&quot;</span>
+
+<span class="c1"># Start an interactive chat session</span>
+chat<span class="w"> </span>interactive
+
+<span class="c1"># Launch the web interface for chat</span>
+chat<span class="w"> </span>web
 </code></pre></div>
-Should report that Ollama is reachable.</p>
-<h3 id="interactive-mode">Interactive Mode:<a class="headerlink" href="#interactive-mode" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>chat<span class="w"> </span>interactive
+<h2 id="rag-module-cli-rag">RAG Module CLI (rag)<a class="headerlink" href="#rag-module-cli-rag" title="Permanent link">&para;</a></h2>
+<p>The <code>rag</code> (Retrieval-Augmented Generation) module provides tools for document indexing and question answering.</p>
+<div class="highlight"><pre><span></span><code>Usage:<span class="w"> </span>rag<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+
+<span class="w">  </span>RAG<span class="w"> </span>-<span class="w"> </span>Retrieval-Augmented<span class="w"> </span>Generation
+
+Options:
+<span class="w">  </span>--install-completion<span class="w">  </span>Install<span class="w"> </span>completion<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>shell.
+<span class="w">  </span>--show-completion<span class="w">     </span>Show<span class="w"> </span>completion<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>shell,<span class="w"> </span>to<span class="w"> </span>copy
+<span class="w">                        </span>it<span class="w"> </span>or<span class="w"> </span>customize<span class="w"> </span>the<span class="w"> </span>installation.
+<span class="w">  </span>--help<span class="w">                </span>Show<span class="w"> </span>this<span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span>exit.
+
+Commands:
+<span class="w">  </span>index<span class="w">         </span>Build<span class="w"> </span>a<span class="w"> </span>RAG<span class="w"> </span>index<span class="w"> </span>from<span class="w"> </span>files
+<span class="w">  </span>ask<span class="w">           </span>Ask<span class="w"> </span>questions<span class="w"> </span>using<span class="w"> </span>indexed<span class="w"> </span>documents
+<span class="w">  </span>interactive<span class="w">   </span>Run<span class="w"> </span>interactive<span class="w"> </span>RAG<span class="w"> </span>chat
+<span class="w">  </span>web<span class="w">           </span>Launch<span class="w"> </span>web<span class="w"> </span>interface<span class="w"> </span><span class="k">for</span><span class="w"> </span>RAG
 </code></pre></div>
-Chat with any of the built-in personalities.</p>
-<hr />
-<h2 id="classroom-preparation">🧪 Classroom Preparation<a class="headerlink" href="#classroom-preparation" title="Permanent link">&para;</a></h2>
-<ul>
-<li>✅ Ensure all students have Python and Ollama installed</li>
-<li>✅ Pre-install the models if bandwidth is limited</li>
-<li>✅ Use <code>just doctor</code> or <code>chat doctor</code> to verify working setup</li>
-<li>✅ Optionally, preload <code>.venv</code> and models on lab machines</li>
-<li>✅ Use offline bundle (<code>just bundle</code>) if internet is restricted</li>
-</ul>
-<hr />
-<h2 id="optional-offline-setup">📦 Optional: Offline Setup<a class="headerlink" href="#optional-offline-setup" title="Permanent link">&para;</a></h2>
-<p>Use the offline zip bundle:
-<div class="highlight"><pre><span></span><code>just<span class="w"> </span>bundle
+<h3 id="example-usage_2">Example Usage<a class="headerlink" href="#example-usage_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Index a directory of documents</span>
+rag<span class="w"> </span>index<span class="w"> </span>docs/
+
+<span class="c1"># Ask a question using the indexed documents</span>
+rag<span class="w"> </span>ask<span class="w"> </span><span class="s2">&quot;What is the purpose of RAG?&quot;</span>
+
+<span class="c1"># Start an interactive RAG session</span>
+rag<span class="w"> </span>interactive
+
+<span class="c1"># Launch the web interface for RAG</span>
+rag<span class="w"> </span>web
 </code></pre></div>
-Distribute <code>ChatCraft_Offline_Bundle.zip</code> to students for isolated environments.</p>
-<hr />
-<h2 id="remote-ollama-advanced">🌐 Remote Ollama (Advanced)<a class="headerlink" href="#remote-ollama-advanced" title="Permanent link">&para;</a></h2>
-<p>You can point ChatCraft to a remote Ollama server by setting the environment variable:
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CHATCRAFT_SERVER_URL</span><span class="o">=</span>http://your-ollama-server:11434
+<h3 id="detailed-command-options">Detailed Command Options<a class="headerlink" href="#detailed-command-options" title="Permanent link">&para;</a></h3>
+<h4 id="rag-index">rag index<a class="headerlink" href="#rag-index" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>Usage:<span class="w"> </span>rag<span class="w"> </span>index<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>INPUT_PATH
+
+<span class="w">  </span>Build<span class="w"> </span>a<span class="w"> </span>RAG<span class="w"> </span>index<span class="w"> </span>from<span class="w"> </span>files
+
+Arguments:
+<span class="w">  </span>INPUT_PATH<span class="w">  </span>File<span class="w"> </span>or<span class="w"> </span>directory<span class="w"> </span>to<span class="w"> </span>index<span class="w"> </span><span class="o">[</span>required<span class="o">]</span>
+
+Options:
+<span class="w">  </span>--output-file<span class="w"> </span>TEXT<span class="w">          </span>Output<span class="w"> </span>index<span class="w"> </span>file<span class="w"> </span><span class="o">(</span>default:<span class="w"> </span>~/.ailabkit/index.npz<span class="o">)</span>
+<span class="w">  </span>--chunk-size<span class="w"> </span>INTEGER<span class="w">        </span>Words<span class="w"> </span>per<span class="w"> </span>chunk<span class="w"> </span><span class="o">(</span>default:<span class="w"> </span>from<span class="w"> </span>config<span class="o">)</span>
+<span class="w">  </span>--force<span class="w"> </span>/<span class="w"> </span>--no-force<span class="w">        </span>Overwrite<span class="w"> </span>existing<span class="w"> </span>index<span class="w"> </span><span class="o">[</span>default:<span class="w"> </span>no-force<span class="o">]</span>
+<span class="w">  </span>--help<span class="w">                      </span>Show<span class="w"> </span>this<span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span>exit.
 </code></pre></div>
-Useful for running a central server in class.</p>
-<hr />
-<h2 id="related-tools">🧰 Related Tools<a class="headerlink" href="#related-tools" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>just doctor</code> - Check environment</li>
-<li><code>just repl</code> or <code>chat interactive</code> - Start REPL</li>
-<li><code>just build-all</code> - Build docs and mini-projects</li>
-<li><code>mkdocs serve</code> - Live preview of documentation site</li>
-</ul>
-<hr />
-<h2 id="see-also">📘 See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../cli-guide/">CLI Guide</a></li>
-<li><a href="../ollama-guide/">Ollama Setup</a></li>
-<li><a href="../education-guide/">Education Guide</a></li>
-</ul>
+<h2 id="agent-module-cli-agent">Agent Module CLI (agent)<a class="headerlink" href="#agent-module-cli-agent" title="Permanent link">&para;</a></h2>
+<p>The <code>agent</code> module provides tools for working with AI agents that can use tools to perform tasks.</p>
+<div class="highlight"><pre><span></span><code>Usage:<span class="w"> </span>agent<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+
+<span class="w">  </span>Agent<span class="w"> </span>-<span class="w"> </span>LLM<span class="w"> </span>Tool<span class="w"> </span>Use<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>Reasoning
+
+Options:
+<span class="w">  </span>--install-completion<span class="w">  </span>Install<span class="w"> </span>completion<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>shell.
+<span class="w">  </span>--show-completion<span class="w">     </span>Show<span class="w"> </span>completion<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>shell,<span class="w"> </span>to<span class="w"> </span>copy
+<span class="w">                        </span>it<span class="w"> </span>or<span class="w"> </span>customize<span class="w"> </span>the<span class="w"> </span>installation.
+<span class="w">  </span>--help<span class="w">                </span>Show<span class="w"> </span>this<span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span>exit.
+
+Commands:
+<span class="w">  </span>ask<span class="w">           </span>Run<span class="w"> </span>an<span class="w"> </span>agent<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>prompt
+<span class="w">  </span>tools<span class="w">         </span>List<span class="w"> </span>available<span class="w"> </span>tools
+<span class="w">  </span>interactive<span class="w">   </span>Start<span class="w"> </span>interactive<span class="w"> </span>agent<span class="w"> </span>console
+<span class="w">  </span>web<span class="w">           </span>Launch<span class="w"> </span>web<span class="w"> </span>interface<span class="w"> </span><span class="k">for</span><span class="w"> </span>agent
+</code></pre></div>
+<h3 id="example-usage_3">Example Usage<a class="headerlink" href="#example-usage_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># List available agent tools</span>
+agent<span class="w"> </span>tools
+
+<span class="c1"># Run an agent with a specific prompt</span>
+agent<span class="w"> </span>ask<span class="w"> </span><span class="s2">&quot;What is 25 * 32?&quot;</span>
+
+<span class="c1"># Start an interactive agent session</span>
+agent<span class="w"> </span>interactive
+
+<span class="c1"># Launch the web interface for the agent</span>
+agent<span class="w"> </span>web
+</code></pre></div>
+<h2 id="tips-for-using-the-cli">Tips for Using the CLI<a class="headerlink" href="#tips-for-using-the-cli" title="Permanent link">&para;</a></h2>
+<ol>
+<li>All commands support the <code>--help</code> flag to display available options</li>
+<li>Use tab completion (if installed) for easier navigation</li>
+<li>The web interfaces provide a graphical alternative to the command-line</li>
+<li>The interactive modes (REPL) allow for multi-turn conversations</li>
+<li>Configure settings in <code>~/.ailabkit/config.json</code> or with the <code>ailabkit config</code> command</li>
+</ol>
 
 
 
