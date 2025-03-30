@@ -22,7 +22,7 @@ jobs:
       - name: ⚡ Install uv
         uses: yezz123/setup-uv@v3
         with:
-          uv-version: 'latest'
+          uv-version: '0.6.10'
 
       - name: 📦 Install dependencies
         run: uv pip install -e ".[dev]"
