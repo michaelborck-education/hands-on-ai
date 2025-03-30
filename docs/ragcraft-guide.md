@@ -1,6 +1,6 @@
 # 🧠 RagCraft Guide: Ask Questions About Your Notes
 
-[![](https://img.shields.io/badge/CLI-RagCraft-blue)](#💬-cli-usage)
+[![](https://img.shields.io/badge/CLI-RagCraft-blue)](#cli-usage)
 
 RagCraft is a lightweight tool to turn your documents into an AI-powered knowledge base using Retrieval-Augmented Generation (RAG). It’s part of the ChatCraft ecosystem.
 
@@ -26,7 +26,7 @@ uv pip install chatcraft[rag]
 
 ---
 
-## 💬 CLI Usage
+## CLI Usage
 
 ```bash
 ragcraft index notes/            # Build index from folder or file
@@ -66,11 +66,10 @@ ragcraft index chatcraft/testdata/demo_notes/
 
 Includes:
 
-- `sample.md` – Markdown format
-- `reference.txt` – Plain text
-- `demo.docx` – [Download](../demo.docx)
-- `demo.pdf` – [Download](../demo.pdf)
-
+- `sample.md` – [Markdown Notes](demo_notes/sample.md)
+- `reference.txt` – [Reference Text](demo_notes/reference.txt)
+- `demo.docx` – [Demo Word Document](demo_notes/demo.docx)
+- `demo.pdf` – [Demo PDF](demo_notes/example.pdf)
 ---
 
 ## 🛠️ Justfile (Optional Shortcuts)

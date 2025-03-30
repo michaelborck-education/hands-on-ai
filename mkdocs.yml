@@ -21,7 +21,9 @@ nav:
   - Projects: mini-projects.md
   - Template: mini-project-template.md
   - "ChatCraft CLI": cli-guide.md
-  - RAG Guide: docs/ragcraft-guide.md
+  - RAG Guide: ragcraft-guide.md
+  - Classroom: classroom-setup.md
+  - Configuration: configuration.md
 plugins:
   - search
   - mkdocstrings:

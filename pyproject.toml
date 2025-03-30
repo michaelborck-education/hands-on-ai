@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "cython"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "chatcraft"
+name = "ailabkit"
 version = "0.1.0"
-description = "Educational LLM bot personalities for classrooms"
+description = "AI Learning Lab Toolkit for classrooms"
 authors = [
   { name = "Michael Borck", email = "michael@borck.me" }
 ]
@@ -15,11 +15,14 @@ requires-python = ">=3.8"
 dependencies = ["requests", "typer"]
 
 [project.scripts]
-chatcraft = "chatcraft.cli:app"
-ragcraft = "chatcraft.ragcraft.cli:app"
+ailabkit = "ailabkit.cli:app"
+chat = "ailabkit.chat.cli:app"
+rag = "ailabkit.rag.cli:app"
+agent = "ailabkit.agent.cli:app"
 
 [project.optional-dependencies]
-rag = ["python-docx", "pymupdf"]
+rag = ["python-docx", "pymupdf", "scikit-learn", "numpy"]
+agent = []
 dev = [
   "pytest",
   "build",
@@ -37,13 +40,13 @@ dev = [
 where = ["src"]
 
 [tool.setuptools.package-data]
-"chatcraft" = ["data/*.json"]
+"ailabkit" = ["chat/data/*.json"]
 
 [project.urls]
-Homepage = "https://github.com/teaching-repositories/chatcraft"
-Documentation = "https://github.com/teaching-repositories/chatcraft"
-Source = "https://github.com/teaching-repositories/chatcraft"
-Issues = "https://github.com/teaching-repositories/chatcraft"
+Homepage = "https://github.com/teaching-repositories/ailabkit"
+Documentation = "https://github.com/teaching-repositories/ailabkit"
+Source = "https://github.com/teaching-repositories/ailabkit"
+Issues = "https://github.com/teaching-repositories/ailabkit"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
