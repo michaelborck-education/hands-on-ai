@@ -40,9 +40,11 @@ bundle:
 
 # 📚 Documentation
 docs:
+  python scripts/generate_project_index.py
   mkdocs build --clean
 
 deploy-docs:
+  python scripts/generate_project_index.py
   mkdocs gh-deploy --force
 
 # 🧪 Run CLI modules in interactive mode
@@ -86,6 +88,7 @@ build-project-browser:
 build-all:
   just sync-version
   just build-mini-projects
+  python scripts/generate_project_index.py
   just build-project-browser
   just docs
 
@@ -114,6 +117,10 @@ release-test:
 # Lint mini-projects markdown files
 lint-mini-projects:
   python scripts/lint_mini_projects.py
+  
+# Generate the projects index.md file
+generate-project-index:
+  python scripts/generate_project_index.py
 
 # Lint chat mini-projects markdown files
 lint-chat-projects:
@@ -156,6 +163,7 @@ help:
   @echo "  build-mini-projects   Rebuild mini-projects.md from /docs/projects"
   @echo "  spelling-au           Convert American spelling to Australian/British spelling"
   @echo "  lint-mini-projects    Lint the combined mini-projects.md file"
+  @echo "  generate-project-index  Generate the projects/index.md file"
   @echo "  lint-chat-projects    Lint chat mini-projects"
   @echo "  lint-rag-projects     Lint RAG mini-projects"
   @echo "  lint-agent-projects   Lint agent mini-projects"

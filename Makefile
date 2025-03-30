@@ -1,6 +1,6 @@
 # Makefile for common development tasks
 
-.PHONY: install-dev test test-basic lint format ci sync-version requirements build bundle docs deploy-docs chat-repl rag-repl agent-repl chat-web rag-web agent-web doctor build-mini-projects spelling-au build-project-browser build-all release release-test help clean lint-mini-projects lint-chat-projects lint-rag-projects lint-agent-projects lint-all-projects
+.PHONY: install-dev test test-basic lint format ci sync-version requirements build bundle docs deploy-docs chat-repl rag-repl agent-repl chat-web rag-web agent-web doctor build-mini-projects spelling-au build-project-browser build-all release release-test help clean lint-mini-projects lint-chat-projects lint-rag-projects lint-agent-projects lint-all-projects generate-project-index
 
 # 🧪 Run and check
 test:
@@ -39,9 +39,11 @@ bundle:
 
 # 📚 Documentation
 docs:
+	python scripts/generate_project_index.py
 	mkdocs build --clean
 
 deploy-docs:
+	python scripts/generate_project_index.py
 	mkdocs gh-deploy --force
 
 # 🧪 Run CLI modules in interactive mode
@@ -87,6 +89,10 @@ build-project-browser:
 lint-mini-projects:
 	python scripts/lint_mini_projects.py
 
+# Generate the projects index.md file
+generate-project-index:
+	python scripts/generate_project_index.py
+
 # Lint chat mini-projects markdown files
 lint-chat-projects:
 	python scripts/lint_mini_projects.py docs/projects/chat
@@ -103,7 +109,7 @@ lint-agent-projects:
 lint-all-projects: lint-chat-projects lint-rag-projects lint-agent-projects
 
 # 🛠️ Rebuild everything: sync version, docs, browser, mini-projects
-build-all: sync-version build-mini-projects build-project-browser docs
+build-all: sync-version build-mini-projects generate-project-index build-project-browser docs
 
 # 🚀 Publish a new release
 release: build-all
@@ -153,6 +159,7 @@ help:
 	@echo "  build-mini-projects   Rebuild mini-projects.md from /docs/projects"
 	@echo "  spelling-au           Convert American spelling to Australian/British spelling"
 	@echo "  lint-mini-projects    Lint the combined mini-projects.md file"
+	@echo "  generate-project-index  Generate the projects/index.md file"
 	@echo "  lint-chat-projects    Lint chat mini-projects"
 	@echo "  lint-rag-projects     Lint RAG mini-projects"
 	@echo "  lint-agent-projects   Lint agent mini-projects"
