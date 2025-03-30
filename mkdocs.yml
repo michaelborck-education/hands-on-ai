@@ -27,22 +27,35 @@ nav:
     - Chat:
       - "Overview": chat-guide.md
       - "Bot Gallery": bot-gallery.md
+      - "Bot Template": bot-template.md
       - "CLI Reference": cli-guide.md
     - RAG:
       - "Overview": rag-guide.md
       - "RAG Flow": rag-flow.md
       - "How RAG Works": rag-llm-explain.md
+      - "CLI Reference": cli-guide.md
     - Agent:
       - "Overview": agent-guide.md
       - "Understanding Agents": agent-concepts.md
+      - "Agent Modules": agent-agent.md
+      - "Tool Reference": agent-tools.md
+      - "CLI Reference": cli-guide.md
   - For Educators:
     - "Education Guide": education-guide.md
+    - "Classroom Setup": classroom-setup.md
     - "Projects Overview": mini-projects.md
+    - "Project Gallery": projects/index.md
     - "Project Template": mini-project-template.md
+    - "Bot Template": bot-template.md
+  - For Developers:
     - "Project Tools": project-tools.md
-  - Mini-Projects:
-    - "Overview": mini-projects.md
-    - "Project Gallery": projects/
+    - "CLI Reference": cli-guide.md
+    - "Bot Template": bot-template.md
+    - "Project Template": mini-project-template.md
+    - "Contributing": contributing.md
+  - Templates:
+    - "Bot Template": bot-template.md
+    - "Project Template": mini-project-template.md
   - About:
     - "Authors": authors.md
     - "Contributing": contributing.md
