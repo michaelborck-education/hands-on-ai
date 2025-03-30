@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0", "cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ailabkit"
+version = "0.1.0"
+description = "AI Learning Lab Toolkit for classrooms"
+authors = [
+  { name = "Michael Borck", email = "michael@borck.me" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["requests", "typer"]
+
+[project.scripts]
+ailabkit = "ailabkit.cli:app"
+chat = "ailabkit.chat.cli:app"
+rag = "ailabkit.rag.cli:app"
+agent = "ailabkit.agent.cli:app"
+
+[project.optional-dependencies]
+rag = ["python-docx", "pymupdf", "scikit-learn", "numpy"]
+agent = []
+dev = [
+  "pytest",
+  "build",
+  "twine",
+  "cython",
+  "ruff",
+  "mkdocs",
+  "mkdocstrings[python]",
+  "mkdocs-material",
+  "pymdown-extensions",
+  "uv"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"ailabkit" = ["chat/data/*.json"]
+
+[project.urls]
+Homepage = "https://github.com/teaching-repositories/ailabkit"
+Documentation = "https://github.com/teaching-repositories/ailabkit"
+Source = "https://github.com/teaching-repositories/ailabkit"
+Issues = "https://github.com/teaching-repositories/ailabkit"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-v"
+
+[tool.ruff]
+line-length = 100
+exclude = ["build", "dist", ".venv"]
