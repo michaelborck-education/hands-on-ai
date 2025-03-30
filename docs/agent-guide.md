@@ -99,6 +99,45 @@ Unit conversion tools for various measurements:
 - **convert_temperature**: Converts between temperature units
   - Example: `convert_temperature "32" "f" "c"`
 
+### Text Analysis Agent
+
+Tools for analyzing and processing text:
+
+- **word_count**: Counts words, characters, sentences, and paragraphs
+  - Example: `word_count "This is a sample text. It has two sentences."`
+
+- **readability**: Calculates readability scores (Flesch Reading Ease, grade level)
+  - Example: `readability "The quick brown fox jumps over the lazy dog."`
+
+- **summarize**: Creates a summary of longer text
+  - Example: `summarize "Long text here..." "0.3"` (ratio parameter controls length)
+
+### Date and Time Agent
+
+Tools for working with dates and time:
+
+- **date_diff**: Calculates the difference between two dates
+  - Example: `date_diff "2023-01-01" "2023-12-31"`
+
+- **format_date**: Formats a date in various standard formats
+  - Example: `format_date "2023-01-15" "long"` (formats to "January 15, 2023")
+
+- **days_until**: Calculates days until a given date
+  - Example: `days_until "2024-12-25"`
+
+### Educational Tools Agent
+
+Tools for educational purposes:
+
+- **periodic_table**: Looks up information about an element
+  - Example: `periodic_table "oxygen"` or `periodic_table "O"`
+
+- **multiplication_table**: Generates a multiplication table
+  - Example: `multiplication_table "7" "12"` (generates 7× table up to 12)
+
+- **prime_check**: Checks if a number is prime and finds its factors
+  - Example: `prime_check "17"` or `prime_check "36"`
+
 ## Creating Custom Tools
 
 You can extend the Agent with your own custom tools. Here's a simple example:

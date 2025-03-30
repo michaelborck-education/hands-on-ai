@@ -22,11 +22,17 @@ def interactive(
     from ..agents.calculator import register_calculator_agent
     from ..agents.dictionary import register_dictionary_agent
     from ..agents.converter import register_converter_agent
+    from ..agents.text_tools import register_text_tools
+    from ..agents.datetime_tools import register_datetime_tools
+    from ..agents.education_tools import register_education_tools
     
     # Register all agent tools
     register_calculator_agent()
     register_dictionary_agent()
     register_converter_agent()
+    register_text_tools()
+    register_datetime_tools()
+    register_education_tools()
     
     console = Console()
     
