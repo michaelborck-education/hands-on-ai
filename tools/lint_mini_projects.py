@@ -1,10 +1,14 @@
 # tools/lint_mini_projects.py
 
 import re
+import typer
 from pathlib import Path
 import os
 
-MINI_PROJECTS_PATH = Path("docs/mini-projects.md")
+app = typer.Typer(help="Lint mini-projects markdown files for correct format")
+
+# Default is the combined file, but we also support directories
+DEFAULT_MINI_PROJECTS_PATH = Path("docs/mini-projects.md")
 
 # Match Python code blocks to exclude them from search
 CODE_BLOCK_REGEX = re.compile(r"```python.*?```", re.DOTALL)
@@ -99,16 +103,17 @@ def lint_project(title, body, debug_preview):
     
     return errors
 
-def main():
-    if not MINI_PROJECTS_PATH.exists():
-        print(f"❌ Could not find {MINI_PROJECTS_PATH}")
-        return
-
-    projects = extract_projects(MINI_PROJECTS_PATH)
+def lint_single_file(md_path):
+    """Lint a single markdown file for project format."""
+    if not md_path.exists():
+        print(f"❌ Could not find {md_path}")
+        return False
+    
+    projects = extract_projects(md_path)
     valid_count = 0
     actual_projects = 0
 
-    print(f"Found {len(projects)} sections with level 1 headers")
+    print(f"Found {len(projects)} sections with level 1 headers in {md_path}")
     
     for title, body, debug_preview in projects:
         print(f"🔍 Checking: {title}")
@@ -133,16 +138,65 @@ def main():
             print("  ✅ OK")
             valid_count += 1
 
-    print("\n✅ Finished linting.")
+    if actual_projects == 0:
+        return True
+        
     print(f"✅ {valid_count}/{actual_projects} projects have all required fields and sections.")
+    return valid_count == actual_projects
+
+def lint_directory(directory_path):
+    """Lint all markdown files in a directory for project format."""
+    directory = Path(directory_path)
+    if not directory.exists() or not directory.is_dir():
+        print(f"❌ Could not find directory {directory}")
+        return False
+    
+    md_files = list(directory.glob("*.md"))
+    if not md_files:
+        print(f"❌ No markdown files found in {directory}")
+        return False
+    
+    print(f"Found {len(md_files)} markdown files in {directory}")
+    
+    all_valid = True
+    for md_file in md_files:
+        print(f"\n=== Checking {md_file.name} ===")
+        file_valid = lint_single_file(md_file)
+        all_valid = all_valid and file_valid
+    
+    return all_valid
+    
+@app.command()
+def lint(
+    path: Path = typer.Argument(
+        DEFAULT_MINI_PROJECTS_PATH,
+        help="Path to markdown file or directory containing project files"
+    ),
+    save_report: bool = typer.Option(
+        False, "--save-report", "-s", 
+        help="Save a detailed debug report for failing projects"
+    )
+):
+    """Lint mini-projects markdown files for correct format."""
+    path = Path(path)
+    
+    print(f"Linting mini-projects in {path}")
+    
+    if path.is_dir():
+        all_valid = lint_directory(path)
+    else:
+        all_valid = lint_single_file(path)
+    
+    print("\n✅ Finished linting.")
     
     # Offer to save problematic projects to a file for debugging
-    if valid_count < actual_projects:
-        print("\nWould you like to save a detailed debug report? (y/n): ", end="")
-        response = input()
-        if response.lower() == 'y':
-            with open("lint_debug_report.txt", "w") as f:
-                f.write(f"Debug report for {MINI_PROJECTS_PATH}\n\n")
+    if not all_valid and save_report:
+        report_path = "lint_debug_report.txt"
+        with open(report_path, "w") as f:
+            f.write(f"Debug report for {path}\n\n")
+            
+            if path.is_file():
+                projects = extract_projects(path)
                 for title, body, preview in projects:
                     errors = lint_project(title, body, preview)
                     if errors and not errors[0].startswith("  ⚠️ Skipping"):
@@ -153,7 +207,12 @@ def main():
                             f.write(f"{err}\n")
                         f.write("\nFull Content:\n")
                         f.write(f"{body[:500]}...\n\n")
-            print(f"Debug report saved to lint_debug_report.txt")
+            else:
+                f.write("Directory scan - see console output for details\n")
+                
+        print(f"Debug report saved to {report_path}")
+    
+    return 0 if all_valid else 1
 
 if __name__ == "__main__":
-    main()
+    app()

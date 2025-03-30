@@ -128,6 +128,21 @@ release-test:
 lint-mini-projects:
   python tools/lint_mini_projects.py
 
+# Lint chat mini-projects markdown files
+lint-chat-projects:
+  python tools/lint_mini_projects.py docs/projects/chat
+
+# Lint rag mini-projects markdown files  
+lint-rag-projects:
+  python tools/lint_mini_projects.py docs/projects/rag
+
+# Lint agent mini-projects markdown files
+lint-agent-projects:
+  python tools/lint_mini_projects.py docs/projects/agent
+
+# Lint all module-specific mini-projects
+lint-all-projects: lint-chat-projects lint-rag-projects lint-agent-projects
+
 clean:
   rm -rf build dist *.egg-info __pycache__ .pytest_cache .mypy_cache
 
@@ -156,7 +171,11 @@ help:
   @echo "  update-module-types   Add or update module type in mini-projects"
   @echo "  convert-references    Convert all ChatCraft references to AiLabKit in docs"
   @echo "  spelling-au           Convert American spelling to Australian/British spelling"
-  @echo "  lint-mini-projects    Lint mini-projects.md files"
+  @echo "  lint-mini-projects    Lint the combined mini-projects.md file"
+  @echo "  lint-chat-projects    Lint chat mini-projects"
+  @echo "  lint-rag-projects     Lint RAG mini-projects"
+  @echo "  lint-agent-projects   Lint agent mini-projects"
+  @echo "  lint-all-projects     Lint all module-specific mini-projects"
   @echo "  build-project-browser Generate the project_browser.html"
   @echo "  build-all             Sync version, rebuild docs and project browser"
   @echo "  release               Build, tag, push and publish to PyPI"
