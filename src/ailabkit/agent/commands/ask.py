@@ -19,9 +19,15 @@ def ask(
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Show detailed output"),
 ):
     """Ask a question or give an instruction to the agent."""
-    # Register tools if not already done
-    from ..tools import register_simple_tools
-    register_simple_tools()
+    # Register tools from built-in agents
+    from ..agents.calculator import register_calculator_agent
+    from ..agents.dictionary import register_dictionary_agent
+    from ..agents.converter import register_converter_agent
+    
+    # Register all agent tools
+    register_calculator_agent()
+    register_dictionary_agent()
+    register_converter_agent()
     
     console = Console()
     

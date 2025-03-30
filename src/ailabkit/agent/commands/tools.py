@@ -14,9 +14,15 @@ app = typer.Typer(help="List available agent tools")
 @app.callback(invoke_without_command=True)
 def list_available_tools():
     """List all available agent tools."""
-    # Register tools if not already done
-    from ..tools import register_simple_tools
-    register_simple_tools()
+    # Register tools from built-in agents
+    from ..agents.calculator import register_calculator_agent
+    from ..agents.dictionary import register_dictionary_agent
+    from ..agents.converter import register_converter_agent
+    
+    # Register all agent tools
+    register_calculator_agent()
+    register_dictionary_agent()
+    register_converter_agent()
     
     console = Console()
     

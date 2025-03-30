@@ -50,18 +50,54 @@ ailabkit agent tools
 
 This lists all tools available to the agent.
 
-## Built-in Tools
+## Built-in Agents and Tools
 
-The Agent module comes with several built-in tools:
+The Agent module comes with several built-in specialized agents:
 
-- **calc**: Performs mathematical calculations
+### Calculator Agent
+
+Mathematical tools for calculations and equation solving:
+
+- **calc**: Basic calculator for arithmetic expressions
   - Example: `calc "2 * 3 + 4"`
 
-- **echo**: Repeats text back to the agent
-  - Example: `echo "Hello, world!"`
+- **advanced_calc**: Advanced calculator with math functions
+  - Example: `advanced_calc "sqrt(16) + sin(pi/2)"`
 
-- **today**: Returns the current date
-  - Example: `today`
+- **solve_quadratic**: Solves quadratic equations
+  - Example: `solve_quadratic "1" "2" "-3"` (solves x² + 2x - 3 = 0)
+
+### Dictionary Agent
+
+Language tools for word definitions and relationships:
+
+- **define**: Looks up the definition of a word
+  - Example: `define "happy"`
+
+- **synonyms**: Finds synonyms for a word
+  - Example: `synonyms "happy"`
+
+- **antonyms**: Finds antonyms for a word
+  - Example: `antonyms "happy"`
+
+- **examples**: Shows example sentences using a word
+  - Example: `examples "happy"`
+
+### Converter Agent
+
+Unit conversion tools for various measurements:
+
+- **convert**: General-purpose unit converter
+  - Example: `convert "10" "mi" "km"`
+
+- **convert_length**: Converts between length units
+  - Example: `convert_length "5" "ft" "m"`
+
+- **convert_weight**: Converts between weight units
+  - Example: `convert_weight "150" "lb" "kg"`
+
+- **convert_temperature**: Converts between temperature units
+  - Example: `convert_temperature "32" "f" "c"`
 
 ## Creating Custom Tools
 
