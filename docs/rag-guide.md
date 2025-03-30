@@ -172,4 +172,15 @@ for chunk, source in results:
 
 ---
 
+## 📚 Related Docs
+
+- [RAG Flow Diagram](rag-flow.md) - Visual overview of how RAG works
+- [RAG LLM Explanation](rag-llm-explain.md) - Technical details of RAG implementation
+- [Chat Module Guide](chat-guide.md) - Learn about the chat module
+- [Agent Module Guide](agent-guide.md) - Learn about the agent module
+- [Ollama Setup Guide](ollama-guide.md) - Set up local models with Ollama
+- [Mini Projects](mini-projects.md) - Example projects using AiLabKit
+
+---
+
 Designed for educators. Built for learners. Powered by open models.

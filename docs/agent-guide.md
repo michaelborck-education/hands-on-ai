@@ -198,3 +198,11 @@ Here are some examples of what you can do with the Agent module:
 - Try creating your own custom tools
 - Experiment with different types of questions in the interactive mode
 - Check out our [agent mini-projects](../mini-projects.md) for inspiration
+
+## 📚 Related Docs
+
+- [Understanding AI Agents](agent-concepts.md) - Conceptual overview of how agents work
+- [Chat Module Guide](chat-guide.md) - Learn about the chat module
+- [RAG Module Guide](rag-guide.md) - Learn about the RAG module
+- [Ollama Setup Guide](ollama-guide.md) - Set up local models with Ollama
+- [Education Guide](education-guide.md) - Use AiLabKit in educational settings

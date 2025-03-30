@@ -116,3 +116,9 @@ AI agents represent a significant advancement in making AI systems more helpful,
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)
 - [Augmented Language Models: A Survey](https://arxiv.org/abs/2302.07842)
 - [Tool Learning with Foundation Models](https://arxiv.org/abs/2304.08354)
+
+## 📚 Related Docs
+
+- [Agent Module Guide](agent-guide.md) - Practical guide to using the agent module
+- [Mini Projects](mini-projects.md) - Example projects using AiLabKit
+- [Education Guide](education-guide.md) - Use AiLabKit in educational settings

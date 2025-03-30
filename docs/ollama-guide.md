@@ -1,6 +1,6 @@
-# Setting Up Ollama for ChatCraft
+# Setting Up Ollama for AiLabKit
 
-This guide will walk you through the simple process of setting up Ollama on your local machine to power your ChatCraft projects.
+This guide will walk you through the simple process of setting up Ollama on your local machine to power your AiLabKit projects.
 
 
 Great instinct! Since the docstring update was already complete, there's no change needed in your Python code.
@@ -9,13 +9,11 @@ Now, for your **Ollama guide**, here’s what you can add based on your idea:
 
 ---
 
-### ✅ Add this to the beginning of the guide:
+## 🧭 Who Is This Guide For?
 
-> ## 🧭 Who Is This Guide For?
->
-> This guide is written for **beginners** who want to run ChatCraft with a local LLM using [Ollama](https://ollama.com). If you're an educator or student new to large language models, this will walk you through everything step by step.
->
-> If you're an advanced user with an existing Ollama setup (custom models, non-default ports, Docker, remote hosting), feel free to skip this guide — ChatCraft will work as long as your Ollama server is reachable.
+This guide is written for **beginners** who want to run AiLabKit with a local LLM using [Ollama](https://ollama.com). If you're an educator or student new to large language models, this will walk you through everything step by step.
+
+If you're an advanced user with an existing Ollama setup (custom models, non-default ports, Docker, remote hosting), feel free to skip this guide — AiLabKit will work as long as your Ollama server is reachable.
 
 
 ## What is Ollama?
@@ -95,30 +93,30 @@ No additional configuration is required unless you've changed Ollama's default s
 > ollama run llama3
 > ```
 >
-> You can test ChatCraft in Python with:
+You can test AiLabKit in Python with:
 >
-> ```python
-> from chatcraft import friendly_bot
-> print(friendly_bot(\"What is 3 + 4?\"))
-> ```
->
-> You should get a real-time AI response!
+```python
+from ailabkit.chat import get_response
+print(get_response("What is 3 + 4?"))
+```
+
+You should get a real-time AI response!
 
 ---
 
 ### ✅ Optional Tip (Advanced Config):
 
 > ### ⚙️ Advanced: Custom Model Host
->
-> If you're running Ollama on a different host or port (e.g. remote or Docker), you can create a config file to tell ChatCraft where to send requests.  
->
-> See: [docs/configuration.md](configuration.md) for advanced setup.
+
+If you're running Ollama on a different host or port (e.g. remote or Docker), you can create a config file to tell AiLabKit where to send requests.  
+
+See: [docs/configuration.md](configuration.md) for advanced setup.
 
 ## Troubleshooting
 
 ### "Connection refused" error
 
-If ChatCraft shows a connection error:
+If AiLabKit shows a connection error:
 1. Make sure Ollama is running
 2. Check that you haven't changed the default port (11434)
 3. On Windows or macOS, you might need to restart the Ollama application
@@ -141,7 +139,7 @@ Here are some models you can use with ChatCraft:
 
 - `llama3` - The recommended default model for most users
 - `llama3:8b` - A smaller, faster version if you have limited resources
-- `codellama` - Specialized for programming tasks (recommended for code-related exercises)
+- `codellama` - Specialised for programming tasks (recommended for code-related exercises)
 - `mistral` - An alternative model with good performance
 - `phi` - A smaller model with good capabilities for simpler tasks
 
@@ -156,4 +154,14 @@ For more detailed information about Ollama, visit their official documentation a
 
 ---
 
-Now that you have Ollama set up, you're ready to use ChatCraft and start creating your own AI educational experiences!
+## 📚 Related Docs
+
+- [Chat Module Guide](chat-guide.md) - Learn about using the chat module with Ollama
+- [RAG Module Guide](rag-guide.md) - Learn about using the RAG module with Ollama
+- [Agent Module Guide](agent-guide.md) - Learn about using the agent module with Ollama
+- [Configuration Guide](configuration.md) - Advanced configuration options
+- [Education Guide](education-guide.md) - Use AiLabKit in educational settings
+
+---
+
+Now that you have Ollama set up, you're ready to use AiLabKit and start creating your own AI educational experiences!
