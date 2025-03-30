@@ -33,7 +33,8 @@ nav:
       - "RAG Flow": rag-flow.md
       - "How RAG Works": rag-llm-explain.md
     - Agent:
-      - "Coming Soon": index.md
+      - "Overview": agent-guide.md
+      - "Understanding Agents": agent-concepts.md
   - For Educators:
     - "Education Guide": education-guide.md
     - "Projects Overview": mini-projects.md

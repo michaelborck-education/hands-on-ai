@@ -19,10 +19,8 @@ def interactive(
 ):
     """Run interactive agent chat."""
     # Register tools if not already done
-    from ..tools import register_calculator_tool, register_weather_tool, register_search_tool
-    register_calculator_tool()
-    register_weather_tool()
-    register_search_tool()
+    from ..tools import register_simple_tools
+    register_simple_tools()
     
     console = Console()
     

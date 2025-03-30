@@ -4,34 +4,13 @@ Core agent functionality for ReAct-style reasoning and tool use.
 
 import re
 import json
-from typing import Dict, List, Callable, Any
+from typing import Dict, List, Callable, Any, Optional, Tuple
 from ..config import get_model, log
 from ..chat import get_response
+from .prompts import SYSTEM_PROMPT, TOOL_DESCRIPTION_FORMAT, TOOL_RESULT_FORMAT
 
 # Global tool registry
-_tools: Dict[str, Callable] = {}
-
-# ReAct prompts
-AGENT_SYSTEM_PROMPT = """You are a helpful AI assistant with access to tools. 
-Follow these steps for using tools:
-
-1. THINK: Analyze what the user is asking
-2. PLAN: Decide if you need a tool to help answer
-3. ACT: Call a tool using this exact format:
-   ```tool
-   {
-     "tool": "tool_name",
-     "input": {"param1": "value1", "param2": "value2"}
-   }
-   ```
-4. OBSERVE: Review the tool's response
-5. RESPOND: Answer the user's question using the tool's output when appropriate
-
-Available tools: {tool_list}
-
-If you don't need any tools, just respond directly.
-Always be helpful, accurate, and concise.
-"""
+_tools: Dict[str, Dict[str, Any]] = {}
 
 
 def register_tool(name: str, description: str, function: Callable):
@@ -73,92 +52,139 @@ def _format_tools_for_prompt():
     for name, info in _tools.items():
         tool_texts.append(f"- {name}: {info['description']}")
     
-    return "\n".join(tool_texts)
+    return TOOL_DESCRIPTION_FORMAT.format(tool_list="\n".join(tool_texts))
 
 
-def _parse_tool_calls(text: str):
-    """Parse tool calls from text using regex."""
-    pattern = r"```tool\s+({.*?})\s+```"
-    matches = re.findall(pattern, text, re.DOTALL)
+def _parse_tool_calls(text: str) -> List[Tuple[str, str]]:
+    """
+    Parse tool calls from text using ReAct format.
     
+    Args:
+        text: The model's response text
+        
+    Returns:
+        List of tuples with (tool_name, tool_input)
+    """
+    # Match action and action input patterns from ReAct format
+    action_pattern = r"Action: *(.*?)$"
+    action_input_pattern = r"Action Input: *(.*?)$"
+    
+    # Find all instances
+    actions = re.findall(action_pattern, text, re.MULTILINE)
+    inputs = re.findall(action_input_pattern, text, re.MULTILINE)
+    
+    # Ensure we have matching pairs
     tool_calls = []
-    for match in matches:
-        try:
-            tool_data = json.loads(match)
-            if "tool" in tool_data and "input" in tool_data:
-                tool_calls.append(tool_data)
-        except json.JSONDecodeError:
-            log.warning(f"Failed to parse tool call: {match}")
+    for i in range(min(len(actions), len(inputs))):
+        tool_name = actions[i].strip()
+        tool_input = inputs[i].strip()
+        if tool_name and tool_input:
+            tool_calls.append((tool_name, tool_input))
     
     return tool_calls
 
 
-def _execute_tool_call(tool_call):
-    """Execute a parsed tool call."""
-    tool_name = tool_call["tool"]
-    tool_input = tool_call["input"]
+def _execute_tool_call(tool_name: str, tool_input: str) -> str:
+    """
+    Execute a parsed tool call with proper error handling.
     
+    Args:
+        tool_name: Name of the tool to execute
+        tool_input: String input for the tool
+        
+    Returns:
+        str: Result of tool execution or error message
+    """
     if tool_name not in _tools:
         return f"Error: Tool '{tool_name}' not found."
     
     try:
-        result = _tools[tool_name]["function"](**tool_input)
-        return result
+        # For simple tools, we can just pass the input string directly
+        result = _tools[tool_name]["function"](tool_input)
+        return str(result)
     except Exception as e:
         log.exception(f"Error executing tool {tool_name}")
         return f"Error executing tool '{tool_name}': {str(e)}"
 
 
-def run_agent(prompt, model=None, max_iterations=5):
+def run_agent(prompt: str, model: Optional[str] = None, max_iterations: int = 5, verbose: bool = False) -> str:
     """
-    Run the agent with the given prompt.
+    Run the agent with the given prompt using ReAct format.
     
     Args:
-        prompt: User prompt
-        model: LLM model to use
+        prompt: User question or instruction
+        model: LLM model to use, defaults to configured model
         max_iterations: Maximum number of tool use iterations
+        verbose: Whether to print intermediate steps
         
     Returns:
-        str: Agent response
+        str: Final agent response
     """
     # Prepare system prompt with tools
-    system_prompt = AGENT_SYSTEM_PROMPT.format(
-        tool_list=_format_tools_for_prompt()
+    system_prompt = SYSTEM_PROMPT.format(
+        tool_descriptions=_format_tools_for_prompt()
     )
     
-    # Initial response
+    # Get model from config if not specified
     if model is None:
         model = get_model()
     
-    conversation = [
-        {"role": "user", "content": prompt}
+    # Initialize conversation with the user query
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": f"Question: {prompt}"}
     ]
     
-    for _ in range(max_iterations):
+    # To store the full response with reasoning and tool usage
+    full_trace = [f"Question: {prompt}"]
+    
+    for i in range(max_iterations):
         # Get model response
-        response_text = get_response(
-            prompt=json.dumps([msg["content"] for msg in conversation]),
-            system=system_prompt,
+        response = get_response(
+            messages=messages,
             model=model
         )
         
+        if verbose:
+            log.info(f"Model response: {response}")
+        full_trace.append(response)
+        
         # Check for tool calls
-        tool_calls = _parse_tool_calls(response_text)
+        tool_calls = _parse_tool_calls(response)
+        
+        # Check if we've reached a final answer
+        if "Final Answer:" in response:
+            # Extract the final answer
+            final_answer = re.search(r"Final Answer: *(.*?)($|Thought:)", response + "Thought:", re.DOTALL)
+            if final_answer:
+                return final_answer.group(1).strip()
+            # Fallback to returning the whole response if pattern doesn't match
+            return response
         
         if not tool_calls:
-            # No tools used, we're done
-            return response_text
+            # No tools used but also no final answer - interpret as direct response
+            return response
         
-        # Execute tools and add to conversation
-        for tool_call in tool_calls:
-            tool_result = _execute_tool_call(tool_call)
+        # Execute tools and add results to the conversation
+        for tool_name, tool_input in tool_calls:
+            tool_result = _execute_tool_call(tool_name, tool_input)
             
-            # Add the response and tool result to the conversation
-            conversation.append({"role": "assistant", "content": response_text})
-            conversation.append({
-                "role": "tool", 
-                "content": f"Tool result for {tool_call['tool']}:\n{tool_result}"
-            })
+            # Format tool result in the observation format
+            observation = TOOL_RESULT_FORMAT.format(result=tool_result)
+            full_trace.append(observation)
+            
+            # Add the observation to the conversation
+            messages.append({"role": "assistant", "content": response})
+            messages.append({"role": "user", "content": observation})
     
-    # If we reach max iterations, return the last response
+    # If we reach max iterations without a final answer
+    if verbose:
+        log.warning(f"Reached maximum iterations ({max_iterations}) without finding a final answer")
+    
+    # Try to extract any partial answer
+    final_thoughts = re.search(r"Thought: *(.*?)($|Action:|Final Answer:)", response, re.DOTALL)
+    if final_thoughts:
+        return f"I've been working on this but haven't reached a final answer. Here's what I know so far: {final_thoughts.group(1).strip()}"
+    
+    # Fallback to a generic message
     return "I've reached the maximum number of tool calls without finding a complete answer."

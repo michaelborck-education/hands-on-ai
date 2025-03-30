@@ -15,10 +15,8 @@ app = typer.Typer(help="List available agent tools")
 def list_available_tools():
     """List all available agent tools."""
     # Register tools if not already done
-    from ..tools import register_calculator_tool, register_weather_tool, register_search_tool
-    register_calculator_tool()
-    register_weather_tool()
-    register_search_tool()
+    from ..tools import register_simple_tools
+    register_simple_tools()
     
     console = Console()
     
