@@ -23,7 +23,7 @@ install-dev:
   pip install -r requirements-dev.txt
 
 sync-version:
-  python scripts/inject_version.py --all
+  scripts/inject_version.py --all
   echo "✅ Synced version across pyproject.toml and version.json"
 
 requirements:
@@ -36,15 +36,17 @@ build:
   python -m build
 
 bundle:
-  python scripts/build_zip.py
+  scripts/build_zip.py
 
 # 📚 Documentation
 docs:
-  python scripts/generate_project_index.py
+  just generate-bot-gallery
+  just generate-project-index
   mkdocs build --clean
 
 deploy-docs:
-  python scripts/generate_project_index.py
+  just generate-bot-gallery
+  just generate-project-index
   mkdocs gh-deploy --force
 
 # 🧪 Run CLI modules in interactive mode
@@ -71,24 +73,25 @@ rag-web:
 agent-web:
   ailabkit agent web
 
-# 🔧 Rebuild mini-projects markdown from individual project files
-build-mini-projects:
-  python scripts/build_mini_projects.py
-
+# Rebuild Bot gallery markdown from doc strings
+generate-bot-gallery:
+  scripts/generate_bot_gallery.py --flat --out docs/bot-gallery.md
 
 # 🇦🇺 Convert American spelling to Australian/British spelling in docs
 spelling-au:
-  python scripts/convert_spelling.py --verbose
+  scripts/convert_spelling.py --verbose
 
 # 🌐 Regenerate HTML-based project browser
 build-project-browser:
-  python scripts/project_browser.py --output project_browser.html
+  scripts/project_browser.py --output docs/project_browser.html
+  cp docs/project_browser.html project_browser.html
 
 # 🛠️ Rebuild everything: sync version, docs, browser, mini-projects
 build-all:
   just sync-version
   just build-mini-projects
-  python scripts/generate_project_index.py
+  just generate-project-index
+  just generate-bot-gallery
   just build-project-browser
   just docs
 
@@ -116,23 +119,23 @@ release-test:
 
 # Lint mini-projects markdown files
 lint-mini-projects:
-  python scripts/lint_mini_projects.py
+  scripts/lint_mini_projects.py
   
 # Generate the projects index.md file
 generate-project-index:
-  python scripts/generate_project_index.py
+  scripts/generate_project_index.py
 
 # Lint chat mini-projects markdown files
 lint-chat-projects:
-  python scripts/lint_mini_projects.py docs/projects/chat
+  scripts/lint_mini_projects.py docs/projects/chat
 
 # Lint rag mini-projects markdown files  
 lint-rag-projects:
-  python scripts/lint_mini_projects.py docs/projects/rag
+  scripts/lint_mini_projects.py docs/projects/rag
 
 # Lint agent mini-projects markdown files
 lint-agent-projects:
-  python scripts/lint_mini_projects.py docs/projects/agent
+  scripts/lint_mini_projects.py docs/projects/agent
 
 # Lint all module-specific mini-projects
 lint-all-projects: lint-chat-projects lint-rag-projects lint-agent-projects
@@ -164,6 +167,7 @@ help:
   @echo "  spelling-au           Convert American spelling to Australian/British spelling"
   @echo "  lint-mini-projects    Lint the combined mini-projects.md file"
   @echo "  generate-project-index  Generate the projects/index.md file"
+  @echo "  generate-bot-gallery   Generate the bot gallery markdown"
   @echo "  lint-chat-projects    Lint chat mini-projects"
   @echo "  lint-rag-projects     Lint RAG mini-projects"
   @echo "  lint-agent-projects   Lint agent mini-projects"

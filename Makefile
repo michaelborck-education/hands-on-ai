@@ -83,7 +83,8 @@ spelling-au:
 
 # 🌐 Regenerate HTML-based project browser
 build-project-browser:
-	python scripts/project_browser.py --output project_browser.html
+	python scripts/project_browser.py --output docs/project_browser.html
+	cp docs/project_browser.html project_browser.html
 
 # Lint mini-projects markdown files
 lint-mini-projects:
