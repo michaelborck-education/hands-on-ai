@@ -2,7 +2,8 @@
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Function calls, lists, creativity, dialogue simulation
+**Learning Focus**: Function calls, lists, creativity, dialogue simulation  
+**Module**: chat
 
 ## Overview
 
@@ -462,12 +463,12 @@ This interview format is particularly useful for:
 ## Extension Ideas
 
 - Add a feature for the user to join as an additional participant
-- Create specialized formats for specific topics (ethics, technology, etc.)
+- Create specialised formats for specific topics (ethics, technology, etc.)
 - Implement a scoring system where users rate which perspective they found most compelling
 - Add follow-up questions that challenge each persona's perspective
 - Create a "change my mind" feature where personas try to persuade on a controversial topic
 - Allow students to create their own custom persona profiles
-- Add a feature to visualize the dialogue flow and connections between arguments
+- Add a feature to visualise the dialogue flow and connections between arguments
 - Implement a fact-checker persona that evaluates claims made during discussions
 - Create a mode where personas can switch perspectives mid-dialogue to show flexibility in thinking
 - Add the ability to save transcripts for later analysis or comparison

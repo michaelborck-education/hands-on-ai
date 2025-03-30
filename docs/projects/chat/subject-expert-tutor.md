@@ -2,11 +2,12 @@
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Domain-specific prompting, educational dialogue
+**Learning Focus**: Domain-specific prompting, educational dialogue  
+**Module**: chat
 
 ## Overview
 
-Create a specialized tutor bot for a specific subject area that can explain concepts and quiz the user.
+Create a specialised tutor bot for a specific subject area that can explain concepts and quiz the user.
 
 ## Instructions
 

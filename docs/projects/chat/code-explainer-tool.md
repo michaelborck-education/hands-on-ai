@@ -2,7 +2,8 @@
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Code analysis, documentation
+**Learning Focus**: Code analysis, documentation  
+**Module**: chat
 
 ## Overview
 

@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
-**Learning Focus**: API integration, text processing, content repurposing
+**Learning Focus**: API integration, text processing, content repurposing  
+**Module**: chat
 
 ## Overview
 
@@ -177,6 +178,6 @@ if __name__ == "__main__":
 - Create a scheduler to process videos in batch
 - Add image extraction from video thumbnails or frames
 - Build a web interface with Flask or Streamlit
-- Implement SEO optimization suggestions for the generated content
+- Implement SEO optimisation suggestions for the generated content
 
 ---

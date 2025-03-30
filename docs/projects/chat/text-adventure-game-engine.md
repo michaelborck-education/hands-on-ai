@@ -2,7 +2,8 @@
 
 **Difficulty**: Advanced  
 **Time**: 90-120 minutes  
-**Learning Focus**: Object-oriented programming, game design, file I/O, AI interaction
+**Learning Focus**: Object-oriented programming, game design, file I/O, AI interaction  
+**Module**: chat
 
 ## Overview
 

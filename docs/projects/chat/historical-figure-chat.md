@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
-**Learning Focus**: Historical research, character perspective, dialogue
+**Learning Focus**: Historical research, character perspective, dialogue  
+**Module**: chat
 
 ## Overview
 

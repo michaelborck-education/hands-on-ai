@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: File I/O, date handling, text analysis
+**Learning Focus**: File I/O, date handling, text analysis  
+**Module**: chat
 
 ## Overview
 
@@ -139,6 +140,6 @@ if __name__ == "__main__":
 
 ## Extension Ideas
 
-Add mood tracking visualizations or goal-setting features.
+Add mood tracking visualisations or goal-setting features.
 
 ---

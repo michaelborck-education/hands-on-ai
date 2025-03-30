@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Loops, conditionals, lists
+**Learning Focus**: Loops, conditionals, lists  
+**Module**: chat
 
 ## Overview
 
@@ -96,7 +97,7 @@ if __name__ == "__main__":
 
 - Add difficulty levels where harder questions are worth more points
 - Include a hint system where users can ask for clues but lose points
-- Make a specialized quiz for a specific subject the students are studying
+- Make a specialised quiz for a specific subject the students are studying
 - Add a timer element where users have to answer within a time limit
 - Let students create their own question banks to quiz each other
 

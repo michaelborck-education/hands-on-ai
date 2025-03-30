@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
-**Learning Focus**: Selection, text analysis, branching logic
+**Learning Focus**: Selection, text analysis, branching logic  
+**Module**: chat
 
 ## Overview
 

@@ -2,7 +2,8 @@
 
 **Difficulty**: Intermediate-Advanced  
 **Time**: 60-90 minutes  
-**Learning Focus**: API integration, data visualization, environmental data analysis
+**Learning Focus**: API integration, data visualisation, environmental data analysis  
+**Module**: chat
 
 ## Overview
 
@@ -383,8 +384,8 @@ if __name__ == "__main__":
 - Add support for multiple locations and comparison views
 - Implement unit conversion between metric and imperial
 - Create a historical weather data retrieval and analysis feature
-- Add precipitation and wind forecasts with appropriate visualizations
+- Add precipitation and wind forecasts with appropriate visualisations
 - Implement a daily weather notification system
-- Create a map-based visualization of weather data
+- Create a map-based visualisation of weather data
 
 ---

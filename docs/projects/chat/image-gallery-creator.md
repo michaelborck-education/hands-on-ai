@@ -2,7 +2,8 @@
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: File handling, HTML generation, metadata management, API integration
+**Learning Focus**: File handling, HTML generation, metadata management, API integration  
+**Module**: chat
 
 ## Overview
 
@@ -237,8 +238,8 @@ if __name__ == "__main__":
 ## Extension Ideas
 
 - Add image filtering by tags or categories
-- Implement image resizing and thumbnail generation
-- Create a lightbox effect for viewing full-size images
+- Implement image resising and thumbnail generation
+- Create a lightbox effect for viewing full-sise images
 - Add EXIF data extraction to display camera information
 - Implement a theme selector with different gallery styles
 - Create a server-side component to host the gallery online

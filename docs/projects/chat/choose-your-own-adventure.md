@@ -2,7 +2,8 @@
 
 **Difficulty**: Intermediate  
 **Time**: 60-90 minutes  
-**Learning Focus**: State management, narrative design, user input handling
+**Learning Focus**: State management, narrative design, user input handling  
+**Module**: chat
 
 ## Overview
 

@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Lists, loops, conditionals, scoring systems
+**Learning Focus**: Lists, loops, conditionals, scoring systems  
+**Module**: chat
 
 ## Overview
 

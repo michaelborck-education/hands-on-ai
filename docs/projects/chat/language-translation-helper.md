@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
-**Learning Focus**: Multilingual communication, cultural context
+**Learning Focus**: Multilingual communication, cultural context  
+**Module**: chat
 
 ## Overview
 

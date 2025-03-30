@@ -15,7 +15,7 @@ app = typer.Typer(help="Generate HTML browser for mini-projects")
 def read_markdown_files(projects_dir):
     projects = []
 
-    for md_file in projects_dir.glob('*.md'):
+    for md_file in projects_dir.glob('**/*.md'):
         content = md_file.read_text(encoding='utf-8')
         
         # Match h1 titles and metadata

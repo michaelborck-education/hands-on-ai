@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
-**Learning Focus**: Functions, creativity, system prompts
+**Learning Focus**: Functions, creativity, system prompts  
+**Module**: chat
 
 ## Overview
 

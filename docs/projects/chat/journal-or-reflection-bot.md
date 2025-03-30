@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 30-45 minutes  
-**Learning Focus**: Lists, memory, summarization
+**Learning Focus**: Lists, memory, summarisation  
+**Module**: chat
 
 ## Overview
 
@@ -142,9 +143,9 @@ if __name__ == "__main__":
 ## Extension Ideas
 
 - Add mood tracking to each entry
-- Create visualizations of common themes or topics over time
+- Create visualisations of common themes or topics over time
 - Add a guided meditation option based on journal content
 - Implement a goal-setting feature that references past entries
-- Create specialized journaling templates for different purposes (gratitude, productivity, etc.)
+- Create specialised journaling templates for different purposes (gratitude, productivity, etc.)
 
 ---

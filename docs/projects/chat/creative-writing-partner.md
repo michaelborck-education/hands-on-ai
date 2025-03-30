@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner-Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Narrative development, creative collaboration, editing
+**Learning Focus**: Narrative development, creative collaboration, editing  
+**Module**: chat
 
 ## Overview
 

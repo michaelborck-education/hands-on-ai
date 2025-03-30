@@ -2,11 +2,12 @@
 
 **Difficulty**: Intermediate-Advanced  
 **Time**: 60-90 minutes  
-**Learning Focus**: Data structures, file I/O, data visualization, natural language processing, user experience design
+**Learning Focus**: Data structures, file I/O, data visualisation, natural language processing, user experience design  
+**Module**: chat
 
 ## Overview
 
-Create a comprehensive journaling application that combines structured mood tracking with flexible reflection prompts, offering users deep insights through data visualization and AI-powered analysis.
+Create a comprehensive journaling application that combines structured mood tracking with flexible reflection prompts, offering users deep insights through data visualisation and AI-powered analysis.
 
 ## Instructions
 
@@ -1505,16 +1506,16 @@ if __name__ == "__main__":
 
 ## Extension Ideas
 
-- **Data Visualization Enhancements**: Add interactive visualizations using libraries like Plotly or Bokeh
+- **Data Visualisation Enhancements**: Add interactive visualisations using libraries like Plotly or Bokeh
 - **Natural Language Processing**: Implement sentiment analysis to automatically detect the emotional tone of entries
 - **Machine Learning Integration**: Build a recommendation system that suggests activities based on past mood correlations
-- **Multiple Journaling Modes**: Add specialized templates for gratitude journaling, goal tracking, habit formation, etc.
-- **Social Features**: Add optional sharing of insights (anonymized) with trusted friends or mentors
+- **Multiple Journaling Modes**: Add specialised templates for gratitude journaling, goal tracking, habit formation, etc.
+- **Social Features**: Add optional sharing of insights (anonymised) with trusted friends or mentors
 - **Integrations**: Connect with other applications like calendar, fitness trackers, or meditation apps
 - **Mobile Compatibility**: Create a companion mobile app for on-the-go journaling
 - **Voice Journaling**: Add speech-to-text functionality for verbal journaling
-- **Export Options**: Enhanced export formats including PDF with embedded visualizations, interactive web formats
-- **Cloud Sync**: Add secure cloud synchronization for access across multiple devices
+- **Export Options**: Enhanced export formats including PDF with embedded visualisations, interactive web formats
+- **Cloud Sync**: Add secure cloud synchronisation for access across multiple devices
 - **Guided Journaling Sessions**: AI-guided journaling sessions focused on specific topics or goals
 
 ---

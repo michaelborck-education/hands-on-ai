@@ -2,7 +2,8 @@
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Dictionaries, functions, menu systems
+**Learning Focus**: Dictionaries, functions, menu systems  
+**Module**: chat
 
 ## Overview
 

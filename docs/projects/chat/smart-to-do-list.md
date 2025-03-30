@@ -2,11 +2,12 @@
 
 **Difficulty**: Intermediate  
 **Time**: 60-75 minutes  
-**Learning Focus**: Data structures, file I/O, date handling, AI assistance
+**Learning Focus**: Data structures, file I/O, date handling, AI assistance  
+**Module**: chat
 
 ## Overview
 
-Build a smart to-do list application that helps users organize tasks with categories, priorities, and due dates. The application provides AI-assisted recommendations for task management and organization.
+Build a smart to-do list application that helps users organise tasks with categories, priorities, and due dates. The application provides AI-assisted recommendations for task management and organisation.
 
 ## Instructions
 
@@ -542,7 +543,7 @@ if __name__ == "__main__":
 
 - Add recurring tasks (daily, weekly, monthly)
 - Implement task dependencies (tasks that require other tasks to be completed first)
-- Create a calendar view to visualize task distribution
+- Create a calendar view to visualise task distribution
 - Add a Pomodoro timer feature for focused work sessions
 - Implement task sharing or collaboration features
 - Create a mobile-friendly web interface using a framework like Flask

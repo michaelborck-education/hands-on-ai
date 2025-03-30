@@ -2,7 +2,8 @@
 
 **Difficulty**: Intermediate  
 **Time**: 45-60 minutes  
-**Learning Focus**: Functions, menu systems, multiple bot use
+**Learning Focus**: Functions, menu systems, multiple bot use  
+**Module**: chat
 
 ## Overview
 

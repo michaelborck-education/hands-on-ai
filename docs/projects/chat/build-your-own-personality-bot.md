@@ -2,7 +2,8 @@
 
 **Difficulty**: Beginner  
 **Time**: 30-45 minutes  
-**Learning Focus**: Functions, system prompts, creative writing
+**Learning Focus**: Functions, system prompts, creative writing  
+**Module**: chat
 
 ## Overview
 
