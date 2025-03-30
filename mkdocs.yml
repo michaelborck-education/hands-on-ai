@@ -1,35 +1,52 @@
-site_name: ChatCraft Documentation
-site_url: https://github.com/teaching-repositories/chatcraft
-repo_url: https://github.com/teaching-repositories/chatcraft
-repo_name: teaching-repositories/chatcraft
+site_name: AiLabKit Documentation
+site_url: https://github.com/teaching-repositories/ailabkit
+repo_url: https://github.com/teaching-repositories/ailabkit
+repo_name: teaching-repositories/ailabkit
 edit_uri: edit/main/docs/
 theme:
   name: material
   favicon: assets/icon-192.png
   features:
     - navigation.tabs
+    - navigation.sections
     - navigation.instant
+    - navigation.tracking
+    - content.code.copy
+    - toc.integrate
   palette:
     scheme: default
     primary: indigo
     accent: light blue
 nav:
   - Home: index.md
-  - Bots: bot-gallery.md
-  - "Ollama Setup": ollama-guide.md
-  - Education: education-guide.md
-  - Projects: mini-projects.md
-  - Template: mini-project-template.md
-  - "ChatCraft CLI": cli-guide.md
-  - RAG Guide: ragcraft-guide.md
-  - Classroom: classroom-setup.md
-  - Configuration: configuration.md
+  - Getting Started:
+    - "Installation": configuration.md 
+    - "Ollama Setup": ollama-guide.md
+    - "Classroom Setup": classroom-setup.md
+  - Modules:
+    - Chat:
+      - "Overview": chat-guide.md
+      - "Bot Gallery": bot-gallery.md
+      - "CLI Reference": cli-guide.md
+    - RAG:
+      - "Overview": rag-guide.md
+      - "RAG Flow": rag-flow.md
+      - "How RAG Works": rag-llm-explain.md
+    - Agent:
+      - "Coming Soon": index.md
+  - For Educators:
+    - "Education Guide": education-guide.md
+    - "Projects Overview": mini-projects.md
+    - "Project Template": mini-project-template.md
+  - Mini-Projects:
+    - "Overview": mini-projects.md
+    - "Project Gallery": projects/
 plugins:
   - search
   - mkdocstrings:
       handlers:
         python:
-          paths: ["chatcraft"]
+          paths: ["ailabkit"]
           options:
             docstring_style: google
             show_signature: false
@@ -47,7 +64,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/teaching-repositories/chatcraft
+      link: https://github.com/teaching-repositories/ailabkit
 
 extra_css:
   - stylesheets/custom.css

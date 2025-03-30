@@ -1,9 +1,27 @@
-# Welcome to ChatCraft!
+# Welcome to AiLabKit!
 
-ChatCraft makes AI accessible for classrooms by providing fun and friendly chatbot personalities that educators and students can interact with in pure Python.
+AiLabKit is a unified educational toolkit designed to teach students how modern AI systems work — by building and interacting with them directly.
 
-- No API keys
-- No setup headaches
-- Works offline with Ollama
+It provides a clean, modular structure that introduces core AI concepts progressively through three tools:
 
-Explore how it works, view the bot gallery, or try one of our mini-projects!
+## 🧱 Module Overview
+
+| Module | Purpose | CLI Name |
+|--------|---------|----------|
+| chat | Simple chatbot with system prompts | chat |
+| rag | Retrieval-Augmented Generation (RAG) | rag |
+| agent | ReAct-style reasoning with tool use | agent |
+
+Each module is:
+- 🔌 Self-contained
+- 🧩 Installable via one package: `pip install ailabkit`
+- 🧠 Designed for progressive learning
+
+## Key Benefits
+
+- No API keys required
+- Minimal setup with Ollama
+- Works offline for classroom settings
+- Beginner-friendly Python interface
+
+Ready to get started? Check out our [installation guide](configuration.md), explore the [bot gallery](bot-gallery.md), or try one of our [mini-projects](mini-projects.md)!
