@@ -7,7 +7,6 @@ readability scoring, and text summarization.
 
 import re
 import math
-from typing import Dict, List, Any, Tuple
 from ..core import register_tool
 
 def word_count(text: str) -> str:
@@ -137,8 +136,8 @@ def readability_score(text: str) -> str:
         f"Flesch Reading Ease: {flesch_ease:.1f} - {flesch_interpretation}",
         f"Flesch-Kincaid Grade Level: {fk_grade:.1f}",
         f"SMOG Index: {smog:.1f}",
-        f"",
-        f"Statistics:",
+        "",
+        "Statistics:",
         f"- Sentences: {sentence_count}",
         f"- Words: {word_count}",
         f"- Syllables: {syllable_count}",

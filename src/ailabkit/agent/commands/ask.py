@@ -3,7 +3,6 @@ Ask command for the agent CLI - runs an agent with tools.
 """
 
 import typer
-from rich import print
 from rich.panel import Panel
 from rich.console import Console
 from ..core import run_agent, list_tools

@@ -3,7 +3,6 @@ Tools command for the agent CLI - lists available tools.
 """
 
 import typer
-from rich import print
 from rich.table import Table
 from rich.console import Console
 from ..core import list_tools

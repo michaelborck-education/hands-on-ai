@@ -6,7 +6,6 @@ lookups, multiplication tables, and prime number checking.
 """
 
 import math
-from typing import Dict, List, Any, Optional
 from ..core import register_tool
 
 
@@ -126,7 +125,7 @@ def multiplication_table(number: str, size: str = "10") -> str:
         return f"{header}\n{separator}\n" + "\n".join(table)
         
     except ValueError:
-        return f"Error: Please provide valid integers for number and size."
+        return "Error: Please provide valid integers for number and size."
 
 
 def prime_check(number: str) -> str:
@@ -183,7 +182,7 @@ def prime_check(number: str) -> str:
             return result
             
     except ValueError:
-        return f"Error: Please provide a valid integer."
+        return "Error: Please provide a valid integer."
 
 
 def register_education_tools():

@@ -4,8 +4,7 @@ Converter agent for unit conversions.
 This agent provides tools for converting between different units of measurement.
 """
 
-from typing import Dict, Any, Tuple, Optional
-import re
+from typing import Optional
 from ..core import register_tool
 
 

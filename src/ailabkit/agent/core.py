@@ -3,7 +3,6 @@ Core agent functionality for ReAct-style reasoning and tool use.
 """
 
 import re
-import json
 from typing import Dict, List, Callable, Any, Optional, Tuple
 from ..config import get_model, log
 from ..chat import get_response

@@ -5,8 +5,6 @@ This agent provides tools for date calculations, formatting, and timezone conver
 """
 
 import datetime
-import time
-from typing import Dict, List, Any, Optional
 from ..core import register_tool
 
 
@@ -50,7 +48,7 @@ def date_diff(date1: str, date2: str) -> str:
         
         # Create the result string
         if dates_swapped:
-            result = f"Date 2 is earlier than Date 1. Calculating difference with dates swapped.\n"
+            result = "Date 2 is earlier than Date 1. Calculating difference with dates swapped.\n"
         else:
             result = ""
             
@@ -117,7 +115,7 @@ def format_date(date_str: str, format_code: str = "iso") -> str:
         return f"Original date: {date_str}\nFormatted date ({format_code}): {formatted_date}"
         
     except ValueError:
-        return f"Error: Invalid date format. Please use YYYY-MM-DD format."
+        return "Error: Invalid date format. Please use YYYY-MM-DD format."
 
 
 def days_until(target_date: str) -> str:
@@ -183,7 +181,7 @@ def days_until(target_date: str) -> str:
             return result
             
     except ValueError:
-        return f"Error: Invalid date format. Please use YYYY-MM-DD format."
+        return "Error: Invalid date format. Please use YYYY-MM-DD format."
 
 
 def register_datetime_tools():

@@ -6,8 +6,6 @@ and examples. It uses a built-in dictionary for basic functionality without
 requiring external API calls.
 """
 
-import json
-from typing import Dict, List, Any, Optional
 from ..core import register_tool
 
 # Simple built-in dictionary with common words
