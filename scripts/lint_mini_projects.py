@@ -3,7 +3,6 @@
 import re
 import typer
 from pathlib import Path
-import os
 
 app = typer.Typer(help="Lint mini-projects markdown files for correct format")
 

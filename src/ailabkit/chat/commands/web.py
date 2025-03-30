@@ -3,7 +3,6 @@ Web command for the chat CLI - provides a web interface.
 """
 
 import typer
-from ...config import get_model, log
 from ..bots import list_available_bots, get_bot_description
 
 app = typer.Typer(help="Launch web interface for Chat")
@@ -17,11 +16,15 @@ def web(
 ):
     """Launch web interface for Chat."""
     try:
-        from fasthtml.common import *
+        from fasthtml.common import (fast_app, Titled, Article, Form, Div, 
+                                    Label, Select, Option, Input, Button, 
+                                    Style, Script, serve)
     except ImportError:
         try:
             # Alternative import path if the package is installed as python-fasthtml
-            from python_fasthtml.common import *
+            from python_fasthtml.common import (fast_app, Titled, Article, Form, Div, 
+                                              Label, Select, Option, Input, Button, 
+                                              Style, Script, serve)
         except ImportError:
             print("❌ FastHTML is required for the web interface.")
             print("Please install it with: pip install python-fasthtml")
@@ -157,8 +160,6 @@ def web(
     
     @rt("/chat")
     def post(prompt: str, bot: str):
-        from ..get_response import get_response
-        
         bot_func = all_bots.get(bot)
         if not bot_func:
             return Div("Bot not found", cls="message bot-message")

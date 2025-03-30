@@ -7,11 +7,10 @@ This script recursively scans markdown files in the specified directory
 and applies common American to Australian/British spelling conversions.
 """
 
-import os
 import re
 from pathlib import Path
 import typer
-from typing import List, Optional
+from typing import Optional
 
 # Define common American to Australian/British spelling conversions
 # Format: (American spelling, Australian/British spelling)
@@ -309,7 +308,7 @@ def main(
             
         updated = update_file(file, dry_run, True)
         if updated:
-            typer.echo(f"File would be updated" if dry_run else f"File updated")
+            typer.echo("File would be updated" if dry_run else "File updated")
         else:
             typer.echo("No changes needed")
     else:

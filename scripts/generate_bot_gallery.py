@@ -1,5 +1,4 @@
 import inspect
-import sys
 import re
 import csv
 from collections import defaultdict

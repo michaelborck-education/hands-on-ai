@@ -30,7 +30,7 @@ def ask(
     index_path = Path(index_path)
     if not index_path.exists():
         print(f"[red]❌ Index file not found: {index_path}[/red]")
-        print(f"Run 'rag index <directory>' first to create an index.")
+        print("Run 'rag index <directory>' first to create an index.")
         raise typer.Exit(1)
     
     # Get matching chunks

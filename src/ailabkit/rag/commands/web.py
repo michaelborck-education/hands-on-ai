@@ -4,7 +4,6 @@ Web command for the rag CLI - provides a web interface using FastHTML.
 
 import typer
 import os
-import json
 import tempfile
 from pathlib import Path
 from ...config import CONFIG_DIR, log
@@ -23,11 +22,13 @@ def web(
 ):
     """Launch web interface for RAG using FastHTML."""
     try:
-        from fasthtml.common import *
+        from fasthtml.common import (fast_app, Titled, Article, Form, Div, P, H1, H2, H3, H4,
+                                    Input, Button, Hr, Style, serve)
     except ImportError:
         try:
             # Alternative import path if the package is installed as python-fasthtml
-            from python_fasthtml.common import *
+            from python_fasthtml.common import (fast_app, Titled, Article, Form, Div, P, H1, H2, H3, H4,
+                                              Input, Button, Hr, Style, serve)
         except ImportError:
             print("❌ FastHTML is required for the web interface.")
             print("Please install it with: pip install python-fasthtml")
@@ -50,7 +51,7 @@ def web(
     
     # File upload handling - this uses a temporary file to store the uploaded file
     @rt("/upload")
-    async def post(file, request):
+    async def upload_post(file, request):
         try:
             # Check if the index file can be loaded (or initialize it if it doesn't exist)
             if os.path.exists(index_path):
@@ -92,7 +93,7 @@ def web(
     
     # Question answering
     @rt("/ask")
-    async def post(question: str):
+    async def ask_post(question: str):
         try:
             # Get context
             context_items, scores = get_top_k(question, index_path, k=3, return_scores=True)

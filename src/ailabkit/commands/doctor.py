@@ -20,7 +20,7 @@ def doctor():
     model = config.get_model()
     embedding_model = config.get_embedding_model()
     
-    print(f"[bold]Configuration[/bold]")
+    print("[bold]Configuration[/bold]")
     print(f"  • Config file: {config.CONFIG_PATH}")
     print(f"  • Server URL: {server_url}")
     print(f"  • Default model: {model}")

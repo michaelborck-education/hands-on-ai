@@ -2,9 +2,8 @@
 Web interface for the agent module using FastHTML.
 """
 
-import time
 import asyncio
-from typing import List, Dict, Any
+from typing import List
 import json
 
 # Handle correct import for python-fasthtml package
@@ -21,9 +20,8 @@ except ImportError:
             "FastHTML is required for the web interface. "
             "Please install it with: pip install python-fasthtml"
         )
-from ..config import get_model, log
-from .core import run_agent, list_tools
-from .tools import register_simple_tools
+from ..config import log
+from .core import run_agent
 
 # Register tools from built-in agents
 from .agents.calculator import register_calculator_agent
@@ -53,9 +51,6 @@ async def index():
     """
     Render the main agent interface.
     """
-    tools = list_tools()
-    model = get_model()
-    
     return """
     <div class="container mx-auto px-4 py-8 max-w-4xl">
         <h1 class="text-3xl font-bold mb-6">AiLabKit Agent</h1>
@@ -288,7 +283,7 @@ async def websocket_handler(socket: Sockets, request: Request):
                         "type": "error",
                         "content": f"An error occurred: {str(e)}"
                     }))
-    except Exception as e:
+    except Exception:
         log.exception("WebSocket error")
     finally:
         await socket.close()

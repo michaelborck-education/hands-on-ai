@@ -17,7 +17,7 @@ app = typer.Typer(help="Build a RAG index from files")
 def index(
     input_path: str = typer.Argument(..., help="File or directory to index"),
     output_file: str = typer.Option(None, help="Output index file (default: ~/.ailabkit/index.npz)"),
-    chunk_size: int = typer.Option(None, help=f"Words per chunk (default: from config)"),
+    chunk_size: int = typer.Option(None, help="Words per chunk (default: from config)"),
     force: bool = typer.Option(False, help="Overwrite existing index"),
 ):
     """Build a RAG index from files."""

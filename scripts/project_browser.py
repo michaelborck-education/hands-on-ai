@@ -4,7 +4,6 @@ import markdown
 import re
 import json
 import typer
-from typing import Optional
 
 PROJECTS_DIR = Path("docs/projects")
 VERSION_FILE = Path("version.json")
