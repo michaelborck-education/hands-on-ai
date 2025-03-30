@@ -37,7 +37,7 @@ nav:
     - Agent:
       - "Overview": agent-guide.md
       - "Understanding Agents": agent-concepts.md
-      - "Agent Modules": agent-agent.md
+      - "Agent Modules": agent-agents.md
       - "Tool Reference": agent-tools.md
       - "CLI Reference": cli-guide.md
   - For Educators:
