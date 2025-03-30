@@ -8,10 +8,10 @@ test-basic:
   python test_ailabkit.py
 
 lint:
-  ruff src/ailabkit tests tools
+  ruff src/ailabkit tests scripts
 
 format:
-  ruff format src/ailabkit tests tools
+  ruff format src/ailabkit tests scripts
 
 # 💼 Run linter and tests together
 ci: 
@@ -70,21 +70,8 @@ rag-web:
 build-mini-projects:
   python scripts/build_mini_projects.py
 
-# 🔧 Split mini-projects.md into individual project files
-split-mini-projects:
-  python archive/archive/split.py
-
-# 🔄 Update mini-projects code examples to use ailabkit.chat
-update-mini-projects:
-  python archive/archive/update_mini_projects.py
-
-# 🏷️ Add or update module type (chat, rag, agent) in mini-projects
-update-module-types:
-  python archive/archive/add_module_type.py
-
-# 🔄 Convert all ChatCraft references to AiLabKit in documentation
-convert-references:
-  python archive/archive/convert_references.py
+# Legacy commands (kept for reference but non-functional)
+# These commands require scripts that have been archived and are no longer maintained
 
 # 🇦🇺 Convert American spelling to Australian/British spelling in docs
 spelling-au:
@@ -97,7 +84,6 @@ build-project-browser:
 # 🛠️ Rebuild everything: sync version, docs, browser, mini-projects
 build-all:
   just sync-version
-  just update-mini-projects
   just build-mini-projects
   just build-project-browser
   just docs
@@ -166,10 +152,6 @@ help:
   @echo "  rag-web               Start AiLabKit RAG web interface"
   @echo "  doctor                Run system diagnostic for AiLabKit"
   @echo "  build-mini-projects   Rebuild mini-projects.md from /docs/projects"
-  @echo "  split-mini-projects   Split mini-projects.md into individual project files"
-  @echo "  update-mini-projects  Update code in mini-projects to use ailabkit.chat"
-  @echo "  update-module-types   Add or update module type in mini-projects"
-  @echo "  convert-references    Convert all ChatCraft references to AiLabKit in docs"
   @echo "  spelling-au           Convert American spelling to Australian/British spelling"
   @echo "  lint-mini-projects    Lint the combined mini-projects.md file"
   @echo "  lint-chat-projects    Lint chat mini-projects"
