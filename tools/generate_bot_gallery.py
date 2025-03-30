@@ -1,11 +1,14 @@
 import inspect
-import chatcraft
 import argparse
 import sys
 import re
 import csv
 from collections import defaultdict
 from io import StringIO
+
+# Import from ailabkit package
+import ailabkit
+from ailabkit.chat.personalities import bots
 
 BOT_TEMPLATE = '''def your_bot_name(prompt):
     """
@@ -14,7 +17,7 @@ BOT_TEMPLATE = '''def your_bot_name(prompt):
     One-line summary of your bot's personality.
 
     ```python
-    from chatcraft import your_bot_name
+    from ailabkit.chat import your_bot_name
     response = your_bot_name("Ask me anything")
     print(response)
     ```
@@ -37,9 +40,9 @@ BOT_TEMPLATE = '''def your_bot_name(prompt):
     return get_response(prompt, system="Describe your bot's behavior here.", personality="yourpersonality")
 '''
 
-HEADER = """# 🤖 ChatCraft Bot Gallery
+HEADER = """# 🤖 AiLabKit Bot Gallery
 
-This gallery lists all available personality bots in ChatCraft. Each bot can be called with a prompt and will respond in its own unique style.
+This gallery lists all available personality bots in AiLabKit's chat module. Each bot can be called with a prompt and will respond in its own unique style.
 
 Below you'll find each bot's name and its docstring, which includes usage examples, educational applications, and example responses (as written in the docstring).
 
@@ -50,13 +53,23 @@ def is_bot_func(obj):
     return callable(obj) and obj.__name__.endswith('_bot')
 
 def extract_bots():
-    bots = []
-    for name in dir(chatcraft):
-        obj = getattr(chatcraft, name)
+    bot_list = []
+    # Check directly in the bots module
+    for name in dir(bots):
+        obj = getattr(bots, name)
         if is_bot_func(obj):
             doc = inspect.getdoc(obj)
-            bots.append((name, doc))
-    return bots
+            bot_list.append((name, doc))
+            
+    # Also check if any bots are directly exported at the module level
+    for name in dir(ailabkit.chat):
+        obj = getattr(ailabkit.chat, name)
+        if is_bot_func(obj):
+            doc = inspect.getdoc(obj)
+            if (name, doc) not in bot_list:  # Avoid duplicates
+                bot_list.append((name, doc))
+                
+    return bot_list
 
 def parse_educational_tags(doc):
     if not doc:

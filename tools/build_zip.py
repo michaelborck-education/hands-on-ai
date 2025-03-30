@@ -4,7 +4,7 @@ import zipfile
 from pathlib import Path
 import subprocess
 
-ZIP_NAME = "ChatCraft_Offline_Bundle.zip"
+ZIP_NAME = "AiLabKit_Offline_Bundle.zip"
 PROJECT_BROWSER = Path("tools/project_browser.html")
 PROJECT_DIR = Path("docs/projects")
 

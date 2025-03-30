@@ -62,8 +62,8 @@ def generate_html(projects):
     <script>hljs.highlightAll();</script>
 </head>
 <body class='bg-gray-50 p-6'>
-    <h1 class='text-2xl font-bold mb-4'>Project Browser</h1>
-    <p class='mb-4'>Generated: {date_str} v{local_version} <span id="latest-version">  <span id="latest-version">📁 Offline version. Visit <a href="https://github.com/teaching-repositories/chatcraft" target="_blank">ChatCraft GitHub</a> to check for updates.</span>
+    <h1 class='text-2xl font-bold mb-4'>AiLabKit Project Browser</h1>
+    <p class='mb-4'>Generated: {date_str} v{local_version} <span id="latest-version">  <span id="latest-version">📁 Offline version. Visit <a href="https://github.com/teaching-repositories/ailabkit" target="_blank">AiLabKit GitHub</a> to check for updates.</span>
 </span></p>
 
     <div class='mb-4 flex flex-col md:flex-row gap-4'>

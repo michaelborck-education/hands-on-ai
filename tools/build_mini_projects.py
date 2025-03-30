@@ -6,7 +6,7 @@ PROJECTS_DIR = Path("docs/projects")
 OUTPUT_FILE = Path("docs/mini-projects.md")
 HEADER = """# Mini Project Examples
 
-This document contains ready-to-use mini-projects and activities for using ChatCraft in educational settings. Each project includes learning objectives, difficulty level, estimated time, and complete code examples.
+This document contains ready-to-use mini-projects and activities for using AiLabKit in educational settings. Each project includes learning objectives, difficulty level, estimated time, and complete code examples.
 
 ## Table of Contents
 """
@@ -17,7 +17,7 @@ FOOTER = """
 <!-- All mini-projects are now included and conform to the standard format.
 For additions or edits, update the corresponding files in docs/projects/ and regenerate this document. -->
 
-_For implementation strategies and assessment ideas, see the [ChatCraft Education Guide](education-guide.md)._
+_For implementation strategies and assessment ideas, see the [AiLabKit Education Guide](education-guide.md)._
 """
 
 def extract_title(md):
