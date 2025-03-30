@@ -1,6 +1,6 @@
 # Makefile for common development tasks
 
-.PHONY: install-dev test test-basic lint format ci sync-version requirements build bundle docs deploy-docs chat-repl rag-repl agent-repl chat-web rag-web doctor build-mini-projects update-mini-projects update-module-types convert-references split-mini-projects spelling-au build-project-browser build-all release release-test help clean lint-mini-projects
+.PHONY: install-dev test test-basic lint format ci sync-version requirements build bundle docs deploy-docs chat-repl rag-repl agent-repl chat-web rag-web agent-web doctor build-mini-projects spelling-au build-project-browser build-all release release-test help clean lint-mini-projects lint-chat-projects lint-rag-projects lint-agent-projects lint-all-projects
 
 # 🧪 Run and check
 test:
@@ -10,10 +10,10 @@ test-basic:
 	python test_ailabkit.py
 
 lint:
-	ruff src/ailabkit tests tools
+	ruff src/ailabkit tests scripts
 
 format:
-	ruff format src/ailabkit tests tools
+	ruff format src/ailabkit tests scripts
 
 ci: lint test
 
@@ -22,7 +22,7 @@ install-dev:
 	pip install -r requirements-dev.txt
 
 sync-version:
-	python tools/inject_version.py --all
+	python scripts/inject_version.py --all
 	@echo "✅ Synced version across pyproject.toml and version.json"
 
 requirements:
@@ -35,7 +35,7 @@ build:
 	python -m build
 
 bundle:
-	python tools/build_zip.py
+	python scripts/build_zip.py
 
 # 📚 Documentation
 docs:
@@ -60,6 +60,9 @@ chat-web:
 
 rag-web:
 	ailabkit rag web
+	
+agent-web:
+	ailabkit agent web
 
 # 🩺 Run diagnostic check
 doctor:
@@ -67,38 +70,40 @@ doctor:
 
 # 🔧 Rebuild mini-projects markdown from individual project files
 build-mini-projects:
-	python tools/build_mini_projects.py
+	python scripts/build_mini_projects.py
 
-# 🔧 Split mini-projects.md into individual project files
-split-mini-projects:
-	python tools/scripts/split.py
-
-# 🔄 Update mini-projects code examples to use ailabkit.chat
-update-mini-projects:
-	python tools/scripts/update_mini_projects.py
-
-# 🏷️ Add or update module type (chat, rag, agent) in mini-projects
-update-module-types:
-	python tools/scripts/add_module_type.py
-
-# 🔄 Convert all ChatCraft references to AiLabKit in documentation
-convert-references:
-	python tools/scripts/convert_references.py
+# Legacy commands (kept for reference but non-functional)
+# These commands require scripts that have been archived and are no longer maintained
 
 # 🇦🇺 Convert American spelling to Australian/British spelling in docs
 spelling-au:
-	python tools/scripts/convert_spelling.py --verbose
+	python scripts/convert_spelling.py --verbose
 
 # 🌐 Regenerate HTML-based project browser
 build-project-browser:
-	python tools/project_browser.py --output project_browser.html
+	python scripts/project_browser.py --output project_browser.html
 
 # Lint mini-projects markdown files
 lint-mini-projects:
-	python tools/lint_mini_projects.py
+	python scripts/lint_mini_projects.py
+
+# Lint chat mini-projects markdown files
+lint-chat-projects:
+	python scripts/lint_mini_projects.py docs/projects/chat
+
+# Lint rag mini-projects markdown files  
+lint-rag-projects:
+	python scripts/lint_mini_projects.py docs/projects/rag
+
+# Lint agent mini-projects markdown files
+lint-agent-projects:
+	python scripts/lint_mini_projects.py docs/projects/agent
+
+# Lint all module-specific mini-projects
+lint-all-projects: lint-chat-projects lint-rag-projects lint-agent-projects
 
 # 🛠️ Rebuild everything: sync version, docs, browser, mini-projects
-build-all: sync-version update-mini-projects build-mini-projects build-project-browser docs
+build-all: sync-version build-mini-projects build-project-browser docs
 
 # 🚀 Publish a new release
 release: build-all
@@ -143,14 +148,15 @@ help:
 	@echo "  agent-repl            Start AiLabKit agent interactive mode"
 	@echo "  chat-web              Start AiLabKit chat web interface"
 	@echo "  rag-web               Start AiLabKit RAG web interface"
+	@echo "  agent-web             Start AiLabKit agent web interface"
 	@echo "  doctor                Run system diagnostic for AiLabKit"
 	@echo "  build-mini-projects   Rebuild mini-projects.md from /docs/projects"
-	@echo "  split-mini-projects   Split mini-projects.md into individual project files"
-	@echo "  update-mini-projects  Update code in mini-projects to use ailabkit.chat"
-	@echo "  update-module-types   Add or update module type in mini-projects"
-	@echo "  convert-references    Convert all ChatCraft references to AiLabKit in docs"
 	@echo "  spelling-au           Convert American spelling to Australian/British spelling"
-	@echo "  lint-mini-projects    Lint mini-projects.md files"
+	@echo "  lint-mini-projects    Lint the combined mini-projects.md file"
+	@echo "  lint-chat-projects    Lint chat mini-projects"
+	@echo "  lint-rag-projects     Lint RAG mini-projects"
+	@echo "  lint-agent-projects   Lint agent mini-projects"
+	@echo "  lint-all-projects     Lint all module-specific mini-projects"
 	@echo "  build-project-browser Generate the project_browser.html"
 	@echo "  build-all             Sync version, rebuild docs and project browser"
 	@echo "  release               Tag, build, and publish to PyPI"
