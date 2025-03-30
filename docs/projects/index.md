@@ -6,15 +6,15 @@ This page lists all the mini-projects available in AiLabKit, organized by module
 
 Chat mini-projects focus on using LLMs for conversational interactions.
 
-- [Advanced Journal Bot](chat/advanced-journal-bot.md)
+- [Advanced Journal Assistant](chat/advanced-journal-bot.md)
 - [Bot Personality Menu Generator](chat/bot-personality-menu-generator.md)
 - [Build Your Own Personality Bot](chat/build-your-own-personality-bot.md)
 - [Choose Your Own Adventure](chat/choose-your-own-adventure.md)
 - [Classroom Simulation Bot](chat/classroom-simulation-bot.md)
 - [Code Explainer Tool](chat/code-explainer-tool.md)
 - [Creative Writing Partner](chat/creative-writing-partner.md)
-- [Data Visualization Dashboard](chat/data-visualization-dashboard.md)
-- [Debate/Interview Panel Dialogue Simulator](chat/debate-interview-panel-dialogue-simulator.md)
+- [Data Visualisation Dashboard](chat/data-visualization-dashboard.md)
+- [AI Persona Dialogue Simulator](chat/debate-interview-panel-dialogue-simulator.md)
 - [Emotional Support Bot](chat/emotional-support-bot.md)
 - [Historical Figure Chat](chat/historical-figure-chat.md)
 - [Image Gallery Creator](chat/image-gallery-creator.md)
@@ -30,14 +30,14 @@ Chat mini-projects focus on using LLMs for conversational interactions.
 - [Weather Dashboard](chat/weather-dashboard.md)
 - [YouTube to Blog Converter](chat/youtube-to-blog-converter.md)
 
-## RAG Projects
+## Rag Projects
 
 RAG (Retrieval-Augmented Generation) projects focus on combining document retrieval with LLM generation.
 
-- [Build Your Own Q&A CLI](rag/build-your-own-qa-cli.md)
-- [First RAG Bot](rag/first-rag-bot.md)
+- [Build Your Own QandA CLI](rag/build-your-own-qa-cli.md)
+- [My First RAG Bot](rag/first-rag-bot.md)
 - [Hybrid Reasoning Bot](rag/hybrid-reasoning-bot.md)
-- [PDF Question-Answering Chatbot](rag/pdf-question-answering-chatbot.md)
+- [PDF Question Answering Chatbot](rag/pdf-question-answering-chatbot.md)
 
 ## Agent Projects
 

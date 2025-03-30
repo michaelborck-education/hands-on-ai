@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # build_zip.py - Create offline zip bundle of project browser + docs
 
 import zipfile

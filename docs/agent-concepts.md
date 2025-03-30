@@ -120,5 +120,5 @@ AI agents represent a significant advancement in making AI systems more helpful,
 ## 📚 Related Docs
 
 - [Agent Module Guide](agent-guide.md) - Practical guide to using the agent module
-- [Mini Projects](mini-projects.md) - Example projects using AiLabKit
+- [Mini Projects](projects/index.md) - Example projects using AiLabKit
 - [Education Guide](education-guide.md) - Use AiLabKit in educational settings

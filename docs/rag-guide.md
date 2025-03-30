@@ -201,7 +201,7 @@ for chunk, source in results:
 - [Chat Module Guide](chat-guide.md) - Learn about the chat module
 - [Agent Module Guide](agent-guide.md) - Learn about the agent module
 - [Ollama Setup Guide](ollama-guide.md) - Set up local models with Ollama
-- [Mini Projects](mini-projects.md) - Example projects using AiLabKit
+- [Mini Projects](projects/index.md) - Example projects using AiLabKit
 
 ---
 

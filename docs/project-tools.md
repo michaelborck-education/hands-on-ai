@@ -1,1 +1,1 @@
-../tools/README.md
+../scripts/README.md

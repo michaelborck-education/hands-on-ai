@@ -1,4 +1,4 @@
-# Build Your Own Q&A CLI
+# Build Your Own QandA CLI
 
 **Difficulty**: Intermediate  
 **Time**: 45 minutes  

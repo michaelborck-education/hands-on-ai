@@ -24,8 +24,8 @@ Each module is:
 - Works offline for classroom settings
 - Beginner-friendly Python interface
 
-Ready to get started? Check out our [installation guide](configuration.md), explore the [bot gallery](bot-gallery.md), or try one of our [mini-projects](mini-projects.md)!
+Ready to get started? Check out our [installation guide](configuration.md), explore the [bot gallery](bot-gallery.md), or try one of our [mini-projects](projects/index.md)!
 
 ## Offline Resources
 
-- **[Project Browser](../project_browser.html)**: Download this standalone HTML file to browse and filter mini-projects offline. Perfect for classrooms without reliable internet access or for quick project discovery.
+- **[Project Browser](project_browser.html)**: Download this standalone HTML file to browse and filter mini-projects offline. Perfect for classrooms without reliable internet access or for quick project discovery.

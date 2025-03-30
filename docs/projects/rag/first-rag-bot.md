@@ -1,4 +1,4 @@
-# 🧠 My First RAG Bot
+# My First RAG Bot
 
 **Difficulty**: Intermediate  
 **Time**: 45 minutes  

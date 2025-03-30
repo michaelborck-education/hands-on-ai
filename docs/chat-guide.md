@@ -122,7 +122,7 @@ export OLLAMA_HOST=http://remote-server:11434
 ## 📚 Related Docs
 
 - [Ollama Setup Guide](./ollama-guide.md)
-- [Mini Projects](./mini-projects.md)
+- [Mini Projects](./projects/index.md)
 - [Education Guide](./education-guide.md)
 
 ---

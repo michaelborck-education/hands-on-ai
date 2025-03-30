@@ -117,8 +117,8 @@ When introducing AI in the classroom, consider discussing:
 
 ## Additional Resources
 
-- [mini-projects.md](mini-projects.md) - Ready-to-use classroom activities
-- [project_browser.html](../project_browser.html) - Interactive offline browser for mini-projects
+- [mini-projects.md](projects/index.md) - Ready-to-use classroom activities
+- [project_browser.html](project_browser.html) - Interactive offline browser for mini-projects
 - [bot-gallery.md](bot-gallery.md) - Library of pre-built personality bots
 - [classroom-setup.md](classroom-setup.md) - Detailed technical setup instructions
 
@@ -164,7 +164,7 @@ When introducing AI in the classroom, consider discussing:
 ### Assessment
 - Completed personality bot function
 - Creative application of system prompts
-- Thoughtful reflection on bot behavior
+- Thoughtful reflection on bot behaviour
 
 ---
 

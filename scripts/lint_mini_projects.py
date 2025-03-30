@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # tools/lint_mini_projects.py
 
 import re

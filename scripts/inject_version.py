@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # tools/inject_version.py
 # inject_version.py - Sync version.json with project_browser.html and pyproject.toml
 

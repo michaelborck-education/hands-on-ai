@@ -208,10 +208,11 @@ Here are some examples of what you can do with the Agent module:
 
 ## Next Steps
 
-- Explore the [built-in tools](../reference/agent/tools.md) in more detail
+- Explore the [built-in tools](agent-tools.md) in more detail
+- Explore the [built-in agents](agent-agents.md) and their capabilities
 - Try creating your own custom tools
 - Experiment with different types of questions in the interactive mode
-- Check out our [agent mini-projects](../mini-projects.md) for inspiration
+- Check out our [agent mini-projects](projects/index.md) for inspiration
 
 ## 📚 Related Docs
 
