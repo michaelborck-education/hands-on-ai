@@ -23,7 +23,7 @@ install-dev:
   pip install -r requirements-dev.txt
 
 sync-version:
-  python tools/inject_version.py --all
+  python scripts/inject_version.py --all
   echo "✅ Synced version across pyproject.toml and version.json"
 
 requirements:
@@ -36,7 +36,7 @@ build:
   python -m build
 
 bundle:
-  python tools/build_zip.py
+  python scripts/build_zip.py
 
 # 📚 Documentation
 docs:
@@ -68,31 +68,31 @@ rag-web:
 
 # 🔧 Rebuild mini-projects markdown from individual project files
 build-mini-projects:
-  python tools/build_mini_projects.py
+  python scripts/build_mini_projects.py
 
 # 🔧 Split mini-projects.md into individual project files
 split-mini-projects:
-  python tools/scripts/split.py
+  python archive/archive/split.py
 
 # 🔄 Update mini-projects code examples to use ailabkit.chat
 update-mini-projects:
-  python tools/scripts/update_mini_projects.py
+  python archive/archive/update_mini_projects.py
 
 # 🏷️ Add or update module type (chat, rag, agent) in mini-projects
 update-module-types:
-  python tools/scripts/add_module_type.py
+  python archive/archive/add_module_type.py
 
 # 🔄 Convert all ChatCraft references to AiLabKit in documentation
 convert-references:
-  python tools/scripts/convert_references.py
+  python archive/archive/convert_references.py
 
 # 🇦🇺 Convert American spelling to Australian/British spelling in docs
 spelling-au:
-  python tools/scripts/convert_spelling.py --verbose
+  python scripts/convert_spelling.py --verbose
 
 # 🌐 Regenerate HTML-based project browser
 build-project-browser:
-  python tools/project_browser.py --output project_browser.html
+  python scripts/project_browser.py --output project_browser.html
 
 # 🛠️ Rebuild everything: sync version, docs, browser, mini-projects
 build-all:
@@ -126,19 +126,19 @@ release-test:
 
 # Lint mini-projects markdown files
 lint-mini-projects:
-  python tools/lint_mini_projects.py
+  python scripts/lint_mini_projects.py
 
 # Lint chat mini-projects markdown files
 lint-chat-projects:
-  python tools/lint_mini_projects.py docs/projects/chat
+  python scripts/lint_mini_projects.py docs/projects/chat
 
 # Lint rag mini-projects markdown files  
 lint-rag-projects:
-  python tools/lint_mini_projects.py docs/projects/rag
+  python scripts/lint_mini_projects.py docs/projects/rag
 
 # Lint agent mini-projects markdown files
 lint-agent-projects:
-  python tools/lint_mini_projects.py docs/projects/agent
+  python scripts/lint_mini_projects.py docs/projects/agent
 
 # Lint all module-specific mini-projects
 lint-all-projects: lint-chat-projects lint-rag-projects lint-agent-projects
