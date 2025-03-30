@@ -1,10 +1,12 @@
 import inspect
-import argparse
 import sys
 import re
 import csv
 from collections import defaultdict
 from io import StringIO
+import typer
+from typing import Optional
+from pathlib import Path
 
 # Import from ailabkit package
 import ailabkit
@@ -125,33 +127,62 @@ def generate_csv(bots):
 
     return csv_output.getvalue()
 
-def main():
-    parser = argparse.ArgumentParser(description="Generate or lint ChatCraft bot gallery.")
-    parser.add_argument("--lint", action="store_true", help="Check for missing docstrings only.")
-    parser.add_argument("--out", type=str, help="Path to output file. If not set, prints to stdout.")
-    parser.add_argument("--template", action="store_true", help="Print a template for creating a new bot.")
-    parser.add_argument("--no-header", action="store_true", help="Exclude the header section from output.")
-    parser.add_argument("--flat", action="store_true", help="Disable section grouping and print all bots in one list.")
-    parser.add_argument("--csv", action="store_true", help="Output a CSV file instead of Markdown.")
-    args = parser.parse_args()
+app = typer.Typer(help="Generate or lint AiLabKit bot gallery")
 
-    if args.template:
-        print(BOT_TEMPLATE)
-        return
+@app.command()
+def generate(
+    lint: bool = typer.Option(
+        False,
+        "--lint",
+        help="Check for missing docstrings only"
+    ),
+    out: Optional[Path] = typer.Option(
+        None,
+        "--out",
+        "-o",
+        help="Path to output file. If not set, prints to stdout"
+    ),
+    template: bool = typer.Option(
+        False,
+        "--template",
+        "-t",
+        help="Print a template for creating a new bot"
+    ),
+    no_header: bool = typer.Option(
+        False,
+        "--no-header",
+        help="Exclude the header section from output"
+    ),
+    flat: bool = typer.Option(
+        False,
+        "--flat",
+        "-f",
+        help="Disable section grouping and print all bots in one list"
+    ),
+    csv_output: bool = typer.Option(
+        False,
+        "--csv",
+        "-c",
+        help="Output a CSV file instead of Markdown"
+    ),
+):
+    """Generate a gallery of available bots with their documentation."""
+    if template:
+        typer.echo(BOT_TEMPLATE)
+        raise typer.Exit()
 
-    bots = extract_bots()
+    bot_list = extract_bots()
 
-    if args.csv:
-        output = generate_csv(bots)
+    if csv_output:
+        output = generate_csv(bot_list)
     else:
-        output = generate_markdown(bots, lint=args.lint, include_header=not args.no_header, flat=args.flat)
+        output = generate_markdown(bot_list, lint=lint, include_header=not no_header, flat=flat)
 
-    if args.out:
-        with open(args.out, "w") as f:
-            f.write(output)
-        print(f"✅ Bot gallery written to {args.out}")
+    if out:
+        out.write_text(output)
+        typer.echo(f"✅ Bot gallery written to {out}")
     else:
-        print(output)
+        typer.echo(output)
 
 if __name__ == "__main__":
-    main()
+    app()

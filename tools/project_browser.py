@@ -1,13 +1,16 @@
 import datetime
-import argparse
 from pathlib import Path
 import markdown
 import re
 import json
+import typer
+from typing import Optional
 
 PROJECTS_DIR = Path("docs/projects")
 VERSION_FILE = Path("version.json")
 OUTPUT_HTML = Path("project_browser.html")
+
+app = typer.Typer(help="Generate HTML browser for mini-projects")
 
 def read_markdown_files(projects_dir):
     projects = []
@@ -186,15 +189,27 @@ def build_html(projects_dir, output_path):
     return len(projects)
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Generate HTML browser for mini-projects")
-    parser.add_argument("--projects-dir", type=Path, default=Path("docs/projects"), 
-                        help="Directory containing markdown project files (default: docs/projects)")
-    parser.add_argument("--output", type=Path, default=Path("project_browser.html"), 
-                        help="Output HTML file path (default: project_browser.html)")
-
-    args = parser.parse_args()
-
+@app.command()
+def main(
+    projects_dir: Path = typer.Option(
+        PROJECTS_DIR,
+        "--projects-dir",
+        "-p",
+        help="Directory containing markdown project files",
+    ),
+    output: Path = typer.Option(
+        OUTPUT_HTML,
+        "--output",
+        "-o",
+        help="Output HTML file path",
+    ),
+):
+    """Generate an HTML browser for mini-projects."""
+    global local_version
     local_version = read_local_version()
-    count = build_html(args.projects_dir, args.output)
-    print(f"✅ Generated browser with {count} projects: {args.output}")
+    count = build_html(projects_dir, output)
+    typer.echo(f"✅ Generated browser with {count} projects: {output}")
+
+
+if __name__ == "__main__":
+    app()

@@ -3,7 +3,8 @@
 import re
 import os
 from pathlib import Path
-import argparse
+import typer
+from typing import List, Optional
 
 OLD_IMPORT_PATTERNS = [
     r'^from\s+chatcraft',  # From imports
@@ -18,7 +19,7 @@ def check_file(file_path):
         try:
             content = f.read()
         except UnicodeDecodeError:
-            print(f"⚠️ Skipping {file_path} - Encoding issues")
+            typer.echo(f"⚠️ Skipping {file_path} - Encoding issues")
             return False, []
     
     issues = []
@@ -57,13 +58,13 @@ def check_directory(directory, extensions=None, show_all=False):
                     files_with_issues += 1
                     total_issues += len(issues)
                 elif show_all:
-                    print(f"✅ {file_path}")
+                    typer.echo(f"✅ {file_path}")
     
     return files_with_issues, total_issues, all_issues
 
 def report_issues(issues_dict, fix=False):
     for file_path, issues in issues_dict.items():
-        print(f"\n🔍 {file_path}: {len(issues)} issue(s)")
+        typer.echo(f"\n🔍 {file_path}: {len(issues)} issue(s)")
         
         if fix:
             try:
@@ -76,45 +77,63 @@ def report_issues(issues_dict, fix=False):
                 with open(file_path, 'w', encoding='utf-8') as f:
                     f.write(content)
                 
-                print(f"  ✅ Fixed {len(issues)} issue(s)")
+                typer.echo(f"  ✅ Fixed {len(issues)} issue(s)")
             except Exception as e:
-                print(f"  ❌ Error fixing file: {e}")
+                typer.echo(f"  ❌ Error fixing file: {e}")
         else:
             for line_num, old_line, new_line in issues:
-                print(f"  • Line {line_num}: {old_line.strip()}")
-                print(f"    Should be: {new_line.strip()}")
+                typer.echo(f"  • Line {line_num}: {old_line.strip()}")
+                typer.echo(f"    Should be: {new_line.strip()}")
 
-def main():
-    parser = argparse.ArgumentParser(description="Check for old 'chatcraft' imports and usages")
-    parser.add_argument("--directory", "-d", type=str, default=".", 
-                       help="Directory to check recursively (default: current directory)")
-    parser.add_argument("--fix", action="store_true", 
-                       help="Fix issues by replacing chatcraft with ailabkit")
-    parser.add_argument("--all", action="store_true", 
-                       help="Show all files, even those without issues")
-    parser.add_argument("--extensions", "-e", type=str, default=".py,.md,.html,.txt",
-                       help="Comma-separated list of file extensions to check (default: .py,.md,.html,.txt)")
+app = typer.Typer(help="Check for old 'chatcraft' imports and usages")
+
+@app.command()
+def main(
+    directory: str = typer.Option(
+        ".", 
+        "--directory", 
+        "-d",
+        help="Directory to check recursively"
+    ),
+    fix: bool = typer.Option(
+        False,
+        "--fix",
+        "-f",
+        help="Fix issues by replacing chatcraft with ailabkit"
+    ),
+    show_all: bool = typer.Option(
+        False,
+        "--all",
+        "-a",
+        help="Show all files, even those without issues"
+    ),
+    extensions: str = typer.Option(
+        ".py,.md,.html,.txt",
+        "--extensions",
+        "-e",
+        help="Comma-separated list of file extensions to check"
+    ),
+):
+    """Check for old 'chatcraft' imports and suggest replacements."""
+    ext_list = extensions.split(",")
     
-    args = parser.parse_args()
-    extensions = args.extensions.split(",")
-    
-    print(f"🔍 Checking for 'chatcraft' usage in {args.directory}")
-    print(f"📄 Checking files with extensions: {', '.join(extensions)}")
+    typer.echo(f"🔍 Checking for 'chatcraft' usage in {directory}")
+    typer.echo(f"📄 Checking files with extensions: {', '.join(ext_list)}")
     
     files_with_issues, total_issues, all_issues = check_directory(
-        args.directory, extensions, args.all
+        directory, ext_list, show_all
     )
     
     if total_issues > 0:
-        print(f"\n⚠️ Found {total_issues} issue(s) in {files_with_issues} file(s)")
-        report_issues(all_issues, args.fix)
+        typer.echo(f"\n⚠️ Found {total_issues} issue(s) in {files_with_issues} file(s)")
+        report_issues(all_issues, fix)
         
-        if args.fix:
-            print(f"\n✅ Fixed {total_issues} issue(s) in {files_with_issues} file(s)")
+        if fix:
+            typer.echo(f"\n✅ Fixed {total_issues} issue(s) in {files_with_issues} file(s)")
         else:
-            print("\nTo automatically fix these issues, run with the --fix flag")
+            typer.echo("\nTo automatically fix these issues, run with the --fix flag")
     else:
-        print("\n✅ No issues found!")
+        typer.echo("\n✅ No issues found!")
 
 if __name__ == "__main__":
-    main()
+    app()

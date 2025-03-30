@@ -9,8 +9,9 @@ and applies common American to Australian/British spelling conversions.
 
 import os
 import re
-import argparse
 from pathlib import Path
+import typer
+from typing import List, Optional
 
 # Define common American to Australian/British spelling conversions
 # Format: (American spelling, Australian/British spelling)
@@ -262,43 +263,63 @@ def process_directory(directory_path, extensions=None, dry_run=False, verbose=Fa
     
     return total_files, updated_files
 
-def main():
-    """Main function to update documentation files."""
-    parser = argparse.ArgumentParser(
-        description='Convert American spelling to Australian/British spelling in documentation files'
-    )
-    parser.add_argument('--dir', default='./docs', help='Directory to process (default: ./docs)')
-    parser.add_argument('--extensions', default='.md,.mdx,.txt,.html', 
-                        help='Comma-separated file extensions to process (default: .md,.mdx,.txt,.html)')
-    parser.add_argument('--dry-run', action='store_true', help='Check files without making changes')
-    parser.add_argument('--file', help='Process a specific file instead of a directory')
-    parser.add_argument('--verbose', '-v', action='store_true', help='Show detailed output')
-    
-    args = parser.parse_args()
-    
+app = typer.Typer(help='Convert American spelling to Australian/British spelling in documentation files')
+
+@app.command()
+def main(
+    directory: Path = typer.Option(
+        "./docs", 
+        "--dir", 
+        "-d",
+        help="Directory to process"
+    ),
+    extensions: str = typer.Option(
+        ".md,.mdx,.txt,.html",
+        "--extensions",
+        "-e",
+        help="Comma-separated file extensions to process"
+    ),
+    dry_run: bool = typer.Option(
+        False,
+        "--dry-run",
+        help="Check files without making changes"
+    ),
+    file: Optional[Path] = typer.Option(
+        None,
+        "--file",
+        "-f",
+        help="Process a specific file instead of a directory"
+    ),
+    verbose: bool = typer.Option(
+        False,
+        "--verbose",
+        "-v",
+        help="Show detailed output"
+    ),
+):
+    """Convert American spelling to Australian/British spelling in documentation files."""
     # Process extensions
-    extensions = args.extensions.split(',')
+    ext_list = extensions.split(',')
     
-    if args.file:
+    if file:
         # Process just one file
-        file_path = Path(args.file)
-        if not file_path.exists():
-            print(f"Error: File '{file_path}' not found.")
-            return
+        if not file.exists():
+            typer.echo(f"Error: File '{file}' not found.")
+            raise typer.Exit(code=1)
             
-        updated = update_file(file_path, args.dry_run, True)
+        updated = update_file(file, dry_run, True)
         if updated:
-            print(f"File would be updated" if args.dry_run else f"File updated")
+            typer.echo(f"File would be updated" if dry_run else f"File updated")
         else:
-            print("No changes needed")
+            typer.echo("No changes needed")
     else:
         # Process directory
         total_files, updated_files = process_directory(
-            args.dir, extensions, args.dry_run, args.verbose
+            directory, ext_list, dry_run, verbose
         )
         
-        mode = "would be" if args.dry_run else "were"
-        print(f"\nDone! {updated_files} of {total_files} files {mode} updated with Australian/British spelling.")
+        mode = "would be" if dry_run else "were"
+        typer.echo(f"\nDone! {updated_files} of {total_files} files {mode} updated with Australian/British spelling.")
 
 if __name__ == "__main__":
-    main()
+    app()
