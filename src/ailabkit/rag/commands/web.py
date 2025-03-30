@@ -16,7 +16,9 @@ app = typer.Typer(help="Launch web interface for RAG")
 
 @app.callback(invoke_without_command=True)
 def web(
-    port: int = typer.Option(8000, help="Port to run the web server on"),
+    port: int = typer.Option(8001, help="Port to run the web server on"),
+    host: str = typer.Option("127.0.0.1", "--host", help="Host to bind to"),
+    public: bool = typer.Option(False, "--public", help="Make the interface accessible from other devices (binds to 0.0.0.0)"),
     index_path: str = typer.Option(None, help="Path to index file (default: ~/.ailabkit/index.npz)"),
 ):
     """Launch web interface for RAG using FastHTML."""
@@ -26,6 +28,11 @@ def web(
         print("❌ FastHTML is required for the web interface.")
         print("Please install it with: pip install python-fasthtml")
         raise typer.Exit(1)
+
+    # Override host if public flag is set
+    if public:
+        host = "0.0.0.0"
+        print("\n⚠️ PUBLIC MODE: Interface will be accessible from other devices on your network.")
 
     # Determine the index path
     if index_path is None:
@@ -177,9 +184,10 @@ def web(
         )
     
     # Run the server
-    print(f"🌐 Starting RAG web interface on http://localhost:{port}")
+    display_host = "localhost" if host == "127.0.0.1" else host
+    print(f"🌐 Starting RAG web interface on http://{display_host}:{port}")
     print(f"Using index: {index_path}")
     print("Press Ctrl+C to stop the server")
     
     # Serve the application
-    serve(app=app, port=port)
+    serve(app=app, host=host, port=port)
