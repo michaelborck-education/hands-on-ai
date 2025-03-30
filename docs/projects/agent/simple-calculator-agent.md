@@ -1,9 +1,7 @@
 # Simple Calculator Agent
 
 **Difficulty**: Beginner - A simple introduction to agent functionality
-
 **Learning Focus**: Agents, Tool Use, ReAct Framework
-
 **Module**: agent
 
 This mini-project creates a simple calculator agent that can solve math problems using the ReAct framework. It demonstrates how to create and use tools with an agent.

@@ -3,7 +3,7 @@
 **Difficulty**: Intermediate-Advanced  
 **Time**: 60-90 minutes  
 **Learning Focus**: Document processing, natural language understanding, information retrieval  
-**Module**: chat
+**Module**: RAG
 
 ## Overview
 

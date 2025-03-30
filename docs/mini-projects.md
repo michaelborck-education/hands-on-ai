@@ -4,31 +4,459 @@ This document contains ready-to-use mini-projects and activities for using AiLab
 
 ## Table of Contents
 
-1. [Advanced Journal Assistant](#advanced-journal-assistant)
-2. [Bot Personality Menu Generator](#bot-personality-menu-generator)
-3. [Build Your Own Personality Bot](#build-your-own-personality-bot)
-4. [Choose Your Own Adventure](#choose-your-own-adventure)
-5. [Classroom Simulation Bot](#classroom-simulation-bot)
-6. [Code Explainer Tool](#code-explainer-tool)
-7. [Creative Writing Partner](#creative-writing-partner)
-8. [Data Visualisation Dashboard](#data-visualisation-dashboard)
-9. [AI Persona Dialogue Simulator](#ai-persona-dialogue-simulator)
-10. [Emotional Support Bot](#emotional-support-bot)
-11. [Historical Figure Chat](#historical-figure-chat)
-12. [Image Gallery Creator](#image-gallery-creator)
-13. [Journal or Reflection Bot](#journal-or-reflection-bot)
-14. [Knowledge Quiz Bot](#knowledge-quiz-bot)
-15. [Language Translation Helper](#language-translation-helper)
-16. [Mood Journal Assistant](#mood-journal-assistant)
-17. [PDF Question Answering Chatbot](#pdf-question-answering-chatbot)
-18. [Personality Bot Creator](#personality-bot-creator)
-19. [Simple Calculator Agent](#simple-calculator-agent)
-20. [Smart To-Do List](#smart-to-do-list)
-21. [Subject Expert Tutor](#subject-expert-tutor)
-22. [Text Adventure Game Engine](#text-adventure-game-engine)
-23. [Trivia or Quiz Bot](#trivia-or-quiz-bot)
-24. [Weather Dashboard](#weather-dashboard)
-25. [YouTube to Blog Converter](#youtube-to-blog-converter)
+1. [Agent Evaluation Framework](#agent-evaluation-framework)
+2. [Custom Tool Creator](#custom-tool-creator)
+3. [Date Calculator](#date-calculator)
+4. [Educational Assistant](#educational-assistant)
+5. [Multi-Tool Problem Solver](#multi-tool-problem-solver)
+6. [Personal Math Tutor](#personal-math-tutor)
+7. [Science Explorer](#science-explorer)
+8. [Simple Calculator Agent](#simple-calculator-agent)
+9. [Text Analyzer](#text-analyzer)
+10. [Unit Conversion Assistant](#unit-conversion-assistant)
+11. [Word Detective](#word-detective)
+12. [Advanced Journal Assistant](#advanced-journal-assistant)
+13. [Bot Personality Menu Generator](#bot-personality-menu-generator)
+14. [Build Your Own Personality Bot](#build-your-own-personality-bot)
+15. [Choose Your Own Adventure](#choose-your-own-adventure)
+16. [Classroom Simulation Bot](#classroom-simulation-bot)
+17. [Code Explainer Tool](#code-explainer-tool)
+18. [Creative Writing Partner](#creative-writing-partner)
+19. [Data Visualisation Dashboard](#data-visualisation-dashboard)
+20. [AI Persona Dialogue Simulator](#ai-persona-dialogue-simulator)
+21. [Emotional Support Bot](#emotional-support-bot)
+22. [Historical Figure Chat](#historical-figure-chat)
+23. [Image Gallery Creator](#image-gallery-creator)
+24. [Journal or Reflection Bot](#journal-or-reflection-bot)
+25. [Knowledge Quiz Bot](#knowledge-quiz-bot)
+26. [Language Translation Helper](#language-translation-helper)
+27. [Mood Journal Assistant](#mood-journal-assistant)
+28. [Personality Bot Creator](#personality-bot-creator)
+29. [Smart To-Do List](#smart-to-do-list)
+30. [Subject Expert Tutor](#subject-expert-tutor)
+31. [Text Adventure Game Engine](#text-adventure-game-engine)
+32. [Trivia or Quiz Bot](#trivia-or-quiz-bot)
+33. [Weather Dashboard](#weather-dashboard)
+34. [YouTube to Blog Converter](#youtube-to-blog-converter)
+35. [Build Your Own Q&A CLI](#build-your-own-q&a-cli)
+36. [🧠 My First RAG Bot](#🧠-my-first-rag-bot)
+37. [Hybrid Reasoning Bot](#hybrid-reasoning-bot)
+38. [PDF Question Answering Chatbot](#pdf-question-answering-chatbot)
+
+---
+
+# Agent Evaluation Framework
+
+**Difficulty**: Advanced  
+**Time**: 90 minutes  
+**Learning Focus**: Critical analysis, agent limitations, structured evaluation  
+**Module**: agent
+
+## Overview
+Develop a framework to evaluate the agent's performance across different types of tasks and identify its strengths and limitations.
+
+## Instructions
+1. Design a test suite with 3-5 questions in each of these categories:
+   - Factual (using educational tools)
+   - Computational (using calculator tools)
+   - Analytical (requiring multiple reasoning steps)
+   - Creative (open-ended tasks)
+2. For each question, define what an ideal answer would include
+3. Run the agent through your test suite and score its responses
+4. Analyze the results to identify patterns in the agent's performance:
+   - Which types of questions does it handle well?
+   - Where does it struggle or make mistakes?
+   - How clear is its reasoning process?
+5. Write a brief report summarizing your findings and recommendations for effective agent use
+
+## Extension Ideas
+- Compare the agent's performance with and without access to specific tools
+- Test edge cases and ambiguous questions to see how the agent handles uncertainty
+- Design prompts that intentionally challenge the agent's reasoning capabilities
+
+---
+
+# Custom Tool Creator
+
+**Difficulty**: Advanced  
+**Time**: 75 minutes  
+**Learning Focus**: Custom tool development, Python coding  
+**Module**: agent
+
+## Overview
+Design and implement your own custom tools to extend the agent's capabilities for specialized tasks.
+
+## Instructions
+1. Review the custom tool example in the documentation
+2. Create a Python file to define your custom tools (e.g., `my_tools.py`)
+3. Implement at least 2 of the following custom tools:
+   - A random quote generator that returns an inspirational quote
+   - A tool that generates a strong password of a specified length
+   - A simple game like rock-paper-scissors or number guessing
+   - A tool that provides current weather information for a given location
+4. Register your tools using the `register_tool` function
+5. Test your tools by asking the agent to use them in various scenarios
+6. Document how the agent integrates your custom tools with its existing capabilities
+
+## Extension Ideas
+- Create a tool that connects to an external API (like weather, news, or sports data)
+- Design a tool that performs a specialized calculation relevant to your field of study
+- Implement a tool that works with files (e.g., reading CSV data or creating simple charts)
+
+---
+
+# Date Calculator
+
+**Difficulty**: Beginner  
+**Time**: 40 minutes  
+**Learning Focus**: Date and time tools, practical applications  
+**Module**: agent
+
+## Overview
+Create a date calculator that helps plan projects, calculate age, and work with calendar-based information.
+
+## Instructions
+1. Start the agent in interactive mode using `ailabkit agent interactive`
+2. Explore the date tools by asking questions like:
+   - "How many days until Christmas?"
+   - "What's the difference between March 15, 2023 and today?"
+   - "How old would someone be if they were born on July 4, 1990?"
+3. Create a project timeline with 3-4 milestones and ask the agent to calculate the duration between them
+4. Ask the agent to format dates in different styles (short, long, with weekday, etc.)
+5. Document which queries worked well and which required more specific instructions
+
+## Extension Ideas
+- Create a birthday calculator that tells you interesting facts about your birth date
+- Plan an international trip across different time zones and ask the agent for help
+- Ask about historical date calculations, like "How many days passed between the moon landing and the fall of the Berlin Wall?"
+
+---
+
+# Educational Assistant
+
+**Difficulty**: Advanced  
+**Time**: 120 minutes  
+**Learning Focus**: Planning, educational content creation, tool orchestration  
+**Module**: agent
+
+## Overview
+Create a comprehensive educational assistant that helps students learn a specific topic by providing explanations, examples, practice problems, and personalized feedback.
+
+## Instructions
+1. Choose an educational topic that can leverage multiple agent tools (e.g., chemistry, mathematics, language learning)
+2. Design a learning plan with these components:
+   - A diagnostic assessment to identify what the student already knows
+   - Explanations of key concepts with relevant examples
+   - Interactive practice problems of varying difficulty
+   - A final assessment to measure learning progress
+3. Implement your plan by creating specific prompts for the agent
+4. Test your educational assistant with at least 3 different scenarios:
+   - A beginner with no prior knowledge
+   - An intermediate learner who needs to fill knowledge gaps
+   - An advanced student looking for challenging applications
+5. Document how the agent adapts to different learning needs and which tools are most useful for educational purposes
+
+## Extension Ideas
+- Create a spaced repetition system that uses the agent to generate review questions
+- Develop a project-based learning module where the agent guides students through a complex problem
+- Design a collaborative learning activity where multiple students interact with the agent together
+
+---
+
+# Multi-Tool Problem Solver
+
+**Difficulty**: Intermediate  
+**Time**: 60 minutes  
+**Learning Focus**: Tool combinations, complex problem-solving  
+**Module**: agent
+
+## Overview
+Challenge the agent to solve complex problems that require using multiple tools together in creative ways.
+
+## Instructions
+1. Launch the agent using `ailabkit agent interactive`
+2. Create 3 multi-step problems that each require at least 2 different tools. For example:
+   - "If I drive 65 miles at 55 mph, then walk 3 kilometers, how many minutes will my journey take in total?"
+   - "I need to mix a solution that's 35% acid. If I have 200ml of 50% acid solution, how much water should I add?"
+   - "A recipe needs 2 cups of flour for 12 cookies. If I want to make 30 cookies but measure in grams, how much flour do I need?"
+3. For each problem, ask the agent to explain its reasoning step by step
+4. Identify which tools were used to solve each problem
+5. Document any creative or unexpected approaches the agent took
+
+## Extension Ideas
+- Create a scavenger hunt with clues that require different tools to solve
+- Design a multi-stage problem where each answer leads to the next question
+- Challenge the agent with a problem where the most obvious tool isn't the best approach
+
+---
+
+# Personal Math Tutor
+
+**Difficulty**: Beginner  
+**Time**: 30 minutes  
+**Learning Focus**: Basic agent interaction, calculator tools  
+**Module**: agent
+
+## Overview
+Create a math tutor agent that helps solve arithmetic problems and explains the steps involved.
+
+## Instructions
+1. Start the agent in interactive mode using `ailabkit agent interactive`
+2. Ask the agent to solve basic math problems like "What is 24 × 7?" or "Calculate 125 ÷ 5"
+3. For each problem, ask the agent to explain its reasoning step by step
+4. Try more complex problems like "If I have 3 boxes with 12 items each, and I add 7 more items, how many do I have total?"
+5. Observe how the agent uses the calculator tools to solve these problems
+6. Create a list of 5 progressively harder math problems that demonstrate the agent's capabilities
+
+## Extension Ideas
+- Ask the agent to solve algebraic equations like "If 2x + 7 = 15, what is x?"
+- Challenge the agent with word problems that require multiple calculation steps
+- Compare the agent's approach with how you would solve the same problems
+
+---
+
+# Science Explorer
+
+**Difficulty**: Intermediate  
+**Time**: 45 minutes  
+**Learning Focus**: Educational tools, multi-tool queries  
+**Module**: agent
+
+## Overview
+Use the agent as a science learning companion to explore elements, mathematical properties, and scientific concepts.
+
+## Instructions
+1. Launch the agent using `ailabkit agent interactive`
+2. Explore the periodic table tool by asking about different elements:
+   - "Tell me about oxygen"
+   - "What's the atomic number of gold?"
+   - "Compare the properties of sodium and potassium"
+3. Use the prime check tool to investigate number properties:
+   - "Is 97 a prime number?"
+   - "What are the factors of 144?"
+4. Combine tools by asking questions that require multiple lookups:
+   - "What's the sum of the atomic numbers of iron and calcium?"
+   - "If I have a sample with 12 atoms of carbon and 18 atoms of oxygen, what's the ratio?"
+5. Create a mini science quiz with 5 questions that the agent can help answer
+
+## Extension Ideas
+- Design a chemistry experiment and ask the agent to help with calculations
+- Create a periodic table scavenger hunt with clues about element properties
+- Compare how the agent answers science questions with and without using tools
+
+---
+
+# Simple Calculator Agent
+
+**Difficulty**: Beginner - A simple introduction to agent functionality
+**Learning Focus**: Agents, Tool Use, ReAct Framework
+**Module**: agent
+
+This mini-project creates a simple calculator agent that can solve math problems using the ReAct framework. It demonstrates how to create and use tools with an agent.
+
+## Project Overview
+
+In this project, you'll create an agent that can:
+
+1. Parse mathematical expressions
+2. Break down complex calculations into steps
+3. Use a calculator tool to solve sub-problems
+4. Show its reasoning process
+
+This is a great introduction to how agents work and how they can use tools to solve problems.
+
+## Implementation
+
+Start by importing the necessary modules:
+
+```python
+from ailabkit.agent import run_agent, register_tool
+
+# Define a calculator function
+def calculator(expression):
+    """Evaluate a mathematical expression."""
+    try:
+        # Using a safe eval environment
+        result = eval(expression, {"__builtins__": {}}, {
+            "abs": abs, "min": min, "max": max, "round": round, 
+            "sum": sum, "pow": pow, "int": int, "float": float
+        })
+        return f"Result: {result}"
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+# Register the calculator tool
+register_tool(
+    "calculator", 
+    "Evaluate a mathematical expression. Example: 2 + 2 * 10", 
+    calculator
+)
+
+# Create a function to run the agent
+def solve_math_problem(question):
+    """Solve a math problem using the agent."""
+    print(f"Question: {question}")
+    
+    # Run the agent with the question
+    response = run_agent(question, verbose=True)
+    
+    print("\nFinal Answer:")
+    print(response)
+    
+    return response
+
+# Example usage
+if __name__ == "__main__":
+    questions = [
+        "What is 25 * 3?",
+        "If I have 125 apples and give away 1/5 of them, how many do I have left?",
+        "What is the square root of 144?",
+        "What is 15% of 240?",
+        "If a triangle has sides of length 3, 4, and 5, what is its area?"
+    ]
+    
+    for q in questions:
+        print("\n" + "="*50)
+        solve_math_problem(q)
+        print("="*50)
+```
+
+## How It Works
+
+1. We define a `calculator` function that can safely evaluate mathematical expressions.
+2. We register this tool with the agent system using `register_tool`.
+3. We create a `solve_math_problem` function that runs the agent with a question.
+4. The agent uses ReAct prompting to break down the problem and use the calculator tool.
+5. The agent returns a final answer based on its reasoning and the tool results.
+
+## Sample Output
+
+When you run this code, you'll see output like:
+
+```
+==================================================
+Question: What is 25 * 3?
+
+Thought: I need to multiply 25 by 3. I can use the calculator tool for this.
+Action: calculator
+Action Input: 25 * 3
+Observation: Result: 75
+
+Final Answer: The result of 25 * 3 is 75.
+==================================================
+```
+
+## Extensions and Variations
+
+Here are some ways to extend this project:
+
+1. **Add more mathematical functions**: Extend the calculator to handle more complex operations like logarithms, trigonometry, etc.
+
+2. **Create a multi-step calculator**: Modify the agent to show intermediate steps for complex calculations.
+
+3. **Add unit conversion**: Create a unit conversion tool and let the agent solve problems involving different units.
+
+4. **Create a word problem solver**: Enhance the agent to parse word problems and solve them step-by-step.
+
+5. **Add visualization**: Create a web interface that displays the agent's reasoning steps alongside the calculations.
+
+## Educational Applications
+
+This project can be used to:
+
+- Teach how agents break down problems into steps
+- Demonstrate the ReAct framework in practice
+- Show how tools can extend an AI system's capabilities
+- Help students understand mathematical problem-solving strategies
+
+## Assessment Ideas
+
+- Have students modify the calculator tool to handle additional operations
+- Ask students to analyze the agent's reasoning for different types of problems
+- Challenge students to create a word problem generator that the agent can solve
+- Have students compare the agent's approach to their own problem-solving methods
+
+---
+
+# Text Analyzer
+
+**Difficulty**: Intermediate  
+**Time**: 50 minutes  
+**Learning Focus**: Text analysis tools, data interpretation  
+**Module**: agent
+
+## Overview
+Build a text analysis tool that helps evaluate and improve writing by providing metrics and suggestions.
+
+## Instructions
+1. Start the agent using `ailabkit agent interactive`
+2. Write a short paragraph (5-7 sentences) on a topic of your choice
+3. Ask the agent to analyze your text using the word_count tool
+4. Request a readability analysis of your paragraph
+5. Ask the agent to summarize your text and compare it to your original
+6. Based on the analysis, ask for specific suggestions to improve:
+   - Sentence length variation
+   - Vocabulary diversity
+   - Overall readability
+7. Revise your paragraph and run the analysis again to see the changes
+
+## Extension Ideas
+- Analyze different types of writing (technical, creative, persuasive) and compare the metrics
+- Ask the agent to help you rewrite the same content for different audiences (children, experts, general public)
+- Create a writing improvement workflow that uses multiple text analysis tools in sequence
+
+---
+
+# Unit Conversion Assistant
+
+**Difficulty**: Beginner  
+**Time**: 30 minutes  
+**Learning Focus**: Conversion tools, formatting responses  
+**Module**: agent
+
+## Overview
+Build a helpful unit conversion assistant that can convert between different measurement systems.
+
+## Instructions
+1. Launch the agent using `ailabkit agent interactive`
+2. Explore the different conversion tools by asking the agent about them
+3. Test basic conversions like "Convert 5 miles to kilometers" or "How many kilograms is 150 pounds?"
+4. Try more complex queries like "If my recipe needs 350g of flour but I only have a cup measure, how much should I use?"
+5. Create a travel scenario where you need to convert temperatures, distances, and weights
+6. Document how the agent selects the appropriate conversion tool for each query
+
+## Extension Ideas
+- Ask for conversions between multiple units in a single question
+- Create a cooking recipe that uses mixed measurement systems and ask the agent to standardize it
+- Challenge the agent with historical units like leagues, stones, or furlongs
+
+---
+
+# Word Detective
+
+**Difficulty**: Beginner  
+**Time**: 45 minutes  
+**Learning Focus**: Dictionary tools, crafting effective queries  
+**Module**: agent
+
+## Overview
+Use the agent's dictionary tools to explore word meanings, find synonyms and antonyms, and improve your vocabulary.
+
+## Instructions
+1. Start the agent using `ailabkit agent interactive`
+2. Choose 5 interesting or unfamiliar words to explore
+3. For each word, ask the agent to:
+   - Define the word
+   - Provide synonyms and antonyms
+   - Show example sentences
+4. Create a short story (3-4 sentences) using at least 3 of these words
+5. Ask the agent to suggest improvements to your story by recommending more precise or interesting word choices
+6. Document how the agent's suggestions changed your understanding of the words
+
+## Extension Ideas
+- Challenge the agent to explain the subtle differences between similar words
+- Ask for words related to a specific theme or emotion
+- Create a word game where you and the agent take turns providing synonyms for a starting word
 
 ---
 
@@ -4360,287 +4788,6 @@ Add mood tracking visualisations or goal-setting features.
 
 ---
 
-# PDF Question Answering Chatbot
-
-**Difficulty**: Intermediate-Advanced  
-**Time**: 60-90 minutes  
-**Learning Focus**: Document processing, natural language understanding, information retrieval  
-**Module**: chat
-
-## Overview
-
-Create a chatbot that can answer questions from a PDF document. This project teaches students how to extract and process text from PDFs and use AI to retrieve relevant information based on user queries.
-
-## Instructions
-
-```python
-import os
-import sys
-import fitz  # PyMuPDF
-from ailabkit.chat import get_response
-
-class PDFChatbot:
-    """A chatbot that can answer questions about PDF documents."""
-    
-    def __init__(self):
-        self.pdf_file = None
-        self.pdf_text = ""
-        self.context_size = 5000  # Max context size to send to the AI
-    
-    def load_pdf(self, file_path):
-        """Load and extract text from a PDF file."""
-        try:
-            if not os.path.exists(file_path):
-                print(f"Error: File '{file_path}' not found.")
-                return False
-            
-            self.pdf_file = file_path
-            
-            # Open the PDF
-            doc = fitz.open(file_path)
-            
-            # Extract text from all pages
-            full_text = []
-            for page_num in range(len(doc)):
-                page = doc.load_page(page_num)
-                full_text.append(page.get_text())
-            
-            self.pdf_text = "\n".join(full_text)
-            
-            # Print document stats
-            print(f"\nDocument loaded: {os.path.basename(file_path)}")
-            print(f"Number of pages: {len(doc)}")
-            print(f"Total characters: {len(self.pdf_text)}")
-            
-            # Print a preview
-            preview_length = min(200, len(self.pdf_text))
-            print(f"\nPreview:\n{self.pdf_text[:preview_length]}...")
-            
-            return True
-            
-        except Exception as e:
-            print(f"Error loading PDF: {e}")
-            return False
-    
-    def summarize_document(self):
-        """Generate a summary of the document."""
-        if not self.pdf_text:
-            print("Error: No document loaded. Please load a PDF first.")
-            return
-        
-        print("\nGenerating document summary...")
-        
-        # Create a prompt for the AI
-        prompt = f"""
-        Please provide a concise summary of the following document:
-        
-        {self.pdf_text[:5000]}  # Send only the first part if the document is large
-        
-        Include:
-        1. Main topics and themes
-        2. Key points or arguments
-        3. Important entities mentioned
-        4. Document structure overview
-        
-        Keep the summary under 300 words.
-        """
-        
-        try:
-            summary = get_response(prompt)
-            print("\n=== Document Summary ===")
-            print(summary)
-        except Exception as e:
-            print(f"Error generating summary: {e}")
-    
-    def answer_question(self, question):
-        """Answer a question about the document."""
-        if not self.pdf_text:
-            print("Error: No document loaded. Please load a PDF first.")
-            return
-        
-        if not question:
-            print("Error: No question provided.")
-            return
-        
-        print(f"\nAnswering: {question}")
-        
-        # Create a prompt for the AI
-        prompt = f"""
-        Document text:
-        {self.pdf_text[:self.context_size]}
-        
-        Question: {question}
-        
-        Please answer the question based only on the information provided in the document.
-        If the answer cannot be found in the document, state that clearly.
-        Provide page numbers or sections if you can determine them from the context.
-        """
-        
-        try:
-            answer = get_response(prompt)
-            print("\n=== Answer ===")
-            print(answer)
-        except Exception as e:
-            print(f"Error generating answer: {e}")
-    
-    def extract_key_information(self):
-        """Extract key information from the document."""
-        if not self.pdf_text:
-            print("Error: No document loaded. Please load a PDF first.")
-            return
-        
-        print("\nExtracting key information...")
-        
-        # Create a prompt for the AI
-        prompt = f"""
-        Please extract and organize key information from this document:
-        
-        {self.pdf_text[:self.context_size]}
-        
-        Extract the following (if present):
-        1. Dates and deadlines
-        2. Names and organizations
-        3. Numerical data or statistics
-        4. Definitions or technical terms
-        5. Action items or requirements
-        
-        Format the information in clear categories with brief explanations.
-        """
-        
-        try:
-            key_info = get_response(prompt)
-            print("\n=== Key Information ===")
-            print(key_info)
-        except Exception as e:
-            print(f"Error extracting information: {e}")
-    
-    def find_related_topics(self, topic):
-        """Find information related to a specific topic in the document."""
-        if not self.pdf_text:
-            print("Error: No document loaded. Please load a PDF first.")
-            return
-        
-        if not topic:
-            print("Error: No topic provided.")
-            return
-        
-        print(f"\nFinding information related to: {topic}")
-        
-        # Create a prompt for the AI
-        prompt = f"""
-        Document text:
-        {self.pdf_text[:self.context_size]}
-        
-        Please find and extract all information related to the topic "{topic}" from the document.
-        Include any definitions, explanations, examples, or references related to this topic.
-        Organize the information in a structured way and indicate where in the document it appears if possible.
-        If the topic is not mentioned in the document, please state that clearly.
-        """
-        
-        try:
-            related_info = get_response(prompt)
-            print(f"\n=== Information Related to '{topic}' ===")
-            print(related_info)
-        except Exception as e:
-            print(f"Error finding related information: {e}")
-    
-    def run(self):
-        """Run the PDF chatbot interface."""
-        print("=== PDF Question Answering Chatbot ===")
-        print("This chatbot can answer questions about PDF documents.")
-        
-        while True:
-            print("\nOptions:")
-            print("1. Load a PDF document")
-            print("2. Get document summary")
-            print("3. Ask a question")
-            print("4. Extract key information")
-            print("5. Find related topics")
-            print("6. Exit")
-            
-            choice = input("\nSelect an option (1-6): ")
-            
-            if choice == '1':
-                # Load PDF
-                file_path = input("\nEnter the path to a PDF file: ")
-                self.load_pdf(file_path)
-                
-            elif choice == '2':
-                # Summarize document
-                self.summarize_document()
-                
-            elif choice == '3':
-                # Ask a question
-                if not self.pdf_text:
-                    print("Please load a PDF document first (option 1).")
-                    continue
-                    
-                question = input("\nEnter your question about the document: ")
-                self.answer_question(question)
-                
-            elif choice == '4':
-                # Extract key information
-                self.extract_key_information()
-                
-            elif choice == '5':
-                # Find related topics
-                if not self.pdf_text:
-                    print("Please load a PDF document first (option 1).")
-                    continue
-                    
-                topic = input("\nEnter a topic to find in the document: ")
-                self.find_related_topics(topic)
-                
-            elif choice == '6':
-                # Exit
-                print("\nExiting PDF Chatbot. Goodbye!")
-                break
-                
-            else:
-                print("Invalid choice. Please select a number between 1 and 6.")
-
-# Run the chatbot
-if __name__ == "__main__":
-    chatbot = PDFChatbot()
-    chatbot.run()
-```
-
-## Extension Ideas
-
-- Add support for multiple document formats (DOCX, TXT, etc.)
-- Implement semantic search to find specific information more efficiently
-- Create a feature to compare information across multiple documents
-- Add a citation generator for referencing document content
-- Build a web interface using Flask or Streamlit
-- Implement document chunking for handling very large documents
-
----
-
-# Implementation Tips
-
-When using these advanced mini-projects in a classroom setting:
-
-1. **Scaffold appropriately**: Start with simpler projects for beginners, then progress to more complex ones.
-2. **Modify complexity**: Adjust project requirements based on student skill level and available time.
-3. **Pair programming**: Have students work in pairs to encourage collaboration.
-4. **Challenge extensions**: Provide additional challenges for students who finish early.
-5. **Focus on concepts**: Emphasize the programming concepts being used rather than just creating a functioning application.
-6. **Ethical discussions**: Use these projects as opportunities to discuss AI ethics, bias, and limitations.
-
-# Assessment Ideas
-
-- Have students document their process in a digital portfolio
-- Create a "project showcase" where students present their creations
-- Ask students to write reflections on what they learned
-- Evaluate code structure, comments, and organization
-- Have students peer-review each other's projects
-
----
-
-*These examples are designed to be flexible starting points. Adjust and expand them to suit your specific educational needs and student skill levels.*
-
----
-
 # Personality Bot Creator
 
 **Difficulty**: Beginner  
@@ -4702,140 +4849,6 @@ for prompt in test_prompts:
 Create a menu system that lets the user choose which personality to talk to.
 
 ---
-
----
-
-# Simple Calculator Agent
-
-**Difficulty**: Beginner - A simple introduction to agent functionality
-
-**Learning Focus**: Agents, Tool Use, ReAct Framework
-
-**Module**: agent
-
-This mini-project creates a simple calculator agent that can solve math problems using the ReAct framework. It demonstrates how to create and use tools with an agent.
-
-## Project Overview
-
-In this project, you'll create an agent that can:
-
-1. Parse mathematical expressions
-2. Break down complex calculations into steps
-3. Use a calculator tool to solve sub-problems
-4. Show its reasoning process
-
-This is a great introduction to how agents work and how they can use tools to solve problems.
-
-## Implementation
-
-Start by importing the necessary modules:
-
-```python
-from ailabkit.agent import run_agent, register_tool
-
-# Define a calculator function
-def calculator(expression):
-    """Evaluate a mathematical expression."""
-    try:
-        # Using a safe eval environment
-        result = eval(expression, {"__builtins__": {}}, {
-            "abs": abs, "min": min, "max": max, "round": round, 
-            "sum": sum, "pow": pow, "int": int, "float": float
-        })
-        return f"Result: {result}"
-    except Exception as e:
-        return f"Error: {str(e)}"
-
-# Register the calculator tool
-register_tool(
-    "calculator", 
-    "Evaluate a mathematical expression. Example: 2 + 2 * 10", 
-    calculator
-)
-
-# Create a function to run the agent
-def solve_math_problem(question):
-    """Solve a math problem using the agent."""
-    print(f"Question: {question}")
-    
-    # Run the agent with the question
-    response = run_agent(question, verbose=True)
-    
-    print("\nFinal Answer:")
-    print(response)
-    
-    return response
-
-# Example usage
-if __name__ == "__main__":
-    questions = [
-        "What is 25 * 3?",
-        "If I have 125 apples and give away 1/5 of them, how many do I have left?",
-        "What is the square root of 144?",
-        "What is 15% of 240?",
-        "If a triangle has sides of length 3, 4, and 5, what is its area?"
-    ]
-    
-    for q in questions:
-        print("\n" + "="*50)
-        solve_math_problem(q)
-        print("="*50)
-```
-
-## How It Works
-
-1. We define a `calculator` function that can safely evaluate mathematical expressions.
-2. We register this tool with the agent system using `register_tool`.
-3. We create a `solve_math_problem` function that runs the agent with a question.
-4. The agent uses ReAct prompting to break down the problem and use the calculator tool.
-5. The agent returns a final answer based on its reasoning and the tool results.
-
-## Sample Output
-
-When you run this code, you'll see output like:
-
-```
-==================================================
-Question: What is 25 * 3?
-
-Thought: I need to multiply 25 by 3. I can use the calculator tool for this.
-Action: calculator
-Action Input: 25 * 3
-Observation: Result: 75
-
-Final Answer: The result of 25 * 3 is 75.
-==================================================
-```
-
-## Extensions and Variations
-
-Here are some ways to extend this project:
-
-1. **Add more mathematical functions**: Extend the calculator to handle more complex operations like logarithms, trigonometry, etc.
-
-2. **Create a multi-step calculator**: Modify the agent to show intermediate steps for complex calculations.
-
-3. **Add unit conversion**: Create a unit conversion tool and let the agent solve problems involving different units.
-
-4. **Create a word problem solver**: Enhance the agent to parse word problems and solve them step-by-step.
-
-5. **Add visualization**: Create a web interface that displays the agent's reasoning steps alongside the calculations.
-
-## Educational Applications
-
-This project can be used to:
-
-- Teach how agents break down problems into steps
-- Demonstrate the ReAct framework in practice
-- Show how tools can extend an AI system's capabilities
-- Help students understand mathematical problem-solving strategies
-
-## Assessment Ideas
-
-- Have students modify the calculator tool to handle additional operations
-- Ask students to analyze the agent's reasoning for different types of problems
-- Challenge students to create a word problem generator that the agent can solve
-- Have students compare the agent's approach to their own problem-solving methods
 
 ---
 
@@ -6743,6 +6756,754 @@ if __name__ == "__main__":
 - Implement SEO optimisation suggestions for the generated content
 
 ---
+
+---
+
+# Build Your Own Q&A CLI
+
+**Difficulty**: Intermediate  
+**Time**: 45 minutes  
+**Learning Focus**: RAG, Embeddings, Vector Search, CLI Development  
+**Module**: RAG
+
+## Overview
+Create a command-line interface (CLI) tool that implements Retrieval-Augmented Generation (RAG) to answer questions based on your own knowledge index. This project will teach you how to programmatically load vector embeddings, perform similarity searches, and generate contextually relevant responses.
+
+## Instructions
+
+1. **Setup Your Environment**
+   - Ensure you have Python 3.7+ installed
+   - Install the required libraries: `ailabkit` and `numpy`
+
+2. **Understanding the Components**
+   - Learn how RAG combines retrieval and generation
+   - Understand embeddings and cosine similarity for semantic search
+   - Explore the provided `rag_utils` functions: `embed_query()` and `get_top_k()`
+
+3. **Build Your CLI Script**
+   - Create a Python script with the following functions:
+     - `load_index()`: Load document chunks and embeddings from an .npz file
+     - `query_index()`: Embed a query and find the most similar chunks
+     - `generate_answer()`: Create a response using retrieved context
+     - `main()`: Handle CLI arguments and orchestrate the workflow
+
+4. **Sample Implementation**
+   ```python
+   #!/usr/bin/env python3
+   """
+   Simple Q&A CLI using RAG (Retrieval-Augmented Generation)
+   This script loads an index, embeds queries, retrieves relevant chunks, and generates answers.
+   """
+
+   import argparse
+   import numpy as np
+   from ailabkit.chat import get_response
+   from ailabkit.rag.utils import embed_query, get_top_k
+
+   def load_index(index_path):
+       """Load chunked documents and their embeddings from an .npz file"""
+       print(f"Loading index from {index_path}...")
+       try:
+           data = np.load(index_path, allow_pickle=True)
+           chunks = data['chunks']
+           embeddings = data['embeddings']
+           metadata = data.get('metadata', None)
+           print(f"Loaded {len(chunks)} chunks from index.")
+           return chunks, embeddings, metadata
+       except Exception as e:
+           print(f"Error loading index: {e}")
+           exit(1)
+
+   def query_index(query, chunks, embeddings, metadata=None, top_k=3, show_scores=False):
+       """Embed the query and retrieve the top K most relevant chunks"""
+       print(f"Processing query: '{query}'")
+       
+       # Embed the query
+       query_embedding = embed_query(query)
+       
+       # Get the top k chunks and their similarity scores
+       top_chunks, top_scores, top_indices = get_top_k(
+           query_embedding, embeddings, chunks, k=top_k, return_indices=True
+       )
+       
+       # Prepare context from top chunks
+       context = "\n\n---\n\n".join(top_chunks)
+       
+       # Show scores and sources if requested
+       if show_scores:
+           print("\n=== Top Chunks ===")
+           for i, (chunk, score) in enumerate(zip(top_chunks, top_scores)):
+               source_info = ""
+               if metadata is not None and len(metadata) > top_indices[i]:
+                   source_info = f" Source: {metadata[top_indices[i]].get('source', 'unknown')}"
+               print(f"[{i+1}] Score: {score:.4f}{source_info}")
+               print(f"Preview: {chunk[:100]}...\n")
+       
+       return context, top_chunks, top_scores
+
+   def generate_answer(query, context):
+       """Generate a response using the provided context"""
+       prompt = f"""
+   Based on the following context, please answer the question. If the context doesn't contain 
+   relevant information to answer the question fully, say what you can based on the context 
+   and indicate what information is missing.
+
+   Context:
+   {context}
+
+   Question: {query}
+
+   Answer:
+   """
+       return get_response(prompt, personality="helpful")
+
+   def main():
+       parser = argparse.ArgumentParser(description="Query a RAG index and get answers.")
+       parser.add_argument("query", help="The question to ask")
+       parser.add_argument("--index", "-i", default="sample_index.npz", help="Path to the .npz index file")
+       parser.add_argument("--top-k", "-k", type=int, default=3, help="Number of chunks to retrieve")
+       parser.add_argument("--show-scores", "-s", action="store_true", help="Show similarity scores and chunk previews")
+       parser.add_argument("--show-context", "-c", action="store_true", help="Show full context used for generation")
+       args = parser.parse_args()
+       
+       # Load the index
+       chunks, embeddings, metadata = load_index(args.index)
+       
+       # Query the index
+       context, top_chunks, top_scores = query_index(
+           args.query, chunks, embeddings, metadata, 
+           top_k=args.top_k, show_scores=args.show_scores
+       )
+       
+       # Show full context if requested
+       if args.show_context:
+           print("\n=== Full Context ===")
+           print(context)
+           print("\n")
+       
+       # Generate and print the answer
+       print("\n=== Answer ===")
+       answer = generate_answer(args.query, context)
+       print(answer)
+       
+       # Log source information if metadata is available
+       if metadata is not None and not args.show_scores:
+           print("\n=== Sources ===")
+           used_sources = set()
+           for idx in range(min(args.top_k, len(top_chunks))):
+               if idx < len(top_scores):
+                   source = metadata[idx].get('source', 'unknown')
+                   used_sources.add(source)
+           
+           for source in used_sources:
+               print(f"- {source}")
+
+   if __name__ == "__main__":
+       main()
+   ```
+
+5. **Test Your Implementation**
+   - Use the provided `sample_index.npz` file
+   - Run your script with various queries
+   - Experiment with different `top_k` values to see how it affects answers
+
+## Extension Ideas
+
+1. **Add More CLI Options**
+   - Implement a `--temperature` flag to control response randomness
+   - Add a `--model` option to select different LLMs for response generation
+   - Create a `--format` flag to return responses as JSON or markdown
+
+2. **Enhance Result Quality**
+   - Implement re-ranking of retrieved chunks using cross-encoders
+   - Add chunk summarization before combining context
+   - Create a custom scoring mechanism that considers both relevance and recency
+
+3. **Build a Web Interface**
+   - Create a simple Flask or Streamlit app that uses your RAG engine
+   - Add visualization of similarity scores or chunk relationships
+   - Implement user feedback collection to improve retrieval quality
+
+4. **Performance Optimizations**
+   - Add caching for query embeddings and responses
+   - Implement batched query processing for multiple questions
+   - Explore approximate nearest neighbor algorithms for faster retrieval on large indices
+
+---
+
+# 🧠 My First RAG Bot
+
+**Difficulty**: Intermediate  
+**Time**: 45 minutes  
+**Learning Focus**: Document indexing, vector retrieval, context-based generation  
+**Module**: RAG
+
+## Overview
+Learn how to use the `rag` CLI to index documents and create a simple Retrieval-Augmented Generation (RAG) system that can answer questions based on your own notes or documents.
+
+## Instructions
+
+### Step 1: Set up your environment
+1. Install the `rag` CLI tool:
+   ```bash
+   pip install ailabkit
+   ```
+2. Ensure you have access to the `testdata/demo_notes/` directory or prepare your own documents
+
+### Step 2: Index your documents
+1. Browse through the available demo documents:
+   ```bash
+   ls ailabkit/testdata/demo_notes/
+   ```
+2. Create an index of all documents in the demo notes directory:
+   ```bash
+   rag index ailabkit/testdata/demo_notes/
+   ```
+3. Observe the output showing how many files were found and processed, and note the name of the saved index file (e.g., `sample_index.npz`)
+
+### Step 3: Ask questions using your RAG system
+1. Ask a basic question about the content:
+   ```bash
+   rag ask "What does TCP do?" --show-context
+   ```
+2. Try different questions to explore the content:
+   ```bash
+   rag ask "How does HTTP work?" --show-context
+   rag ask "What is the difference between TCP and UDP?" --show-scores
+   ```
+3. Experiment with different flags:
+   - `--show-context`: See what information was used to answer
+   - `--show-scores`: View relevance ranking of different text chunks
+   - `--top-k 5`: Retrieve 5 most relevant chunks instead of default 3
+
+### Step 4: Understand how RAG works
+1. Review how the system processes your request:
+   - Documents are broken into smaller chunks
+   - Vector embeddings are created for each chunk
+   - When you ask a question, it finds chunks with similar embeddings
+   - Retrieved chunks are used as context for generating an answer
+
+## Extension Ideas
+
+1. **Create your own knowledge base**:
+   - Create markdown files with your class notes or research
+   - Index them and ask questions to test your understanding
+
+2. **Experiment with different file types**:
+   - Add PDF files to your document collection
+   - Re-index to include the new files
+   - Compare how well the system handles different formats
+
+3. **Build a specialized RAG system**:
+   - Create a collection of documents on a specific topic
+   - Develop a set of test questions to evaluate retrieval quality
+   - Fine-tune your prompts to get better answers
+
+4. **Analyze retrieval performance**:
+   - Use the `--show-scores` flag to see how different chunks are ranked
+   - Experiment with question phrasing to improve retrieval accuracy
+   - Try adjusting the number of chunks retrieved with `--top-k`
+
+---
+
+# Hybrid Reasoning Bot
+
+**Difficulty**: Intermediate  
+**Time**: 60 minutes  
+**Learning Focus**: RAG, similarity thresholds, fallback logic  
+**Module**: RAG
+
+## Overview
+Create a bot that intelligently chooses between using your indexed documents (RAG) or the model's general knowledge based on similarity scores. The bot tags responses with source indicators to clearly show where information is coming from.
+
+## Instructions
+
+1. **Set up the project:**
+   - Create a new Python script file
+   - Import the necessary libraries from ailabkit
+   - Define emoji constants for tagging sources (🧠 = from notes, 🌐 = fallback)
+
+2. **Implement the index loading function:**
+   - Create a function that loads chunks, embeddings, and metadata from an .npz file
+   - Handle potential loading errors gracefully
+
+3. **Create the retrieval function:**
+   - Implement a function that embeds the query
+   - Retrieves top-K chunks with similarity scores
+   - Returns chunks, scores, and indices
+
+4. **Build answer generation functions:**
+   - Create a RAG-based answer function that uses retrieved chunks as context
+   - Create a fallback function that uses only the LLM's general knowledge
+
+5. **Implement the decision logic:**
+   - Use similarity threshold (e.g., 0.7) to decide between RAG or fallback
+   - Tag responses appropriately with source indicators
+
+6. **Add command-line argument handling:**
+   - Query input
+   - Index file path
+   - Similarity threshold
+   - Top-K value
+   - Optional flags for comparing answers and showing scores
+
+7. **Test your implementation:**
+   - Try queries with obvious matches in your index
+   - Try queries with no relevant information in your index
+   - Experiment with different threshold values
+
+
+```python
+#!/usr/bin/env python3
+"""
+Hybrid Reasoning Bot
+-------------------
+A bot that chooses between RAG or general LLM answers based on similarity score.
+It uses your indexed documents when it finds relevant information,
+and falls back to general knowledge when necessary.
+"""
+
+import argparse
+import numpy as np
+from ailabkit.chat import get_response
+from ailabkit.rag.utils import embed_query, get_top_k
+import os
+import time
+
+# Emoji constants
+RAG_TAG = "🧠"  # Knowledge from your notes/documents
+LLM_TAG = "🌐"  # Knowledge from the model's training
+
+def load_index(index_path):
+    """Load the index from an .npz file"""
+    try:
+        data = np.load(index_path, allow_pickle=True)
+        chunks = data['chunks']
+        embeddings = data['embeddings']
+        metadata = data.get('metadata', None)
+        return chunks, embeddings, metadata
+    except Exception as e:
+        print(f"Error loading index: {e}")
+        exit(1)
+
+def get_chunks_with_scores(query, chunks, embeddings, top_k=3):
+    """Retrieve the most relevant chunks and their similarity scores for a query"""
+    # Embed the query
+    query_embedding = embed_query(query)
+    
+    # Get top chunks with scores
+    top_chunks, top_scores, top_indices = get_top_k(
+        query_embedding, embeddings, chunks, k=top_k, return_indices=True
+    )
+    
+    return top_chunks, top_scores, top_indices
+
+def generate_rag_answer(query, chunks):
+    """Generate an answer using RAG with the provided chunks as context"""
+    context = "\n\n---\n\n".join(chunks)
+    
+    prompt = f"""
+Based on the following information, please answer the question.
+If the information doesn't fully address the question, use only what's relevant.
+
+Context:
+{context}
+
+Question: {query}
+
+Answer:
+"""
+    return get_response(prompt, personality="helpful")
+
+def generate_llm_answer(query):
+    """Generate an answer using only the LLM's general knowledge"""
+    prompt = f"""
+Please answer this question based on your general knowledge:
+
+Question: {query}
+
+Answer:
+"""
+    return get_response(prompt, personality="helpful")
+
+def main():
+    parser = argparse.ArgumentParser(description="Hybrid reasoning bot using RAG and general knowledge")
+    parser.add_argument("query", help="The question to ask")
+    parser.add_argument("--index", "-i", default="sample_index.npz", help="Path to the .npz index file")
+    parser.add_argument("--threshold", "-t", type=float, default=0.7, 
+                        help="Similarity score threshold for using RAG (0.0-1.0)")
+    parser.add_argument("--top-k", "-k", type=int, default=3, 
+                        help="Number of chunks to use when generating RAG answers")
+    parser.add_argument("--no-fallback", "-n", action="store_true", 
+                        help="Disable fallback to general knowledge even with low scores")
+    parser.add_argument("--compare", "-c", action="store_true", 
+                        help="Show both RAG and general knowledge answers for comparison")
+    parser.add_argument("--show-scores", "-s", action="store_true", 
+                        help="Show similarity scores for retrieved chunks")
+    args = parser.parse_args()
+    
+    # Load the index
+    print(f"Loading index from {args.index}...")
+    chunks, embeddings, metadata = load_index(args.index)
+    print(f"Loaded {len(chunks)} chunks from index.")
+    
+    # Get relevant chunks and their scores
+    top_chunks, top_scores, top_indices = get_chunks_with_scores(
+        args.query, chunks, embeddings, top_k=args.top_k
+    )
+    
+    # Determine if we should use RAG based on the highest similarity score
+    best_score = max(top_scores) if top_scores else 0
+    use_rag = best_score >= args.threshold
+    
+    # Show scores if requested
+    if args.show_scores:
+        print("\n=== Similarity Scores ===")
+        for i, (chunk, score) in enumerate(zip(top_chunks, top_scores)):
+            print(f"[{i+1}] Score: {score:.4f}")
+            print(f"Preview: {chunk[:100]}...\n")
+        print(f"Best score: {best_score:.4f} (Threshold: {args.threshold})")
+        print(f"Decision: {'Using RAG' if use_rag else 'Using general knowledge'}\n")
+    
+    # Generate answers
+    if args.compare:
+        # Generate both answers for comparison
+        print("\n=== Generating both answers for comparison ===")
+        
+        print(f"\n{RAG_TAG} Generating answer from your documents...")
+        rag_answer = generate_rag_answer(args.query, top_chunks)
+        
+        print(f"\n{LLM_TAG} Generating answer from general knowledge...")
+        llm_answer = generate_llm_answer(args.query)
+        
+        # Display both answers
+        print(f"\n=== {RAG_TAG} Answer from your documents ===")
+        print(rag_answer)
+        
+        print(f"\n=== {LLM_TAG} Answer from general knowledge ===")
+        print(llm_answer)
+        
+    else:
+        # Generate only one answer based on the threshold
+        if use_rag or args.no_fallback:
+            tag = RAG_TAG
+            print(f"\n{tag} Generating answer from your documents...")
+            answer = generate_rag_answer(args.query, top_chunks)
+        else:
+            tag = LLM_TAG
+            print(f"\n{tag} No sufficiently relevant information found in your documents.")
+            print(f"{tag} Falling back to general knowledge...")
+            answer = generate_llm_answer(args.query)
+        
+        # Display the answer
+        print(f"\n=== {tag} Answer ===")
+        print(answer)
+    
+    # Show sources if using RAG
+    if (use_rag or args.no_fallback or args.compare) and metadata is not None:
+        print("\n=== Sources ===")
+        used_sources = set()
+        for idx in top_indices:
+            source = metadata[idx].get('source', 'unknown')
+            used_sources.add(source)
+        
+        for source in used_sources:
+            print(f"- {source}")
+
+if __name__ == "__main__":
+    main()
+```
+## Extension Ideas
+
+1. **Enhanced Source Attribution**: Display specific document names and page numbers for RAG answers
+2. **Confidence Visualization**: Create a visual representation of similarity scores 
+3. **Hybrid Answers**: Combine information from both sources when appropriate
+4. **Interactive Mode**: Create a chat-like interface that remembers context
+5. **Custom Personalities**: Allow different personality settings for different query types
+6. **Performance Metrics**: Track and display response times for both methods
+7. **Web Interface**: Create a simple web UI for the hybrid bot
+
+
+---
+
+# PDF Question Answering Chatbot
+
+**Difficulty**: Intermediate-Advanced  
+**Time**: 60-90 minutes  
+**Learning Focus**: Document processing, natural language understanding, information retrieval  
+**Module**: RAG
+
+## Overview
+
+Create a chatbot that can answer questions from a PDF document. This project teaches students how to extract and process text from PDFs and use AI to retrieve relevant information based on user queries.
+
+## Instructions
+
+```python
+import os
+import sys
+import fitz  # PyMuPDF
+from ailabkit.chat import get_response
+
+class PDFChatbot:
+    """A chatbot that can answer questions about PDF documents."""
+    
+    def __init__(self):
+        self.pdf_file = None
+        self.pdf_text = ""
+        self.context_size = 5000  # Max context size to send to the AI
+    
+    def load_pdf(self, file_path):
+        """Load and extract text from a PDF file."""
+        try:
+            if not os.path.exists(file_path):
+                print(f"Error: File '{file_path}' not found.")
+                return False
+            
+            self.pdf_file = file_path
+            
+            # Open the PDF
+            doc = fitz.open(file_path)
+            
+            # Extract text from all pages
+            full_text = []
+            for page_num in range(len(doc)):
+                page = doc.load_page(page_num)
+                full_text.append(page.get_text())
+            
+            self.pdf_text = "\n".join(full_text)
+            
+            # Print document stats
+            print(f"\nDocument loaded: {os.path.basename(file_path)}")
+            print(f"Number of pages: {len(doc)}")
+            print(f"Total characters: {len(self.pdf_text)}")
+            
+            # Print a preview
+            preview_length = min(200, len(self.pdf_text))
+            print(f"\nPreview:\n{self.pdf_text[:preview_length]}...")
+            
+            return True
+            
+        except Exception as e:
+            print(f"Error loading PDF: {e}")
+            return False
+    
+    def summarize_document(self):
+        """Generate a summary of the document."""
+        if not self.pdf_text:
+            print("Error: No document loaded. Please load a PDF first.")
+            return
+        
+        print("\nGenerating document summary...")
+        
+        # Create a prompt for the AI
+        prompt = f"""
+        Please provide a concise summary of the following document:
+        
+        {self.pdf_text[:5000]}  # Send only the first part if the document is large
+        
+        Include:
+        1. Main topics and themes
+        2. Key points or arguments
+        3. Important entities mentioned
+        4. Document structure overview
+        
+        Keep the summary under 300 words.
+        """
+        
+        try:
+            summary = get_response(prompt)
+            print("\n=== Document Summary ===")
+            print(summary)
+        except Exception as e:
+            print(f"Error generating summary: {e}")
+    
+    def answer_question(self, question):
+        """Answer a question about the document."""
+        if not self.pdf_text:
+            print("Error: No document loaded. Please load a PDF first.")
+            return
+        
+        if not question:
+            print("Error: No question provided.")
+            return
+        
+        print(f"\nAnswering: {question}")
+        
+        # Create a prompt for the AI
+        prompt = f"""
+        Document text:
+        {self.pdf_text[:self.context_size]}
+        
+        Question: {question}
+        
+        Please answer the question based only on the information provided in the document.
+        If the answer cannot be found in the document, state that clearly.
+        Provide page numbers or sections if you can determine them from the context.
+        """
+        
+        try:
+            answer = get_response(prompt)
+            print("\n=== Answer ===")
+            print(answer)
+        except Exception as e:
+            print(f"Error generating answer: {e}")
+    
+    def extract_key_information(self):
+        """Extract key information from the document."""
+        if not self.pdf_text:
+            print("Error: No document loaded. Please load a PDF first.")
+            return
+        
+        print("\nExtracting key information...")
+        
+        # Create a prompt for the AI
+        prompt = f"""
+        Please extract and organize key information from this document:
+        
+        {self.pdf_text[:self.context_size]}
+        
+        Extract the following (if present):
+        1. Dates and deadlines
+        2. Names and organizations
+        3. Numerical data or statistics
+        4. Definitions or technical terms
+        5. Action items or requirements
+        
+        Format the information in clear categories with brief explanations.
+        """
+        
+        try:
+            key_info = get_response(prompt)
+            print("\n=== Key Information ===")
+            print(key_info)
+        except Exception as e:
+            print(f"Error extracting information: {e}")
+    
+    def find_related_topics(self, topic):
+        """Find information related to a specific topic in the document."""
+        if not self.pdf_text:
+            print("Error: No document loaded. Please load a PDF first.")
+            return
+        
+        if not topic:
+            print("Error: No topic provided.")
+            return
+        
+        print(f"\nFinding information related to: {topic}")
+        
+        # Create a prompt for the AI
+        prompt = f"""
+        Document text:
+        {self.pdf_text[:self.context_size]}
+        
+        Please find and extract all information related to the topic "{topic}" from the document.
+        Include any definitions, explanations, examples, or references related to this topic.
+        Organize the information in a structured way and indicate where in the document it appears if possible.
+        If the topic is not mentioned in the document, please state that clearly.
+        """
+        
+        try:
+            related_info = get_response(prompt)
+            print(f"\n=== Information Related to '{topic}' ===")
+            print(related_info)
+        except Exception as e:
+            print(f"Error finding related information: {e}")
+    
+    def run(self):
+        """Run the PDF chatbot interface."""
+        print("=== PDF Question Answering Chatbot ===")
+        print("This chatbot can answer questions about PDF documents.")
+        
+        while True:
+            print("\nOptions:")
+            print("1. Load a PDF document")
+            print("2. Get document summary")
+            print("3. Ask a question")
+            print("4. Extract key information")
+            print("5. Find related topics")
+            print("6. Exit")
+            
+            choice = input("\nSelect an option (1-6): ")
+            
+            if choice == '1':
+                # Load PDF
+                file_path = input("\nEnter the path to a PDF file: ")
+                self.load_pdf(file_path)
+                
+            elif choice == '2':
+                # Summarize document
+                self.summarize_document()
+                
+            elif choice == '3':
+                # Ask a question
+                if not self.pdf_text:
+                    print("Please load a PDF document first (option 1).")
+                    continue
+                    
+                question = input("\nEnter your question about the document: ")
+                self.answer_question(question)
+                
+            elif choice == '4':
+                # Extract key information
+                self.extract_key_information()
+                
+            elif choice == '5':
+                # Find related topics
+                if not self.pdf_text:
+                    print("Please load a PDF document first (option 1).")
+                    continue
+                    
+                topic = input("\nEnter a topic to find in the document: ")
+                self.find_related_topics(topic)
+                
+            elif choice == '6':
+                # Exit
+                print("\nExiting PDF Chatbot. Goodbye!")
+                break
+                
+            else:
+                print("Invalid choice. Please select a number between 1 and 6.")
+
+# Run the chatbot
+if __name__ == "__main__":
+    chatbot = PDFChatbot()
+    chatbot.run()
+```
+
+## Extension Ideas
+
+- Add support for multiple document formats (DOCX, TXT, etc.)
+- Implement semantic search to find specific information more efficiently
+- Create a feature to compare information across multiple documents
+- Add a citation generator for referencing document content
+- Build a web interface using Flask or Streamlit
+- Implement document chunking for handling very large documents
+
+---
+
+# Implementation Tips
+
+When using these advanced mini-projects in a classroom setting:
+
+1. **Scaffold appropriately**: Start with simpler projects for beginners, then progress to more complex ones.
+2. **Modify complexity**: Adjust project requirements based on student skill level and available time.
+3. **Pair programming**: Have students work in pairs to encourage collaboration.
+4. **Challenge extensions**: Provide additional challenges for students who finish early.
+5. **Focus on concepts**: Emphasize the programming concepts being used rather than just creating a functioning application.
+6. **Ethical discussions**: Use these projects as opportunities to discuss AI ethics, bias, and limitations.
+
+# Assessment Ideas
+
+- Have students document their process in a digital portfolio
+- Create a "project showcase" where students present their creations
+- Ask students to write reflections on what they learned
+- Evaluate code structure, comments, and organization
+- Have students peer-review each other's projects
+
+---
+
+*These examples are designed to be flexible starting points. Adjust and expand them to suit your specific educational needs and student skill levels.*
 
 ---
 
