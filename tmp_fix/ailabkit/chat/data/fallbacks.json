@@ -1,0 +1,53 @@
+{
+  "friendly": [
+    "Oops! I got a little tangled up... Let's try that again 😊",
+    "Hang tight, I'm thinking... trying again!"
+  ],
+  "sarcastic": [
+    "Well, *that* didn’t work. Shocker. Retrying.",
+    "AI's having a moment. Let’s see if it pulls itself together."
+  ],
+  "pirate": [
+      "☠️ Me circuits be tangled! Ask again, ye landlubber!",
+      "⚓️ The winds be foul. Try again, matey!"
+  ],
+  "parrot": [
+    "Squawk! Retry! Retry!",
+    "Pieces of eight! Something went wrong, matey. Trying again!"
+  ],
+  "shakespeare": [
+    "Forsooth! Mine circuits didst err. A second chance I shall take."
+  ],
+  "teacher": [
+    "Hmm, seems something went wrong. Let's try that again, step by step."
+  ],
+  "coach": [
+    "No worries, champion! We’ll try again and crush it this time!"
+  ],
+  "caveman": [
+    "Bot no work. Try again. Bot fix."
+  ],
+  "hacker": [
+    "Whoa. That API glitched. Recompiling the matrix... hold up."
+  ],
+  "therapist": [
+    "Something didn’t go as planned. That’s okay. Let’s try again together."
+  ],
+  "grumpy": [
+    "Ugh. Of course it failed. Trying again, not that you'll appreciate it."
+  ],
+  "alien": [
+    "Error... peculiar. Reinitializing cognitive subroutines..."
+  ],
+  "emoji": [
+    "😵‍💫💻❓🔁",
+    "🤖💥➡️🔧... trying again!"
+  ],
+  "coder": [
+    "Timeout? Probably a bug. Let’s try that request again."
+  ],
+  "default": [
+      "The ghost in the machine just acted up. Try again in a sec?",
+      "⚠️ Error in the digital depths... please retype that question."
+  ]
+}

@@ -89,7 +89,6 @@ build-project-browser:
 # 🛠️ Rebuild everything: sync version, docs, browser, mini-projects
 build-all:
   just sync-version
-  just build-mini-projects
   just generate-project-index
   just generate-bot-gallery
   just build-project-browser
@@ -97,25 +96,39 @@ build-all:
 
 # 🚀 Publish a new release
 release:
-  just build-all
+  just sync-version
   echo "🔖 Preparing release..."
   version=$(grep '^version *= *"' pyproject.toml | sed 's/version *= *"\(.*\)"/\1/')
   echo "🔖 Version: $$version"
   git add .
-  git commit -m "🔖 Release $$version"
-  git tag v$$version
-  git push
-  git push --tags
+  git commit -m "🔖 Release $$version" || true
+  git tag v$$version || true
+  git push || true
+  git push --tags || true
   echo "📦 Building and uploading to PyPI..."
-  python -m build
-  twine upload dist/*
+  # Create source distribution for PyPI
+  mkdir -p /tmp/ailabkit-pypi
+  cp -r src/ailabkit /tmp/ailabkit-pypi/
+  cp README.md /tmp/ailabkit-pypi/
+  # Create setup.py with proper documentation
+  cd /tmp/ailabkit-pypi && printf 'from setuptools import setup, find_packages\n\nwith open("README.md", "r") as f:\n    long_description = f.read()\n\nsetup(\n    name="ailabkit",\n    version="'"$$version"'",\n    description="AI Learning Lab Toolkit for classrooms",\n    long_description=long_description,\n    long_description_content_type="text/markdown",\n    author="Michael Borck",\n    author_email="michael@borck.me",\n    url="https://github.com/teaching-repositories/ailabkit",\n    packages=find_packages(),\n    install_requires=["typer","requests","python-fasthtml","python-docx","pymupdf","scikit-learn","numpy"],\n    classifiers=[\n        "Programming Language :: Python :: 3",\n        "License :: OSI Approved :: MIT License",\n        "Operating System :: OS Independent",\n    ],\n)' > setup.py
+  cd /tmp/ailabkit-pypi && python setup.py sdist
+  cd /tmp/ailabkit-pypi && twine upload dist/*
   echo "✅ Release $$version published!"
 
 # 🚀 Publish a new release to TestPyPI
 release-test:
-  just build-all
-  python -m build
-  twine upload --repository testpypi dist/*
+  # Clean previous builds
+  rm -rf dist build /tmp/ailabkit-pypi
+  # Create source distribution for TestPyPI
+  mkdir -p /tmp/ailabkit-pypi
+  cp -r src/ailabkit /tmp/ailabkit-pypi/
+  cp README.md /tmp/ailabkit-pypi/
+  # Create setup.py with proper documentation
+  cd /tmp/ailabkit-pypi && printf 'from setuptools import setup, find_packages\n\nwith open("README.md", "r") as f:\n    long_description = f.read()\n\nsetup(\n    name="ailabkit",\n    version="0.1.0dev1",\n    description="AI Learning Lab Toolkit for classrooms",\n    long_description=long_description,\n    long_description_content_type="text/markdown",\n    author="Michael Borck",\n    author_email="michael@borck.me",\n    url="https://github.com/teaching-repositories/ailabkit",\n    packages=find_packages(),\n    install_requires=["typer","requests","python-fasthtml","python-docx","pymupdf","scikit-learn","numpy"],\n    classifiers=[\n        "Programming Language :: Python :: 3",\n        "License :: OSI Approved :: MIT License",\n        "Operating System :: OS Independent",\n    ],\n)' > setup.py
+  # Build and upload to TestPyPI
+  cd /tmp/ailabkit-pypi && python setup.py sdist
+  cd /tmp/ailabkit-pypi && twine upload --repository testpypi dist/*
 
 # Lint mini-projects markdown files
 lint-mini-projects:

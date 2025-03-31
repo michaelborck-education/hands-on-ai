@@ -7,7 +7,7 @@ from pathlib import Path
 import json
 import re
 
-HTML_PATH = Path("tools/project_browser.html")
+HTML_PATH = Path("project_browser.html")
 TOML_PATH = Path("pyproject.toml")
 VERSION_FILE = Path("version.json")
 
