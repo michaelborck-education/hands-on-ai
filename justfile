@@ -98,11 +98,10 @@ build-all:
 release:
   just sync-version
   echo "🔖 Preparing release..."
-  version=$(grep '^version *= *"' pyproject.toml | sed 's/version *= *"\(.*\)"/\1/')
-  echo "🔖 Version: $$version"
+  echo "🔖 Version: 0.1.0"
   git add .
-  git commit -m "🔖 Release $$version" || true
-  git tag v$$version || true
+  git commit -m "🔖 Release 0.1.0" || true
+  git tag v0.1.0 || true
   git push || true
   git push --tags || true
   echo "📦 Building and uploading to PyPI..."
@@ -111,10 +110,10 @@ release:
   cp -r src/ailabkit /tmp/ailabkit-pypi/
   cp README.md /tmp/ailabkit-pypi/
   # Create setup.py with proper documentation
-  cd /tmp/ailabkit-pypi && printf 'from setuptools import setup, find_packages\n\nwith open("README.md", "r") as f:\n    long_description = f.read()\n\nsetup(\n    name="ailabkit",\n    version="'"$$version"'",\n    description="AI Learning Lab Toolkit for classrooms",\n    long_description=long_description,\n    long_description_content_type="text/markdown",\n    author="Michael Borck",\n    author_email="michael@borck.me",\n    url="https://github.com/teaching-repositories/ailabkit",\n    packages=find_packages(),\n    install_requires=["typer","requests","python-fasthtml","python-docx","pymupdf","scikit-learn","numpy"],\n    classifiers=[\n        "Programming Language :: Python :: 3",\n        "License :: OSI Approved :: MIT License",\n        "Operating System :: OS Independent",\n    ],\n)' > setup.py
+  cd /tmp/ailabkit-pypi && printf 'from setuptools import setup, find_packages\n\nwith open("README.md", "r") as f:\n    long_description = f.read()\n\nsetup(\n    name="ailabkit",\n    version="0.1.0",\n    description="AI Learning Lab Toolkit for classrooms",\n    long_description=long_description,\n    long_description_content_type="text/markdown",\n    author="Michael Borck",\n    author_email="michael@borck.me",\n    url="https://github.com/teaching-repositories/ailabkit",\n    packages=find_packages(),\n    install_requires=["typer","requests","python-fasthtml","python-docx","pymupdf","scikit-learn","numpy"],\n    classifiers=[\n        "Programming Language :: Python :: 3",\n        "License :: OSI Approved :: MIT License",\n        "Operating System :: OS Independent",\n    ],\n)' > setup.py
   cd /tmp/ailabkit-pypi && python setup.py sdist
   cd /tmp/ailabkit-pypi && twine upload dist/*
-  echo "✅ Release $$version published!"
+  echo "✅ Release 0.1.0 published!"
 
 # 🚀 Publish a new release to TestPyPI
 release-test:
