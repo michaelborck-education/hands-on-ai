@@ -1,5 +1,5 @@
 """
-Basic test script for the ailabkit package.
+Basic test script for the hands_on_ai package.
 """
 
 import os
@@ -13,20 +13,20 @@ def test_imports():
     print("Testing imports...")
     
     # Test main package
-    import ailabkit
-    print(f"✅ Successfully imported ailabkit {ailabkit.__name__}")
+    import hands_on_ai
+    print(f"✅ Successfully imported hands_on_ai {hands_on_ai.__name__}")
     
     # Test chat module
-    from ailabkit import chat
-    print(f"✅ Successfully imported ailabkit.chat {chat.__name__}")
+    from hands_on_ai import chat
+    print(f"✅ Successfully imported hands_on_ai.chat {chat.__name__}")
     
     # Test RAG module
-    from ailabkit import rag
-    print(f"✅ Successfully imported ailabkit.rag {rag.__name__}")
+    from hands_on_ai import rag
+    print(f"✅ Successfully imported hands_on_ai.rag {rag.__name__}")
     
     # Test agent module
-    from ailabkit import agent
-    print(f"✅ Successfully imported ailabkit.agent {agent.__name__}")
+    from hands_on_ai import agent
+    print(f"✅ Successfully imported hands_on_ai.agent {agent.__name__}")
     
     print("All imports successful!")
 
@@ -36,15 +36,15 @@ def test_chat():
     print("\nTesting chat module...")
     
     # Import bot functions
-    from ailabkit.chat import friendly_bot
+    from hands_on_ai.chat import friendly_bot
     print(f"✅ Successfully imported friendly_bot {friendly_bot.__name__}")
     
     # Test importing from categories
-    from ailabkit.chat.personalities.creative import pirate_bot
+    from hands_on_ai.chat.personalities.creative import pirate_bot
     print(f"✅ Successfully imported pirate_bot {pirate_bot.__name__}")
     
     # Test importing directly from bot file
-    from ailabkit.chat.personalities.bots.teacher_bot import teacher_bot
+    from hands_on_ai.chat.personalities.bots.teacher_bot import teacher_bot
     print(f"✅ Successfully imported teacher_bot {teacher_bot.__name__}")
     
     print("Chat module tests passed!")
@@ -54,7 +54,7 @@ def test_config():
     """Test configuration functionality."""
     print("\nTesting configuration...")
     
-    from ailabkit.config import (
+    from hands_on_ai.config import (
         get_server_url,
         get_model,
         get_embedding_model,
@@ -70,7 +70,7 @@ def test_config():
 
 
 if __name__ == "__main__":
-    print("Running basic tests for ailabkit package...\n")
+    print("Running basic tests for hands-on-ai package...\n")
     test_imports()
     test_chat()
     test_config()

@@ -2,9 +2,9 @@
 Bot personalities for the chat module.
 
 You can import:
-1. Individual bots directly: from ailabkit.chat.personalities.bots import friendly_bot
-2. Categories of bots: from ailabkit.chat.personalities.creative import *
-3. All bots (this module): from ailabkit.chat.personalities import *
+1. Individual bots directly: from hands_on_ai.chat.personalities.bots import friendly_bot
+2. Categories of bots: from hands_on_ai.chat.personalities.creative import *
+3. All bots (this module): from hands_on_ai.chat.personalities import *
 """
 
 # Import individual bots for direct access

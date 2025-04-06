@@ -1,7 +1,7 @@
-site_name: AiLabKit Documentation
-site_url: https://github.com/teaching-repositories/ailabkit
-repo_url: https://github.com/teaching-repositories/ailabkit
-repo_name: teaching-repositories/ailabkit
+site_name: HandsOnAI Documentation
+site_url: https://github.com/teaching-repositories/hands-on-ai
+repo_url: https://github.com/teaching-repositories/hands-on-ai
+repo_name: teaching-repositories/hands-on-ai
 edit_uri: edit/main/docs/
 theme:
   name: material
@@ -64,7 +64,7 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
-          paths: ["ailabkit"]
+          paths: ["hands_on_ai"]
           options:
             docstring_style: google
             show_signature: false
@@ -82,7 +82,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/teaching-repositories/ailabkit
+      link: https://github.com/teaching-repositories/hands-on-ai
 
 extra_css:
   - stylesheets/custom.css

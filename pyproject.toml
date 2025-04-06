@@ -3,9 +3,9 @@ requires = ["flit_core>=3.4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "ailabkit"
+name = "hands-on-ai"
 version = "0.1.0"
-description = "AI Learning Lab Toolkit for classrooms"
+description = "Hands-on AI Toolkit for classrooms"
 authors = [
   { name = "Michael Borck", email = "michael@borck.me" }
 ]
@@ -23,13 +23,13 @@ dependencies = [
 ]
 
 [project.scripts]
-ailabkit = "ailabkit.cli:app"
-chat = "ailabkit.chat.cli:app"
-rag = "ailabkit.rag.cli:app"
-agent = "ailabkit.agent.cli:app"
+handsonai = "hands_on_ai.cli:app"
+chat = "hands_on_ai.chat.cli:app"
+rag = "hands_on_ai.rag.cli:app"
+agent = "hands_on_ai.agent.cli:app"
 
 [tool.flit.module]
-name = "ailabkit"
+name = "hands_on_ai"
 
 # Keep optional dependencies for backward compatibility and development
 [project.optional-dependencies]
@@ -53,16 +53,16 @@ dev = [
 where = ["src"]
 
 [tool.setuptools.package-data]
-"ailabkit" = [
+"hands_on_ai" = [
     "chat/data/*.json",
     "rag/data/samples/*"
 ]
 
 [project.urls]
-Homepage = "https://github.com/teaching-repositories/ailabkit"
-Documentation = "https://github.com/teaching-repositories/ailabkit"
-Source = "https://github.com/teaching-repositories/ailabkit"
-Issues = "https://github.com/teaching-repositories/ailabkit"
+Homepage = "https://github.com/teaching-repositories/hands-on-ai"
+Documentation = "https://github.com/teaching-repositories/hands-on-ai"
+Source = "https://github.com/teaching-repositories/hands-on-ai"
+Issues = "https://github.com/teaching-repositories/hands-on-ai"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]

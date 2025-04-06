@@ -1,4 +1,4 @@
-# ailabkit: Your AI Learning Lab
+# HandsOnAI: Your AI Learning Lab
 
 [![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
 [![MIT License](https://img.shields.io/badge/licence-MIT-green.svg)](https://opensource.org/licenses/MIT)
@@ -7,7 +7,7 @@
 
 > AI learning made simple for students and educators
 
-ailabkit is a unified educational toolkit designed to teach students how modern AI systems work — by building and interacting with them directly.
+HandsOnAI is a unified educational toolkit designed to teach students how modern AI systems work — by building and interacting with them directly.
 
 It provides a clean, modular structure that introduces core AI concepts progressively through three tools:
 
@@ -21,13 +21,13 @@ It provides a clean, modular structure that introduces core AI concepts progress
 
 Each module is:
 - 🔌 Self-contained
-- 🧩 Installable via one package: `pip install ailabkit`
+- 🧩 Installable via one package: `pip install hands-on-ai`
 - 🧠 Designed for progressive learning
 
 ## 🗂 Project Structure
 
 ```
-ailabkit/
+hands_on_ai/
 ├── chat/           ← A simple prompt/response chatbot
 ├── rag/            ← Ask questions using your own documents
 ├── agent/          ← Agent reasoning + tools (ReAct-style)
@@ -50,10 +50,10 @@ Each tool teaches a different level of modern AI interaction:
 
 ```bash
 # Install from PyPI
-pip install ailabkit
+pip install hands-on-ai
 
 # Or directly from GitHub
-pip install git+https://github.com/teaching-repositories/ailabkit.git
+pip install git+https://github.com/teaching-repositories/hands-on-ai.git
 ```
 
 ### Prerequisites
@@ -66,14 +66,14 @@ pip install git+https://github.com/teaching-repositories/ailabkit.git
 Run a local Ollama server, then import and start chatting:
 
 ```python
-from ailabkit.chat import pirate_bot
+from hands_on_ai.chat import pirate_bot
 print(pirate_bot("What is photosynthesis?"))
 ```
 
 For more options:
 
 ```python
-from ailabkit.chat import get_response, friendly_bot, pirate_bot
+from hands_on_ai.chat import get_response, friendly_bot, pirate_bot
 
 # Basic usage with default model
 response = get_response("Tell me about planets")

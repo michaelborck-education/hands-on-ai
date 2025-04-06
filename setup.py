@@ -3,9 +3,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="ailabkit",
+    name="hands-on-ai",
     version="0.1.0",
-    description="AI Learning Lab Toolkit for classrooms",
+    description="Hands-on AI Toolkit for classrooms",
     author="Michael Borck",
     author_email="michael@borck.me",
     license="MIT",
@@ -22,10 +22,10 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "ailabkit=ailabkit.cli:app",
-            "chat=ailabkit.chat.cli:app",
-            "rag=ailabkit.rag.cli:app",
-            "agent=ailabkit.agent.cli:app",
+            "handsonai=hands_on_ai.cli:app",
+            "chat=hands_on_ai.chat.cli:app",
+            "rag=hands_on_ai.rag.cli:app",
+            "agent=hands_on_ai.agent.cli:app",
         ],
     },
     python_requires=">=3.8",

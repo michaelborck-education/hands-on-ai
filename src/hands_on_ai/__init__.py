@@ -1,5 +1,5 @@
 """
-ailabkit: Your AI Learning Lab Toolkit
+hands_on_ai: Your Hands-on AI Toolkit
 
 A modular toolkit for learning AI concepts through hands-on experimentation.
 """

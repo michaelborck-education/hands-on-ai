@@ -34,7 +34,7 @@ def load_text_file(path: Path) -> str:
         try:
             import docx
         except ImportError:
-            raise ImportError("Please install `python-docx` to use .docx files. Try: pip install ailabkit[rag]")
+            raise ImportError("Please install `python-docx` to use .docx files. Try: pip install hands-on-ai[rag]")
         doc = docx.Document(path)
         return "\n".join(p.text for p in doc.paragraphs if p.text.strip())
 
@@ -42,7 +42,7 @@ def load_text_file(path: Path) -> str:
         try:
             import fitz  # PyMuPDF
         except ImportError:
-            raise ImportError("Please install `pymupdf` to use .pdf files. Try: pip install ailabkit[rag]")
+            raise ImportError("Please install `pymupdf` to use .pdf files. Try: pip install hands-on-ai[rag]")
         with fitz.open(path) as doc:
             return "\n".join(page.get_text() for page in doc)
 
@@ -164,7 +164,7 @@ def get_sample_docs_path():
     """
     try:
         # For Python 3.9+
-        with importlib.resources.path('ailabkit.rag.data', 'samples') as path:
+        with importlib.resources.path('hands_on_ai.rag.data', 'samples') as path:
             return path
     except Exception:
         # Fallback for older Python or direct file access
