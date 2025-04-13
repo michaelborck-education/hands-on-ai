@@ -92,6 +92,15 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## LLM Ready
+
+This package is LLM-ready with a comprehensive guide for Large Language Models to understand its functionality. See the [LLM Guide](docs/llm-guide.md) for detailed API references, usage examples, and best practices.
+
+For best results when working with an LLM:
+1. Download the LLM guide file
+2. Upload it to your LLM interface/chat at the beginning of your conversation
+3. The LLM will now have detailed knowledge about the package's structure and capabilities
+
 ## Acknowledgments
 
 - Built with education in mind
