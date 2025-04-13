@@ -1,6 +1,6 @@
 {
-    "version": "0.1.0",
-    "updated": "2025-03-28",
-    "notes": "Initial public release with bot personalities, fallback support, and project browser."
+    "version": "0.1.2",
+    "updated": "2025-04-13",
+    "notes": "Add LLM guide and LLM-ready features"
   }
   

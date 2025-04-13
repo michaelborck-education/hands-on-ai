@@ -12,7 +12,7 @@ A collaborative writing tool that helps students develop stories, poems, or essa
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 
 def writing_partner():
     """Interactive creative writing assistant"""

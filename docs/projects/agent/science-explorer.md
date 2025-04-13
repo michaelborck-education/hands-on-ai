@@ -9,7 +9,7 @@
 Use the agent as a science learning companion to explore elements, mathematical properties, and scientific concepts.
 
 ## Instructions
-1. Launch the agent using `ailabkit agent interactive`
+1. Launch the agent using `hands-on-ai agent interactive`
 2. Explore the periodic table tool by asking about different elements:
    - "Tell me about oxygen"
    - "What's the atomic number of gold?"

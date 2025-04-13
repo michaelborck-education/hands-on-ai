@@ -8,7 +8,7 @@ def your_bot_name(prompt):
     One-line summary of your bot's personality.
 
     ```python
-    from ailabkit.chat import your_bot_name
+    from hands_on_ai.chat import your_bot_name
     response = your_bot_name("Ask me anything")
     print(response)
     ```

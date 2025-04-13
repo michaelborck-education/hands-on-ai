@@ -9,7 +9,7 @@
 Build a helpful unit conversion assistant that can convert between different measurement systems.
 
 ## Instructions
-1. Launch the agent using `ailabkit agent interactive`
+1. Launch the agent using `hands-on-ai agent interactive`
 2. Explore the different conversion tools by asking the agent about them
 3. Test basic conversions like "Convert 5 miles to kilometers" or "How many kilograms is 150 pounds?"
 4. Try more complex queries like "If my recipe needs 350g of flour but I only have a cup measure, how much should I use?"

@@ -1,6 +1,6 @@
 # Mini-Projects Overview
 
-AiLabKit mini-projects are designed to provide hands-on learning experiences with large language models across different application types. These projects range from beginner to advanced levels and cover the various modules in AiLabKit.
+Hands-On AI mini-projects are designed to provide hands-on learning experiences with large language models across different application types. These projects range from beginner to advanced levels and cover the various modules in Hands-On AI.
 
 ## Project Structure
 

@@ -12,7 +12,7 @@ Create a specialised tutor bot for a specific subject area that can explain conc
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 import time
 
 def tutor_bot():

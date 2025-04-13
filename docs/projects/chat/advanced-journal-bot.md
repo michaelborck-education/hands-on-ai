@@ -12,7 +12,7 @@ Create a comprehensive journaling application that combines structured mood trac
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 import datetime
 import os
 import json

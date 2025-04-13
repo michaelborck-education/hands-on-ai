@@ -12,7 +12,7 @@ Create a new bot personality that responds in a unique way — like a movie char
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 
 # Example bot personality
 def cat_bot(prompt):

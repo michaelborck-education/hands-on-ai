@@ -1,6 +1,6 @@
-# Setting Up Ollama for AiLabKit
+# Setting Up Ollama for Hands-On AI
 
-This guide will walk you through the simple process of setting up Ollama on your local machine to power your AiLabKit projects.
+This guide will walk you through the simple process of setting up Ollama on your local machine to power your Hands-On AI projects.
 
 
 Great instinct! Since the docstring update was already complete, there's no change needed in your Python code.
@@ -11,9 +11,9 @@ Now, for your **Ollama guide**, here’s what you can add based on your idea:
 
 ## 🧭 Who Is This Guide For?
 
-This guide is written for **beginners** who want to run AiLabKit with a local LLM using [Ollama](https://ollama.com). If you're an educator or student new to large language models, this will walk you through everything step by step.
+This guide is written for **beginners** who want to run Hands-On AI with a local LLM using [Ollama](https://ollama.com). If you're an educator or student new to large language models, this will walk you through everything step by step.
 
-If you're an advanced user with an existing Ollama setup (custom models, non-default ports, Docker, remote hosting), feel free to skip this guide — AiLabKit will work as long as your Ollama server is reachable.
+If you're an advanced user with an existing Ollama setup (custom models, non-default ports, Docker, remote hosting), feel free to skip this guide — Hands-On AI will work as long as your Ollama server is reachable.
 
 
 ## What is Ollama?
@@ -93,10 +93,10 @@ No additional configuration is required unless you've changed Ollama's default s
 > ollama run llama3
 > ```
 >
-You can test AiLabKit in Python with:
+You can test Hands-On AI in Python with:
 >
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 print(get_response("What is 3 + 4?"))
 ```
 
@@ -108,7 +108,7 @@ You should get a real-time AI response!
 
 > ### ⚙️ Advanced: Custom Model Host
 
-If you're running Ollama on a different host or port (e.g. remote or Docker), you can create a config file to tell AiLabKit where to send requests.  
+If you're running Ollama on a different host or port (e.g. remote or Docker), you can create a config file to tell Hands-On AI where to send requests.  
 
 See: [docs/configuration.md](configuration.md) for advanced setup.
 
@@ -116,7 +116,7 @@ See: [docs/configuration.md](configuration.md) for advanced setup.
 
 ### "Connection refused" error
 
-If AiLabKit shows a connection error:
+If Hands-On AI shows a connection error:
 1. Make sure Ollama is running
 2. Check that you haven't changed the default port (11434)
 3. On Windows or macOS, you might need to restart the Ollama application
@@ -160,8 +160,8 @@ For more detailed information about Ollama, visit their official documentation a
 - [RAG Module Guide](rag-guide.md) - Learn about using the RAG module with Ollama
 - [Agent Module Guide](agent-guide.md) - Learn about using the agent module with Ollama
 - [Configuration Guide](configuration.md) - Advanced configuration options
-- [Education Guide](education-guide.md) - Use AiLabKit in educational settings
+- [Education Guide](education-guide.md) - Use Hands-On AI in educational settings
 
 ---
 
-Now that you have Ollama set up, you're ready to use AiLabKit and start creating your own AI educational experiences!
+Now that you have Ollama set up, you're ready to use Hands-On AI and start creating your own AI educational experiences!

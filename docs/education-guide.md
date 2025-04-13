@@ -1,8 +1,8 @@
-# AiLabKit: Education Guide
+# Hands-On AI: Education Guide
 
 > "LLMs made simple for students and educators"
 
-This guide provides educational rationale, classroom implementation strategies, and learning objectives for using AiLabKit in various educational settings.
+This guide provides educational rationale, classroom implementation strategies, and learning objectives for using Hands-On AI in various educational settings.
 
 ## Educational Value
 

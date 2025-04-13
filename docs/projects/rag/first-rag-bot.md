@@ -13,18 +13,18 @@ Learn how to use the `rag` CLI to index documents and create a simple Retrieval-
 ### Step 1: Set up your environment
 1. Install the `rag` CLI tool:
    ```bash
-   pip install ailabkit
+   pip install hands-on-ai
    ```
 2. Ensure you have access to the `testdata/demo_notes/` directory or prepare your own documents
 
 ### Step 2: Index your documents
 1. Browse through the available demo documents:
    ```bash
-   ls ailabkit/testdata/demo_notes/
+   ls hands_on_ai/testdata/demo_notes/
    ```
 2. Create an index of all documents in the demo notes directory:
    ```bash
-   rag index ailabkit/testdata/demo_notes/
+   rag index hands_on_ai/testdata/demo_notes/
    ```
 3. Observe the output showing how many files were found and processed, and note the name of the saved index file (e.g., `sample_index.npz`)
 

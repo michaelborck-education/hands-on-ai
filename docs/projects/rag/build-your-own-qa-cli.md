@@ -12,7 +12,7 @@ Create a command-line interface (CLI) tool that implements Retrieval-Augmented G
 
 1. **Setup Your Environment**
    - Ensure you have Python 3.7+ installed
-   - Install the required libraries: `ailabkit` and `numpy`
+   - Install the required libraries: `hands-on-ai` and `numpy`
 
 2. **Understanding the Components**
    - Learn how RAG combines retrieval and generation
@@ -36,8 +36,8 @@ Create a command-line interface (CLI) tool that implements Retrieval-Augmented G
 
    import argparse
    import numpy as np
-   from ailabkit.chat import get_response
-   from ailabkit.rag.utils import embed_query, get_top_k
+   from hands_on_ai.chat import get_response
+   from hands_on_ai.rag.utils import embed_query, get_top_k
 
    def load_index(index_path):
        """Load chunked documents and their embeddings from an .npz file"""

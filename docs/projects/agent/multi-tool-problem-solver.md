@@ -9,7 +9,7 @@
 Challenge the agent to solve complex problems that require using multiple tools together in creative ways.
 
 ## Instructions
-1. Launch the agent using `ailabkit agent interactive`
+1. Launch the agent using `hands-on-ai agent interactive`
 2. Create 3 multi-step problems that each require at least 2 different tools. For example:
    - "If I drive 65 miles at 55 mph, then walk 3 kilometers, how many minutes will my journey take in total?"
    - "I need to mix a solution that's 35% acid. If I have 200ml of 50% acid solution, how much water should I add?"

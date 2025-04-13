@@ -1,6 +1,6 @@
 # Project Gallery
 
-This page lists all the mini-projects available in AiLabKit, organized by module.
+This page lists all the mini-projects available in Hands-On AI, organized by module.
 
 ## Chat Projects
 

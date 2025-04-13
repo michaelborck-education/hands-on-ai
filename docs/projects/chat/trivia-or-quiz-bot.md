@@ -12,7 +12,7 @@ Build an interactive quiz bot that asks questions, tracks the user's score, prov
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 import random
 
 def create_quiz_bot():

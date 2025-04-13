@@ -12,7 +12,7 @@ Create an interactive dashboard that allows users to visualise and explore data 
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 import pandas as pd
 import matplotlib.pyplot as plt
 from io import BytesIO

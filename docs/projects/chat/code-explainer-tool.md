@@ -12,7 +12,7 @@ Create a tool that explains code snippets and helps users understand programming
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 import sys
 
 def code_explainer():

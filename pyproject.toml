@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "hands-on-ai"
-version = "0.1.0"
+version = "0.1.2"
 description = "Hands-on AI Toolkit for classrooms"
 authors = [
   { name = "Michael Borck", email = "michael@borck.me" }
@@ -39,7 +39,7 @@ agent = []
 dev = [
   "pytest",
   "build",
-  "twine",
+  "twine==6.0.1",
   "cython",
   "ruff",
   "mkdocs",

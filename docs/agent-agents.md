@@ -1,6 +1,6 @@
 # Agent Modules Reference
 
-The Agent system in AiLabKit includes several specialized agent modules, each focused on different domains of functionality. Each agent module registers a set of related tools that can be used together to solve specific types of problems.
+The Agent system in Hands-On AI includes several specialized agent modules, each focused on different domains of functionality. Each agent module registers a set of related tools that can be used together to solve specific types of problems.
 
 ## Calculator Agent
 
@@ -239,14 +239,14 @@ Total: 364 days
 There are 85 days until 2023-12-25 (about 12 weeks)
 ```
 
-## Using Agents in AiLabKit
+## Using Agents in Hands-On AI
 
-Agents are collections of related tools designed to work together. When you run the AiLabKit agent system, it has access to all these specialized agents and can choose the appropriate tools based on the task.
+Agents are collections of related tools designed to work together. When you run the Hands-On AI agent system, it has access to all these specialized agents and can choose the appropriate tools based on the task.
 
 ### Via Python API
 
 ```python
-from ailabkit.agent import run_agent
+from hands_on_ai.agent import run_agent
 
 response = run_agent("Convert 25 degrees Celsius to Fahrenheit and tell me if it's hot or cold.")
 print(response)
@@ -264,4 +264,4 @@ In both cases, the agent system will:
 3. Execute the tools with the correct parameters
 4. Combine the results into a coherent response
 
-This modular agent system allows AiLabKit to handle a wide range of tasks with specialized, purpose-built tools that can work together seamlessly.
+This modular agent system allows Hands-On AI to handle a wide range of tasks with specialized, purpose-built tools that can work together seamlessly.

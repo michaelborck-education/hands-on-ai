@@ -1,27 +1,27 @@
-# 🧠 AiLabKit RAG: Ask Questions About Your Documents
+# 🧠 Hands-On AI RAG: Ask Questions About Your Documents
 
-[![](https://img.shields.io/badge/CLI-AiLabKit_RAG-blue)](#cli-usage)
+[![](https://img.shields.io/badge/CLI-Hands_On_AI_RAG-blue)](#cli-usage)
 
-The RAG module is a lightweight tool to turn your documents into an AI-powered knowledge base using Retrieval-Augmented Generation (RAG). It's part of the AiLabKit ecosystem.
+The RAG module is a lightweight tool to turn your documents into an AI-powered knowledge base using Retrieval-Augmented Generation (RAG). It's part of the Hands-On AI ecosystem.
 
 ---
 
-![AiLabKit RAG Web Interface](assets/ragcraft-web-preview.png)
+![Hands-On AI RAG Web Interface](assets/ragcraft-web-preview.png)
 
 ---
 
 ## 🚀 How to Use
 
-### ✅ Install AiLabKit with RAG support
+### ✅ Install Hands-On AI with RAG support
 
 ```bash
-pip install ailabkit
+pip install hands-on-ai
 ```
 
 Or with `uv`:
 
 ```bash
-uv pip install ailabkit
+uv pip install hands-on-ai
 ```
 
 ---
@@ -29,18 +29,18 @@ uv pip install ailabkit
 ## CLI Usage
 
 ```bash
-ailabkit rag index notes/       # Build index from folder or file
-ailabkit rag ask "What is TCP?" # Ask a question
-ailabkit rag interactive        # Start interactive Q&A mode
-ailabkit rag web                # Launch the web interface
+hands-on-ai rag index notes/       # Build index from folder or file
+hands-on-ai rag ask "What is TCP?" # Ask a question
+hands-on-ai rag interactive        # Start interactive Q&A mode
+hands-on-ai rag web                # Launch the web interface
 ```
 
 ---
 
 ## 📁 Where Indexes Are Stored
 
-- CLI default: `~/.ailabkit/rag_index/default.npz`
-- Web UI default: `~/.ailabkit/rag_index/web_index.npz`
+- CLI default: `~/.hands_on_ai/rag_index/default.npz`
+- Web UI default: `~/.hands_on_ai/rag_index/web_index.npz`
 
 You can override using `--output-file` or `--index-path`.
 
@@ -48,10 +48,10 @@ You can override using `--output-file` or `--index-path`.
 
 ## 🧪 Try It With Sample Documents
 
-AiLabKit comes with built-in sample documents to help you get started. You can access these programmatically:
+Hands-On AI comes with built-in sample documents to help you get started. You can access these programmatically:
 
 ```python
-from ailabkit.rag import list_sample_docs, get_sample_docs_path, copy_sample_docs
+from hands_on_ai.rag import list_sample_docs, get_sample_docs_path, copy_sample_docs
 
 # List all available sample files
 print(list_sample_docs())
@@ -69,13 +69,13 @@ Or from the command line:
 
 ```bash
 # Copy the sample documents to your current directory
-python -c "from ailabkit.rag import copy_sample_docs; copy_sample_docs()"
+python -c "from hands_on_ai.rag import copy_sample_docs; copy_sample_docs()"
 
 # Create an index from the sample documents
-ailabkit rag index sample_docs/
+hands-on-ai rag index sample_docs/
 
 # Ask questions about your samples
-ailabkit rag ask "What is in the sample documents?"
+hands-on-ai rag ask "What is in the sample documents?"
 ```
 
 ---
@@ -110,13 +110,13 @@ just rag-web
 Launch a web interface to ask questions about your documents:
 
 ```bash
-ailabkit rag web
+hands-on-ai rag web
 ```
 
 By default, the interface is only accessible from your local machine. To make it accessible from other devices on your network:
 
 ```bash
-ailabkit rag web --public
+hands-on-ai rag web --public
 ```
 
 > ⚠️ When using the `--public` flag, the interface will be accessible to anyone on your network. Use with caution.
@@ -124,7 +124,7 @@ ailabkit rag web --public
 You can also specify a custom port (default is 8001):
 
 ```bash
-ailabkit rag web --port 8888
+hands-on-ai rag web --port 8888
 ```
 
 ---
@@ -133,16 +133,16 @@ ailabkit rag web --port 8888
 
 ```bash
 # Copy sample documents
-python -c "from ailabkit.rag import copy_sample_docs; copy_sample_docs('demo')"
+python -c "from hands_on_ai.rag import copy_sample_docs; copy_sample_docs('demo')"
 
 # Build index from the documents
-ailabkit rag index demo/
+hands-on-ai rag index demo/
 
 # Ask questions
-ailabkit rag ask "What is RAG?" --show-context
+hands-on-ai rag ask "What is RAG?" --show-context
 
 # Launch the web interface
-ailabkit rag web
+hands-on-ai rag web
 ```
 
 ---
@@ -152,7 +152,7 @@ ailabkit rag web
 ```python
 import os
 from pathlib import Path
-from ailabkit.rag import (
+from hands_on_ai.rag import (
     load_text_file, 
     chunk_text, 
     get_embeddings, 
@@ -201,7 +201,7 @@ for chunk, source in results:
 - [Chat Module Guide](chat-guide.md) - Learn about the chat module
 - [Agent Module Guide](agent-guide.md) - Learn about the agent module
 - [Ollama Setup Guide](ollama-guide.md) - Set up local models with Ollama
-- [Mini Projects](projects/index.md) - Example projects using AiLabKit
+- [Mini Projects](projects/index.md) - Example projects using Hands-On AI
 
 ---
 

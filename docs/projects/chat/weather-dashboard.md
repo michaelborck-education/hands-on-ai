@@ -16,7 +16,7 @@ import requests
 import matplotlib.pyplot as plt
 import os
 from datetime import datetime, timedelta
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 
 class WeatherDashboard:
     """

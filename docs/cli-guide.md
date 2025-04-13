@@ -1,15 +1,15 @@
-# AiLabKit Command Line Interface (CLI)
+# Hands-On AI Command Line Interface (CLI)
 
-This document provides a reference for the command-line interfaces in AiLabKit. The toolkit provides several CLI commands for different modules.
+This document provides a reference for the command-line interfaces in Hands-On AI. The toolkit provides several CLI commands for different modules.
 
-## Main CLI (ailabkit)
+## Main CLI (hands-on-ai)
 
-The main `ailabkit` command provides access to global functions and serves as an entry point to the module-specific commands.
+The main `hands-on-ai` command provides access to global functions and serves as an entry point to the module-specific commands.
 
 ```bash
-Usage: ailabkit [OPTIONS] COMMAND [ARGS]...
+Usage: hands-on-ai [OPTIONS] COMMAND [ARGS]...
 
-  AI Learning Lab Toolkit
+  Hands-On AI Toolkit
 
 Options:
   --install-completion  Install completion for the current shell.
@@ -28,16 +28,16 @@ Commands:
 
 ```bash
 # Check system configuration
-ailabkit doctor
+hands-on-ai doctor
 
 # View and edit configuration
-ailabkit config
+hands-on-ai config
 
 # List all available modules
-ailabkit list
+hands-on-ai list
 
 # Check version
-ailabkit version
+hands-on-ai version
 ```
 
 ## Chat Module CLI (chat)
@@ -130,7 +130,7 @@ Arguments:
   INPUT_PATH  File or directory to index [required]
 
 Options:
-  --output-file TEXT          Output index file (default: ~/.ailabkit/index.npz)
+  --output-file TEXT          Output index file (default: ~/.hands-on-ai/index.npz)
   --chunk-size INTEGER        Words per chunk (default: from config)
   --force / --no-force        Overwrite existing index [default: no-force]
   --help                      Show this message and exit.
@@ -180,4 +180,4 @@ agent web
 2. Use tab completion (if installed) for easier navigation
 3. The web interfaces provide a graphical alternative to the command-line
 4. The interactive modes (REPL) allow for multi-turn conversations
-5. Configure settings in `~/.ailabkit/config.json` or with the `ailabkit config` command
+5. Configure settings in `~/.hands_on_ai/config.json` or with the `hands-on-ai config` command

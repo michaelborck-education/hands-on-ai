@@ -1,6 +1,6 @@
 # Agent Module Guide
 
-The Agent module in AiLabKit provides a powerful way to create AI assistants that can use tools to accomplish tasks. This guide will help you understand how to use the Agent module effectively.
+The Agent module in Hands-On AI provides a powerful way to create AI assistants that can use tools to accomplish tasks. This guide will help you understand how to use the Agent module effectively.
 
 ## What is an Agent?
 
@@ -21,7 +21,7 @@ The Agent module provides a command-line interface with several commands:
 ### Ask a question
 
 ```bash
-ailabkit agent ask "What is 3 * 14?"
+hands-on-ai agent ask "What is 3 * 14?"
 ```
 
 This runs the agent with a single question and returns the response.
@@ -29,7 +29,7 @@ This runs the agent with a single question and returns the response.
 ### Interactive mode
 
 ```bash
-ailabkit agent interactive
+hands-on-ai agent interactive
 ```
 
 This starts an interactive session where you can have a conversation with the agent.
@@ -37,7 +37,7 @@ This starts an interactive session where you can have a conversation with the ag
 ### Web interface
 
 ```bash
-ailabkit agent web
+hands-on-ai agent web
 ```
 
 This launches a web interface for the agent, accessible in your browser.
@@ -45,7 +45,7 @@ This launches a web interface for the agent, accessible in your browser.
 By default, the interface is only accessible from your local machine. To make it accessible from other devices on your network:
 
 ```bash
-ailabkit agent web --public
+hands-on-ai agent web --public
 ```
 
 > ⚠️ When using the `--public` flag, the interface will be accessible to anyone on your network. Use with caution.
@@ -53,13 +53,13 @@ ailabkit agent web --public
 You can also specify a custom port (default is 8002):
 
 ```bash
-ailabkit agent web --port 8888
+hands-on-ai agent web --port 8888
 ```
 
 ### List available tools
 
 ```bash
-ailabkit agent tools
+hands-on-ai agent tools
 ```
 
 This lists all tools available to the agent.
@@ -157,7 +157,7 @@ Tools for educational purposes:
 You can extend the Agent with your own custom tools. Here's a simple example:
 
 ```python
-from ailabkit.agent import register_tool
+from hands_on_ai.agent import register_tool
 
 def random_number(min_val=0, max_val=100):
     """Generate a random number in the given range."""
@@ -220,4 +220,4 @@ Here are some examples of what you can do with the Agent module:
 - [Chat Module Guide](chat-guide.md) - Learn about the chat module
 - [RAG Module Guide](rag-guide.md) - Learn about the RAG module
 - [Ollama Setup Guide](ollama-guide.md) - Set up local models with Ollama
-- [Education Guide](education-guide.md) - Use AiLabKit in educational settings
+- [Education Guide](education-guide.md) - Use Hands-On AI in educational settings

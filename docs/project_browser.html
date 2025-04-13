@@ -11,8 +11,8 @@
     <script>hljs.highlightAll();</script>
 </head>
 <body class='bg-gray-50 p-6'>
-    <h1 class='text-2xl font-bold mb-4'>AiLabKit Project Browser</h1>
-    <p class='mb-4'>Generated: 2025-03-31 15:05 v0.1.0 <span id="latest-version">📁 Offline version. Visit <a href="https://github.com/teaching-repositories/ailabkit" target="_blank">AiLabKit GitHub</a> to check for updates.</span></p>
+    <h1 class='text-2xl font-bold mb-4'>Hands-On AI Project Browser</h1>
+    <p class='mb-4'>Generated: 2025-03-31 15:05 v0.1.0 <span id="latest-version">📁 Offline version. Visit <a href="https://github.com/teaching-repositories/hands-on-ai" target="_blank">Hands-On AI GitHub</a> to check for updates.</span></p>
 
     <div class='mb-4 flex flex-col md:flex-row gap-4'>
         <input type='text' id='search' placeholder='Search project title' class='border p-2 rounded w-full md:w-1/3'>
@@ -45,7 +45,7 @@
         </button>
         <div id='content-0' class='hidden p-4 border-t'>
             <h1>Project Gallery</h1>
-<p>This page lists all the mini-projects available in AiLabKit, organized by module.</p>
+<p>This page lists all the mini-projects available in Hands-On AI, organized by module.</p>
 <h2>Chat Projects</h2>
 <p>Chat mini-projects focus on using LLMs for conversational interactions.</p>
 <ul>
@@ -120,17 +120,17 @@
 <ol>
 <li>Install the <code>rag</code> CLI tool:
    <code>bash
-   pip install ailabkit</code></li>
+   pip install hands-on-ai</code></li>
 <li>Ensure you have access to the <code>testdata/demo_notes/</code> directory or prepare your own documents</li>
 </ol>
 <h3>Step 2: Index your documents</h3>
 <ol>
 <li>Browse through the available demo documents:
    <code>bash
-   ls ailabkit/testdata/demo_notes/</code></li>
+   ls hands-on-ai/testdata/demo_notes/</code></li>
 <li>Create an index of all documents in the demo notes directory:
    <code>bash
-   rag index ailabkit/testdata/demo_notes/</code></li>
+   rag index hands-on-ai/testdata/demo_notes/</code></li>
 <li>Observe the output showing how many files were found and processed, and note the name of the saved index file (e.g., <code>sample_index.npz</code>)</li>
 </ol>
 <h3>Step 3: Ask questions using your RAG system</h3>
@@ -208,7 +208,7 @@
 <ol>
 <li><strong>Set up the project:</strong></li>
 <li>Create a new Python script file</li>
-<li>Import the necessary libraries from ailabkit</li>
+<li>Import the necessary libraries from hands-on-ai</li>
 <li>
 <p>Define emoji constants for tagging sources (🧠 = from notes, 🌐 = fallback)</p>
 </li>
@@ -269,8 +269,8 @@
 
 <span class="kn">import</span> <span class="nn">argparse</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
-<span class="kn">from</span> <span class="nn">ailabkit.rag.utils</span> <span class="kn">import</span> <span class="n">embed_query</span><span class="p">,</span> <span class="n">get_top_k</span>
+<span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<span class="kn">from</span> <span class="nn">hands-on-ai.rag.utils</span> <span class="kn">import</span> <span class="n">embed_query</span><span class="p">,</span> <span class="n">get_top_k</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
@@ -452,7 +452,7 @@
 <li><strong>Setup Your Environment</strong></li>
 <li>Ensure you have Python 3.7+ installed</li>
 <li>
-<p>Install the required libraries: <code>ailabkit</code> and <code>numpy</code></p>
+<p>Install the required libraries: <code>hands-on-ai</code> and <code>numpy</code></p>
 </li>
 <li>
 <p><strong>Understanding the Components</strong></p>
@@ -486,8 +486,8 @@
 </ol>
 <p>import argparse
    import numpy as np
-   from ailabkit.chat import get_response
-   from ailabkit.rag.utils import embed_query, get_top_k</p>
+   from hands_on_ai.chat import get_response
+   from hands_on_ai.rag.utils import embed_query, get_top_k</p>
 <p>def load_index(index_path):
        """Load chunked documents and their embeddings from an .npz file"""
        print(f"Loading index from {index_path}...")
@@ -644,7 +644,7 @@
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">fitz</span>  <span class="c1"># PyMuPDF</span>
-<span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="k">class</span> <span class="nc">PDFChatbot</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A chatbot that can answer questions about PDF documents.&quot;&quot;&quot;</span>
@@ -961,7 +961,7 @@
 <p>Build a helpful unit conversion assistant that can convert between different measurement systems.</p>
 <h2>Instructions</h2>
 <ol>
-<li>Launch the agent using <code>ailabkit agent interactive</code></li>
+<li>Launch the agent using <code>hands-on-ai agent interactive</code></li>
 <li>Explore the different conversion tools by asking the agent about them</li>
 <li>Test basic conversions like "Convert 5 miles to kilometers" or "How many kilograms is 150 pounds?"</li>
 <li>Try more complex queries like "If my recipe needs 350g of flour but I only have a cup measure, how much should I use?"</li>
@@ -995,7 +995,7 @@
 <p>Build a text analysis tool that helps evaluate and improve writing by providing metrics and suggestions.</p>
 <h2>Instructions</h2>
 <ol>
-<li>Start the agent using <code>ailabkit agent interactive</code></li>
+<li>Start the agent using <code>hands-on-ai agent interactive</code></li>
 <li>Write a short paragraph (5-7 sentences) on a topic of your choice</li>
 <li>Ask the agent to analyze your text using the word_count tool</li>
 <li>Request a readability analysis of your paragraph</li>
@@ -1033,7 +1033,7 @@
 <p>Use the agent as a science learning companion to explore elements, mathematical properties, and scientific concepts.</p>
 <h2>Instructions</h2>
 <ol>
-<li>Launch the agent using <code>ailabkit agent interactive</code></li>
+<li>Launch the agent using <code>hands-on-ai agent interactive</code></li>
 <li>Explore the periodic table tool by asking about different elements:</li>
 <li>"Tell me about oxygen"</li>
 <li>"What's the atomic number of gold?"</li>
@@ -1073,7 +1073,7 @@
 <p>Challenge the agent to solve complex problems that require using multiple tools together in creative ways.</p>
 <h2>Instructions</h2>
 <ol>
-<li>Launch the agent using <code>ailabkit agent interactive</code></li>
+<li>Launch the agent using <code>hands-on-ai agent interactive</code></li>
 <li>Create 3 multi-step problems that each require at least 2 different tools. For example:</li>
 <li>"If I drive 65 miles at 55 mph, then walk 3 kilometers, how many minutes will my journey take in total?"</li>
 <li>"I need to mix a solution that's 35% acid. If I have 200ml of 50% acid solution, how much water should I add?"</li>
@@ -1149,7 +1149,7 @@
 <p>Use the agent's dictionary tools to explore word meanings, find synonyms and antonyms, and improve your vocabulary.</p>
 <h2>Instructions</h2>
 <ol>
-<li>Start the agent using <code>ailabkit agent interactive</code></li>
+<li>Start the agent using <code>hands-on-ai agent interactive</code></li>
 <li>Choose 5 interesting or unfamiliar words to explore</li>
 <li>For each word, ask the agent to:</li>
 <li>Define the word</li>
@@ -1193,7 +1193,7 @@
 <p>This is a great introduction to how agents work and how they can use tools to solve problems.</p>
 <h2>Implementation</h2>
 <p>Start by importing the necessary modules:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.agent</span> <span class="kn">import</span> <span class="n">run_agent</span><span class="p">,</span> <span class="n">register_tool</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.agent</span> <span class="kn">import</span> <span class="n">run_agent</span><span class="p">,</span> <span class="n">register_tool</span>
 
 <span class="c1"># Define a calculator function</span>
 <span class="k">def</span> <span class="nf">calculator</span><span class="p">(</span><span class="n">expression</span><span class="p">):</span>
@@ -1321,7 +1321,7 @@
 <p>Create a date calculator that helps plan projects, calculate age, and work with calendar-based information.</p>
 <h2>Instructions</h2>
 <ol>
-<li>Start the agent in interactive mode using <code>ailabkit agent interactive</code></li>
+<li>Start the agent in interactive mode using <code>hands-on-ai agent interactive</code></li>
 <li>Explore the date tools by asking questions like:</li>
 <li>"How many days until Christmas?"</li>
 <li>"What's the difference between March 15, 2023 and today?"</li>
@@ -1357,7 +1357,7 @@
 <p>Create a math tutor agent that helps solve arithmetic problems and explains the steps involved.</p>
 <h2>Instructions</h2>
 <ol>
-<li>Start the agent in interactive mode using <code>ailabkit agent interactive</code></li>
+<li>Start the agent in interactive mode using <code>hands-on-ai agent interactive</code></li>
 <li>Ask the agent to solve basic math problems like "What is 24 × 7?" or "Calculate 125 ÷ 5"</li>
 <li>For each problem, ask the agent to explain its reasoning step by step</li>
 <li>Try more complex problems like "If I have 3 boxes with 12 items each, and I add 7 more items, how many do I have total?"</li>
@@ -1430,7 +1430,7 @@
 <h2>Overview</h2>
 <p>Create a digital journaling assistant that helps users reflect on their experiences, identify patterns in their thoughts, and provide meaningful insights or feedback on their entries.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
@@ -1591,7 +1591,7 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
-<span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="k">class</span> <span class="nc">WeatherDashboard</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1984,7 +1984,7 @@
 <h2>Overview</h2>
 <p>Create an interactive dashboard that allows users to visualise and explore data relationships through various chart types. Students will learn data manipulation with pandas and visualisation with matplotlib.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
@@ -2208,7 +2208,7 @@
 <h2>Overview</h2>
 <p>Build a bot that quizzes the user on a topic and tracks their score.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">random</span>
 
 <span class="k">def</span> <span class="nf">generate_questions</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="n">number_of_questions</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
@@ -2310,7 +2310,7 @@
 <h2>Overview</h2>
 <p>Create a new bot personality that responds in a unique way — like a movie character, animal, celebrity, or completely invented creature. Students will learn how to craft system prompts that reflect specific voices or styles.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="c1"># Example bot personality</span>
 <span class="k">def</span> <span class="nf">cat_bot</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
@@ -2386,7 +2386,7 @@
 <h2>Overview</h2>
 <p>Students create and interact with a bot that has a unique personality of their design. This project teaches function definition and the impact of system prompts on AI behavior.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="c1"># Example personalities students can create:</span>
 <span class="k">def</span> <span class="nf">superhero_bot</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
@@ -2454,7 +2454,7 @@
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
-<span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="k">class</span> <span class="nc">SmartTodoList</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -3008,7 +3008,7 @@
 <h2>Overview</h2>
 <p>Create a bot that responds differently based on the user's emotional state, providing tailored support, advice, or encouragement depending on the mood expressed.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="k">def</span> <span class="nf">emotional_support_bot</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Emotional Support Bot ===&quot;</span><span class="p">)</span>
@@ -3131,7 +3131,7 @@
 <h2>Overview</h2>
 <p>Chat with simulated historical figures to learn about their lives, achievements, and time periods.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">random</span>
 
 <span class="k">def</span> <span class="nf">historical_figure_chat</span><span class="p">():</span>
@@ -3221,7 +3221,7 @@
 <h2>Overview</h2>
 <p>Create a comprehensive journaling application that combines structured mood tracking with flexible reflection prompts, offering users deep insights through data visualisation and AI-powered analysis.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">json</span>
@@ -4748,7 +4748,7 @@
 <h2>Overview</h2>
 <p>Create a classroom simulation where students can interact with different characters or experts on various topics, practicing both coding skills and exploring different perspectives.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="k">def</span> <span class="nf">classroom_simulation</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Virtual Classroom Simulation ===&quot;</span><span class="p">)</span>
@@ -4883,7 +4883,7 @@
 <h2>Overview</h2>
 <p>Create a journaling assistant that helps users track moods and reflect on patterns.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">json</span>
@@ -5032,7 +5032,7 @@
 <h2>Overview</h2>
 <p>Create an interactive story where the bot generates narrative segments based on user choices.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="k">def</span> <span class="nf">adventure_game</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Interactive Choose Your Own Adventure game powered by an LLM&quot;&quot;&quot;</span>
@@ -5204,7 +5204,7 @@
 <h2>Overview</h2>
 <p>Create a specialised tutor bot for a specific subject area that can explain concepts and quiz the user.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
 <span class="k">def</span> <span class="nf">tutor_bot</span><span class="p">():</span>
@@ -5392,7 +5392,7 @@
 <h2>Overview</h2>
 <p>A collaborative writing tool that helps students develop stories, poems, or essays.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="k">def</span> <span class="nf">writing_partner</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Interactive creative writing assistant&quot;&quot;&quot;</span>
@@ -5780,7 +5780,7 @@
 <h2>Overview</h2>
 <p>Create a text adventure game engine that allows students to build interactive stories with rooms, items, and characters. The engine supports saving/loading games and provides AI-powered hints to guide players.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
@@ -6262,7 +6262,7 @@
 <h2>Overview</h2>
 <p>Create a flexible menu system that allows users to interact with multiple bot personalities on demand, practicing dictionary management, function mappings, and user interface design.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="k">def</span> <span class="nf">personality_menu</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Bot Personality Menu Generator ===&quot;</span><span class="p">)</span>
@@ -6402,7 +6402,7 @@
 <h2>Instructions</h2>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="k">def</span> <span class="nf">create_image_gallery</span><span class="p">():</span>
@@ -6653,7 +6653,7 @@
 <h2>Overview</h2>
 <p>Build an interactive quiz bot that asks questions, tracks the user's score, provides feedback, and offers hints when needed.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">random</span>
 
 <span class="k">def</span> <span class="nf">create_quiz_bot</span><span class="p">():</span>
@@ -6765,7 +6765,7 @@
 <p>Simulate an interview or debate between multiple bots with different personalities or perspectives, exploring how different characters might approach the same questions or topics.</p>
 <p>This project offers flexibility to run either panel discussions with multiple participants or focused one-on-one debates, allowing students to explore how different personas respond to the same topics.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
 <span class="k">def</span> <span class="nf">ai_persona_dialogue_simulator</span><span class="p">():</span>
@@ -7247,7 +7247,7 @@
 <h2>Overview</h2>
 <p>Create a tool that helps translate text between languages and explains cultural context.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="k">def</span> <span class="nf">translation_helper</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Tool to translate text and explain cultural context&quot;&quot;&quot;</span>
@@ -7401,7 +7401,7 @@
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">argparse</span>
 <span class="kn">from</span> <span class="nn">youtube_transcript_api</span> <span class="kn">import</span> <span class="n">YouTubeTranscriptApi</span>
-<span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 
 <span class="k">def</span> <span class="nf">youtube_to_blog</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert YouTube video transcripts into blog post content using AI.&quot;&quot;&quot;</span>
@@ -7587,7 +7587,7 @@
 <h2>Overview</h2>
 <p>Create a tool that explains code snippets and helps users understand programming concepts.</p>
 <h2>Instructions</h2>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">ailabkit.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">hands-on-ai.chat</span> <span class="kn">import</span> <span class="n">get_response</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="k">def</span> <span class="nf">code_explainer</span><span class="p">():</span>

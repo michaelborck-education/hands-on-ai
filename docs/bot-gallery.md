@@ -1,6 +1,6 @@
-# 🤖 AiLabKit Bot Gallery
+# 🤖 Hands-On AI Bot Gallery
 
-This gallery lists all available personality bots in AiLabKit's chat module. Each bot can be called with a prompt and will respond in its own unique style.
+This gallery lists all available personality bots in Hands-On AI's chat module. Each bot can be called with a prompt and will respond in its own unique style.
 
 Below you'll find each bot's name and its docstring, which includes usage examples, educational applications, and example responses (as written in the docstring).
 

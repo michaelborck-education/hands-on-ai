@@ -15,7 +15,7 @@ Build a smart to-do list application that helps users organise tasks with catego
 import os
 import json
 from datetime import datetime, timedelta
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 
 class SmartTodoList:
     """

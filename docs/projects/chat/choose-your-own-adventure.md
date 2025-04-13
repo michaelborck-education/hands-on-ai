@@ -12,7 +12,7 @@ Create an interactive story where the bot generates narrative segments based on 
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 
 def adventure_game():
     """Interactive Choose Your Own Adventure game powered by an LLM"""

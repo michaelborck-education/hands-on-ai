@@ -1,6 +1,6 @@
-# AiLabKit Project Tools
+# Hands-On AI Project Tools
 
-This directory contains utility scripts used for development, maintenance, and building AiLabKit documentation and resources.
+This directory contains utility scripts used for development, maintenance, and building Hands-On AI documentation and resources.
 
 ## Mini-Projects Tools
 
@@ -51,6 +51,6 @@ just build-browser        # Builds the project browser
 just deploy-docs          # Deploys documentation to GitHub Pages
 ```
 
-These tools are primarily intended for maintainers and contributors. Users of AiLabKit generally do not need to run these scripts directly.
+These tools are primarily intended for maintainers and contributors. Users of Hands-On AI generally do not need to run these scripts directly.
 
-For more information on using AiLabKit, please refer to the [official documentation](https://teaching-repositories.github.io/ailabkit/).
+For more information on using Hands-On AI, please refer to the [official documentation](https://teaching-repositories.github.io/hands-on-ai/).

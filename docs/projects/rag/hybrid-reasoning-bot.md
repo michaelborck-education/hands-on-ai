@@ -12,8 +12,7 @@ Create a bot that intelligently chooses between using your indexed documents (RA
 
 1. **Set up the project:**
    - Create a new Python script file
-   - Import the necessary libraries from ailabkit
-   - Define emoji constants for tagging sources (🧠 = from notes, 🌐 = fallback)
+   - Import the necessary libraries from hands-on-ai - Define emoji constants for tagging sources (🧠 = from notes, 🌐 = fallback)
 
 2. **Implement the index loading function:**
    - Create a function that loads chunks, embeddings, and metadata from an .npz file
@@ -57,8 +56,8 @@ and falls back to general knowledge when necessary.
 
 import argparse
 import numpy as np
-from ailabkit.chat import get_response
-from ailabkit.rag.utils import embed_query, get_top_k
+from hands_on_ai.chat import get_response
+from hands_on_ai.rag.utils import embed_query, get_top_k
 import os
 import time
 

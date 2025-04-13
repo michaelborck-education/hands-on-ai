@@ -9,7 +9,7 @@
 Build a text analysis tool that helps evaluate and improve writing by providing metrics and suggestions.
 
 ## Instructions
-1. Start the agent using `ailabkit agent interactive`
+1. Start the agent using `hands-on-ai agent interactive`
 2. Write a short paragraph (5-7 sentences) on a topic of your choice
 3. Ask the agent to analyze your text using the word_count tool
 4. Request a readability analysis of your paragraph

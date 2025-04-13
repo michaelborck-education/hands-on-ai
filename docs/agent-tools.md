@@ -1,6 +1,6 @@
 # Agent Tools Reference
 
-The Agent module in AiLabKit provides a collection of tools that enable LLMs to perform specific tasks in a tool-using, reasoning framework. These tools are organized into different categories based on their functionality.
+The Agent module in Hands-On AI provides a collection of tools that enable LLMs to perform specific tasks in a tool-using, reasoning framework. These tools are organized into different categories based on their functionality.
 
 ## Core Tools
 
@@ -188,7 +188,7 @@ Converts between weight/mass units.
 - **Example Input**: Value and source/target units
 - **Output**: Converted weight value
 
-## Using Tools in AiLabKit
+## Using Tools in Hands-On AI
 
 Agents can use these tools to assist with tasks by following a reasoning process:
 
@@ -200,7 +200,7 @@ Agents can use these tools to assist with tasks by following a reasoning process
 ### Example Usage
 
 ```python
-from ailabkit.agent import run_agent
+from hands_on_ai.agent import run_agent
 
 # Ask a question that requires tool use
 response = run_agent("What is the atomic weight of oxygen and what is 25 × 16?")

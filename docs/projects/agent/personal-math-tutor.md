@@ -9,7 +9,7 @@
 Create a math tutor agent that helps solve arithmetic problems and explains the steps involved.
 
 ## Instructions
-1. Start the agent in interactive mode using `ailabkit agent interactive`
+1. Start the agent in interactive mode using `hands-on-ai agent interactive`
 2. Ask the agent to solve basic math problems like "What is 24 × 7?" or "Calculate 125 ÷ 5"
 3. For each problem, ask the agent to explain its reasoning step by step
 4. Try more complex problems like "If I have 3 boxes with 12 items each, and I add 7 more items, how many do I have total?"

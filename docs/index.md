@@ -1,6 +1,6 @@
-# Welcome to AiLabKit!
+# Welcome to Hands-On AI!
 
-AiLabKit is a unified educational toolkit designed to teach students how modern AI systems work — by building and interacting with them directly.
+Hands-On AI is a unified educational toolkit designed to teach students how modern AI systems work — by building and interacting with them directly.
 
 It provides a clean, modular structure that introduces core AI concepts progressively through three tools:
 
@@ -14,7 +14,7 @@ It provides a clean, modular structure that introduces core AI concepts progress
 
 Each module is:
 - 🔌 Self-contained
-- 🧩 Installable via one package: `pip install ailabkit`
+- 🧩 Installable via one package: `pip install hands-on-ai`
 - 🧠 Designed for progressive learning
 
 ## Key Benefits

@@ -1,10 +1,10 @@
-# 🤝 Contributing to AiLabKit
+# 🤝 Contributing to Hands-On AI
 
-Thanks for your interest in contributing to AiLabKit! Whether you're fixing a typo, writing a bot, improving documentation, or adding a new feature — you're welcome here.
+Thanks for your interest in contributing to Hands-On AI! Whether you're fixing a typo, writing a bot, improving documentation, or adding a new feature — you're welcome here.
 
 ## Ways to Contribute
 
-There are many ways to contribute to AiLabKit:
+There are many ways to contribute to Hands-On AI:
 
 1. **Add new bot personalities**: Create creative, educational, or specialised bot personalities for the chat module.
 2. **Enhance RAG capabilities**: Improve document processing, indexing, or retrieval in the RAG module.
@@ -16,8 +16,8 @@ There are many ways to contribute to AiLabKit:
 
 ## 🧰 Development Setup
 
-1. **Fork the repository**: Create your own fork of the AiLabKit repository.
-2. **Clone your fork**: `git clone https://github.com/your-username/ailabkit.git`
+1. **Fork the repository**: Create your own fork of the Hands-On AI repository.
+2. **Clone your fork**: `git clone https://github.com/your-username/hands-on-ai.git`
 3. **Install Python 3.8 or higher**.
 4. **Install dev dependencies**:
    ```bash
@@ -71,15 +71,15 @@ To add a new bot personality to the chat module:
 
 1. Decide whether your bot fits into an existing personality category (educational, creative, technical, etc.)
 2. Create a new bot file in the appropriate directory:
-   - For a standard category bot: `src/ailabkit/chat/personalities/your_bot.py`
-   - For a specialised bot: `src/ailabkit/chat/personalities/bots/your_bot.py`
+   - For a standard category bot: `src/hands-on-ai/chat/personalities/your_bot.py`
+   - For a specialised bot: `src/hands-on-ai/chat/personalities/bots/your_bot.py`
 3. Follow the pattern:
    ```python
    def your_bot_name(prompt):
        """Your bot description.
        
        Usage:
-           from ailabkit.chat import your_bot_name
+           from hands_on_ai.chat import your_bot_name
            your_bot_name("Your prompt here")
            
        Educational uses:
@@ -89,7 +89,7 @@ To add a new bot personality to the chat module:
            >>> your_bot_name("Hello!")
            "Your example response"
        """
-       from ailabkit.chat.get_response import get_response
+       from hands_on_ai.chat.get_response import get_response
        return get_response(
            prompt, 
            system="Your system prompt here.", 
@@ -98,9 +98,9 @@ To add a new bot personality to the chat module:
    ```
 4. Import and expose your bot in the appropriate `__init__.py` files:
    - Add to the category's `__init__.py` 
-   - Make sure it's imported in `src/ailabkit/chat/personalities/__init__.py`
-   - Include it in `src/ailabkit/chat/__init__.py`
-5. Add appropriate fallback messages in `src/ailabkit/chat/data/fallbacks.json`.
+   - Make sure it's imported in `src/hands-on-ai/chat/personalities/__init__.py`
+   - Include it in `src/hands-on-ai/chat/__init__.py`
+5. Add appropriate fallback messages in `src/hands-on-ai/chat/data/fallbacks.json`.
 6. Document your bot in the appropriate documentation files.
 
 ## 📚 Extending RAG Module
@@ -108,7 +108,7 @@ To add a new bot personality to the chat module:
 To extend the RAG (Retrieval-Augmented Generation) capabilities:
 
 1. Understand the existing components:
-   - Document loading and processing in `src/ailabkit/rag/utils.py`
+   - Document loading and processing in `src/hands-on-ai/rag/utils.py`
    - Index creation and searching functionality
    - Query processing and response generation
 2. Consider adding:
@@ -126,9 +126,9 @@ To extend the RAG (Retrieval-Augmented Generation) capabilities:
 
 To extend the agent module with new tools or capabilities:
 
-1. Add new tools to `src/ailabkit/agent/tools/`
+1. Add new tools to `src/hands-on-ai/agent/tools/`
 2. Follow the existing tool pattern
-3. Update the relevant command handlers in `src/ailabkit/agent/commands/`
+3. Update the relevant command handlers in `src/hands-on-ai/agent/commands/`
 4. Document your new tools and their capabilities
 5. Ensure your tools work well with the agent framework
 
@@ -179,4 +179,4 @@ If you have questions about contributing, open an issue in the repository or con
 
 ## ❤️ Thanks
 
-Thanks for helping make AiLabKit better for educators and students everywhere!
+Thanks for helping make Hands-On AI better for educators and students everywhere!

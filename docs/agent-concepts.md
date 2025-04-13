@@ -28,7 +28,7 @@ This process is inspired by how humans approach complex problems: we think about
 
 ### ReAct Format
 
-In the AiLabKit implementation, ReAct follows this format:
+In the Hands-On AI implementation, ReAct follows this format:
 
 ```
 Question: <user question>
@@ -120,5 +120,5 @@ AI agents represent a significant advancement in making AI systems more helpful,
 ## 📚 Related Docs
 
 - [Agent Module Guide](agent-guide.md) - Practical guide to using the agent module
-- [Mini Projects](projects/index.md) - Example projects using AiLabKit
-- [Education Guide](education-guide.md) - Use AiLabKit in educational settings
+- [Mini Projects](projects/index.md) - Example projects using Hands-On AI
+- [Education Guide](education-guide.md) - Use Hands-On AI in educational settings

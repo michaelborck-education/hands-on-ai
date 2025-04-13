@@ -12,7 +12,7 @@ Build a bot that quizzes the user on a topic and tracks their score.
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 import random
 
 def generate_questions(topic, number_of_questions=5):

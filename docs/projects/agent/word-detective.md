@@ -9,7 +9,7 @@
 Use the agent's dictionary tools to explore word meanings, find synonyms and antonyms, and improve your vocabulary.
 
 ## Instructions
-1. Start the agent using `ailabkit agent interactive`
+1. Start the agent using `hands-on-ai agent interactive`
 2. Choose 5 interesting or unfamiliar words to explore
 3. For each word, ask the agent to:
    - Define the word

@@ -12,7 +12,7 @@ Create a classroom simulation where students can interact with different charact
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 
 def classroom_simulation():
     print("=== Virtual Classroom Simulation ===")

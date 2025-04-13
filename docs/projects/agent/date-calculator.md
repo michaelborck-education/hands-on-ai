@@ -9,7 +9,7 @@
 Create a date calculator that helps plan projects, calculate age, and work with calendar-based information.
 
 ## Instructions
-1. Start the agent in interactive mode using `ailabkit agent interactive`
+1. Start the agent in interactive mode using `hands-on-ai agent interactive`
 2. Explore the date tools by asking questions like:
    - "How many days until Christmas?"
    - "What's the difference between March 15, 2023 and today?"

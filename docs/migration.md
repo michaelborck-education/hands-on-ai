@@ -1,6 +1,6 @@
-# Migration Guide: ChatCraft to ailabkit
+# Migration Guide: ChatCraft to Hands-On AI
 
-This document outlines the migration from the original `chatcraft` package structure to the new modular `ailabkit` package.
+This document outlines the migration from the original `chatcraft` package structure to the new modular `hands-on-ai` package.
 
 ## Package Structure Changes
 
@@ -18,11 +18,11 @@ chatcraft/
 │       └── ragcraft/        # RAG submodule
 ```
 
-### After (ailabkit):
+### After (hands-on-ai):
 ```
-ailabkit/
+hands_on_ai/
 ├── src/
-│   └── ailabkit/
+│   └── hands_on_ai/
 │       ├── __init__.py      # Package exports
 │       ├── config.py        # Shared configuration
 │       ├── cli.py           # Meta CLI
@@ -64,9 +64,9 @@ ailabkit/
    - Individual bot files for easy contribution
    - Category grouping for logical organisation
    - Three ways to import bots:
-     - From individual files: `from ailabkit.chat.personalities.bots import friendly_bot`
-     - From categories: `from ailabkit.chat.personalities.creative import *`
-     - From the main module: `from ailabkit.chat import *`
+     - From individual files: `from hands_on_ai.chat.personalities.bots import friendly_bot`
+     - From categories: `from hands_on_ai.chat.personalities.creative import *`
+     - From the main module: `from hands_on_ai.chat import *`
 
 3. **Command Structure:**
    - Each command is in its own file in a `commands/` directory
@@ -74,13 +74,13 @@ ailabkit/
    - Consistent pattern across all submodules
 
 4. **Configuration:**
-   - Centralised configuration in ailabkit/config.py
-   - Environment variables renamed from CHATCRAFT_* to AILABKIT_*
-   - Configuration directory ~/.chatcraft -> ~/.ailabkit
+   - Centralised configuration in hands_on_ai/config.py
+   - Environment variables renamed from CHATCRAFT_* to HANDS_ON_AI_*
+   - Configuration directory ~/.chatcraft -> ~/.hands_on_ai
 
 5. **Entry Points:**
    - Multiple CLI entry points:
-     - `ailabkit` - Meta CLI
+     - `hands-on-ai` - Meta CLI
      - `chat` - Chat functionality
      - `rag` - RAG functionality
      - `agent` - Agent functionality
@@ -94,12 +94,12 @@ ailabkit/
 
 2. Install new package:
    ```
-   pip install ailabkit
+   pip install hands-on-ai
    ```
 
 3. Update import statements:
-   - `from chatcraft import friendly_bot` → `from ailabkit.chat import friendly_bot`
-   - `from chatcraft import get_response` → `from ailabkit.chat import get_response`
+   - `from chatcraft import friendly_bot` → `from hands_on_ai.chat import friendly_bot`
+   - `from chatcraft import get_response` → `from hands_on_ai.chat import get_response`
 
 4. Update CLI commands:
    - `chatcraft bots` → `chat bots`
@@ -107,7 +107,7 @@ ailabkit/
    - `ragcraft ask` → `rag ask`
 
 5. Update configuration:
-   - Rename ~/.chatcraft to ~/.ailabkit
+   - Rename ~/.chatcraft to ~/.hands_on_ai
    - Update environment variables
 
 ## Migration Steps for Developers
@@ -115,4 +115,4 @@ ailabkit/
 1. Understand the new module structure
 2. Create PRs against the correct submodule
 3. Follow the new patterns for commands and functionality
-4. Use test_ailabkit.py to verify changes
+4. Use test_hands_on_ai.py to verify changes

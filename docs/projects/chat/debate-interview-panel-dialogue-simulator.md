@@ -16,7 +16,7 @@ This project offers flexibility to run either panel discussions with multiple pa
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 import time
 
 def ai_persona_dialogue_simulator():

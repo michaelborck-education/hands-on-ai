@@ -22,7 +22,7 @@ This project was made possible thanks to the following contributors:
   - Educational project design
 
 - **Claude (Anthropic)**  
-  Provided assistance with transitioning the project to AiLabKit.  
+  Provided assistance with transitioning the project to Hands-On AI.  
   Helped with modular architecture, web interfaces, and documentation.  
   Contributions include:  
   - Web interface implementation  

@@ -22,7 +22,7 @@ This is a great introduction to how agents work and how they can use tools to so
 Start by importing the necessary modules:
 
 ```python
-from ailabkit.agent import run_agent, register_tool
+from hands_on_ai.agent import run_agent, register_tool
 
 # Define a calculator function
 def calculator(expression):

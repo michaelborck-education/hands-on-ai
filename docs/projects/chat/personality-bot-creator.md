@@ -12,7 +12,7 @@ Students create and interact with a bot that has a unique personality of their d
 ## Instructions
 
 ```python
-from ailabkit.chat import get_response
+from hands_on_ai.chat import get_response
 
 # Example personalities students can create:
 def superhero_bot(prompt):
