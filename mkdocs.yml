@@ -23,6 +23,8 @@ nav:
     - "Installation": configuration.md 
     - "Ollama Setup": ollama-guide.md
     - "Classroom Setup": classroom-setup.md
+    - "LLM Guide": llm-guide.md
+    - "Migration Guide": migration.md
   - Modules:
     - Chat:
       - "Overview": chat-guide.md
@@ -45,6 +47,47 @@ nav:
     - "Classroom Setup": classroom-setup.md
     - "Projects Overview": mini-projects.md
     - "Project Gallery": projects/index.md
+    - Agent Projects:
+      - Agent Evaluation Framework: projects/agent/agent-evaluation-framework.md
+      - Custom Tool Creator: projects/agent/custom-tool-creator.md
+      - Date Calculator: projects/agent/date-calculator.md
+      - Educational Assistant: projects/agent/educational-assistant.md
+      - Multi-tool Problem Solver: projects/agent/multi-tool-problem-solver.md
+      - Personal Math Tutor: projects/agent/personal-math-tutor.md
+      - Science Explorer: projects/agent/science-explorer.md
+      - Simple Calculator Agent: projects/agent/simple-calculator-agent.md
+      - Text Analyzer: projects/agent/text-analyzer.md
+      - Unit Conversion Assistant: projects/agent/unit-conversion-assistant.md
+      - Word Detective: projects/agent/word-detective.md
+    - Chat Projects:
+      - Advanced Journal Bot: projects/chat/advanced-journal-bot.md
+      - Bot Personality Menu Generator: projects/chat/bot-personality-menu-generator.md
+      - Build Your Own Personality Bot: projects/chat/build-your-own-personality-bot.md
+      - Choose Your Own Adventure: projects/chat/choose-your-own-adventure.md
+      - Classroom Simulation Bot: projects/chat/classroom-simulation-bot.md
+      - Code Explainer Tool: projects/chat/code-explainer-tool.md
+      - Creative Writing Partner: projects/chat/creative-writing-partner.md
+      - Data Visualization Dashboard: projects/chat/data-visualization-dashboard.md
+      - Debate Interview Panel Dialogue Simulator: projects/chat/debate-interview-panel-dialogue-simulator.md
+      - Emotional Support Bot: projects/chat/emotional-support-bot.md
+      - Historical Figure Chat: projects/chat/historical-figure-chat.md
+      - Image Gallery Creator: projects/chat/image-gallery-creator.md
+      - Journal or Reflection Bot: projects/chat/journal-or-reflection-bot.md
+      - Knowledge Quiz Bot: projects/chat/knowledge-quiz-bot.md
+      - Language Translation Helper: projects/chat/language-translation-helper.md
+      - Mood Journal Assistant: projects/chat/mood-journal-assistant.md
+      - Personality Bot Creator: projects/chat/personality-bot-creator.md
+      - Smart To-Do List: projects/chat/smart-to-do-list.md
+      - Subject Expert Tutor: projects/chat/subject-expert-tutor.md
+      - Text Adventure Game Engine: projects/chat/text-adventure-game-engine.md
+      - Trivia or Quiz Bot: projects/chat/trivia-or-quiz-bot.md
+      - Weather Dashboard: projects/chat/weather-dashboard.md
+      - YouTube to Blog Converter: projects/chat/youtube-to-blog-converter.md
+    - RAG Projects:
+      - Build Your Own QA CLI: projects/rag/build-your-own-qa-cli.md
+      - First RAG Bot: projects/rag/first-rag-bot.md
+      - Hybrid Reasoning Bot: projects/rag/hybrid-reasoning-bot.md
+      - PDF Question Answering Chatbot: projects/rag/pdf-question-answering-chatbot.md
     - "Project Template": mini-project-template.md
     - "Bot Template": bot-template.md
   - For Developers:

@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "hands-on-ai"
-version = "0.1.2"
+version = "0.1.3"
 description = "Hands-on AI Toolkit for classrooms"
 authors = [
   { name = "Michael Borck", email = "michael@borck.me" }
@@ -60,7 +60,7 @@ where = ["src"]
 
 [project.urls]
 Homepage = "https://github.com/teaching-repositories/hands-on-ai"
-Documentation = "https://github.com/teaching-repositories/hands-on-ai"
+Documentation = "https://michael-borck.github.io/hands-on-ai/"
 Source = "https://github.com/teaching-repositories/hands-on-ai"
 Issues = "https://github.com/teaching-repositories/hands-on-ai"
 
