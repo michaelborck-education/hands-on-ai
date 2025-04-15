@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/teaching-repositories/hands-on-ai/ollama-guide/">
+        <link rel="canonical" href="https://github.com/teaching-repositories/hands-on-ai/llm-guide/">
       
       
-        <link rel="prev" href="../configuration/">
+        <link rel="prev" href="../classroom-setup/">
       
       
-        <link rel="next" href="../classroom-setup/">
+        <link rel="next" href="../migration/">
       
       
       <link rel="icon" href="../assets/icon-192.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Ollama Setup - HandsOnAI Documentation</title>
+        <title>LLM Guide - HandsOnAI Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-ollama-for-hands-on-ai" class="md-skip">
+        <a href="#hands-on-ai-llm-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ollama Setup
+              LLM Guide
             
           </span>
         </div>
@@ -484,32 +484,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Ollama Setup
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ollama-guide/" class="md-nav__link">
         
   
   
@@ -520,224 +498,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#who-is-this-guide-for" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧭 Who Is This Guide For?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-ollama" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Ollama?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      System Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation Guide
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation Guide">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#for-macos" class="md-nav__link">
-    <span class="md-ellipsis">
-      For macOS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      For Windows
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#for-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      For Linux
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#downloading-your-first-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Downloading Your First Model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-your-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing Your Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-ollama-with-chatcraft" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Ollama with ChatCraft
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-your-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 Test Your Installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧪 Test Your Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-tip-advanced-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Optional Tip (Advanced Config):
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-custom-model-host" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ Advanced: Custom Model Host
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connection-refused-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      "Connection refused" error
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#slow-responses" class="md-nav__link">
-    <span class="md-ellipsis">
-      Slow responses
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#out-of-memory-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      "Out of memory" error
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#available-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Available Models
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#need-more-help" class="md-nav__link">
-    <span class="md-ellipsis">
-      Need More Help?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-docs" class="md-nav__link">
-    <span class="md-ellipsis">
-      📚 Related Docs
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -770,10 +530,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../llm-guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    LLM Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -784,6 +566,482 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-package-overview-and-core-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Package Overview and Core Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-installation-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Installation Instructions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Installation Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-complete-api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Complete API Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Complete API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-configuration-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Configuration Functions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-module-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Module API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chat Module API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-personality-bots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Personality Bots:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rag-module-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG Module API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RAG Module API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-module-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Module API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Module API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#built-in-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Agents:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Usage Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-line-interface-cli-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command-Line Interface (CLI) Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command-Line Interface (CLI) Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rag-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent CLI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-api-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python API Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python API Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-chat-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Chat Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rag-example-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG Example Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-agent-with-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Agent with Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-architecture-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Architecture Details
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Architecture Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-common-use-cases-and-project-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Common Use Cases and Project Ideas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Common Use Cases and Project Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#educational-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Educational Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Ideas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Projects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rag-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAG Projects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Projects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-module-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Module Projects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-best-practices-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Best Practices and Limitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Best Practices and Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2912,129 +3170,517 @@
   
 
 
-<h1 id="setting-up-ollama-for-hands-on-ai">Setting Up Ollama for Hands-On AI<a class="headerlink" href="#setting-up-ollama-for-hands-on-ai" title="Permanent link">&para;</a></h1>
-<p>This guide will walk you through the simple process of setting up Ollama on your local machine to power your Hands-On AI projects.</p>
-<p>Great instinct! Since the docstring update was already complete, there's no change needed in your Python code.</p>
-<p>Now, for your <strong>Ollama guide</strong>, here’s what you can add based on your idea:</p>
-<hr />
-<h2 id="who-is-this-guide-for">🧭 Who Is This Guide For?<a class="headerlink" href="#who-is-this-guide-for" title="Permanent link">&para;</a></h2>
-<p>This guide is written for <strong>beginners</strong> who want to run Hands-On AI with a local LLM using <a href="https://ollama.com">Ollama</a>. If you're an educator or student new to large language models, this will walk you through everything step by step.</p>
-<p>If you're an advanced user with an existing Ollama setup (custom models, non-default ports, Docker, remote hosting), feel free to skip this guide — Hands-On AI will work as long as your Ollama server is reachable.</p>
-<h2 id="what-is-ollama">What is Ollama?<a class="headerlink" href="#what-is-ollama" title="Permanent link">&para;</a></h2>
-<p>Ollama is a lightweight tool that allows you to run large language models (LLMs) locally on your computer. It makes it easy to download and run models like Llama 3 without needing specialized hardware or complex setup.</p>
-<h2 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Windows, macOS, or Linux</strong> computer</li>
-<li>At least <strong>8GB RAM</strong> (16GB+ recommended for better performance)</li>
-<li>At least <strong>10GB</strong> of free disk space</li>
-<li>An <strong>internet connection</strong> (for the initial model download)</li>
-</ul>
-<h2 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">&para;</a></h2>
-<h3 id="for-macos">For macOS<a class="headerlink" href="#for-macos" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Download the Ollama installer from <a href="https://ollama.ai">ollama.ai</a></li>
-<li>Open the downloaded file and drag the Ollama app to your Applications folder</li>
-<li>Launch Ollama from your Applications folder</li>
-<li>Ollama will run in your menu bar (look for the llama icon)</li>
-</ol>
-<h3 id="for-windows">For Windows<a class="headerlink" href="#for-windows" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Download the Windows installer from <a href="https://ollama.ai">ollama.ai</a></li>
-<li>Run the installer and follow the on-screen instructions</li>
-<li>Once installed, Ollama will start automatically and run in the system tray</li>
-</ol>
-<h3 id="for-linux">For Linux<a class="headerlink" href="#for-linux" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Run the following command in your terminal:
-   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://ollama.ai/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
-</code></pre></div></li>
-<li>Start the Ollama service:
-   <div class="highlight"><pre><span></span><code>ollama<span class="w"> </span>serve
-</code></pre></div></li>
-</ol>
-<h2 id="downloading-your-first-model">Downloading Your First Model<a class="headerlink" href="#downloading-your-first-model" title="Permanent link">&para;</a></h2>
-<p>After installing Ollama, you'll need to download at least one model. For beginners, we recommend the <code>llama3</code> model, which offers a good balance of performance and quality.</p>
-<ol>
-<li>Open a terminal or command prompt</li>
-<li>Run the following command:
-   <div class="highlight"><pre><span></span><code>ollama<span class="w"> </span>pull<span class="w"> </span>llama3
-</code></pre></div></li>
-<li>Wait for the download to complete (this may take a few minutes depending on your internet speed)</li>
-</ol>
-<p>The first time you run this command, it will download the model files (about 4GB). Once downloaded, the model will be available locally on your computer.</p>
-<h2 id="testing-your-installation">Testing Your Installation<a class="headerlink" href="#testing-your-installation" title="Permanent link">&para;</a></h2>
-<p>Let's make sure everything is working properly:</p>
-<ol>
-<li>In your terminal or command prompt, run:
-   <div class="highlight"><pre><span></span><code>ollama<span class="w"> </span>run<span class="w"> </span>llama3<span class="w"> </span><span class="s2">&quot;Hello, how are you today?&quot;</span>
-</code></pre></div></li>
-<li>You should see a response from the model</li>
-</ol>
-<p>If you received a response, congratulations! Ollama is set up correctly and ready to use with ChatCraft.</p>
-<h2 id="using-ollama-with-chatcraft">Using Ollama with ChatCraft<a class="headerlink" href="#using-ollama-with-chatcraft" title="Permanent link">&para;</a></h2>
-<p>ChatCraft is designed to work with Ollama by default. As long as Ollama is running in the background, ChatCraft will automatically connect to it at <code>http://localhost:11434</code>.</p>
-<p>No additional configuration is required unless you've changed Ollama's default settings.</p>
-<blockquote>
-<h2 id="test-your-installation">🧪 Test Your Installation<a class="headerlink" href="#test-your-installation" title="Permanent link">&para;</a></h2>
-<p>Once you’ve started a model using:</p>
-<div class="highlight"><pre><span></span><code>ollama<span class="w"> </span>run<span class="w"> </span>llama3
+<h1 id="hands-on-ai-llm-guide">hands-on-ai LLM Guide<a class="headerlink" href="#hands-on-ai-llm-guide" title="Permanent link">&para;</a></h1>
+<p>This comprehensive guide provides detailed information about the <code>hands-on-ai</code> package to help large language models (LLMs) understand how to use and explain it effectively.</p>
+<h2 id="1-package-overview-and-core-features">1. Package Overview and Core Features<a class="headerlink" href="#1-package-overview-and-core-features" title="Permanent link">&para;</a></h2>
+<p><code>hands-on-ai</code> is a unified educational toolkit designed to teach students how modern AI systems work by building and interacting with them directly. The package includes three primary modules:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Purpose</th>
+<th>CLI Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>chat</strong></td>
+<td>Simple chatbot with system prompts and personalities</td>
+<td><code>chat</code></td>
+</tr>
+<tr>
+<td><strong>rag</strong></td>
+<td>Retrieval-Augmented Generation for document Q&amp;A</td>
+<td><code>rag</code></td>
+</tr>
+<tr>
+<td><strong>agent</strong></td>
+<td>ReAct-style reasoning with tool use</td>
+<td><code>agent</code></td>
+</tr>
+</tbody>
+</table>
+<p>Each module is:
+- Self-contained with its own functionality
+- Accessible via a single package installation
+- Designed for progressive learning from simple to complex AI concepts</p>
+<p>The package aims to make AI learning accessible for students and educators through hands-on experimentation with key AI paradigms.</p>
+<h2 id="2-installation-instructions">2. Installation Instructions<a class="headerlink" href="#2-installation-instructions" title="Permanent link">&para;</a></h2>
+<h3 id="basic-installation">Basic Installation<a class="headerlink" href="#basic-installation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install from PyPI</span>
+pip<span class="w"> </span>install<span class="w"> </span>hands-on-ai
+
+<span class="c1"># Or directly from GitHub</span>
+pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/teaching-repositories/hands-on-ai.git
 </code></pre></div>
-<p>You can test Hands-On AI in Python with:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">hands_on_ai.chat</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_response</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">get_response</span><span class="p">(</span><span class="s2">&quot;What is 3 + 4?&quot;</span><span class="p">))</span>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Python 3.8 or higher</li>
+<li>For local LLM usage: <a href="https://ollama.ai/">Ollama</a> or similar local LLM server</li>
+</ul>
+<h3 id="development-installation">Development Installation<a class="headerlink" href="#development-installation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install with development dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>hands-on-ai<span class="o">[</span>dev<span class="o">]</span>
 </code></pre></div>
-</blockquote>
-<p>You should get a real-time AI response!</p>
-<hr />
-<h3 id="optional-tip-advanced-config">✅ Optional Tip (Advanced Config):<a class="headerlink" href="#optional-tip-advanced-config" title="Permanent link">&para;</a></h3>
-<blockquote>
-<h3 id="advanced-custom-model-host">⚙️ Advanced: Custom Model Host<a class="headerlink" href="#advanced-custom-model-host" title="Permanent link">&para;</a></h3>
-</blockquote>
-<p>If you're running Ollama on a different host or port (e.g. remote or Docker), you can create a config file to tell Hands-On AI where to send requests.  </p>
-<p>See: <a href="../configuration/">docs/configuration.md</a> for advanced setup.</p>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<h3 id="connection-refused-error">"Connection refused" error<a class="headerlink" href="#connection-refused-error" title="Permanent link">&para;</a></h3>
-<p>If Hands-On AI shows a connection error:
-1. Make sure Ollama is running
-2. Check that you haven't changed the default port (11434)
-3. On Windows or macOS, you might need to restart the Ollama application</p>
-<h3 id="slow-responses">Slow responses<a class="headerlink" href="#slow-responses" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Try a smaller model like <code>llama3:8b</code> which requires fewer resources</li>
-<li>Close other resource-intensive applications</li>
-<li>Ensure your computer meets the minimum requirements</li>
-</ol>
-<h3 id="out-of-memory-error">"Out of memory" error<a class="headerlink" href="#out-of-memory-error" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Try a smaller model like <code>llama3:8b</code></li>
-<li>Increase your system's virtual memory (swap file)</li>
-<li>Close other applications to free up RAM</li>
-</ol>
-<h2 id="available-models">Available Models<a class="headerlink" href="#available-models" title="Permanent link">&para;</a></h2>
-<p>Here are some models you can use with ChatCraft:</p>
+<h2 id="3-complete-api-reference">3. Complete API Reference<a class="headerlink" href="#3-complete-api-reference" title="Permanent link">&para;</a></h2>
+<h3 id="configuration-module">Configuration Module<a class="headerlink" href="#configuration-module" title="Permanent link">&para;</a></h3>
+<p>The central configuration system manages settings across all modules.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">hands_on_ai.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_config</span><span class="p">,</span> <span class="n">save_config</span><span class="p">,</span> <span class="n">get_server_url</span><span class="p">,</span> <span class="n">get_model</span>
+
+<span class="c1"># Get configuration values</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">load_config</span><span class="p">()</span>  <span class="c1"># Returns dict with all config</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">get_model</span><span class="p">()</span>     <span class="c1"># Get default LLM model</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">get_server_url</span><span class="p">()</span>  <span class="c1"># Get Ollama server URL</span>
+
+<span class="c1"># Save configuration</span>
+<span class="n">config</span><span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;llama3&quot;</span>
+<span class="n">save_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="key-configuration-functions">Key Configuration Functions:<a class="headerlink" href="#key-configuration-functions" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>llama3</code> - The recommended default model for most users</li>
-<li><code>llama3:8b</code> - A smaller, faster version if you have limited resources</li>
-<li><code>codellama</code> - Specialised for programming tasks (recommended for code-related exercises)</li>
-<li><code>mistral</code> - An alternative model with good performance</li>
-<li><code>phi</code> - A smaller model with good capabilities for simpler tasks</li>
+<li><code>load_config()</code>: Load configuration from file or environment variables</li>
+<li><code>save_config(config)</code>: Save configuration to file</li>
+<li><code>get_server_url()</code>: Get the server URL from config</li>
+<li><code>get_model()</code>: Get the default model from config</li>
+<li><code>get_embedding_model()</code>: Get the default embedding model</li>
+<li><code>get_chunk_size()</code>: Get the default chunk size for RAG</li>
 </ul>
-<p>To download any of these models, use:
-<div class="highlight"><pre><span></span><code>ollama<span class="w"> </span>pull<span class="w"> </span>model_name
-</code></pre></div></p>
-<h2 id="need-more-help">Need More Help?<a class="headerlink" href="#need-more-help" title="Permanent link">&para;</a></h2>
-<p>For more detailed information about Ollama, visit their official documentation at <a href="https://ollama.ai/docs">ollama.ai/docs</a>.</p>
-<hr />
-<h2 id="related-docs">📚 Related Docs<a class="headerlink" href="#related-docs" title="Permanent link">&para;</a></h2>
+<p>Environment variables that override config:
+- <code>AILABKIT_SERVER</code>: Override server URL
+- <code>AILABKIT_MODEL</code>: Override default model
+- <code>AILABKIT_EMBEDDING_MODEL</code>: Override embedding model
+- <code>AILABKIT_LOG=debug</code>: Enable debug logging</p>
+<h3 id="chat-module-api">Chat Module API<a class="headerlink" href="#chat-module-api" title="Permanent link">&para;</a></h3>
+<p>The chat module provides simple LLM interactions with various personalities.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">hands_on_ai.chat</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_response</span><span class="p">,</span> <span class="n">pirate_bot</span><span class="p">,</span> <span class="n">coder_bot</span>
+
+<span class="c1"># Basic chat usage</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">get_response</span><span class="p">(</span><span class="s2">&quot;Tell me about planets&quot;</span><span class="p">)</span>
+
+<span class="c1"># Use a personality bot</span>
+<span class="n">pirate_response</span> <span class="o">=</span> <span class="n">pirate_bot</span><span class="p">(</span><span class="s2">&quot;Tell me about sailing ships&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="core-functions">Core Functions:<a class="headerlink" href="#core-functions" title="Permanent link">&para;</a></h4>
+<p><code>get_response(prompt, model=None, system="You are a helpful assistant.", personality="friendly", stream=False, retries=2)</code>
+- <code>prompt</code>: Text prompt to send to the model (required)
+- <code>model</code>: LLM model to use (defaults to config setting)
+- <code>system</code>: System message defining bot behavior
+- <code>personality</code>: Used for fallback character during retries
+- <code>stream</code>: Whether to request streaming output (default False)
+- <code>retries</code>: Number of times to retry on error</p>
+<h4 id="available-personality-bots">Available Personality Bots:<a class="headerlink" href="#available-personality-bots" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="../chat-guide/">Chat Module Guide</a> - Learn about using the chat module with Ollama</li>
-<li><a href="../rag-guide/">RAG Module Guide</a> - Learn about using the RAG module with Ollama</li>
-<li><a href="../agent-guide/">Agent Module Guide</a> - Learn about using the agent module with Ollama</li>
-<li><a href="../configuration/">Configuration Guide</a> - Advanced configuration options</li>
-<li><a href="../education-guide/">Education Guide</a> - Use Hands-On AI in educational settings</li>
+<li><code>friendly_bot</code>: General helpful assistant</li>
+<li><code>sarcastic_bot</code>: Sarcastic, humorous responses</li>
+<li><code>pirate_bot</code>: Answers in pirate speak</li>
+<li><code>shakespeare_bot</code>: Shakespearean language</li>
+<li><code>coder_bot</code>: Technical programming assistant</li>
+<li><code>teacher_bot</code>: Educational, explanatory style</li>
+<li><code>therapist_bot</code>: Supportive, reflective responses</li>
+<li>And many more...</li>
 </ul>
-<hr />
-<p>Now that you have Ollama set up, you're ready to use Hands-On AI and start creating your own AI educational experiences!</p>
+<h3 id="rag-module-api">RAG Module API<a class="headerlink" href="#rag-module-api" title="Permanent link">&para;</a></h3>
+<p>The RAG (Retrieval-Augmented Generation) module enables document-based question answering.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">hands_on_ai.rag</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">load_text_file</span><span class="p">,</span> <span class="n">chunk_text</span><span class="p">,</span> <span class="n">get_embeddings</span><span class="p">,</span>
+    <span class="n">save_index_with_sources</span><span class="p">,</span> <span class="n">load_index_with_sources</span><span class="p">,</span>
+    <span class="n">get_top_k</span><span class="p">,</span> <span class="n">copy_sample_docs</span>
+<span class="p">)</span>
+
+<span class="c1"># Basic RAG workflow</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">load_text_file</span><span class="p">(</span><span class="s2">&quot;document.pdf&quot;</span><span class="p">)</span>
+<span class="n">chunks</span> <span class="o">=</span> <span class="n">chunk_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">vectors</span> <span class="o">=</span> <span class="n">get_embeddings</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+<span class="n">save_index_with_sources</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;document.pdf&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunks</span><span class="p">),</span> <span class="s2">&quot;index.npz&quot;</span><span class="p">)</span>
+
+<span class="c1"># Query the index</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">get_top_k</span><span class="p">(</span><span class="s2">&quot;What is climate change?&quot;</span><span class="p">,</span> <span class="s2">&quot;index.npz&quot;</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="core-functions_1">Core Functions:<a class="headerlink" href="#core-functions_1" title="Permanent link">&para;</a></h4>
+<p><code>load_text_file(path)</code>: 
+- Loads text from .txt, .md, .docx, or .pdf files
+- Returns extracted text content</p>
+<p><code>chunk_text(text, chunk_size=None)</code>:
+- Splits text into chunks for embedding
+- Default chunk_size from config if not specified</p>
+<p><code>get_embeddings(chunks, model=None)</code>:
+- Generates vector embeddings for text chunks
+- Uses default embedding model from config if not specified</p>
+<p><code>save_index_with_sources(vectors, chunks, sources, path)</code>:
+- Saves RAG index with source tracking
+- Preserves relationship between chunks and source documents</p>
+<p><code>load_index_with_sources(path)</code>:
+- Loads previously saved RAG index
+- Returns (vectors, chunks, sources) tuple</p>
+<p><code>get_top_k(query, index_path, k=3, return_scores=False)</code>:
+- Retrieves top k similar chunks for a query
+- Optionally returns similarity scores</p>
+<p><code>get_sample_docs_path()</code>, <code>list_sample_docs()</code>, <code>copy_sample_docs()</code>:
+- Helper functions for working with sample documents</p>
+<h3 id="agent-module-api">Agent Module API<a class="headerlink" href="#agent-module-api" title="Permanent link">&para;</a></h3>
+<p>The agent module implements ReAct-style agents with tool use capabilities.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">hands_on_ai.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">run_agent</span><span class="p">,</span> <span class="n">register_tool</span><span class="p">,</span> <span class="n">list_tools</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">hands_on_ai.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">calculator</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">,</span> <span class="n">converter</span>
+
+<span class="c1"># Run a pre-configured calculator agent</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">calculator</span><span class="p">(</span><span class="s2">&quot;Calculate 5 + 3 * 2&quot;</span><span class="p">)</span>
+
+<span class="c1"># Custom agent with tool registration</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">weather_tool</span><span class="p">(</span><span class="n">location</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Weather forecast for </span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s2">: Sunny, 25°C&quot;</span>
+
+<span class="n">register_tool</span><span class="p">(</span><span class="s2">&quot;weather&quot;</span><span class="p">,</span> <span class="s2">&quot;Get weather for a location&quot;</span><span class="p">,</span> <span class="n">weather_tool</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">run_agent</span><span class="p">(</span><span class="s2">&quot;What&#39;s the weather in London?&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="core-functions_2">Core Functions:<a class="headerlink" href="#core-functions_2" title="Permanent link">&para;</a></h4>
+<p><code>run_agent(prompt, model=None, max_iterations=5, verbose=False)</code>:
+- Runs the agent with the given prompt
+- Uses ReAct format for reasoning and tool use
+- Returns final response after tool interactions
+- Parameters:
+  - <code>prompt</code>: User question or instruction
+  - <code>model</code>: LLM model to use (default from config)
+  - <code>max_iterations</code>: Maximum tool use iterations
+  - <code>verbose</code>: Print intermediate steps</p>
+<p><code>register_tool(name, description, function)</code>:
+- Registers a new tool with the agent
+- Parameters:
+  - <code>name</code>: Tool name
+  - <code>description</code>: Tool description
+  - <code>function</code>: Python function that implements the tool</p>
+<p><code>list_tools()</code>:
+- Returns list of all registered tools</p>
+<h4 id="built-in-agents">Built-in Agents:<a class="headerlink" href="#built-in-agents" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>calculator</code>: Simple calculations</li>
+<li><code>dictionary</code>: Word definitions and information</li>
+<li><code>converter</code>: Unit conversions</li>
+</ul>
+<h2 id="4-usage-examples">4. Usage Examples<a class="headerlink" href="#4-usage-examples" title="Permanent link">&para;</a></h2>
+<h3 id="command-line-interface-cli-examples">Command-Line Interface (CLI) Examples<a class="headerlink" href="#command-line-interface-cli-examples" title="Permanent link">&para;</a></h3>
+<p>Each module includes a CLI for easy access to functionality.</p>
+<h4 id="main-cli">Main CLI<a class="headerlink" href="#main-cli" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># List available modules</span>
+handsonai<span class="w"> </span>list
+
+<span class="c1"># Configure the toolkit</span>
+handsonai<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>model<span class="w"> </span>llama3
+
+<span class="c1"># Check environment and setup</span>
+handsonai<span class="w"> </span>doctor
+</code></pre></div>
+<h4 id="chat-cli">Chat CLI<a class="headerlink" href="#chat-cli" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Simple question with default bot</span>
+chat<span class="w"> </span>ask<span class="w"> </span><span class="s2">&quot;What is photosynthesis?&quot;</span>
+
+<span class="c1"># Use a specific personality</span>
+chat<span class="w"> </span>ask<span class="w"> </span><span class="s2">&quot;Explain quantum physics&quot;</span><span class="w"> </span>--personality<span class="w"> </span>teacher_bot
+
+<span class="c1"># Start interactive chat session</span>
+chat<span class="w"> </span>interactive
+
+<span class="c1"># Launch web interface</span>
+chat<span class="w"> </span>web
+</code></pre></div>
+<h4 id="rag-cli">RAG CLI<a class="headerlink" href="#rag-cli" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Copy sample documents to current directory</span>
+rag<span class="w"> </span>index<span class="w"> </span>--samples
+
+<span class="c1"># Index documents in a directory</span>
+rag<span class="w"> </span>index<span class="w"> </span>./docs<span class="w"> </span>--output_file<span class="w"> </span>index.npz
+
+<span class="c1"># Ask questions about indexed documents</span>
+rag<span class="w"> </span>ask<span class="w"> </span><span class="s2">&quot;What is TCP/IP?&quot;</span><span class="w"> </span>--index_file<span class="w"> </span>index.npz
+
+<span class="c1"># Interactive RAG session</span>
+rag<span class="w"> </span>interactive<span class="w"> </span>--index_file<span class="w"> </span>index.npz
+
+<span class="c1"># Web interface for RAG</span>
+rag<span class="w"> </span>web<span class="w"> </span>--index_file<span class="w"> </span>index.npz
+</code></pre></div>
+<h4 id="agent-cli">Agent CLI<a class="headerlink" href="#agent-cli" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># List available tools</span>
+agent<span class="w"> </span>tools
+
+<span class="c1"># Ask a question that requires tools</span>
+agent<span class="w"> </span>ask<span class="w"> </span><span class="s2">&quot;Calculate 25 * 4 and convert to binary&quot;</span>
+
+<span class="c1"># Interactive agent session</span>
+agent<span class="w"> </span>interactive
+
+<span class="c1"># Launch agent web interface</span>
+agent<span class="w"> </span>web
+</code></pre></div>
+<h3 id="python-api-examples">Python API Examples<a class="headerlink" href="#python-api-examples" title="Permanent link">&para;</a></h3>
+<h4 id="basic-chat-example">Basic Chat Example<a class="headerlink" href="#basic-chat-example" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">hands_on_ai.chat</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_response</span><span class="p">,</span> <span class="n">pirate_bot</span>
+
+<span class="c1"># Simple chat with default model</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">get_response</span><span class="p">(</span><span class="s2">&quot;What is the capital of France?&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>  <span class="c1"># Paris</span>
+
+<span class="c1"># Chat with a personality</span>
+<span class="n">pirate_response</span> <span class="o">=</span> <span class="n">pirate_bot</span><span class="p">(</span><span class="s2">&quot;Tell me about sailing ships&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pirate_response</span><span class="p">)</span>  <span class="c1"># Arr matey! Sailing ships be magnificent vessels...</span>
+</code></pre></div>
+<h4 id="rag-example-workflow">RAG Example Workflow<a class="headerlink" href="#rag-example-workflow" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">hands_on_ai.rag</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">load_text_file</span><span class="p">,</span> <span class="n">chunk_text</span><span class="p">,</span> <span class="n">get_embeddings</span><span class="p">,</span>
+    <span class="n">save_index_with_sources</span><span class="p">,</span> <span class="n">get_top_k</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">hands_on_ai.chat</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_response</span>
+
+<span class="c1"># 1. Load and prepare documents</span>
+<span class="n">documents</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;report.pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;whitepaper.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;notes.md&quot;</span><span class="p">]</span>
+<span class="n">all_chunks</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">all_sources</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">load_text_file</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">doc</span><span class="p">))</span>
+    <span class="n">chunks</span> <span class="o">=</span> <span class="n">chunk_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+    <span class="n">all_chunks</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+    <span class="n">all_sources</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">doc</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunks</span><span class="p">))</span>
+
+<span class="c1"># 2. Create embeddings and index</span>
+<span class="n">vectors</span> <span class="o">=</span> <span class="n">get_embeddings</span><span class="p">(</span><span class="n">all_chunks</span><span class="p">)</span>
+<span class="n">save_index_with_sources</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">all_chunks</span><span class="p">,</span> <span class="n">all_sources</span><span class="p">,</span> <span class="s2">&quot;my_index.npz&quot;</span><span class="p">)</span>
+
+<span class="c1"># 3. Retrieve relevant context for a query</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;What are the main findings?&quot;</span>
+<span class="n">context_chunks</span> <span class="o">=</span> <span class="n">get_top_k</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="s2">&quot;my_index.npz&quot;</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># 4. Format context for the LLM</span>
+<span class="n">context_text</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">chunk</span> <span class="k">for</span> <span class="n">chunk</span><span class="p">,</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">context_chunks</span><span class="p">])</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Answer based on this context:</span>
+
+<span class="si">{</span><span class="n">context_text</span><span class="si">}</span>
+
+<span class="s2">Question: </span><span class="si">{</span><span class="n">query</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># 5. Get response from LLM with context</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">get_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">system</span><span class="o">=</span><span class="s2">&quot;You are a helpful research assistant.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="custom-agent-with-tools">Custom Agent with Tools<a class="headerlink" href="#custom-agent-with-tools" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">hands_on_ai.agent</span><span class="w"> </span><span class="kn">import</span> <span class="n">run_agent</span><span class="p">,</span> <span class="n">register_tool</span>
+
+<span class="c1"># Define a custom tool</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">reverse_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Register the tool with the agent</span>
+<span class="n">register_tool</span><span class="p">(</span>
+    <span class="s2">&quot;reverse&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;Reverse the input text&quot;</span><span class="p">,</span> 
+    <span class="n">reverse_text</span>
+<span class="p">)</span>
+
+<span class="c1"># Define a translator tool</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">translate</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># This would use a real translation API in practice</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Translated: </span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2"> (to Spanish)&quot;</span>
+
+<span class="n">register_tool</span><span class="p">(</span>
+    <span class="s2">&quot;translate&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Translate text to Spanish&quot;</span><span class="p">,</span>
+    <span class="n">translate</span>
+<span class="p">)</span>
+
+<span class="c1"># Run the agent with a question that needs tools</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">run_agent</span><span class="p">(</span>
+    <span class="s2">&quot;Please reverse the text &#39;hello world&#39; and then translate it&quot;</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Final result: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="5-architecture-details">5. Architecture Details<a class="headerlink" href="#5-architecture-details" title="Permanent link">&para;</a></h2>
+<h3 id="package-structure">Package Structure<a class="headerlink" href="#package-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>hands_on_ai/
+├── chat/           # Simple prompt/response chatbot
+│   ├── __init__.py
+│   ├── bots.py
+│   ├── cli.py
+│   ├── commands/
+│   ├── get_response.py
+│   └── personalities/
+├── rag/            # Retrieval-Augmented Generation
+│   ├── __init__.py
+│   ├── cli.py
+│   ├── commands/
+│   ├── data/
+│   └── utils.py
+├── agent/          # ReAct-style agents with tools
+│   ├── __init__.py
+│   ├── agents/
+│   ├── cli.py
+│   ├── commands/
+│   ├── core.py
+│   ├── prompts.py
+│   └── tools/
+├── config.py       # Shared configuration
+├── cli.py          # Main CLI entry point
+└── utils/          # Shared utilities
+</code></pre></div>
+<h3 id="design-principles">Design Principles<a class="headerlink" href="#design-principles" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Modular Design</strong>: Each module (chat, rag, agent) is self-contained but follows consistent patterns</li>
+<li><strong>Progressive Complexity</strong>: Modules increase in complexity, building upon concepts:</li>
+<li>Chat: Simple LLM interaction</li>
+<li>RAG: LLM + document context</li>
+<li>Agent: LLM + reasoning + tools</li>
+<li><strong>Educational Focus</strong>: Clear, readable code with comments designed for learning</li>
+<li><strong>Configuration System</strong>: Shared settings with multiple override options</li>
+<li><strong>Consistent CLI Structure</strong>: Similar command patterns across modules</li>
+</ol>
+<h3 id="workflow-patterns">Workflow Patterns<a class="headerlink" href="#workflow-patterns" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Chat Pattern</strong>:</li>
+<li>User provides prompt</li>
+<li>System adds context/personality</li>
+<li>
+<p>LLM generates response</p>
+</li>
+<li>
+<p><strong>RAG Pattern</strong>:</p>
+</li>
+<li>Documents → Chunking → Embeddings → Index</li>
+<li>
+<p>Query → Retrieve context → Augment prompt → LLM response</p>
+</li>
+<li>
+<p><strong>Agent Pattern</strong> (ReAct):</p>
+</li>
+<li>User query → LLM reasoning</li>
+<li>Tool selection → Tool execution</li>
+<li>Observation → Further reasoning</li>
+<li>Final answer</li>
+</ol>
+<h2 id="6-common-use-cases-and-project-ideas">6. Common Use Cases and Project Ideas<a class="headerlink" href="#6-common-use-cases-and-project-ideas" title="Permanent link">&para;</a></h2>
+<h3 id="educational-use-cases">Educational Use Cases<a class="headerlink" href="#educational-use-cases" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Classroom Demonstrations</strong>:</li>
+<li>Show how different system prompts affect LLM responses</li>
+<li>Demonstrate the impact of adding document context</li>
+<li>
+<p>Explain tool use and reasoning in agents</p>
+</li>
+<li>
+<p><strong>Progressive Assignments</strong>:</p>
+</li>
+<li>Start with personality creation in chat module</li>
+<li>Advance to document-based QA with RAG</li>
+<li>
+<p>Culminate with custom tool creation for agents</p>
+</li>
+<li>
+<p><strong>Compare/Contrast Learning</strong>:</p>
+</li>
+<li>Same prompt across different personalities</li>
+<li>RAG with/without relevant context</li>
+<li>Agent with limited vs expanded tool access</li>
+</ol>
+<h3 id="project-ideas">Project Ideas<a class="headerlink" href="#project-ideas" title="Permanent link">&para;</a></h3>
+<h4 id="chat-projects">Chat Projects<a class="headerlink" href="#chat-projects" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Custom expert personality (e.g., scientist, historian)</li>
+<li>Multi-personality chatbot with switchable modes</li>
+<li>Role-playing game character generator</li>
+</ul>
+<h4 id="rag-projects">RAG Projects<a class="headerlink" href="#rag-projects" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Personal knowledge base with your notes/documents</li>
+<li>Course material Q&amp;A system</li>
+<li>Technical documentation assistant</li>
+</ul>
+<h4 id="agent-projects">Agent Projects<a class="headerlink" href="#agent-projects" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Financial assistant with calculator and conversion tools</li>
+<li>Research agent with web search and summarization</li>
+<li>Code assistant with syntax checking and explanation tools</li>
+</ul>
+<h4 id="cross-module-projects">Cross-Module Projects<a class="headerlink" href="#cross-module-projects" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Learning coach: combines personality (chat) + materials (RAG) + interactive exercises (agent)</li>
+<li>Academic research assistant: searches documents (RAG) + analyzes data (agent) + explains findings (chat)</li>
+<li>Content creator: generates ideas (chat) + researches topics (RAG) + creates structured content (agent)</li>
+</ul>
+<h2 id="7-best-practices-and-limitations">7. Best Practices and Limitations<a class="headerlink" href="#7-best-practices-and-limitations" title="Permanent link">&para;</a></h2>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Model Selection</strong>:</li>
+<li>Use smaller, faster models for development (e.g., llama3)</li>
+<li>Switch to larger models for better reasoning in complex agent tasks</li>
+<li>
+<p>Match model capabilities to task complexity</p>
+</li>
+<li>
+<p><strong>RAG Optimization</strong>:</p>
+</li>
+<li>Keep chunk size between 300-1000 words depending on document type</li>
+<li>Include deliberate overlap between chunks (10-20%)</li>
+<li>
+<p>Test different embedding models for specific domains</p>
+</li>
+<li>
+<p><strong>Agent Design</strong>:</p>
+</li>
+<li>Keep tool descriptions clear and specific</li>
+<li>Limit agent iterations to 5-10 maximum</li>
+<li>
+<p>Implement error handling in custom tools</p>
+</li>
+<li>
+<p><strong>Configuration Management</strong>:</p>
+</li>
+<li>Use environment variables for sensitive settings</li>
+<li>Create domain-specific config files for different projects</li>
+<li>Document configuration options for users</li>
+</ol>
+<h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>LLM Reliability</strong>:</li>
+<li>Responses vary by model and prompt</li>
+<li>Hallucinations can occur, especially without RAG</li>
+<li>
+<p>Tool selection may not always be optimal</p>
+</li>
+<li>
+<p><strong>Performance Considerations</strong>:</p>
+</li>
+<li>Local LLM inference can be slow on limited hardware</li>
+<li>Large document collections may require optimization</li>
+<li>
+<p>Vector operations scale with document count</p>
+</li>
+<li>
+<p><strong>Technical Constraints</strong>:</p>
+</li>
+<li>CLI is primarily designed for demonstration/learning</li>
+<li>Web interfaces are basic/educational, not production-grade</li>
+<li>
+<p>Limited to English language currently</p>
+</li>
+<li>
+<p><strong>Dependency on Ollama</strong>:</p>
+</li>
+<li>Designed to work with Ollama for local LLM inference</li>
+<li>May require adaptation for other LLM backends</li>
+<li>Limited streaming support</li>
+</ol>
+<h3 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h3>
+<p>The package implements several error handling strategies:</p>
+<ol>
+<li><strong>Retries</strong>: Automatic retries for LLM failures</li>
+<li><strong>Fallback Messages</strong>: Personality-specific fallbacks when server errors occur</li>
+<li><strong>Configuration Fallbacks</strong>: Defaults when config files can't be read</li>
+<li><strong>Verbose Logging</strong>: Optional debug logging with environment variable</li>
+</ol>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>The <code>hands-on-ai</code> package provides a comprehensive toolkit for learning and experimenting with modern AI techniques. By offering a progression from simple chatbots to more complex RAG and agent implementations, it enables students and educators to gain hands-on experience with key AI concepts in a structured way.</p>
+<p>The modular design, consistent interfaces, and educational focus make it an excellent resource for understanding how LLMs work in different contexts, from basic prompt engineering to more advanced techniques like retrieval-augmented generation and tool-using agents.</p>
 
 
 

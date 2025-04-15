@@ -1,247 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/agent-agents/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/agent-agents/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/agent-concepts/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/agent-concepts/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/agent-guide/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/agent-guide/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/agent-tools/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/agent-tools/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/authors/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/authors/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/bot-gallery/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/bot-gallery/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/bot-template/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/bot-template/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/chat-guide/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/chat-guide/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/classroom-setup/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/classroom-setup/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/cli-guide/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/cli-guide/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/configuration/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/configuration/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/contributing/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/contributing/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/education-guide/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/education-guide/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/migration/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/llm-guide/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/mini-project-template/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/migration/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/mini-projects/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/mini-project-template/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/ollama-guide/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/mini-projects/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/project-tools/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/ollama-guide/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/rag-flow/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/project-tools/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/rag-guide/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/rag-flow/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/rag-llm-explain/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/rag-guide/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/rag-llm-explain/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/agent-evaluation-framework/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/custom-tool-creator/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/agent-evaluation-framework/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/date-calculator/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/custom-tool-creator/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/educational-assistant/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/date-calculator/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/multi-tool-problem-solver/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/educational-assistant/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/personal-math-tutor/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/multi-tool-problem-solver/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/science-explorer/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/personal-math-tutor/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/simple-calculator-agent/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/science-explorer/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/text-analyzer/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/simple-calculator-agent/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/unit-conversion-assistant/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/text-analyzer/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/agent/word-detective/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/unit-conversion-assistant/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/advanced-journal-bot/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/agent/word-detective/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/bot-personality-menu-generator/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/advanced-journal-bot/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/build-your-own-personality-bot/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/bot-personality-menu-generator/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/choose-your-own-adventure/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/build-your-own-personality-bot/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/classroom-simulation-bot/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/choose-your-own-adventure/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/code-explainer-tool/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/classroom-simulation-bot/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/creative-writing-partner/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/code-explainer-tool/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/data-visualization-dashboard/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/creative-writing-partner/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/debate-interview-panel-dialogue-simulator/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/data-visualization-dashboard/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/emotional-support-bot/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/debate-interview-panel-dialogue-simulator/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/historical-figure-chat/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/emotional-support-bot/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/image-gallery-creator/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/historical-figure-chat/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/journal-or-reflection-bot/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/image-gallery-creator/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/knowledge-quiz-bot/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/journal-or-reflection-bot/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/language-translation-helper/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/knowledge-quiz-bot/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/mood-journal-assistant/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/language-translation-helper/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/personality-bot-creator/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/mood-journal-assistant/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/smart-to-do-list/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/personality-bot-creator/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/subject-expert-tutor/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/smart-to-do-list/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/text-adventure-game-engine/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/subject-expert-tutor/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/trivia-or-quiz-bot/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/text-adventure-game-engine/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/weather-dashboard/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/trivia-or-quiz-bot/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/chat/youtube-to-blog-converter/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/weather-dashboard/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/rag/build-your-own-qa-cli/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/chat/youtube-to-blog-converter/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/rag/first-rag-bot/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/rag/build-your-own-qa-cli/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/rag/hybrid-reasoning-bot/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/rag/first-rag-bot/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
     <url>
-         <loc>https://github.com/teaching-repositories/ailabkit/projects/rag/pdf-question-answering-chatbot/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/rag/hybrid-reasoning-bot/</loc>
+         <lastmod>2025-04-15</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/teaching-repositories/hands-on-ai/projects/rag/pdf-question-answering-chatbot/</loc>
+         <lastmod>2025-04-15</lastmod>
     </url>
 </urlset>
