@@ -1,5 +1,5 @@
 """
-Doctor command for the ailabkit CLI - checks environment and configuration.
+Doctor command for the hands-on-ai CLI - checks environment and configuration.
 """
 
 import typer
@@ -13,7 +13,7 @@ app = typer.Typer(help="Check environment and configuration")
 @app.callback(invoke_without_command=True)
 def doctor():
     """Check environment and configuration."""
-    print("\n🩺 [bold]ailabkit[/bold] environment check\n")
+    print("\n🩺 [bold]hands-on-ai[/bold] environment check\n")
 
     # Check configuration
     server_url = config.get_server_url()

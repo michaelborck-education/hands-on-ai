@@ -1,3 +1,3 @@
 """
-Command modules for the ailabkit CLI.
+Command modules for the hands-on-ai CLI.
 """

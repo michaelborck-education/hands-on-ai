@@ -1,5 +1,5 @@
 """
-Shared configuration for all ailabkit modules.
+Shared configuration for all hands-on-ai modules.
 Handles server settings, paths, and fallback messages.
 """
 
@@ -13,17 +13,17 @@ DEFAULT_SERVER = "http://localhost:11434"
 DEFAULT_MODEL = "llama3"
 DEFAULT_EMBEDDING_MODEL = "nomic-embed-text"
 DEFAULT_CHUNK_SIZE = 500
-CONFIG_DIR = Path.home() / ".ailabkit"
+CONFIG_DIR = Path.home() / ".hands-on-ai"
 CONFIG_PATH = CONFIG_DIR / "config.json"
 
 # Setup logging
-log = logging.getLogger("ailabkit")
+log = logging.getLogger("hands_on_ai")
 log.setLevel(logging.WARNING)
 handler = logging.StreamHandler()
 handler.setFormatter(logging.Formatter("[%(levelname)s] %(message)s"))
 log.addHandler(handler)
 
-if os.environ.get("AILABKIT_LOG") == "debug":
+if os.environ.get("HANDS_ON_AI_LOG") == "debug":
     log.setLevel(logging.DEBUG)
 
 
@@ -34,14 +34,14 @@ def ensure_config_dir():
 
 def load_default_config():
     """
-    Load the default configuration packaged with AiLabKit.
+    Load the default configuration packaged with HandsOnAI.
     
     Returns:
         dict: Default configuration settings
     """
     try:
         from importlib.resources import files
-        path = files("ailabkit.data") / "default_config.json"
+        path = files("hands_on_ai.data") / "default_config.json"
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
     except Exception as e:
@@ -66,14 +66,14 @@ def load_config():
     config = load_default_config()
     
     # Check environment variables
-    if "AILABKIT_SERVER" in os.environ:
-        config["server"] = os.environ["AILABKIT_SERVER"]
+    if "HANDS_ON_AI_SERVER" in os.environ:
+        config["server"] = os.environ["HANDS_ON_AI_SERVER"]
     
-    if "AILABKIT_MODEL" in os.environ:
-        config["model"] = os.environ["AILABKIT_MODEL"]
+    if "HANDS_ON_AI_MODEL" in os.environ:
+        config["model"] = os.environ["HANDS_ON_AI_MODEL"]
         
-    if "AILABKIT_EMBEDDING_MODEL" in os.environ:
-        config["embedding_model"] = os.environ["AILABKIT_EMBEDDING_MODEL"]
+    if "HANDS_ON_AI_EMBEDDING_MODEL" in os.environ:
+        config["embedding_model"] = os.environ["HANDS_ON_AI_EMBEDDING_MODEL"]
     
     # Then check user config file (this overrides defaults and environment variables)
     if CONFIG_PATH.exists():
@@ -128,7 +128,7 @@ def load_fallbacks(module="chat"):
     # Otherwise use built-in fallbacks from package data
     try:
         from importlib.resources import files
-        path = files(f"ailabkit.{module}.data") / "fallbacks.json"
+        path = files(f"hands_on_ai.{module}.data") / "fallbacks.json"
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
     except Exception as e:

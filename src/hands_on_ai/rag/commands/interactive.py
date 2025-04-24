@@ -13,7 +13,7 @@ app = typer.Typer(help="Run interactive RAG chat")
 
 @app.callback(invoke_without_command=True)
 def interactive(
-    index_path: str = typer.Option(None, help="Path to index file (default: ~/.ailabkit/index.npz)"),
+    index_path: str = typer.Option(None, help="Path to index file (default: ~/.hands-on-ai/index.npz)"),
     show_context: bool = typer.Option(False, "--context", "-c", help="Show retrieved context"),
     show_scores: bool = typer.Option(False, "--scores", "-s", help="Show similarity scores"),
     k: int = typer.Option(3, help="Number of chunks to retrieve"),

@@ -1,5 +1,5 @@
 """
-List command for the ailabkit CLI.
+List command for the hands-on-ai CLI.
 """
 
 import typer
@@ -11,7 +11,7 @@ app = typer.Typer(help="List available modules")
 @app.callback(invoke_without_command=True)
 def list_modules():
     """List available modules and their CLIs."""
-    print("\n🧠 [bold]ailabkit[/bold]: AI Learning Lab Toolkit\n")
+    print("\n🧠 [bold]hands-on-ai[/bold]: AI Learning Lab Toolkit\n\n")
     print("[bold cyan]Available Modules:[/bold cyan]")
     print("  • [bold]chat[/bold] - Simple chatbot with system prompts")
     print("    Usage: [cyan]chat --help[/cyan]")

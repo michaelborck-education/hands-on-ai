@@ -18,7 +18,7 @@ def web(
     port: int = typer.Option(8001, help="Port to run the web server on"),
     host: str = typer.Option("127.0.0.1", "--host", help="Host to bind to"),
     public: bool = typer.Option(False, "--public", help="Make the interface accessible from other devices (binds to 0.0.0.0)"),
-    index_path: str = typer.Option(None, help="Path to index file (default: ~/.ailabkit/index.npz)"),
+    index_path: str = typer.Option(None, help="Path to index file (default: ~/.hands-on-ai/index.npz)"),
 ):
     """Launch web interface for RAG using FastHTML."""
     try:

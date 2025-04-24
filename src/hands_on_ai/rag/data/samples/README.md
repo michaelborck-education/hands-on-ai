@@ -1,6 +1,6 @@
-# AiLabKit RAG Sample Documents
+# HandsOnAI RAG Sample Documents
 
-This directory contains sample documents for testing and learning the RAG (Retrieval-Augmented Generation) capabilities of AiLabKit.
+This directory contains sample documents for testing and learning the RAG (Retrieval-Augmented Generation) capabilities of HandsOnAI.
 
 ## Available Files
 
@@ -11,10 +11,10 @@ This directory contains sample documents for testing and learning the RAG (Retri
 
 ## Using the Sample Files
 
-These sample files are included in the AiLabKit package and can be accessed programmatically:
+These sample files are included in the HandsOnAI package and can be accessed programmatically:
 
 ```python
-from ailabkit.rag import list_sample_docs, get_sample_docs_path, copy_sample_docs
+from hands_on_ai.rag import list_sample_docs, get_sample_docs_path, copy_sample_docs
 
 # List all available sample files
 print(list_sample_docs())
@@ -35,7 +35,7 @@ Here's a complete example of using the sample files with RAG:
 ```python
 import os
 from pathlib import Path
-from ailabkit.rag import (
+from hands_on_ai.rag import (
     load_text_file, 
     chunk_text, 
     get_embeddings, 

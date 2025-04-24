@@ -1,5 +1,5 @@
 """
-Version command for the ailabkit CLI.
+Version command for the hands-on-ai CLI.
 """
 
 import typer
@@ -12,5 +12,5 @@ app = typer.Typer(help="Display version information")
 @app.callback(invoke_without_command=True)
 def version():
     """Display version information."""
-    print(f"ailabkit v{__version__}")
+    print(f"hands-on-ai v{__version__}")
     print("AI Learning Lab Toolkit")

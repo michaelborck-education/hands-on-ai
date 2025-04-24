@@ -41,7 +41,7 @@ register_education_tools()
 
 # Create FastHTML app
 app = FastHTML(
-    title="AiLabKit Agent",
+    title="HandsOnAI Agent",
     description="ReAct-style reasoning agent with tool use",
     static_dir=None
 )
@@ -53,7 +53,7 @@ async def index():
     """
     return """
     <div class="container mx-auto px-4 py-8 max-w-4xl">
-        <h1 class="text-3xl font-bold mb-6">AiLabKit Agent</h1>
+        <h1 class="text-3xl font-bold mb-6">HandsOnAI Agent</h1>
         
         <div class="mb-4">
             <div class="flex items-center mb-2">

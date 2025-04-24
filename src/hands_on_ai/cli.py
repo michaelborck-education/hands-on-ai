@@ -1,5 +1,5 @@
 """
-Meta CLI for ailabkit - provides version, configuration and module listing.
+Meta CLI for hands-on-ai - provides version, configuration and module listing.
 """
 
 import typer

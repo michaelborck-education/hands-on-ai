@@ -1,5 +1,5 @@
 """
-Config command for the ailabkit CLI - view or edit configuration.
+Config command for the hands-on-ai CLI - view or edit configuration.
 """
 
 import typer

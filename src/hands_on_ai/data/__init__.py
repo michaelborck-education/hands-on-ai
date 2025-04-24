@@ -1,3 +1,3 @@
 """
-Default data files for AiLabKit including configuration and sample files.
+Default data files for HandsOnAI including configuration and sample files.
 """

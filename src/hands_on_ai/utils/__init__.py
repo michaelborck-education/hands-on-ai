@@ -1,5 +1,5 @@
 """
-Shared utilities for ailabkit modules.
+Shared utilities for hands-on-ai modules.
 """
 
 import random

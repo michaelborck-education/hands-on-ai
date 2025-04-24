@@ -32,7 +32,7 @@ INSTRUCTIONS FOR CONTRIBUTING A NEW PERSONALITY:
    - Import it in the appropriate section
    - Add to __all__ list
 6. OPTIONAL: Add fallback messages for your personality in 
-   ailabkit/src/ailabkit/chat/data/fallbacks.json
+   hands_on_ai/src/hands_on_ai/chat/data/fallbacks.json
 
 Submit a pull request with your changes!
 """

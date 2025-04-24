@@ -71,10 +71,10 @@ save_config(config)
 - `get_chunk_size()`: Get the default chunk size for RAG
 
 Environment variables that override config:
-- `AILABKIT_SERVER`: Override server URL
-- `AILABKIT_MODEL`: Override default model
-- `AILABKIT_EMBEDDING_MODEL`: Override embedding model
-- `AILABKIT_LOG=debug`: Enable debug logging
+- `HANDS_ON_AI_SERVER`: Override server URL
+- `HANDS_ON_AI_MODEL`: Override default model
+- `HANDS_ON_AI_EMBEDDING_MODEL`: Override embedding model
+- `HANDS_ON_AI_LOG=debug`: Enable debug logging
 
 ### Chat Module API
 
