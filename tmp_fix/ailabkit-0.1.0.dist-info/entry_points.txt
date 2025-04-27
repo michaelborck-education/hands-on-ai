@@ -1,5 +1,0 @@
-[console_scripts]
-agent = ailabkit.agent.cli:app
-ailabkit = ailabkit.cli:app
-chat = ailabkit.chat.cli:app
-rag = ailabkit.rag.cli:app
