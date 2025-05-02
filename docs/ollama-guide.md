@@ -108,9 +108,26 @@ You should get a real-time AI response!
 
 > ### ⚙️ Advanced: Custom Model Host
 
-If you're running Ollama on a different host or port (e.g. remote or Docker), you can create a config file to tell Hands-On AI where to send requests.  
+If you're running Ollama on a different host or port (e.g. remote or Docker), you can create a config file to tell Hands-On AI where to send requests.
 
-See: [docs/configuration.md](configuration.md) for advanced setup.
+> ### 🔑 Using API Key Authentication
+
+If your Ollama server requires API key authentication, you can configure it in two ways:
+
+1. **Using environment variables:**
+   ```bash
+   export HANDS_ON_AI_API_KEY=your-api-key
+   ```
+
+2. **Using a config file:**
+   Create or edit `~/.hands-on-ai/config.json`:
+   ```json
+   {
+     "api_key": "your-api-key"
+   }
+   ```
+
+See: [docs/configuration.md](configuration.md) for complete configuration options.
 
 ## Troubleshooting
 

@@ -75,6 +75,9 @@ def load_config():
     if "HANDS_ON_AI_EMBEDDING_MODEL" in os.environ:
         config["embedding_model"] = os.environ["HANDS_ON_AI_EMBEDDING_MODEL"]
     
+    if "HANDS_ON_AI_API_KEY" in os.environ:
+        config["api_key"] = os.environ["HANDS_ON_AI_API_KEY"]
+    
     # Then check user config file (this overrides defaults and environment variables)
     if CONFIG_PATH.exists():
         try:
@@ -154,3 +157,8 @@ def get_embedding_model():
 def get_chunk_size():
     """Get the default chunk size from config."""
     return load_config()["chunk_size"]
+
+
+def get_api_key():
+    """Get the API key from config if available."""
+    return load_config().get("api_key", "")

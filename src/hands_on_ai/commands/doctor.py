@@ -19,16 +19,26 @@ def doctor():
     server_url = config.get_server_url()
     model = config.get_model()
     embedding_model = config.get_embedding_model()
+    api_key = config.get_api_key()
     
     print("[bold]Configuration[/bold]")
     print(f"  • Config file: {config.CONFIG_PATH}")
     print(f"  • Server URL: {server_url}")
     print(f"  • Default model: {model}")
     print(f"  • Embedding model: {embedding_model}")
+    if api_key:
+        masked_key = f"{api_key[:4]}{'*' * (len(api_key) - 8)}{api_key[-4:]}" if len(api_key) > 8 else "****"
+        print(f"  • API key: {masked_key} (configured)")
+    else:
+        print(f"  • API key: Not configured")
     
     # Check server connectivity
     try:
-        r = requests.get(f"{server_url}/api/tags", timeout=5)
+        headers = {}
+        if api_key:
+            headers["Authorization"] = f"Bearer {api_key}"
+        
+        r = requests.get(f"{server_url}/api/tags", headers=headers, timeout=5)
         if r.status_code == 200:
             print("\n✅ Ollama server is reachable")
         else:

@@ -1,15 +1,15 @@
-# ChatCraft Configuration Guide
+# Hands-On AI Configuration Guide
 
-This document outlines how to configure ChatCraft for different environments and usage needs. ChatCraft is designed to be flexible and educator-friendly, supporting both local development and classroom deployment.
+This document outlines how to configure Hands-On AI for different environments and usage needs. Hands-On AI is designed to be flexible and educator-friendly, supporting both local development and classroom deployment.
 
 ---
 
 ## 🔧 Configuration Priorities
 
-ChatCraft supports configuration via the following priority order:
+Hands-On AI supports configuration via the following priority order:
 
 1. **Environment Variables** (highest priority)
-2. **User Configuration File** (`~/.chatcraft/config.json`)
+2. **User Configuration File** (`~/.hands-on-ai/config.json`)
 3. **Built-in Defaults** (fallback if no config found)
 
 ---
@@ -22,15 +22,22 @@ The following options can be configured:
 - **Description**: URL of the Ollama server to use
 - **Default**: `http://localhost:11434`
 - **Set via**:
-  - Environment: `OLLAMA_HOST=http://remote-server:11434`
-  - Config File: `{ "ollama_host": "http://remote-server:11434" }`
+  - Environment: `HANDS_ON_AI_SERVER=http://remote-server:11434`
+  - Config File: `{ "server": "http://remote-server:11434" }`
+
+### `API_KEY`
+- **Description**: API key for authenticating with the Ollama server
+- **Default**: None
+- **Set via**:
+  - Environment: `HANDS_ON_AI_API_KEY=your-api-key`
+  - Config File: `{ "api_key": "your-api-key" }`
 
 ### `DEFAULT_MODEL`
 - **Description**: Default model to use (e.g., `llama3`, `codellama`)
 - **Default**: `llama3`
 - **Set via**:
-  - Environment: `DEFAULT_MODEL=codellama`
-  - Config File: `{ "default_model": "codellama" }`
+  - Environment: `HANDS_ON_AI_MODEL=codellama`
+  - Config File: `{ "model": "codellama" }`
 
 ### `DEFAULT_PERSONALITY`
 - **Description**: Default bot personality for REPL and CLI
@@ -50,17 +57,18 @@ The following options can be configured:
 
 ## 📁 Configuration File Location
 
-By default, ChatCraft looks for a JSON config file at:
+By default, Hands-On AI looks for a JSON config file at:
 ```
-~/.chatcraft/config.json
+~/.hands-on-ai/config.json
 ```
 Example:
 ```json
 {
-  "ollama_host": "http://192.168.1.42:11434",
-  "default_model": "llama3",
+  "server": "http://192.168.1.42:11434",
+  "model": "llama3",
   "default_personality": "coder",
-  "timeout": 12
+  "timeout": 12,
+  "api_key": "your-api-key"
 }
 ```
 
@@ -68,11 +76,11 @@ Example:
 
 ## ⚙️ Developer Overrides
 
-For local development or advanced use, ChatCraft also supports fallback personality message overrides:
+For local development or advanced use, Hands-On AI also supports fallback personality message overrides:
 
-- `~/.chatcraft/fallbacks.json` – user-specific overrides
-- `chatcraft/data/fallbacks.local.json` – local project overrides
-- `chatcraft/data/fallbacks.json` – default bundled fallback messages
+- `~/.hands-on-ai/chat_fallbacks.json` – user-specific overrides
+- `hands_on_ai/chat/data/fallbacks.local.json` – local project overrides
+- `hands_on_ai/chat/data/fallbacks.json` – default bundled fallback messages
 
 ---
 
@@ -80,7 +88,7 @@ For local development or advanced use, ChatCraft also supports fallback personal
 
 Run the built-in diagnostic command:
 ```
-chatcraft doctor
+handsonai doctor
 ```
 This will:
 - Check the Ollama server connection
@@ -101,7 +109,7 @@ This will:
 
 - `just doctor` – Run diagnostics
 - `just repl` – Start CLI REPL
-- `chatcraft --help` – View CLI options
+- `handsonai --help` – View CLI options
 
 ---
 

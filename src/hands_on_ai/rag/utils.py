@@ -8,7 +8,7 @@ import importlib.resources
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import requests
-from ..config import get_server_url, get_embedding_model, get_chunk_size
+from ..config import get_server_url, get_embedding_model, get_chunk_size, get_api_key
 
 
 def load_text_file(path: Path) -> str:
@@ -87,6 +87,9 @@ def get_embeddings(chunks, model=None):
         
     url = f"{get_server_url()}/api/embeddings"
     headers = {"Content-Type": "application/json"}
+    api_key = get_api_key()
+    if api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
     vectors = []
 
     for chunk in chunks:

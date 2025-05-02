@@ -5,7 +5,7 @@ Core response functionality for the chat module.
 import requests
 import random
 import time
-from ..config import get_server_url, load_fallbacks, log
+from ..config import get_server_url, get_api_key, load_fallbacks, log
 
 # Global model cache
 _last_model: str | None = None
@@ -71,6 +71,13 @@ def get_response(
     # Try to get a response
     for attempt in range(1, retries + 1):
         try:
+            # Prepare headers with API key if available
+            headers = {}
+            api_key = get_api_key()
+            if api_key:
+                headers["Authorization"] = f"Bearer {api_key}"
+                log.debug("Using API key for authentication")
+            
             response = requests.post(
                 f"{url}/api/generate",
                 json={
@@ -79,6 +86,7 @@ def get_response(
                     "system": system,
                     "stream": stream
                 },
+                headers=headers,
                 timeout=10
             )
             response.raise_for_status()

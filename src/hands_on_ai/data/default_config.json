@@ -4,5 +4,6 @@
     "embedding_model": "nomic-embed-text",
     "chunk_size": 500,
     "default_personality": "coder",
-    "timeout": 60
+    "timeout": 60,
+    "api_key": ""
 }
