@@ -139,9 +139,13 @@ def run_agent(prompt: str, model: Optional[str] = None, max_iterations: int = 5,
     
     for i in range(max_iterations):
         # Get model response
+        # Convert messages to a single prompt for get_response
+        system_message = messages[0]["content"]
+        full_prompt = "\n\n".join([msg["content"] for msg in messages[1:]])
         response = get_response(
-            messages=messages,
-            model=model
+            prompt=full_prompt,
+            model=model,
+            system=system_message
         )
         
         if verbose:
