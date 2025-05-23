@@ -7,6 +7,7 @@ from typing import Dict, List, Callable, Any, Optional, Tuple
 from ..config import get_model, log
 from ..chat import get_response
 from .prompts import SYSTEM_PROMPT, TOOL_DESCRIPTION_FORMAT, TOOL_RESULT_FORMAT
+from .formats import detect_best_format, run_json_agent
 
 # Global tool registry
 _tools: Dict[str, Dict[str, Any]] = {}
@@ -106,7 +107,51 @@ def _execute_tool_call(tool_name: str, tool_input: str) -> str:
         return f"Error executing tool '{tool_name}': {str(e)}"
 
 
-def run_agent(prompt: str, model: Optional[str] = None, max_iterations: int = 5, verbose: bool = False) -> str:
+def run_agent(
+    prompt: str, 
+    model: Optional[str] = None, 
+    format: str = "auto",
+    max_iterations: int = 5, 
+    verbose: bool = False
+) -> str:
+    """
+    Run the agent with the given prompt.
+    
+    Args:
+        prompt: User question or instruction
+        model: LLM model to use, defaults to configured model
+        format: Format to use ("react", "json", or "auto")
+        max_iterations: Maximum number of tool use iterations
+        verbose: Whether to print intermediate steps
+        
+    Returns:
+        str: Final agent response
+    """
+    # Get model from config if not specified
+    if model is None:
+        model = get_model()
+    
+    # Determine which format to use if set to auto
+    if format == "auto":
+        format = detect_best_format(model)
+        
+    if verbose:
+        log.info(f"Using {format} format for model {model}")
+    
+    # Use JSON format for smaller models
+    if format == "json":
+        return run_json_agent(prompt, _tools, model, max_iterations, verbose)
+    
+    # Otherwise use the original ReAct format
+    return _run_react_agent(prompt, model, max_iterations, verbose)
+
+
+def _run_react_agent(
+    prompt: str, 
+    model: Optional[str] = None,
+    max_iterations: int = 5, 
+    verbose: bool = False
+) -> str:
     """
     Run the agent with the given prompt using ReAct format.
     
@@ -123,10 +168,6 @@ def run_agent(prompt: str, model: Optional[str] = None, max_iterations: int = 5,
     system_prompt = SYSTEM_PROMPT.format(
         tool_descriptions=_format_tools_for_prompt()
     )
-    
-    # Get model from config if not specified
-    if model is None:
-        model = get_model()
     
     # Initialize conversation with the user query
     messages = [
