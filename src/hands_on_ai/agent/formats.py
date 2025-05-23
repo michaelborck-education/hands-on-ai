@@ -6,7 +6,7 @@ import re
 import json
 import requests
 from typing import Dict, List, Callable, Any, Tuple
-from ..config import get_server_url, log
+from ..config import get_server_url, get_api_key, log
 
 # JSON prompt template
 JSON_SYSTEM_PROMPT = """You are an intelligent agent that can analyze questions and call tools.
@@ -86,7 +86,7 @@ def normalize_model_name(model_name: str) -> str:
 
 def detect_best_format(model_name: str) -> str:
     """
-    Determine the best format for the given model.
+    Determine the best format for the given model based on API capabilities.
     
     Args:
         model_name: Name of the model
@@ -94,12 +94,99 @@ def detect_best_format(model_name: str) -> str:
     Returns:
         str: "react" or "json" (default)
     """
-    # For educational purposes, we'll keep this simple and reliable
-    # JSON format works better with smaller models and is more robust
+    # Default format for safety
     DEFAULT_FORMAT = "json"
     
-    # For larger models (if we recognize them by name), use ReAct format
-    # This is a simplified approach without API calls
+    try:
+        server_url = get_server_url()
+        
+        # Try only two variations:
+        # 1. The original name exactly as provided
+        # 2. The normalized name with :latest appended (if needed)
+        original_name = model_name
+        normalized_name = normalize_model_name(model_name)
+        
+        model_variations = [original_name]
+        if normalized_name != original_name:
+            model_variations.append(normalized_name)
+        
+        # Prepare headers with API key if available
+        headers = {}
+        api_key = get_api_key()
+        if api_key:
+            headers["Authorization"] = f"Bearer {api_key}"
+            log.debug("Using API key for authentication")
+        
+        # Try each variation
+        for model_variant in model_variations:
+            log.debug(f"Checking model capabilities for: {model_variant}")
+            
+            # Call the Ollama API to check if the model exists and get its metadata
+            response = requests.post(
+                f"{server_url}/api/show",
+                json={"name": model_variant},
+                headers=headers,
+                timeout=5
+            )
+            
+            # If we found a matching model
+            if response.status_code == 200:
+                log.debug(f"Found model: {model_variant}")
+                
+                # Parse the model info
+                model_info = response.json()
+                
+                # Check if model has parameters field
+                if "parameters" in model_info:
+                    # Extract parameters that might indicate model capability
+                    parameters = model_info.get("parameters", {})
+                    
+                    # Look for model size info
+                    model_size = 0
+                    if "num_params" in parameters:
+                        model_size = parameters["num_params"]
+                    elif "parameter_count" in parameters:
+                        model_size = parameters["parameter_count"]
+                    
+                    # Models with at least 30B parameters can likely handle ReAct format
+                    if model_size >= 30_000_000_000:  # 30B or larger
+                        log.debug(f"Model {model_variant} has {model_size} parameters, using ReAct format")
+                        return "react"
+                    
+                    log.debug(f"Model {model_variant} has {model_size} parameters, using JSON format")
+                
+                # Also check template/system prompt for function calling capabilities
+                template = model_info.get("template", "")
+                if "function" in template.lower() or "tool" in template.lower():
+                    log.debug(f"Model {model_variant} mentions functions/tools in template, using ReAct format")
+                    return "react"
+                
+                # Fall back to name-based detection as a secondary method
+                if _model_name_suggests_large_model(model_variant):
+                    log.debug(f"Model name '{model_variant}' suggests a large model, using ReAct format")
+                    return "react"
+                
+                # Default to JSON format for models we found but can't determine capabilities
+                log.debug(f"Using JSON format for model {model_variant}")
+                return DEFAULT_FORMAT
+        
+        # If API call fails, fall back to name-based detection
+        model_format = _name_based_format_detection(model_name)
+        if model_format != DEFAULT_FORMAT:
+            return model_format
+            
+        # If we tried all variations and none worked, log a debug message
+        model_list = ", ".join(model_variations)
+        log.debug(f"Could not determine model capabilities. Tried: {model_list}. Using default format: {DEFAULT_FORMAT}")
+        return DEFAULT_FORMAT
+    
+    except Exception as e:
+        # If there's any error, fall back to name-based detection
+        log.debug(f"Error accessing model API: {e}. Falling back to name-based detection.")
+        return _name_based_format_detection(model_name)
+
+def _model_name_suggests_large_model(model_name: str) -> bool:
+    """Check if the model name suggests it's a large model based on patterns."""
     large_model_patterns = [
         "gpt-4", "gpt4", 
         "claude-2", "claude-3", "claude3",
@@ -107,14 +194,17 @@ def detect_best_format(model_name: str) -> str:
         "mixtral-8x7b"
     ]
     
-    # Check if the model name matches any large model pattern
-    for pattern in large_model_patterns:
-        if pattern.lower() in model_name.lower():
-            log.debug(f"Model {model_name} recognized as a large model, using ReAct format")
-            return "react"
+    return any(pattern.lower() in model_name.lower() for pattern in large_model_patterns)
+
+def _name_based_format_detection(model_name: str) -> str:
+    """Detect format based on model name patterns."""
+    DEFAULT_FORMAT = "json"
     
-    # For all other models, use JSON format
-    log.debug(f"Using JSON format for model {model_name}")
+    if _model_name_suggests_large_model(model_name):
+        log.debug(f"Model name '{model_name}' suggests a large model, using ReAct format")
+        return "react"
+    
+    log.debug(f"Using default JSON format for model {model_name}")
     return DEFAULT_FORMAT
 
 def parse_json_response(text: str) -> Dict[str, Any]:
