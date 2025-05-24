@@ -3,14 +3,6 @@
 Debug script to show the exact prompt being sent to the LLM.
 """
 
-import os
-import sys
-
-# Set environment variables for API access
-os.environ['HANDS_ON_AI_SERVER'] = 'http://ollama.serveur.au'
-os.environ['HANDS_ON_AI_MODEL'] = 'llama3.2'
-os.environ['HANDS_ON_AI_API_KEY'] = 'student-api-key-123'
-
 # Add patching for get_response to intercept the prompt
 import requests
 from unittest.mock import patch

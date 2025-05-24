@@ -4,13 +4,6 @@ Test script for the agent functionality in hands-on-ai.
 This example demonstrates how the agent calls tools with different formats.
 """
 
-import os
-
-# Set environment variables for API access
-os.environ['HANDS_ON_AI_SERVER'] = 'http://localhost:11434'  # Default Ollama server
-os.environ['HANDS_ON_AI_MODEL'] = 'llama3'     # Default model
-os.environ['HANDS_ON_AI_LOG'] = 'debug'        # Enable debug logging
-
 def weather_data(location):
     """Get weather data for a location."""
     print(f"✅ Tool called: weather_data with input: {location}")

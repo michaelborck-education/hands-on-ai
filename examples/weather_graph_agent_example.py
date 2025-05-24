@@ -7,13 +7,6 @@ an agent that can decide between fetching weather data or generating different
 types of weather graphs based on a conversation.
 """
 
-import os
-
-# Set environment variables for API access
-os.environ['HANDS_ON_AI_SERVER'] = 'http://ollama.serveur.au'
-os.environ['HANDS_ON_AI_MODEL'] = 'granite3.2'
-os.environ['HANDS_ON_AI_API_KEY'] = 'student-api-key-123'
-
 def get_weather_data(location="current location"):
     """Get weather data for a location."""
     return f"Weather data for {location}: Sunny, 25°C, humidity 60%, wind 5mph NE"

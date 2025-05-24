@@ -6,13 +6,6 @@ This script demonstrates the new format auto-detection and JSON-based agent
 that works with smaller language models.
 """
 
-import os
-
-# Set environment variables for API access
-os.environ['HANDS_ON_AI_SERVER'] = 'http://ollama.serveur.au'
-os.environ['HANDS_ON_AI_MODEL'] = 'llama3.2'  # Try with a smaller model
-os.environ['HANDS_ON_AI_API_KEY'] = 'student-api-key-123'
-
 def weather_data(location):
     """Get weather data for a location."""
     print(f"✅ Tool called: weather_data with input: {location}")

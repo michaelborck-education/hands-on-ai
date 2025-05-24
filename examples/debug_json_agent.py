@@ -3,15 +3,6 @@
 Debug script for the JSON agent to identify and fix parsing issues.
 """
 
-import os
-import json
-import re
-
-# Set environment variables for API access
-os.environ['HANDS_ON_AI_SERVER'] = 'http://ollama.serveur.au'
-os.environ['HANDS_ON_AI_MODEL'] = 'llama3.2'
-os.environ['HANDS_ON_AI_API_KEY'] = 'student-api-key-123'
-
 def weather_data(location):
     """Get weather data for a location."""
     print(f"Tool called: weather_data with input: {location}")

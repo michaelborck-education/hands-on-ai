@@ -5,13 +5,6 @@ Simple Weather Agent Test
 This is a fixed version of the original code to test the agent functionality.
 """
 
-import os
-
-# Set environment variables for API access
-os.environ['HANDS_ON_AI_SERVER'] = 'http://ollama.serveur.au'
-os.environ['HANDS_ON_AI_MODEL'] = 'granite3.2'
-os.environ['HANDS_ON_AI_API_KEY'] = 'student-api-key-123'
-
 def the_main_one():
     return "Weather data for your location."
 

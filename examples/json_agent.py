@@ -4,15 +4,6 @@ JSON-based Agent: A simplified agent pattern for smaller models
 that uses structured JSON output for more reliable tool calling.
 """
 
-import os
-import json
-import re
-
-# Set environment variables for API access
-os.environ['HANDS_ON_AI_SERVER'] = 'http://ollama.serveur.au'
-os.environ['HANDS_ON_AI_MODEL'] = 'llama3.2'
-os.environ['HANDS_ON_AI_API_KEY'] = 'student-api-key-123'
-
 # Define our tool functions
 def weather_data(location):
     """Get weather data for a location."""
