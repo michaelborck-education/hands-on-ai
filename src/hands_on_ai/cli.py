@@ -16,12 +16,13 @@ app.add_typer(models.app, name="models", help="Manage and inspect LLM models")
 
 # Add root command
 @app.callback(invoke_without_command=True)
-def root():
+def root(ctx: typer.Context):
     """
     AI Learning Lab Toolkit - A modular toolkit for learning AI concepts.
     """
     # If no subcommand is provided, show list of modules
-    typer.run(list.list_modules)
+    if ctx.invoked_subcommand is None:
+        list.list_modules()
 
 
 if __name__ == "__main__":

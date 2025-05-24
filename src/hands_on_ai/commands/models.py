@@ -11,6 +11,17 @@ app = typer.Typer(help="Manage and inspect LLM models")
 
 
 @app.callback(invoke_without_command=True)
+def models_callback(ctx: typer.Context):
+    """Manage and inspect LLM models."""
+    # Only run list_models if no subcommand was invoked
+    if ctx.invoked_subcommand is None:
+        list_available_models()
+
+@app.command()
+def list():
+    """List all available models."""
+    list_available_models()
+
 def list_available_models():
     """List all available models."""
     models = list_models()
