@@ -18,6 +18,7 @@ It provides a clean, modular structure that introduces core AI concepts progress
 | chat | Simple chatbot with system prompts | chat |
 | rag | Retrieval-Augmented Generation (RAG) | rag |
 | agent | ReAct-style reasoning with tool use | agent |
+| models | Model capability detection and utilities | models |
 
 Each module is:
 - 🔌 Self-contained
@@ -33,7 +34,17 @@ hands_on_ai/
 ├── agent/          ← Agent reasoning + tools (ReAct-style)
 ├── config.py       ← Shared config (model, chunk size, paths)
 ├── cli.py          ← Meta CLI (list, config, version)
-└── utils/          ← Shared tools, prompts, paths, etc.
+├── models.py       ← Centralized model utilities
+├── utils/          ← Shared tools, prompts, paths, etc.
+└── commands/       ← Shared CLI commands
+```
+
+Examples and scripts are available in the repository:
+
+```
+hands-on-ai/
+├── examples/       ← Example scripts for all modules
+└── scripts/        ← Utility scripts for package maintenance
 ```
 
 ## 🧑‍🏫 Why This Matters for Students

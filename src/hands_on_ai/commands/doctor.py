@@ -6,6 +6,7 @@ import typer
 from rich import print
 import requests
 from .. import config
+from ..models import check_model_exists, list_models
 
 app = typer.Typer(help="Check environment and configuration")
 
@@ -41,7 +42,33 @@ def doctor():
         r = requests.get(f"{server_url}/api/tags", headers=headers, timeout=5)
         if r.status_code == 200:
             print("\n✅ Ollama server is reachable")
+            
+            # Check if models exist
+            models = list_models()
+            if models:
+                print(f"✅ Found {len(models)} models on the server")
+            else:
+                print("⚠️ No models found on the server")
+                
+            # Check if default model exists
+            if check_model_exists(model):
+                print(f"✅ Default model '{model}' is available")
+            else:
+                print(f"❌ Default model '{model}' not found")
+                
+            # Check if embedding model exists
+            if check_model_exists(embedding_model):
+                print(f"✅ Embedding model '{embedding_model}' is available")
+            else:
+                print(f"❌ Embedding model '{embedding_model}' not found")
+                
         else:
             print(f"\n❌ Ollama server returned status code {r.status_code}")
     except Exception as e:
         print(f"\n❌ Could not connect to Ollama server: {e}")
+        
+    # Provide guidance for next steps
+    print("\n[bold]Next steps:[/bold]")
+    print("  • Run 'hands-on-ai models' to see available models")
+    print("  • Run 'hands-on-ai config' to check your configuration")
+    print("  • Visit https://ollama.com/install for Ollama installation help")

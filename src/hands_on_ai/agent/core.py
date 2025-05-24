@@ -6,8 +6,9 @@ import re
 from typing import Dict, List, Callable, Any, Optional, Tuple
 from ..config import get_model, log
 from ..chat import get_response
+from ..models import detect_best_format
 from .prompts import SYSTEM_PROMPT, TOOL_DESCRIPTION_FORMAT, TOOL_RESULT_FORMAT
-from .formats import detect_best_format, run_json_agent
+from .formats import run_json_agent
 
 # Global tool registry
 _tools: Dict[str, Dict[str, Any]] = {}

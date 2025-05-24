@@ -178,6 +178,9 @@ cython_debug/
 _scratchpad/
 ChatCraft_Offline_Bundle.zip
 
+# Local example script modifications
+examples/*.local.py
+examples/custom/
 
 _notes/
 uv.lock
