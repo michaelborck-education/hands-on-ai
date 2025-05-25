@@ -184,3 +184,5 @@ examples/custom/
 
 _notes/
 uv.lock
+rag_example
+*.npz
