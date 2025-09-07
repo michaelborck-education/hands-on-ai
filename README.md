@@ -4,6 +4,7 @@
 [![MIT License](https://img.shields.io/badge/licence-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Classroom Ready](https://img.shields.io/badge/classroom-ready-brightgreen.svg)]()
 [![Beginner Friendly](https://img.shields.io/badge/beginner-friendly-orange.svg)]()
+[![DeepWiki](https://deepwiki.com/badge-maker?url=https%3A%2F%2Fdeepwiki.com%2Fmichael-borck%2Fhands-on-ai)](https://deepwiki.com/michael-borck/hands-on-ai)
 
 > AI learning made simple for students and educators
 
@@ -230,6 +231,7 @@ This package is designed to work seamlessly with Large Language Models for codin
 ### For Students & Educators
 - **[LLM.txt](https://github.com/teaching-repositories/hands-on-ai/blob/main/LLM.txt)** - Complete reference guide for LLMs
 - **[Documentation](https://michael-borck.github.io/hands-on-ai/)** - Full documentation site
+- **[DeepWiki](https://deepwiki.com/michael-borck/hands-on-ai)** - Interactive code exploration and wiki
 
 ### How to Use with LLMs
 1. **Download** the [LLM.txt file](https://github.com/teaching-repositories/hands-on-ai/blob/main/LLM.txt)
