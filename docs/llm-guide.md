@@ -33,8 +33,10 @@ pip install git+https://github.com/teaching-repositories/hands-on-ai.git
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- For local LLM usage: [Ollama](https://ollama.ai/) or similar local LLM server
+- Python 3.10+ (3.6+ minimum)
+- Access to any OpenAI-compatible LLM provider:
+  - Local: [Ollama](https://ollama.ai/) for privacy and control
+  - Cloud: OpenAI, OpenRouter, Together AI, etc. for advanced models
 
 ### Development Installation
 
@@ -55,7 +57,7 @@ from hands_on_ai.config import load_config, save_config, get_server_url, get_mod
 # Get configuration values
 config = load_config()  # Returns dict with all config
 model = get_model()     # Get default LLM model
-server = get_server_url()  # Get Ollama server URL
+server = get_server_url()  # Get configured LLM provider URL
 
 # Save configuration
 config["model"] = "llama3"
@@ -513,9 +515,10 @@ hands_on_ai/
    - Web interfaces are basic/educational, not production-grade
    - Limited to English language currently
 
-4. **Dependency on Ollama**:
-   - Designed to work with Ollama for local LLM inference
-   - May require adaptation for other LLM backends
+4. **Provider Flexibility**:
+   - Works with any OpenAI-compatible LLM provider
+   - Defaults to local Ollama but supports cloud providers
+   - No vendor lock-in - easily switch between providers
    - Limited streaming support
 
 ### Error Handling

@@ -1,16 +1,16 @@
-# ChatCraft CLI Guide
+# Chat Module CLI Guide
 
-This guide explains how to use the ChatCraft command-line interface (CLI) to interact with educational chatbot personalities powered by Ollama.
+This guide explains how to use the Chat module's command-line interface (CLI) to interact with educational chatbot personalities powered by any OpenAI-compatible provider.
 
 ## 📦 Installation
 
-Once ChatCraft is installed with pip:
+Once HandsOnAI is installed with pip:
 
 ```bash
-uv pip install -e '.[dev]'
+pip install hands-on-ai
 ```
 
-You’ll have access to a CLI tool:
+You'll have access to the chat CLI tool:
 
 ```bash
 chat --help
@@ -43,7 +43,7 @@ Displays all personality bots with a brief description.
 chat doctor
 ```
 
-Performs a diagnostic to check if the Ollama server is reachable and responding.
+Performs a diagnostic to check if your configured LLM provider is reachable and responding.
 
 ---
 
@@ -89,7 +89,7 @@ Use commands prefixed with `/` inside the REPL:
 | `/exit`              | Exit the REPL |
 | `/bots`              | List available bot personalities |
 | `/personality NAME`  | Switch to a different bot |
-| `/doctor`            | Check Ollama server status |
+| `/doctor`            | Check LLM provider status |
 
 > ❗ This REPL is stateless: it does not retain memory or chat history between turns.
 
@@ -97,7 +97,7 @@ Use commands prefixed with `/` inside the REPL:
 
 ## 🧠 Custom Personalities
 
-ChatCraft bots are defined as simple Python functions using `get_response()`. You can create your own bots or extend existing ones.
+HandsOnAI chat bots are defined as simple Python functions using `get_response()`. You can create your own bots or extend existing ones.
 
 All built-in bots are available via:
 
@@ -109,24 +109,32 @@ from chat import friendly_bot, pirate_bot, coder_bot, ...
 
 ## 🧪 Troubleshooting
 
-- If you see `❌ Ollama server not reachable`, ensure Ollama is running on your machine.
+- If you see connection errors, check that your LLM provider is running and accessible.
+- For local Ollama: ensure Ollama is running on your machine.
+- For cloud providers: verify your API key and server URL are correct.
 - Use `chat doctor` for diagnostics.
-- To change the server URL, set the `OLLAMA_HOST` environment variable.
+- To change configuration, set `HANDS_ON_AI_SERVER` and `HANDS_ON_AI_API_KEY` environment variables.
 
 ```bash
-export OLLAMA_HOST=http://remote-server:11434
+# For local Ollama
+export HANDS_ON_AI_SERVER=http://remote-server:11434
+
+# For cloud providers
+export HANDS_ON_AI_SERVER=https://api.openai.com
+export HANDS_ON_AI_API_KEY=your-api-key
 ```
 
 ---
 
 ## 📚 Related Docs
 
-- [Ollama Setup Guide](./ollama-guide.md)
+- [Ollama Setup Guide](./ollama-guide.md) - For local LLM setup
+- [Configuration Guide](./configuration.md) - For provider setup
 - [Mini Projects](./projects/index.md)
 - [Education Guide](./education-guide.md)
 
 ---
 
-*ChatCraft CLI is designed for educational use, rapid prototyping, and personality-driven chatbot interaction.*
+*The HandsOnAI Chat CLI is designed for educational use, rapid prototyping, and personality-driven chatbot interaction.*
 
-For more advanced usage, consider integrating ChatCraft into your Python projects using the `chat` library.
+For more advanced usage, consider integrating HandsOnAI directly into your Python projects using the `hands_on_ai.chat` module.

@@ -6,7 +6,7 @@ This guide provides educational rationale, classroom implementation strategies, 
 
 ## Educational Value
 
-ChatCraft was designed with specific educational benefits in mind:
+Hands-On AI was designed with specific educational benefits in mind:
 
 1. **Removing Technical Barriers** - Students can experiment with AI without getting lost in API keys, tokens, or complex setup
 2. **Focusing on Core Programming Concepts** - Function calls, variables, conditionals, and user input are reinforced
@@ -16,7 +16,7 @@ ChatCraft was designed with specific educational benefits in mind:
 
 ## Curriculum Integration
 
-ChatCraft can be integrated into various levels of computer science education:
+Hands-On AI can be integrated into various levels of computer science education:
 
 ### Beginner Level (No Prior Programming Experience)
 - **Objectives**: Basic syntax, function calls, variables
@@ -37,19 +37,19 @@ ChatCraft can be integrated into various levels of computer science education:
 - **Activities**: 
   - Create multi-bot conversation simulations
   - Build a chatbot with memory/context
-  - Extend ChatCraft with additional backends
+  - Integrate Hands-On AI with different LLM providers
 
 ## Classroom Implementation Models
 
 ### 1. Guided Tour (1 Hour)
-A quick introduction to AI concepts through ChatCraft:
-- 10 min: Introduction to LLMs and ChatCraft
+A quick introduction to AI concepts through Hands-On AI:
+- 10 min: Introduction to LLMs and Hands-On AI
 - 15 min: Demonstration of pre-built bots
 - 25 min: Hands-on with simple modifications
 - 10 min: Discussion and reflection
 
 ### 2. Mini-Project Workshop (2-3 Hours)
-Students build a specific application with ChatCraft:
+Students build a specific application with Hands-On AI:
 - 15 min: Introduction and demo
 - 30 min: Planning and design
 - 90 min: Development time
@@ -57,7 +57,7 @@ Students build a specific application with ChatCraft:
 
 ### 3. Multi-Week Unit (2-3 Weeks)
 Deeper exploration of AI concepts and applications:
-- Week 1: Introduction to ChatCraft and basic interactions
+- Week 1: Introduction to Hands-On AI and basic interactions
 - Week 2: Building custom personalities and applications
 - Week 3: Culminating projects and presentations
 
@@ -84,7 +84,7 @@ Deeper exploration of AI concepts and applications:
 ## Assessment Ideas
 
 - **Portfolio**: Collection of bot personalities created by students
-- **Project**: Functional application built with ChatCraft (quiz bot, story bot, etc.)
+- **Project**: Functional application built with Hands-On AI (quiz bot, story bot, etc.)
 - **Reflection**: Written analysis of AI strengths/limitations observed
 - **Presentation**: Demo of custom bot and explanation of design choices
 
@@ -97,12 +97,12 @@ Deeper exploration of AI concepts and applications:
 
 ### Software
 - Python 3.6+
-- ChatCraft library installed
+- Hands-On AI library installed
 - Ollama or alternative LLM backend
 
 ### Preparation Steps
 1. Install Python on all classroom machines
-2. Install ChatCraft (`pip install chatcraft`)
+2. Install Hands-On AI (`pip install hands-on-ai`)
 3. Set up Ollama with desired models (llama3 recommended for beginners)
 4. Test a basic example before class
 
@@ -131,7 +131,7 @@ When introducing AI in the classroom, consider discussing:
 **Objective**: Students will create and interact with custom personality bots
 
 ### Materials
-- Computers with Python and ChatCraft installed
+- Computers with Python and Hands-On AI installed
 - Handout with personality prompt examples
 - Worksheet for planning bot personalities
 
@@ -168,4 +168,4 @@ When introducing AI in the classroom, consider discussing:
 
 ---
 
-*Note: ChatCraft is designed to be used with age-appropriate models and settings. Always review school policies regarding AI tools before implementation.*
+*Note: Hands-On AI is designed to be used with age-appropriate models and settings. Always review school policies regarding AI tools before implementation.*

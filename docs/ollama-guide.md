@@ -1,19 +1,33 @@
 # Setting Up Ollama for Hands-On AI
 
-This guide will walk you through the simple process of setting up Ollama on your local machine to power your Hands-On AI projects.
+This guide will walk you through setting up Ollama as a **local, privacy-focused** option for powering your Hands-On AI projects. 
 
-
-Great instinct! Since the docstring update was already complete, there's no change needed in your Python code.
-
-Now, for your **Ollama guide**, here’s what you can add based on your idea:
+> **Note**: HandsOnAI works with **any OpenAI-compatible provider** including OpenAI, OpenRouter, Together AI, and others. This guide focuses specifically on Ollama for users who want to run models locally.
 
 ---
 
 ## 🧭 Who Is This Guide For?
 
-This guide is written for **beginners** who want to run Hands-On AI with a local LLM using [Ollama](https://ollama.com). If you're an educator or student new to large language models, this will walk you through everything step by step.
+This guide is written for:
+- **Beginners** who want to run Hands-On AI with local LLMs using [Ollama](https://ollama.com)
+- **Educators** seeking privacy-focused solutions for classroom use
+- **Students** who prefer not to send data to cloud providers
+- **Anyone** who wants to understand how local LLMs work
 
-If you're an advanced user with an existing Ollama setup (custom models, non-default ports, Docker, remote hosting), feel free to skip this guide — Hands-On AI will work as long as your Ollama server is reachable.
+If you're comfortable using cloud providers like OpenAI or OpenRouter, you can skip this guide and configure HandsOnAI with your preferred provider instead.
+
+---
+
+## 🌍 Ollama vs Other Providers
+
+| Feature | Local Ollama | Cloud Providers |
+|---------|--------------|----------------|
+| **Privacy** | ✅ All data stays local | ❌ Data sent to external servers |
+| **Cost** | ✅ Free after initial setup | ❌ Pay per token/request |
+| **Internet** | ✅ Works offline | ❌ Requires internet connection |
+| **Setup** | ⚠️ Requires installation | ✅ Just need API key |
+| **Performance** | ⚠️ Limited by your hardware | ✅ High-end GPUs available |
+| **Latest Models** | ⚠️ Community releases | ✅ Cutting-edge models first |
 
 
 ## What is Ollama?
@@ -76,13 +90,13 @@ Let's make sure everything is working properly:
    ```
 2. You should see a response from the model
 
-If you received a response, congratulations! Ollama is set up correctly and ready to use with ChatCraft.
+If you received a response, congratulations! Ollama is set up correctly and ready to use with HandsOnAI.
 
-## Using Ollama with ChatCraft
+## Using Ollama with HandsOnAI
 
-ChatCraft is designed to work with Ollama by default. As long as Ollama is running in the background, ChatCraft will automatically connect to it at `http://localhost:11434`.
+HandsOnAI is designed to work with Ollama by default. As long as Ollama is running in the background, HandsOnAI will automatically connect to it at `http://localhost:11434`.
 
-No additional configuration is required unless you've changed Ollama's default settings.
+**No additional configuration is required** - HandsOnAI detects the local Ollama server automatically.
 
 
 > ## 🧪 Test Your Installation
@@ -152,7 +166,7 @@ If Hands-On AI shows a connection error:
 
 ## Available Models
 
-Here are some models you can use with ChatCraft:
+Here are some models you can use with HandsOnAI via Ollama:
 
 - `llama3` - The recommended default model for most users
 - `llama3:8b` - A smaller, faster version if you have limited resources
@@ -181,4 +195,35 @@ For more detailed information about Ollama, visit their official documentation a
 
 ---
 
-Now that you have Ollama set up, you're ready to use Hands-On AI and start creating your own AI educational experiences!
+## 🌍 Beyond Ollama
+
+Once comfortable with local Ollama, you can easily switch HandsOnAI to use other providers:
+
+### Cloud Providers (for more advanced models)
+```python
+import os
+# Switch to OpenAI
+os.environ['HANDS_ON_AI_SERVER'] = 'https://api.openai.com'
+os.environ['HANDS_ON_AI_API_KEY'] = 'your-openai-key'
+os.environ['HANDS_ON_AI_MODEL'] = 'gpt-4'
+```
+
+### Multiple Providers in One Project
+```python
+import os
+
+# Use Ollama for privacy-sensitive tasks
+os.environ['HANDS_ON_AI_SERVER'] = 'http://localhost:11434'
+privacy_response = get_response("Analyze this personal data...")
+
+# Switch to cloud for advanced reasoning
+os.environ['HANDS_ON_AI_SERVER'] = 'https://api.openai.com' 
+os.environ['HANDS_ON_AI_API_KEY'] = 'your-key'
+advanced_response = get_response("Solve this complex math problem...")
+```
+
+See [Provider Compatibility](../README.md#provider-compatibility) for all supported options.
+
+---
+
+Now that you have Ollama set up, you're ready to use Hands-On AI! You can start with local privacy-focused projects and expand to cloud providers as needed.
