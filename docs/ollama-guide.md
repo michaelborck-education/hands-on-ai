@@ -222,7 +222,7 @@ os.environ['HANDS_ON_AI_API_KEY'] = 'your-key'
 advanced_response = get_response("Solve this complex math problem...")
 ```
 
-See [Provider Compatibility](../README.md#provider-compatibility) for all supported options.
+See the main README for full provider compatibility information.
 
 ---
 

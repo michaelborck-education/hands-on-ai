@@ -203,5 +203,5 @@ except Exception as e:
 - [Configuration Guide](configuration.md) - Detailed configuration options
 - [Ollama Guide](ollama-guide.md) - Local Ollama setup instructions  
 - [Education Guide](education-guide.md) - Pedagogical guidance
-- [Provider Compatibility](../README.md#provider-compatibility) - Supported providers
+- Provider Compatibility (see main README) - Supported providers
 

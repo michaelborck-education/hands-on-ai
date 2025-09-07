@@ -5,13 +5,13 @@ test:
   pytest
 
 test-basic:
-  python test_ailabkit.py
+  python test_hands_on_ai.py
 
 lint:
-  ruff src/ailabkit tests scripts
+  ruff src/hands_on_ai tests scripts
 
 format:
-  ruff format src/ailabkit tests scripts
+  ruff format src/hands_on_ai tests scripts
 
 # 💼 Run linter and tests together
 ci: 
@@ -51,27 +51,27 @@ deploy-docs:
 
 # 🧪 Run CLI modules in interactive mode
 chat-repl:
-  ailabkit chat interactive
+  chat interactive
 
 rag-repl:
-  ailabkit rag interactive
+  rag interactive
 
 agent-repl:
-  ailabkit agent interactive
+  agent interactive
 
 # 🩺 Run diagnostic check
 doctor:
-  ailabkit doctor
+  handsonai doctor
 
 # 🌐 Run web interfaces
 chat-web:
-  ailabkit chat web
+  chat web
 
 rag-web:
-  ailabkit rag web
+  rag web
   
 agent-web:
-  ailabkit agent web
+  agent web
 
 # Rebuild Bot gallery markdown from doc strings
 generate-bot-gallery:
@@ -133,13 +133,13 @@ help:
   @echo "  sync-version          Sync version across files"
   @echo "  docs                  Build MkDocs site"
   @echo "  deploy-docs           Deploy site to GitHub Pages"
-  @echo "  chat-repl             Start AiLabKit chat interactive mode"
-  @echo "  rag-repl              Start AiLabKit RAG interactive mode"
-  @echo "  agent-repl            Start AiLabKit agent interactive mode"
-  @echo "  chat-web              Start AiLabKit chat web interface"
-  @echo "  rag-web               Start AiLabKit RAG web interface"
-  @echo "  agent-web             Start AiLabKit agent web interface"
-  @echo "  doctor                Run system diagnostic for AiLabKit"
+  @echo "  chat-repl             Start HandsOnAI chat interactive mode"
+  @echo "  rag-repl              Start HandsOnAI RAG interactive mode"
+  @echo "  agent-repl            Start HandsOnAI agent interactive mode"
+  @echo "  chat-web              Start HandsOnAI chat web interface"
+  @echo "  rag-web               Start HandsOnAI RAG web interface"
+  @echo "  agent-web             Start HandsOnAI agent web interface"
+  @echo "  doctor                Run system diagnostic for HandsOnAI"
   @echo "  build-mini-projects   Rebuild mini-projects.md from /docs/projects"
   @echo "  spelling-au           Convert American spelling to Australian/British spelling"
   @echo "  lint-mini-projects    Lint the combined mini-projects.md file"

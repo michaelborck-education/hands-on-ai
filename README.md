@@ -209,14 +209,25 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## LLM Ready
+## 🤖 LLM Ready
 
-This package is LLM-ready with a comprehensive guide for Large Language Models to understand its functionality. See the [LLM Guide](docs/llm-guide.md) for detailed API references, usage examples, and best practices.
+This package is designed to work seamlessly with Large Language Models for coding assistance and learning:
 
-For best results when working with an LLM:
-1. Download the LLM guide file
-2. Upload it to your LLM interface/chat at the beginning of your conversation
-3. The LLM will now have detailed knowledge about the package's structure and capabilities
+### For Students & Educators
+- **[LLM.txt](https://github.com/teaching-repositories/hands-on-ai/blob/main/LLM.txt)** - Complete reference guide for LLMs
+- **[Documentation](https://michael-borck.github.io/hands-on-ai/)** - Full documentation site
+
+### How to Use with LLMs
+1. **Download** the [LLM.txt file](https://github.com/teaching-repositories/hands-on-ai/blob/main/LLM.txt)
+2. **Upload** it to your LLM (Claude, ChatGPT, etc.)
+3. **Ask** for help with HandsOnAI projects - get complete, working code examples
+
+Example prompts:
+- *"Create a pirate chatbot using hands-on-ai"*
+- *"Build a document Q&A system with the RAG module"*  
+- *"Make an agent that can calculate and search the web"*
+
+The LLM will have complete knowledge of the API, examples, and best practices.
 
 ## Acknowledgments
 

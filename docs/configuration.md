@@ -179,7 +179,7 @@ os.environ['HANDS_ON_AI_API_KEY'] = 'classroom-api-key'
 
 ## 📚 Related Documentation
 
-- [Provider Compatibility](../README.md#provider-compatibility) - Full list of supported providers
+- Provider Compatibility (see main README) - Full list of supported providers
 - [Classroom Setup](classroom-setup.md) - Setting up HandsOnAI for education
 - [Ollama Guide](ollama-guide.md) - Local Ollama installation and setup
 
