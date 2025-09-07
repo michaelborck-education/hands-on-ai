@@ -163,6 +163,19 @@ export HANDS_ON_AI_API_KEY="your-openrouter-key"
 export HANDS_ON_AI_MODEL="openai/gpt-4o"  # or any model they support
 ```
 
+#### Google Gemini
+```bash
+export HANDS_ON_AI_SERVER="https://generativelanguage.googleapis.com/v1beta/openai"
+export HANDS_ON_AI_API_KEY="your-gemini-key"
+export HANDS_ON_AI_MODEL="gpt-4o-mini"  # maps to gemini-1.5-flash
+```
+
+#### Groq
+```bash
+export HANDS_ON_AI_SERVER="https://api.groq.com/openai"
+export HANDS_ON_AI_API_KEY="your-groq-key"
+```
+
 #### LocalAI
 ```bash
 export HANDS_ON_AI_SERVER="http://localhost:8080"
@@ -177,11 +190,12 @@ HandsOnAI works with any service that implements OpenAI-compatible endpoints:
 |--------------|---------------------|-------------------|------------|
 | **Ollama** | `http://localhost:11434` | None (local) | ✅ Tested |
 | **OpenAI** | `https://api.openai.com` | Bearer token | ✅ Compatible |
+| **Google Gemini** | `https://generativelanguage.googleapis.com/v1beta/openai` | Bearer token | ✅ Compatible |
+| **Groq** | `https://api.groq.com/openai` | Bearer token | ✅ Compatible |
 | **OpenRouter** | `https://openrouter.ai/api` | Bearer token | ✅ Compatible |
 | **Together AI** | `https://api.together.xyz` | Bearer token | ✅ Compatible |
 | **LocalAI** | `http://localhost:8080` | Optional | ✅ Compatible |
 | **vLLM** | `http://your-vllm-server` | Optional | ✅ Compatible |
-| **Groq** | `https://api.groq.com` | Bearer token | ✅ Compatible |
 | **Hugging Face** | `https://api-inference.huggingface.co` | Bearer token | ✅ Compatible |
 | **Any OpenAI-compatible server** | `http://your-server` | Varies | ✅ Compatible |
 
