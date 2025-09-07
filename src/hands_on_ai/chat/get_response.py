@@ -5,6 +5,7 @@ Core response functionality for the chat module.
 import requests
 import random
 import time
+from openai import OpenAI
 from ..config import get_server_url, get_api_key, load_fallbacks, log
 
 # Global model cache
@@ -64,34 +65,47 @@ def get_response(
     if not prompt.strip():
         return "⚠️ Empty prompt."
 
-    # Get server URL from config
-    url = get_server_url()
-    log.debug(f"Using server URL: {url}")
+    # Get server URL and configure OpenAI client
+    server_url = get_server_url()
+    
+    # Add /v1 suffix for OpenAI-compatible endpoints
+    if not server_url.endswith('/v1'):
+        server_url = server_url.rstrip('/') + '/v1'
+    
+    log.debug(f"Using OpenAI-compatible server URL: {server_url}")
 
     # Try to get a response
     for attempt in range(1, retries + 1):
         try:
-            # Prepare headers with API key if available
-            headers = {}
-            api_key = get_api_key()
-            if api_key:
-                headers["Authorization"] = f"Bearer {api_key}"
-                log.debug("Using API key for authentication")
+            # Create OpenAI client
+            client = OpenAI(
+                base_url=server_url,
+                api_key=get_api_key() or "hands-on-ai"
+            )
             
-            response = requests.post(
-                f"{url}/api/generate",
-                json={
-                    "model": model,
-                    "prompt": prompt,
-                    "system": system,
-                    "stream": stream
-                },
-                headers=headers,
+            # Make OpenAI-compatible request
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": prompt}
+                ],
+                stream=stream,
                 timeout=10
             )
-            response.raise_for_status()
-            data = response.json()
-            return data.get("response", "⚠️ No response from model.")
+            
+            # Handle streaming vs non-streaming response
+            if stream:
+                # For streaming, collect all chunks
+                content = ""
+                for chunk in response:
+                    if chunk.choices[0].delta.content:
+                        content += chunk.choices[0].delta.content
+                return content if content else "⚠️ No response from model."
+            else:
+                # For non-streaming, get the content directly
+                return response.choices[0].message.content or "⚠️ No response from model."
+                
         except Exception as e:
             log.warning(f"Error during request (attempt {attempt}): {e}")
             if attempt < retries:

@@ -12,6 +12,7 @@ This module provides centralized functionality for working with LLM models:
 import requests
 import re
 from typing import Dict, List, Any, Optional, Tuple
+from openai import OpenAI
 from .config import get_server_url, get_api_key, log
 
 def normalize_model_name(model_name: str) -> str:
@@ -33,17 +34,14 @@ def normalize_model_name(model_name: str) -> str:
 
 def get_model_info(model_name: str) -> Optional[Dict[str, Any]]:
     """
-    Get detailed information about a specific model.
+    Check if a model exists using OpenAI-compatible endpoint.
     
     Args:
         model_name: Name of the model
         
     Returns:
-        Optional[Dict]: Model information or None if not found
+        Optional[Dict]: Basic model information or None if not found
     """
-    # Get server URL and prepare for API call
-    server_url = get_server_url()
-    
     # Try variations of the model name
     original_name = model_name
     normalized_name = normalize_model_name(model_name)
@@ -52,31 +50,36 @@ def get_model_info(model_name: str) -> Optional[Dict[str, Any]]:
     if normalized_name != original_name:
         model_variations.append(normalized_name)
     
-    # Prepare headers with API key if available
-    headers = {}
-    api_key = get_api_key()
-    if api_key:
-        headers["Authorization"] = f"Bearer {api_key}"
-        log.debug("Using API key for authentication")
+    server_url = get_server_url()
+    
+    # Add /v1 suffix for OpenAI-compatible endpoints
+    if not server_url.endswith('/v1'):
+        server_url = server_url.rstrip('/') + '/v1'
     
     # Try each variation
     for model_variant in model_variations:
         log.debug(f"Checking model: {model_variant}")
         
         try:
-            # Call the Ollama API to check if the model exists and get its metadata
-            response = requests.post(
-                f"{server_url}/api/show",
-                json={"name": model_variant},
-                headers=headers,
-                timeout=5
+            # Create OpenAI client
+            client = OpenAI(
+                base_url=server_url,
+                api_key=get_api_key() or "hands-on-ai"
             )
             
-            # If we found a matching model
-            if response.status_code == 200:
-                model_info = response.json()
-                log.debug(f"Found model: {model_variant}")
-                return model_info
+            # Get list of models and check if our model exists
+            models_response = client.models.list()
+            
+            for model in models_response.data:
+                if model.id == model_variant:
+                    log.debug(f"Found model: {model_variant}")
+                    # Return basic model info in expected format
+                    return {
+                        "name": model.id,
+                        "parameters": {},  # Not available in OpenAI format
+                        "template": "",    # Not available in OpenAI format
+                        "created": getattr(model, 'created', 0)
+                    }
             
         except Exception as e:
             log.debug(f"Error accessing model API for {model_variant}: {e}")
@@ -100,37 +103,38 @@ def check_model_exists(model_name: str) -> bool:
 
 def list_models() -> List[Dict[str, Any]]:
     """
-    List all available models.
+    List all available models using OpenAI-compatible endpoint.
     
     Returns:
         List[Dict]: List of model information dictionaries
     """
     server_url = get_server_url()
     
-    # Prepare headers with API key if available
-    headers = {}
-    api_key = get_api_key()
-    if api_key:
-        headers["Authorization"] = f"Bearer {api_key}"
-        log.debug("Using API key for authentication")
+    # Add /v1 suffix for OpenAI-compatible endpoints
+    if not server_url.endswith('/v1'):
+        server_url = server_url.rstrip('/') + '/v1'
     
     try:
-        # Call the Ollama API to list all models
-        response = requests.get(
-            f"{server_url}/api/tags",
-            headers=headers,
-            timeout=5
+        # Create OpenAI client
+        client = OpenAI(
+            base_url=server_url,
+            api_key=get_api_key() or "hands-on-ai"
         )
         
-        if response.status_code == 200:
-            models_data = response.json()
-            # The API returns a dict with 'models' key containing the list
-            if "models" in models_data:
-                return models_data["models"]
-            return []
+        # Use OpenAI-compatible models endpoint
+        models_response = client.models.list()
         
-        log.warning(f"Failed to list models: {response.status_code}")
-        return []
+        # Convert to the expected format
+        models = []
+        for model in models_response.data:
+            models.append({
+                "name": model.id,
+                "size": 0,  # Size not available in OpenAI format
+                "digest": "",  # Digest not available in OpenAI format
+                "modified_at": getattr(model, 'created', 0)
+            })
+        
+        return models
         
     except Exception as e:
         log.warning(f"Error listing models: {e}")

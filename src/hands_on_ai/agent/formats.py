@@ -158,7 +158,7 @@ def format_tools_for_json_prompt(tools: Dict[str, Dict[str, Any]]) -> str:
     
     return "\n".join(tool_texts)
 
-def run_json_agent(
+def run_instructor_agent(
     prompt: str, 
     tools: Dict[str, Dict[str, Any]], 
     model: str = None,
@@ -166,7 +166,10 @@ def run_json_agent(
     verbose: bool = False
 ) -> str:
     """
-    Run an agent that uses JSON for tool calling with smaller models.
+    Run an agent using Instructor for robust structured outputs.
+    
+    This replaces the fragile JSON parsing with Pydantic validation
+    while maintaining the same educational interface.
     
     Args:
         prompt: User question
@@ -178,6 +181,156 @@ def run_json_agent(
     Returns:
         str: Final agent response
     """
+    try:
+        import instructor
+        from openai import OpenAI
+        from .schemas import AgentResponse, ToolCall, FinalAnswer
+        from ..config import get_server_url, get_api_key
+    except ImportError as e:
+        # Fallback to old implementation if dependencies not available
+        log.warning(f"Instructor not available, falling back to basic JSON: {e}")
+        return run_json_agent_fallback(prompt, tools, model, max_iterations, verbose)
+    
+    # Create instructor client with OpenAI-compatible endpoints
+    try:
+        server_url = get_server_url()
+        # Add /v1 suffix for OpenAI-compatible endpoints
+        if not server_url.endswith('/v1'):
+            server_url = server_url.rstrip('/') + '/v1'
+            
+        client = instructor.from_openai(
+            OpenAI(
+                base_url=server_url,
+                api_key=get_api_key() or "ollama"
+            ),
+            mode=instructor.Mode.JSON_SCHEMA  # Use JSON_SCHEMA for Ollama models
+        )
+    except Exception as e:
+        log.warning(f"Failed to initialize Instructor client: {e}")
+        return run_json_agent_fallback(prompt, tools, model, max_iterations, verbose)
+    
+    # Create more specific system prompt for JSON_SCHEMA mode
+    system_prompt = f"""You are an intelligent agent that can analyze questions and call tools.
+
+AVAILABLE TOOLS:
+{format_tools_for_json_prompt(tools)}
+
+You must respond with valid JSON in one of these two formats:
+
+TO CALL A TOOL:
+{{
+  "thought": "Your reasoning about what tool to use",
+  "tool": "exact_tool_name",
+  "input": "parameter for the tool"
+}}
+
+TO PROVIDE FINAL ANSWER:
+{{
+  "thought": "Your reasoning about the answer", 
+  "answer": "Your final answer to the user's question"
+}}
+
+IMPORTANT:
+- Use exact tool names from the list above
+- Provide clear reasoning in the "thought" field
+- Only call tools that are relevant to the question
+- After using tools, provide a final answer with your conclusion"""
+    
+    # Initialize conversation state
+    conversation_history = [prompt]
+    
+    # Main agent loop with Instructor validation
+    for iteration in range(max_iterations):
+        try:
+            # Determine what type of response we expect based on conversation state
+            if any("Now provide your final answer" in msg for msg in conversation_history[-2:]):
+                # After tool execution - expect final answer
+                expected_model = FinalAnswer
+                if verbose:
+                    log.info("Expecting FinalAnswer after tool use")
+            else:
+                # First iteration or continuing conversation - could be either
+                expected_model = AgentResponse
+            
+            # Use Instructor with JSON_SCHEMA mode
+            response = client.chat.completions.create(
+                model=model,
+                response_model=expected_model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": "\n".join(conversation_history)}
+                ]
+            )
+            
+            if verbose:
+                log.info(f"Instructor response (iteration {iteration+1}): {response}")
+            
+            # Handle based on response type (automatic validation!)
+            if isinstance(response, FinalAnswer):
+                if verbose:
+                    log.info(f"Final answer reached: {response.answer}")
+                return response.answer
+            
+            elif isinstance(response, ToolCall):
+                # Validate tool exists
+                if response.tool not in tools:
+                    error_msg = f"Error: Tool '{response.tool}' not found. Available tools: {', '.join(tools.keys())}"
+                    if verbose:
+                        log.warning(error_msg)
+                    conversation_history.append(error_msg)
+                    continue
+                
+                # Execute tool with error handling
+                try:
+                    tool_result = tools[response.tool]["function"](response.input)
+                    if verbose:
+                        log.info(f"Tool '{response.tool}' executed successfully: {tool_result}")
+                    
+                    # Add the tool result to the conversation with instruction for final answer
+                    conversation_history.append(f"Tool result: {tool_result}")
+                    conversation_history.append("Now provide your final answer based on the tool result.")
+                    
+                except Exception as e:
+                    error_msg = f"Error executing tool '{response.tool}': {str(e)}"
+                    if verbose:
+                        log.exception(f"Tool execution failed for {response.tool}")
+                    conversation_history.append(error_msg)
+            
+            else:
+                # This shouldn't happen with proper Pydantic validation
+                if verbose:
+                    log.warning(f"Unexpected response type: {type(response)}")
+                conversation_history.append(
+                    "I need to provide either a tool call or a final answer. Let me try again."
+                )
+                
+        except Exception as e:
+            # Instructor handles retries automatically, but if it fails completely
+            if verbose:
+                log.warning(f"Instructor failed after retries (iteration {iteration+1}): {e}")
+            
+            # Try to continue with an error message
+            conversation_history.append(
+                f"I encountered an error: {str(e)}. Let me try a different approach."
+            )
+            continue
+    
+    # If we reach max iterations without a final answer
+    return "I've reached the maximum number of steps without finding a complete answer."
+
+
+def run_json_agent_fallback(
+    prompt: str, 
+    tools: Dict[str, Dict[str, Any]], 
+    model: str = None,
+    max_iterations: int = 5,
+    verbose: bool = False
+) -> str:
+    """
+    Fallback to the original JSON agent implementation.
+    
+    This maintains backward compatibility if Instructor is not available.
+    """
     from ..chat import get_response
     
     # Format the system prompt with tools
@@ -188,7 +341,7 @@ def run_json_agent(
     # Initialize conversation state
     conversation_history = [prompt]
     
-    # Main agent loop
+    # Main agent loop (original implementation)
     for iteration in range(max_iterations):
         # Get the response from the LLM
         llm_response = get_response(
@@ -259,3 +412,19 @@ def run_json_agent(
     
     # If we reach max iterations without a final answer
     return "I've reached the maximum number of steps without finding a complete answer."
+
+
+# Keep the original function name for backward compatibility
+def run_json_agent(
+    prompt: str, 
+    tools: Dict[str, Dict[str, Any]], 
+    model: str = None,
+    max_iterations: int = 5,
+    verbose: bool = False
+) -> str:
+    """
+    Main entry point for JSON-based agent.
+    
+    Tries Instructor first, falls back to original implementation.
+    """
+    return run_instructor_agent(prompt, tools, model, max_iterations, verbose)

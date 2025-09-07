@@ -70,11 +70,33 @@ pip install git+https://github.com/teaching-repositories/hands-on-ai.git
 ### Prerequisites
 
 - Python 3.6 or higher
-- For local LLM usage: [Ollama](https://ollama.ai/) or similar local LLM server
+- Any OpenAI-compatible LLM provider (see [Provider Compatibility](#provider-compatibility))
 
 ### Quick Start
 
-Run a local Ollama server, then import and start chatting:
+#### Option 1: Set configuration in Python (Recommended for beginners)
+
+```python
+import os
+
+# Configure your provider
+os.environ['HANDS_ON_AI_SERVER'] = 'https://ollama.serveur.au'
+os.environ['HANDS_ON_AI_MODEL'] = 'llama3.2'
+os.environ['HANDS_ON_AI_API_KEY'] = input('Enter your API key: ')
+
+# Now use HandsOnAI
+from hands_on_ai.chat import pirate_bot
+print(pirate_bot("What is photosynthesis?"))
+```
+
+#### Option 2: Use environment variables
+
+Run a local Ollama server, then set environment variables and start chatting:
+
+```bash
+export HANDS_ON_AI_SERVER="http://localhost:11434"
+# No API key needed for local Ollama
+```
 
 ```python
 from hands_on_ai.chat import pirate_bot
@@ -94,6 +116,90 @@ print(response)
 pirate_response = pirate_bot("Tell me about sailing ships")
 print(pirate_response)
 ```
+
+## 🌍 Provider-Agnostic Architecture
+
+HandsOnAI is designed to work with **any OpenAI-compatible LLM provider**. The system uses standard OpenAI API endpoints (`/v1/chat/completions`, `/v1/models`) making it compatible with a wide range of AI services.
+
+### Configuration
+
+Set your provider using environment variables:
+
+```bash
+# Set your provider's base URL
+export HANDS_ON_AI_SERVER="https://your-provider-url"
+
+# Set API key if required
+export HANDS_ON_AI_API_KEY="your-api-key"
+
+# Enable debug logging
+export HANDS_ON_AI_LOG="debug"
+```
+
+### Provider Examples
+
+#### Ollama (Local)
+```bash
+export HANDS_ON_AI_SERVER="http://localhost:11434"
+# No API key needed for local Ollama
+```
+
+#### OpenAI
+```bash
+export HANDS_ON_AI_SERVER="https://api.openai.com"
+export HANDS_ON_AI_API_KEY="sk-your-openai-key"
+```
+
+#### Together AI
+```bash
+export HANDS_ON_AI_SERVER="https://api.together.xyz"
+export HANDS_ON_AI_API_KEY="your-together-key"
+```
+
+#### OpenRouter
+```bash
+export HANDS_ON_AI_SERVER="https://openrouter.ai/api"
+export HANDS_ON_AI_API_KEY="your-openrouter-key"
+export HANDS_ON_AI_MODEL="openai/gpt-4o"  # or any model they support
+```
+
+#### LocalAI
+```bash
+export HANDS_ON_AI_SERVER="http://localhost:8080"
+# API key optional depending on setup
+```
+
+## 📊 Provider Compatibility
+
+HandsOnAI works with any service that implements OpenAI-compatible endpoints:
+
+| **Provider** | **Base URL Example** | **Authentication** | **Status** |
+|--------------|---------------------|-------------------|------------|
+| **Ollama** | `http://localhost:11434` | None (local) | ✅ Tested |
+| **OpenAI** | `https://api.openai.com` | Bearer token | ✅ Compatible |
+| **OpenRouter** | `https://openrouter.ai/api` | Bearer token | ✅ Compatible |
+| **Together AI** | `https://api.together.xyz` | Bearer token | ✅ Compatible |
+| **LocalAI** | `http://localhost:8080` | Optional | ✅ Compatible |
+| **vLLM** | `http://your-vllm-server` | Optional | ✅ Compatible |
+| **Groq** | `https://api.groq.com` | Bearer token | ✅ Compatible |
+| **Hugging Face** | `https://api-inference.huggingface.co` | Bearer token | ✅ Compatible |
+| **Any OpenAI-compatible server** | `http://your-server` | Varies | ✅ Compatible |
+
+### Requirements for Compatibility
+
+Your provider must support:
+- ✅ `/v1/chat/completions` endpoint
+- ✅ `/v1/models` endpoint  
+- ✅ OpenAI message format (`{"role": "user", "content": "..."}`)
+- ✅ Bearer token authentication (if API key required)
+
+### Educational Benefits
+
+This provider-agnostic approach offers several educational advantages:
+- 🌍 **No vendor lock-in** - Switch providers without code changes
+- 📚 **Industry standards** - Students learn OpenAI API patterns used across the industry
+- 🔧 **Real-world skills** - Transferable knowledge to other AI tools and platforms
+- 💡 **Flexibility** - Use local models for privacy or cloud models for power
 
 ## Contributing
 
