@@ -1,0 +1,150 @@
+
+Absolutely! Let’s break down the minimal RAG (Retrieval-Augmented Generation) program and explain what each part does, step by step: --- ## 🧠 What is RAG? RAG stands for **Retrieval-Augmented Generation**. It’s a technique that combines: - **Retrieval**: Finding relevant information from documents (like PDFs, text files, etc.) - **Generation**: Using an LLM to answer questions based on that information This is useful when you want your AI to answer questions using your own content (e.g., class notes, manuals, articles). --- ## 🧪 Minimal RAG Program Explained ```python from hands_on_ai.rag import index_documents, query_documents ``` - This imports two key functions from the `hands_on_ai` package: - `index_documents`: Converts your documents into searchable vector embeddings. - `query_documents`: Lets you ask questions and get answers based on those indexed documents. --- ### 🔹 Step 1: Index Your Documents ```python index_path = index_documents("docs/") ``` - This scans the folder `"docs/"` and creates an index file (e.g., `index.npz`) containing vector representations of the content. - You can point this to any folder with supported files like `.txt`, `.pdf`, `.docx`, `.md`, `.py`, etc. --- ### 🔹 Step 2: Ask a Question ```python response = query_documents("What is the main idea?", index_path=index_path) ``` - This sends your question to the LLM. - The system retrieves the most relevant chunks from the indexed documents and uses them as context to generate an answer. --- ### 🔹 Step 3: Print the Answer ```python print(response) ``` - This simply prints the LLM’s answer to your question. --- ## 🛠️ What You Need to Run This - Python 3.10+ installed - Install the package: ```bash pip install hands-on-ai ``` - A folder with documents you want to query (e.g., `docs/`) - Optionally, set environment variables to choose your model or provider (e.g., OpenAI, Ollama, etc.) --- Would you like me to show how to: - Display the source context used in the answer? - Run this from the command line instead of Python? - Use a specific model or provider? Let me know how you'd like to build on this!
+
+
+
+
+
+
+
+
+
+Today
+You said
+LLM.txt
+
+Plain Text
+
+Please read this file to understand the hands-on-ai package.  When you have read and understond.  Responsd Ready. How can I helpyoui?
+
+I will then ask some questions
+Copilot said
+Ready. How can I help you?
+
+
+
+
+
+Edit in a page
+You said
+Please write a minimal program using RAG
+Copilot said
+Here’s a minimal Python program using the HandsOnAI RAG (Retrieval-Augmented Generation) module to index a folder of documents and query them:
+
+python
+
+
+Copy
+from hands_on_ai.rag import index_documents, query_documents
+
+# Step 1: Index documents in a folder
+index_path = index_documents("docs/")  # Replace with your folder path
+
+# Step 2: Ask a question about the indexed content
+response = query_documents("What is the main idea?", index_path=index_path)
+
+# Step 3: Print the answer
+print(response)
+📝 Requirements:
+
+Install the package: pip install hands-on-ai
+
+Ensure your documents are in a supported format: .txt, .pdf, .docx, .md, .py, etc.
+
+Folder "docs/" should contain the files you want to query.
+
+Let me know if you want to add context display, relevance scores, or use it interactively.
+
+
+
+
+
+Edit in a page
+You said
+Pleas explain more
+Copilot said
+Absolutely! Let’s break down the minimal RAG (Retrieval-Augmented Generation) program and explain what each part does, step by step:
+
+🧠 What is RAG?
+RAG stands for Retrieval-Augmented Generation. It’s a technique that combines:
+
+Retrieval: Finding relevant information from documents (like PDFs, text files, etc.)
+
+Generation: Using an LLM to answer questions based on that information
+
+This is useful when you want your AI to answer questions using your own content (e.g., class notes, manuals, articles).
+
+🧪 Minimal RAG Program Explained
+python
+
+
+Copy
+from hands_on_ai.rag import index_documents, query_documents
+This imports two key functions from the hands_on_ai package:
+
+index_documents: Converts your documents into searchable vector embeddings.
+
+query_documents: Lets you ask questions and get answers based on those indexed documents.
+
+🔹 Step 1: Index Your Documents
+python
+
+
+Copy
+index_path = index_documents("docs/")
+This scans the folder "docs/" and creates an index file (e.g., index.npz) containing vector representations of the content.
+
+You can point this to any folder with supported files like .txt, .pdf, .docx, .md, .py, etc.
+
+🔹 Step 2: Ask a Question
+python
+
+
+Copy
+response = query_documents("What is the main idea?", index_path=index_path)
+This sends your question to the LLM.
+
+The system retrieves the most relevant chunks from the indexed documents and uses them as context to generate an answer.
+
+🔹 Step 3: Print the Answer
+python
+
+
+Copy
+print(response)
+This simply prints the LLM’s answer to your question.
+
+🛠️ What You Need to Run This
+Python 3.10+ installed
+
+Install the package:
+
+bash
+
+
+Copy
+pip install hands-on-ai
+A folder with documents you want to query (e.g., docs/)
+
+Optionally, set environment variables to choose your model or provider (e.g., OpenAI, Ollama, etc.)
+
+Would you like me to show how to:
+
+Display the source context used in the answer?
+
+Run this from the command line instead of Python?
+
+Use a specific model or provider?
+
+Let me know how you'd like to build on this!
+
+
+
+
+
+
+Edit in a page
+
+Message Copilot
+
+
