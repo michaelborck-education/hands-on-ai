@@ -9,9 +9,12 @@ import typer
 from typing import Optional
 from pathlib import Path
 
-# Import from ailabkit package
-import ailabkit
-from ailabkit.chat.personalities import bots
+# Import from hands_on_ai package (fall back to the src/ tree when not installed)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
+import hands_on_ai
+from hands_on_ai.chat.personalities import bots
 
 BOT_TEMPLATE = '''def your_bot_name(prompt):
     """
@@ -20,7 +23,7 @@ BOT_TEMPLATE = '''def your_bot_name(prompt):
     One-line summary of your bot's personality.
 
     ```python
-    from ailabkit.chat import your_bot_name
+    from hands_on_ai.chat import your_bot_name
     response = your_bot_name("Ask me anything")
     print(response)
     ```
@@ -65,8 +68,8 @@ def extract_bots():
             bot_list.append((name, doc))
             
     # Also check if any bots are directly exported at the module level
-    for name in dir(ailabkit.chat):
-        obj = getattr(ailabkit.chat, name)
+    for name in dir(hands_on_ai.chat):
+        obj = getattr(hands_on_ai.chat, name)
         if is_bot_func(obj):
             doc = inspect.getdoc(obj)
             if (name, doc) not in bot_list:  # Avoid duplicates
@@ -128,7 +131,7 @@ def generate_csv(bots):
 
     return csv_output.getvalue()
 
-app = typer.Typer(help="Generate or lint AiLabKit bot gallery")
+app = typer.Typer(help="Generate or lint HandsOnAI bot gallery")
 
 @app.command()
 def generate(

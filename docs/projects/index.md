@@ -57,6 +57,12 @@ Agent projects focus on LLMs that can use tools and follow a reasoning process.
 - [Unit Conversion Assistant](agent/unit-conversion-assistant.md)
 - [Word Detective](agent/word-detective.md)
 
+## Eval Projects
+
+Eval projects for Hands-On AI.
+
+- [Judge Your Bot](eval/judge-your-bot.md)
+
 ## Workflow Projects
 
 Workflow projects for Hands-On AI.
@@ -65,13 +71,7 @@ Workflow projects for Hands-On AI.
 
 ## Loop Projects
 
-Loop projects focus on repeating a step until a goal is met, including the "ratchet" loop.
+Loop projects for Hands-On AI.
 
-- [Improve Until Good](loop/improve-until-good.md)
 - [Build a Ralph Loop](loop/build-a-ralph-loop.md)
-
-## Eval Projects
-
-Eval projects for Hands-On AI.
-
-- [Judge Your Bot](eval/judge-your-bot.md)
+- [Improve Until Good](loop/improve-until-good.md)

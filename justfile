@@ -56,16 +56,18 @@ publish:
 bundle:
   scripts/build_zip.py
 
-# 📚 Documentation
+# 📚 Documentation (mkdocs → site/docs, landing page → site root)
 docs:
   just generate-bot-gallery
   just generate-project-index
-  mkdocs build --clean
+  rm -rf site
+  mkdocs build --clean --site-dir site/docs
+  COPYFILE_DISABLE=1 cp -R landing/. site/
+  find site -name '._*' -delete
 
 deploy-docs:
-  just generate-bot-gallery
-  just generate-project-index
-  mkdocs gh-deploy --force
+  just docs
+  ghp-import --no-jekyll --push --force site
 
 # 🧪 Run CLI modules in interactive mode
 chat-repl:

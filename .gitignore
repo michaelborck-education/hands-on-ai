@@ -186,3 +186,7 @@ _notes/
 uv.lock
 rag_example
 *.npz
+
+# macOS AppleDouble files (external drive)
+._*
+.DS_Store
